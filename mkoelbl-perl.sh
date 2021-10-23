@@ -1,6 +1,8 @@
 #!/bin/sh
 
-wget https://web.archive.org/web/20030423000132/http://compsoc.dur.ac.uk/whitespace/whitespace.pl
+git init
+
+wget https://web.archive.org/web/20030423000132id_/http://compsoc.dur.ac.uk:80/whitespace/whitespace.pl
 git add whitespace.pl
 
 GIT_AUTHOR_NAME='Michael Kölbl' \
@@ -11,7 +13,7 @@ GIT_AUTHOR_DATE='Tue, 01 Apr 2003 19:34:12 GMT' \
 GIT_COMMITTER_DATE='Tue, 01 Apr 2003 19:34:12 GMT' \
 git commit -m 'Contribute Whitespace interpreter in Perl
 
-https://web.archive.org/web/20030423000132/http://compsoc.dur.ac.uk/whitespace/whitespace.pl'
+https://web.archive.org/web/20030423000132/http://compsoc.dur.ac.uk:80/whitespace/whitespace.pl'
 
 wget https://raw.githubusercontent.com/hostilefork/whitespacers/1ae82eb716c65346a71aebf9f92d96872463f220/perl/whitespace.pl -O whitespace.pl
 git add whitespace.pl
@@ -25,3 +27,5 @@ GIT_COMMITTER_DATE='Tue May 3 15:50:55 2016 -0400' \
 git commit -m 'Update perl to whitespace 0.3
 
 https://github.com/hostilefork/whitespacers/pull/3/commits/1ae82eb716c65346a71aebf9f92d96872463f220'
+
+git remote add origin https://github.com/wspace/mkoelbl-perl

@@ -38,7 +38,7 @@ tar xvf wsdebug-0.1.tar.gz
 cd wsdebug-0.1
 
 # Last modified: 2004-09-11 09:46:20 +0000 GMT
-wget https://web.archive.org/web/20050206092452id_/http://wsdebug.berlios.de/wsbfi-1.ws
+wget https://web.archive.org/web/20041102163053/http://wsdebug.berlios.de:80/wsbfi-1.ws
 
 git init
 
@@ -46,12 +46,16 @@ git add wsbfi-1.ws
 GIT_AUTHOR_NAME='Stefan Siegl' GIT_COMMITTER_NAME='Stefan Siegl' \
 GIT_AUTHOR_EMAIL='ssiegl@gmx.de' GIT_COMMITTER_EMAIL='ssiegl@gmx.de' \
 GIT_AUTHOR_DATE='2004-09-11 09:46:20 +0000' GIT_COMMITTER_DATE='2004-09-11 09:46:20 +0000' \
-git commit -m 'Add Brainfuck interpreter in Whitespace'
+git commit -m 'Add Brainfuck interpreter in Whitespace
+
+https://web.archive.org/web/20041102163053/http://wsdebug.berlios.de:80/wsbfi-1.ws'
 
 git add -A
 GIT_AUTHOR_NAME='Stefan Siegl' GIT_COMMITTER_NAME='Stefan Siegl' \
 GIT_AUTHOR_EMAIL='ssiegl@gmx.de' GIT_COMMITTER_EMAIL='ssiegl@gmx.de' \
 GIT_AUTHOR_DATE='2004-10-16 15:14:32 +0000' GIT_COMMITTER_DATE='2004-10-16 15:14:32 +0000' \
-git commit -m 'Release wsdebug 0.1'
+git commit -m 'Release wsdebug 0.1
+
+https://sourceforge.net/projects/wsdebug.berlios/files/wsdebug-0.1.tar.gz/download'
 
 git remote add origin https://github.com/wspace/ssiegl-wsdebug

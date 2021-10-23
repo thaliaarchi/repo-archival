@@ -31,6 +31,8 @@ git add -A
 GIT_AUTHOR_NAME='Philippe Stellwag' GIT_COMMITTER_NAME='Philippe Stellwag' \
 GIT_AUTHOR_EMAIL='linux@mp3s.name' GIT_COMMITTER_EMAIL='linux@mp3s.name' \
 GIT_AUTHOR_DATE='2004-09-09 12:59:19 +0000' GIT_COMMITTER_DATE='2004-09-09 12:59:19 +0000' \
-git commit -m 'Release wspacegen pre-alpha 0.1'
+git commit -m 'Release wspacegen pre-alpha 0.1
+
+https://sourceforge.net/projects/wspacegen/files/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz/download'
 
 git remote add origin https://github.com/wspace/stellwag-wspacegen
