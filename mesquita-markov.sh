@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/sh -e
 
-git init
+git init mesquita-markov
+cd mesquita-markov
 
 # Last modified: 2007-02-25 00:14:15 +0000 GMT
 # Contents:

@@ -1,16 +1,14 @@
 #!/bin/sh -e
 
 wconrad_commit() {
-  GIT_AUTHOR_NAME='Wayne Conrad' \
-  GIT_COMMITTER_NAME='Wayne Conrad' \
-  GIT_AUTHOR_EMAIL='wconrad@yagni.com' \
-  GIT_COMMITTER_EMAIL='wconrad@yagni.com' \
-  GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_DATE="$1" \
+  GIT_AUTHOR_NAME='Wayne Conrad' GIT_COMMITTER_NAME='Wayne Conrad' \
+  GIT_AUTHOR_EMAIL='wconrad@yagni.com' GIT_COMMITTER_EMAIL='wconrad@yagni.com' \
+  GIT_AUTHOR_DATE="$1" GIT_COMMITTER_DATE="$1" \
   git commit -m "$2"
 }
 
-git init
+git init wconrad-ruby
+cd wconrad-ruby
 
 wget https://web.archive.org/web/20030723091413id_/http://www.yagni.com:80/whitespace/whitespace -O whitespace
 chmod +x whitespace
@@ -79,3 +77,5 @@ git commit -m 'Update ruby to whitespace 0.3 and newer ruby
 Also add UTF-8 support
 
 https://github.com/hostilefork/whitespacers/pull/3/commits/4d8017cda77a4817f2a465acf2e23bee9ca4bcd6'
+
+git remote add origin https://github.com/wspace/wconrad-ruby

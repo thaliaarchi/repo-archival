@@ -9,7 +9,8 @@ commit() {
 test -d tutorial
 test -f brainfuck.hpl
 
-git init
+git init hapyli
+cd hapyli
 
 # sudoku.ws uses CRLF; preserve that
 git config core.autocrlf false
@@ -82,3 +83,5 @@ commit '2017-05-26 19:06:04 +0000' 'Cybis' 'cybis-fdp@hotmail.com' \
 'Add sudoku solver in Brainfuck
 
 https://what.thedailywtf.com/topic/23006/stupid-coding-tricks-sudoku-solver-in-brainfuck'
+
+git remote add origin https://github.com/wspace/hapyli

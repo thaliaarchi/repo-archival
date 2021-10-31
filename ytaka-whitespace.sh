@@ -28,6 +28,7 @@ git merge --allow-unrelated-histories --no-edit sieve/main
 git remote remove pumpkin
 git remote remove fizzbuzz
 git remote remove sieve
+rm -rf ../pumpkin ../fizzbuzz ../sieve
 
 # Automatically sorts by author date and drops merge commits.
 # Accept change list as-is.

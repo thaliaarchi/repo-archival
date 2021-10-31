@@ -57,3 +57,5 @@ git log --format='%ad %h %s'
 # 2020-04-02 00:19:19 +0900 f7d120c add README
 # 2020-04-01 23:52:26 +0900 a373ecd add assembler and copying
 # 2020-03-31 23:46:45 +0900 419aa00 create it
+
+git remote add origin https://github.com/wspace/keen-whitelie

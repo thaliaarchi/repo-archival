@@ -23,7 +23,8 @@
 # 2004-09-09 12:59:19 +0000 UTC  wspacegen/
 wget 'https://master.dl.sourceforge.net/project/wspacegen/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz?viasf=1' -O wspacegen-0.1-src.tar.gz
 tar xvf wspacegen-0.1-src.tar.gz
-cd wspacegen
+mv wspacegen stellwag-wspacegen
+cd stellwag-wspacegen
 
 git init
 git add -A

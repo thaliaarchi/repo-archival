@@ -27,6 +27,7 @@ git merge --allow-unrelated-histories --no-edit factor/main
 git remote remove check1
 git remote remove check2
 git remote remove factor
+rm -rf ../check1 ../check2 ../factor
 
 # Automatically sorts by author date and drops merge commits.
 # Accept change list as-is.

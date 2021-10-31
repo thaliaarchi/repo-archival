@@ -26,8 +26,8 @@
 #    delete rameev.ws
 #    delete shura-bura.ws
 
-git clone https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 pik4ez
-cd pik4ez
+git clone https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 pik4ez-ascii
+cd pik4ez-ascii
 
 # Remove file deletions and fix lamarr.ws filename:
 git filter-repo \

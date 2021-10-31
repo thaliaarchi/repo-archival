@@ -1,3 +1,8 @@
+#!/bin/sh -e
+
+mkdir ws-archive
+cd ws-archive
+
 curl https://web.archive.org/web/20150717203521id_/http://compsoc.dur.ac.uk:80/whitespace/index.php                  --create-dirs -o compsoc.dur.ac.uk/whitespace/index.php
 curl https://web.archive.org/web/20150618184706id_/http://compsoc.dur.ac.uk/whitespace/tutorial.php                  --create-dirs -o compsoc.dur.ac.uk/whitespace/tutorial.php
 curl https://web.archive.org/web/20150717115008id_/http://compsoc.dur.ac.uk:80/whitespace/examples.php               --create-dirs -o compsoc.dur.ac.uk/whitespace/examples.php
