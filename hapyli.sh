@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
 commit() {
-  GIT_AUTHOR_DATE="$1" GIT_AUTHOR_NAME="$2" GIT_AUTHOR_EMAIL=$3 \
-  GIT_COMMITTER_DATE="$1" GIT_COMMITTER_NAME="$2" GIT_COMMITTER_EMAIL=$3 \
+  GIT_AUTHOR_NAME="$1" GIT_AUTHOR_EMAIL="$2" GIT_AUTHOR_DATE="$3" \
+  GIT_COMMITTER_NAME="$1" GIT_COMMITTER_EMAIL="$2" GIT_COMMITTER_DATE="$3" \
   git commit -m "$4"
 }
 
@@ -22,7 +22,7 @@ git config core.autocrlf false
 # 2009-11-19 22:42:24 +0000     Cybis FDP <cybis-fdp@hotmail.com>, signed "Cybis" https://web.archive.org/web/20141011193156/http://compsoc.dur.ac.uk/archives/whitespace/2009-November/000072.html
 wget https://pastebin.com/raw/f761fc4b5 -O sudoku.ws
 git add sudoku.ws
-commit '2009-05-19 23:53:16 +0000' 'Cybis' 'cybis-fdp@hotmail.com' \
+commit 'Cybis' 'cybis-fdp@hotmail.com' '2009-05-19 23:53:16 +0000' \
 'Add sudoku solver in Whitespace, compiled from HaPyLi
 
 https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace
@@ -31,7 +31,7 @@ https://pastebin.com/f761fc4b5'
 # 2010-11-27 Marinus Oosters https://www.99-bottles-of-beer.net/language-hapyli-2556.html
 wget https://www.99-bottles-of-beer.net/download/2556 -O 99bottles.hpl
 git add 99bottles.hpl
-commit '2010-11-27 00:00:00 +0000' 'Marinus Oosters' 'marinuso@gmail.com' \
+commit 'Marinus Oosters' 'marinuso@gmail.com' '2010-11-27 00:00:00 +0000' \
 'Add 99 bottles of beer in HaPyLi
 
 https://www.99-bottles-of-beer.net/language-hapyli-2556.html'
@@ -39,7 +39,7 @@ https://www.99-bottles-of-beer.net/language-hapyli-2556.html'
 # 2010-12-01 07:54 Marinus https://esolangs.org/w/index.php?title=User:Marinus/Brainfuck_interpreters&diff=20310&oldid=18866
 # Marinus appears to live in CET +0100 / CEST +0200 based on commits from https://github.com/marinuso
 git add brainfuck.hpl # manually extracted from wiki
-commit '2010-12-01 08:54:00 +0100' 'Marinus Oosters' 'marinuso@gmail.com' \
+commit 'Marinus Oosters' 'marinuso@gmail.com' '2010-12-01 08:54:00 +0100' \
 'Add Brainfuck interpreter in HaPyLi
 
 https://esolangs.org/wiki/User:Marinus/Brainfuck_interpreters#HaPyLi'
@@ -61,8 +61,8 @@ wget https://web.archive.org/web/20110219155019id_/http://hapyli.webs.com:80/var
 wget https://web.archive.org/web/20110219162526id_/http://hapyli.webs.com:80/embeddingwhitespace.htm -O tutorial/embeddingwhitespace.htm
 git add tutorial/*.htm
 git add tutorial/*.hpl # manually extracted from HTML files
-GIT_AUTHOR_DATE='2010-05-23 02:20:21 +0000' GIT_AUTHOR_NAME='Cybis' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' \
-GIT_COMMITTER_DATE='2011-02-12 01:57:25 +0000' GIT_COMMITTER_NAME='Cybis' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' \
+GIT_AUTHOR_NAME='Cybis' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE='2010-05-23 02:20:21 +0000' \
+GIT_COMMITTER_NAME='Cybis' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE='2011-02-12 01:57:25 +0000' \
 git commit -m 'Post HaPyLi web tutorial
 
 https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/
@@ -77,7 +77,7 @@ wget https://what.thedailywtf.com/assets/uploads/files/1495829695493-sudoku.7z -
 7z x sudoku.7z
 mv Sudoku.bf sudoku.bf
 git add sudoku.bf
-commit '2017-05-26 19:06:04 +0000' 'Cybis' 'cybis-fdp@hotmail.com' \
+commit 'Cybis' 'cybis-fdp@hotmail.com' '2017-05-26 19:06:04 +0000' \
 'Add sudoku solver in Brainfuck
 
 https://what.thedailywtf.com/topic/23006/stupid-coding-tricks-sudoku-solver-in-brainfuck'

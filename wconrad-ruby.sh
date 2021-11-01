@@ -1,9 +1,8 @@
 #!/bin/sh -e
 
 wconrad_commit() {
-  GIT_AUTHOR_NAME='Wayne Conrad' GIT_COMMITTER_NAME='Wayne Conrad' \
-  GIT_AUTHOR_EMAIL='wconrad@yagni.com' GIT_COMMITTER_EMAIL='wconrad@yagni.com' \
-  GIT_AUTHOR_DATE="$1" GIT_COMMITTER_DATE="$1" \
+  GIT_AUTHOR_NAME='Wayne Conrad' GIT_AUTHOR_EMAIL='wconrad@yagni.com' GIT_AUTHOR_DATE="$1" \
+  GIT_COMMITTER_NAME='Wayne Conrad' GIT_COMMITTER_EMAIL='wconrad@yagni.com' GIT_COMMITTER_DATE="$1" \
   git commit -m "$2"
 }
 
@@ -66,12 +65,8 @@ rm whitespace.rb
 wget https://raw.githubusercontent.com/hostilefork/whitespacers/4d8017cda77a4817f2a465acf2e23bee9ca4bcd6/ruby/whitespace.rb -O whitespace
 chmod +x whitespace
 git add whitespace
-GIT_AUTHOR_NAME='Tommie Levy' \
-GIT_COMMITTER_NAME='Tommie Levy' \
-GIT_AUTHOR_EMAIL='thomas.a.levy@gmail.com' \
-GIT_COMMITTER_EMAIL='thomas.a.levy@gmail.com' \
-GIT_AUTHOR_DATE='2016-05-03 15:50:41 -0400' \
-GIT_COMMITTER_DATE='2016-05-03 15:50:41 -0400' \
+GIT_AUTHOR_NAME='Tommie Levy' GIT_AUTHOR_EMAIL='thomas.a.levy@gmail.com' GIT_AUTHOR_DATE='2016-05-03 15:50:41 -0400' \
+GIT_COMMITTER_NAME='Tommie Levy' GIT_COMMITTER_EMAIL='thomas.a.levy@gmail.com' GIT_COMMITTER_DATE='2016-05-03 15:50:41 -0400' \
 git commit -m 'Update ruby to whitespace 0.3 and newer ruby
 
 Also add UTF-8 support
