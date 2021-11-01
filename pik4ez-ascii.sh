@@ -42,7 +42,7 @@ git filter-repo \
 #   squash 2e75f1c 1534354829 +0300
 #   pick 23b06bb 1534438966 +0300
 #   squash 138d65b 1534439105 +0300
-git rebase -i --root --committer-date-is-author-date
+git rebase -i --committer-date-is-author-date --root
 
 # Set messages to names of files, since only changes are now adds:
 git filter-repo --commit-callback '

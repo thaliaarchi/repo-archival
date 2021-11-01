@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+. base.sh
+
 git clone https://gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc check1
 git clone https://gist.github.com/0qol/55ab44a35c0faba659448f340af8db70 check2
 git clone https://gist.github.com/0qol/a317e241860518a79a36c879e710de38 factor
@@ -15,23 +17,11 @@ git -C factor branch -m master main
 mkdir 0qol-prime
 cd 0qol-prime
 git init
-git remote add check1 ../check1
-git remote add check2 ../check2
-git remote add factor ../factor
-git fetch check1
-git fetch check2
-git fetch factor
-git merge --allow-unrelated-histories --no-edit check1/main
-git merge --allow-unrelated-histories --no-edit check2/main
-git merge --allow-unrelated-histories --no-edit factor/main
-git remote remove check1
-git remote remove check2
-git remote remove factor
-rm -rf ../check1 ../check2 ../factor
+merge_repo check1
+merge_repo check2
+merge_repo factor
+git rebase --committer-date-is-author-date --root
 
-# Automatically sorts by author date and drops merge commits.
-# Accept change list as-is.
-git rebase -i --root --committer-date-is-author-date
 git filter-repo -f --commit-callback '
   commit.committer_name = commit.author_name
   commit.committer_email = commit.author_email

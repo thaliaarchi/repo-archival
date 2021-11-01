@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+. base.sh
+
 git clone https://github.com/KeenS/whitelie
 git clone https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 whitelie-aux
 
@@ -15,9 +17,7 @@ git -C whitelie branch -m master main
 git -C whitelie-aux branch -m master main
 
 cd whitelie
-git remote add aux ../whitelie-aux
-git fetch aux
-git merge --allow-unrelated-histories --no-edit aux/main
+merge_repo whitelie-aux
 
 git log --format='%ad %h %s'
 # 2021-08-07 22:57:55 +0200 ba3fe69 Merge remote-tracking branch 'aux/main'
@@ -28,7 +28,7 @@ git log --format='%ad %h %s'
 # 2020-04-01 23:52:26 +0900 a4885a5
 # 2020-03-31 23:46:45 +0900 419aa00 create it
 
-git rebase -i --root --empty=drop
+git rebase -i --empty=drop --root
 # From:
 #   pick 419aa00 create it
 #   pick e380295 add copying

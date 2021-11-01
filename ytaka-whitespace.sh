@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+. base.sh
+
 # Repos have simple histories with only one file and one commit
 git clone https://gist.github.com/y-taka-23/7353571 pumpkin
 git clone https://gist.github.com/y-taka-23/7353594 fizzbuzz
@@ -16,23 +18,11 @@ git -C sieve branch -m master main
 mkdir ytaka-whitespace
 cd ytaka-whitespace
 git init
-git remote add pumpkin ../pumpkin
-git remote add fizzbuzz ../fizzbuzz
-git remote add sieve ../sieve
-git fetch pumpkin
-git fetch fizzbuzz
-git fetch sieve
-git merge --allow-unrelated-histories --no-edit pumpkin/main
-git merge --allow-unrelated-histories --no-edit fizzbuzz/main
-git merge --allow-unrelated-histories --no-edit sieve/main
-git remote remove pumpkin
-git remote remove fizzbuzz
-git remote remove sieve
-rm -rf ../pumpkin ../fizzbuzz ../sieve
+merge_repo pumpkin
+merge_repo fizzbuzz
+merge_repo sieve
+git rebase --committer-date-is-author-date --root
 
-# Automatically sorts by author date and drops merge commits.
-# Accept change list as-is.
-git rebase -i --root --committer-date-is-author-date
 git filter-repo -f --commit-callback 'commit.committer_name = commit.author_name; commit.committer_email = commit.author_email'
 
 git remote add origin https://github.com/wspace/ytaka-whitespace
