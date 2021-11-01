@@ -6,9 +6,7 @@ commit() {
   git commit -m "$4"
 }
 
-test -d tutorial
-test -f brainfuck.hpl
-
+cp -rp aux/hapyli .
 git init hapyli
 cd hapyli
 
