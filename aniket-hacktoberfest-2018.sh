@@ -5,9 +5,17 @@ cd aniket-hacktoberfest-2018
 # Ignore dirty tree from conflicting case-sensitive files with --force
 git filter-repo --force \
   --subdirectory-filter Whitespace --path LICENSE \
-  --commit-callback 'commit.file_changes = [c for c in commit.file_changes if c.type != b"D"]' \
-  --prune-degenerate=always
-git rebase --root --committer-date-is-author-date
-git filter-repo --commit-callback 'commit.committer_name = commit.author_name; commit.committer_email = commit.author_email'
+  --commit-callback '
+    commit.file_changes = [c for c in commit.file_changes if c.type != b"D"]
+    commit.author_name = commit.author_name + b"|" + commit.committer_name
+    commit.author_email = commit.author_email + b"|" + commit.committer_email
+  '
+git rebase --committer-date-is-author-date --root
+git filter-repo \
+  --prune-empty=always \
+  --commit-callback '
+    commit.author_name, _, commit.committer_name = commit.author_name.partition(b"|")
+    commit.author_email, _, commit.committer_email = commit.author_email.partition(b"|")
+  '
 git branch -m master main
 git remote add origin https://github.com/wspace/aniket-hacktoberfest-2018
