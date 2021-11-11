@@ -3,24 +3,24 @@
 . base.sh
 
 git clone https://github.com/KeenS/whitelie keen-whitelie
-git clone https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keen-whitelie-aux
+git clone https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keen-whitelie-asm
 
 # Overwrite synthetic time of 2020-04-01 00:00:00 +0000
 git -C keen-whitelie filter-repo --commit-callback '
   if commit.message == b"create it\n": commit.author_date = commit.committer_date'
 # Adjust UTC times from GitHub Gist to +0900
-git -C keen-whitelie-aux filter-repo --commit-callback '
+git -C keen-whitelie-asm filter-repo --commit-callback '
   commit.author_date = re.sub(br"\+0000", b"+0900", commit.author_date)
   commit.committer_date = re.sub(br"\+0000", b"+0900", commit.committer_date)'
 
 git -C keen-whitelie branch -m master main
-git -C keen-whitelie-aux branch -m master main
+git -C keen-whitelie-asm branch -m master main
 
 cd keen-whitelie
-merge_repo keen-whitelie-aux
+merge_repo keen-whitelie-asm
 
 git log --format='%ad %h %s'
-# 2021-08-07 22:57:55 +0200 83a234c Merge remote-tracking branch 'keen-whitelie-aux/main'
+# 2021-08-07 22:57:55 +0200 83a234c Merge remote-tracking branch 'keen-whitelie-asm/main'
 # 2020-04-02 09:27:41 +0900 ef7f438 fix a bug of program size calcuration
 # 2020-04-02 09:24:44 +0900 f1c5d46
 # 2020-04-02 00:19:19 +0900 7b9d613 add README

@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
-git init mkkoelbl-perl
-cd mkkoelbl-perl
+git init mkoelbl-perl
+cd mkoelbl-perl
 
 wget https://web.archive.org/web/20030423000132id_/http://compsoc.dur.ac.uk:80/whitespace/whitespace.pl
 git add whitespace.pl
