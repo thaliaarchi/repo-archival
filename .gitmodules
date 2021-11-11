@@ -43,6 +43,9 @@
 [submodule "git/pik4ez-ascii/shura-bura"]
 	path = git/pik4ez-ascii/shura-bura
 	url = https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd
+[submodule "git/qeedquan-go"]
+	path = git/qeedquan-go
+	url = https://github.com/qeedquan/misc_utilities
 [submodule "git/shimo-yukicoder"]
 	path = git/shimo-yukicoder
 	url = https://github.com/shi-mo/yukicoder
