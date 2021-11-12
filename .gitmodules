@@ -55,6 +55,9 @@
 [submodule "git/ssiegl-wsdebug"]
 	path = git/ssiegl-wsdebug
 	url = https://github.com/BackupTheBerlios/wsdebug
+[submodule "git/wysang-java"]
+	path = git/wysang-java
+	url = https://github.com/wysang/Whitespace-Compiler
 [submodule "git/ytaka-whitespace/fizzbuzz"]
 	path = git/ytaka-whitespace/fizzbuzz
 	url = https://gist.github.com/y-taka-23/7353594
