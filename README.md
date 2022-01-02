@@ -12,6 +12,7 @@ These scripts generate the following repos:
 - [wspace/emilbahnsen-assembler](https://github.com/wspace/emilbahnsen-assembler)
 - [wspace/hapyli](https://github.com/wspace/hapyli)
 - [wspace/hogelog-c](https://github.com/wspace/hogelog-c)
+- [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) - manual rebasing
 - [wspace/keen-whitelie](https://github.com/wspace/keen-whitelie) - manual interactive rebase
 - [wspace/mesquita-markov](https://github.com/wspace/mesquita-markov)
 - [wspace/mkoelbl-perl](https://github.com/wspace/mkoelbl-perl)

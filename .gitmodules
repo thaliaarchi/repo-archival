@@ -19,6 +19,14 @@
 [submodule "git/hostilefork-whitespacers"]
 	path = git/hostilefork-whitespacers
 	url = https://github.com/hostilefork/whitespacers
+[submodule "git/ilikepython256-whitespace-unc/master"]
+	path = git/ilikepython256-whitespace-unc/master
+	url = https://github.com/ILikePython256/Whitespace_UnC
+	branch = master
+[submodule "git/ilikepython256-whitespace-unc/web"]
+	path = git/ilikepython256-whitespace-unc/web
+	url = https://github.com/ILikePython256/Whitespace_UnC
+	branch = web
 [submodule "git/keen-whitelie/asm"]
 	path = git/keen-whitelie/asm
 	url = https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
