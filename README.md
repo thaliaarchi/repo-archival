@@ -25,6 +25,7 @@ These scripts generate the following repos:
 - [wspace/smithers-bluespace](https://github.com/wspace/smithers-bluespace)
 - [wspace/ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug)
 - [wspace/stellwag-wspacegen](https://github.com/wspace/stellwag-wspacegen)
+- [wspace/tetris](https://github.com/wspace/tetris)
 - [wspace/wconrad-ruby](https://github.com/wspace/wconrad-ruby)
 - [wspace/wysang-java](https://github.com/wspace/wysang-java)
 - [wspace/ytaka-whitespace](https://github.com/wspace/ytaka-whitespace)
