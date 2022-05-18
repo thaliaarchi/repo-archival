@@ -21,6 +21,7 @@ These scripts generate the following repos:
 - [wspace/pik4ez-ascii](https://github.com/wspace/pik4ez-ascii) - manual squashing
 - [wspace/progopedia](https://github.com/wspace/progopedia)
 - [wspace/qeedquan-go](https://github.com/wspace/qeedquan-go)
+- [wspace/remigascou-c](https://github.com/wspace/remigascou-c)
 - [wspace/shimo-yukicoder](https://github.com/wspace/shimo-yukicoder)
 - [wspace/smithers-bluespace](https://github.com/wspace/smithers-bluespace)
 - [wspace/ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug)

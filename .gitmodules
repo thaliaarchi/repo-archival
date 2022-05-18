@@ -54,6 +54,9 @@
 [submodule "git/qeedquan-go"]
 	path = git/qeedquan-go
 	url = https://github.com/qeedquan/misc_utilities
+[submodule "git/remigascou-c"]
+	path = git/remigascou-c
+	url = https://github.com/RemiGascou/small-projects
 [submodule "git/shimo-yukicoder"]
 	path = git/shimo-yukicoder
 	url = https://github.com/shi-mo/yukicoder
