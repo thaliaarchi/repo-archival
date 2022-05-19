@@ -10,6 +10,12 @@
 [submodule "git/aniket-hacktoberfest-2018"]
 	path = git/aniket-hacktoberfest-2018
 	url = https://github.com/Aniket965/Hello-world
+[submodule "git/dpohanlon-wsint"]
+	path = git/dpohanlon-wsint
+	url = https://github.com/dpohanlon/wsInt
+[submodule "git/eia-java"]
+	path = git/eia-java
+	url = https://github.com/EIA-University/WhiteSpaceInterpreter
 [submodule "git/emilbahnsen-assembler"]
 	path = git/emilbahnsen-assembler
 	url = https://github.com/EmilBahnsen/projects
@@ -27,15 +33,27 @@
 	path = git/ilikepython256-whitespace-unc/web
 	url = https://github.com/ILikePython256/Whitespace_UnC
 	branch = web
+[submodule "git/jmesyou-erasure"]
+	path = git/jmesyou-erasure
+	url = https://github.com/jmesyou/erasure
 [submodule "git/keen-whitelie/asm"]
 	path = git/keen-whitelie/asm
 	url = https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
 [submodule "git/keen-whitelie/whitelie"]
 	path = git/keen-whitelie/whitelie
 	url = https://github.com/KeenS/whitelie
+[submodule "git/koturn-c"]
+	path = git/koturn-c
+	url = https://github.com/koturn/Whitespace
+[submodule "git/meeees-csharp"]
+	path = git/meeees-csharp
+	url = https://github.com/meeees/Whitespace
 [submodule "git/omurakazuaki-rust"]
 	path = git/omurakazuaki-rust
 	url = https://github.com/omurakazuaki/WriteCodeEveryDay
+[submodule "git/pavelshub-cpp"]
+	path = git/pavelshub-cpp
+	url = https://github.com/pavel987/wspace
 [submodule "git/pik4ez-ascii/brooks"]
 	path = git/pik4ez-ascii/brooks
 	url = https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3
@@ -54,6 +72,9 @@
 [submodule "git/qeedquan-go"]
 	path = git/qeedquan-go
 	url = https://github.com/qeedquan/misc_utilities
+[submodule "git/rdebath-c"]
+	path = git/rdebath-c
+	url = https://github.com/rdebath/whitespace
 [submodule "git/remigascou-c"]
 	path = git/remigascou-c
 	url = https://github.com/RemiGascou/small-projects
@@ -66,6 +87,12 @@
 [submodule "git/ssiegl-wsdebug"]
 	path = git/ssiegl-wsdebug
 	url = https://github.com/BackupTheBerlios/wsdebug
+[submodule "git/technohippy-go"]
+	path = git/technohippy-go
+	url = https://github.com/technohippy/go-whitespace
+[submodule "git/timvandermeij-cpp"]
+	path = git/timvandermeij-cpp
+	url = https://github.com/timvandermeij/whitespace-interpreter
 [submodule "git/wysang-java"]
 	path = git/wysang-java
 	url = https://github.com/wysang/Whitespace-Compiler
