@@ -46,6 +46,7 @@ from large repos, merge repos, and clean git histories.
 - [wspace/rdebath-c](https://github.com/wspace/rdebath-c)
 - [wspace/technohippy-go](https://github.com/wspace/technohippy-go)
 - [wspace/timvandermeij-cpp](https://github.com/wspace/timvandermeij-cpp)
+- [wspace/zrneely-rust](https://github.com/wspace/zrneely-rust)
 
 ## WIP
 

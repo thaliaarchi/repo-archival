@@ -105,3 +105,6 @@
 [submodule "git/ytaka-whitespace/sieve"]
 	path = git/ytaka-whitespace/sieve
 	url = https://gist.github.com/y-taka-23/7353612
+[submodule "git/zrneely-rust"]
+	path = git/zrneely-rust
+	url = https://gitlab.com/zrneely/whitespace.git
