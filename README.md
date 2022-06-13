@@ -81,3 +81,9 @@ repos, and clean git histories.
 ## Converted from CVS
 
 - whitespaceide-java - TODO
+
+## Migrated from Google Code
+
+- [bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) - TODO include wiki and forks
+- whitecoder - [TODO](https://code.google.com/archive/p/whitecoder/)
+- whitespacesdk - [TODO](https://code.google.com/archive/p/whitespacesdk/)
