@@ -6,21 +6,37 @@ repos, and clean git histories.
 
 ## Assembled from webpages
 
+- arnauld-javascript - TODO
+- brunokim-java - TODO
+- dcode-php - TODO
+- ebrady-compsoc - [TODO](fetch_compsoc.sh)
 - [hapyli](https://github.com/wspace/hapyli)
+- lmitchell-elisp - TODO
 - [mesquita-markov](https://github.com/wspace/mesquita-markov)
+- [meth0dz-c](https://github.com/wspace/meth0dz-c) - TODO automate
 - [mkoelbl-perl](https://github.com/wspace/mkoelbl-perl)
-- [progopedia](https://github.com/wspace/progopedia)
+- [peasley-cpp](https://github.com/wspace/peasley-cpp) - TODO automate
+- [progopedia](https://github.com/wspace/progopedia) - TODO add all Whitespace pages
+- res-trans32-python - TODO
+- rosettacode - TODO
 - [smithers-bluespace](https://github.com/wspace/smithers-bluespace)
+- [stephenchappell-python](https://github.com/wspace/stephenchappell-python) - TODO automate
 - [tetris](https://github.com/wspace/tetris)
+- tokigun-esotope-ws - TODO
 - [wconrad-ruby](https://github.com/wspace/wconrad-ruby)
 
 ## From archives
 
+- burghard-wsa - TODO
+- burghard-wsintercpp - TODO
+- burghard-wsinterws - TODO
+- edwinb-wspace - TODO
 - [nutcrack-whiteplanes](https://github.com/wspace/nutcrack-whiteplanes)
-- [ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug)
+- [phlip-pywhitespace](https://github.com/wspace/phlip-pywhitespace) - TODO automate
+- [ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug) - TODO [merge with GitHub repo](ssiegl-wsdebug_github.sh)
 - [stellwag-wspacegen](https://github.com/wspace/stellwag-wspacegen)
 
-## Extracted from subtree
+## Extracted from git subtree
 
 - [akers-lolcode](https://github.com/wspace/akers-lolcode)
 - [aniket-hacktoberfest](https://github.com/wspace/aniket-hacktoberfest)
@@ -57,9 +73,11 @@ repos, and clean git histories.
 
 - [zrneely-rust](https://github.com/wspace/zrneely-rust)
 
-## WIP
+## Converted from SVN
 
-- fetch_compsoc.sh
-- kreutzer-spacedide.sh
-- progopedia.sh
-- ssiegl-wsdebug_github.sh
+- kreutzer-spacedide - [TODO](kreutzer-spacedide.sh)
+- marktraceur-redlandside - TODO convert from SVN and merge with git repo
+
+## Converted from CVS
+
+- whitespaceide-java - TODO
