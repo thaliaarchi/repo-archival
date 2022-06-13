@@ -7,7 +7,7 @@ from large repos, merge repos, and clean git histories.
 ## Automatically generated
 
 - [wspace/akers-lolcode](https://github.com/wspace/akers-lolcode)
-- [wspace/aniket-hacktoberfest-2018](https://github.com/wspace/aniket-hacktoberfest-2018)
+- [wspace/aniket-hacktoberfest](https://github.com/wspace/aniket-hacktoberfest)
 - [wspace/emilbahnsen-assembler](https://github.com/wspace/emilbahnsen-assembler)
 - [wspace/hapyli](https://github.com/wspace/hapyli)
 - [wspace/hogelog-c](https://github.com/wspace/hogelog-c)

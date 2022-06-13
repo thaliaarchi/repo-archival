@@ -7,8 +7,8 @@
 [submodule "git/0qol-prime/factor"]
 	path = git/0qol-prime/factor
 	url = https://gist.github.com/0qol/a317e241860518a79a36c879e710de38
-[submodule "git/aniket-hacktoberfest-2018"]
-	path = git/aniket-hacktoberfest-2018
+[submodule "git/aniket-hacktoberfest"]
+	path = git/aniket-hacktoberfest
 	url = https://github.com/Aniket965/Hello-world
 [submodule "git/dpohanlon-wsint"]
 	path = git/dpohanlon-wsint

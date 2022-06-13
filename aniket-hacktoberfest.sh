@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
-git clone https://github.com/Aniket965/Hello-world aniket-hacktoberfest-2018
-cd aniket-hacktoberfest-2018
+git clone https://github.com/Aniket965/Hello-world aniket-hacktoberfest
+cd aniket-hacktoberfest
 # Ignore dirty tree from conflicting case-sensitive files with --force
 git filter-repo --force \
   --subdirectory-filter Whitespace --path LICENSE \
@@ -18,4 +18,4 @@ git filter-repo \
     commit.author_email, _, commit.committer_email = commit.author_email.partition(b"|")
   '
 git branch -m master main
-git remote add origin https://github.com/wspace/aniket-hacktoberfest-2018
+git remote add origin https://github.com/wspace/aniket-hacktoberfest
