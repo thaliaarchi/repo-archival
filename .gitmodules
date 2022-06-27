@@ -16,6 +16,9 @@
 [submodule "git/dpohanlon-wsint"]
 	path = git/dpohanlon-wsint
 	url = https://github.com/dpohanlon/wsInt
+[submodule "git/edwinb-ws-idr"]
+	path = git/edwinb-ws-idr
+	url = https://github.com/edwinb/WS-idr
 [submodule "git/eia-java"]
 	path = git/eia-java
 	url = https://github.com/EIA-University/WhiteSpaceInterpreter

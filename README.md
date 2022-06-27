@@ -60,6 +60,7 @@ repos, and clean git histories.
 ## GitHub forks
 
 - [dpohanlon-wsint](https://github.com/wspace/dpohanlon-wsint)
+- [edwinb-ws-idr](https://github.com/wspace/edwinb-ws-idr)
 - [eia-java](https://github.com/wspace/eia-java)
 - [jmesyou-erasure](https://github.com/wspace/jmesyou-erasure)
 - [koturn-c](https://github.com/wspace/koturn-c)
