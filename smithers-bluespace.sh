@@ -1,6 +1,8 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/Smithers888/BlueSpace smithers-bluespace
+. base.sh
+
+copy_submodule smithers-bluespace
 cd smithers-bluespace
 
 mkdir programs

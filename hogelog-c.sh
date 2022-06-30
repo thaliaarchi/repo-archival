@@ -1,6 +1,8 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/hogelog/hogel.org-old
+. base.sh
+
+copy_submodule hogelog-c hogel.org-old
 git -C hogel.org-old filter-repo --path-glob 'content/lib/c/ws*' --path-rename content/lib/c/:
 
 tar xvf hogel.org-old/ws_20080502.tar.bz2

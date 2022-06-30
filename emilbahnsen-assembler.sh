@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/EmilBahnsen/projects emilbahnsen-assembler
+. base.sh
+copy_submodule emilbahnsen-assembler
 cd emilbahnsen-assembler
 git filter-repo \
   --path README.md \

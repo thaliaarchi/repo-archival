@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 wconrad_commit() {
   GIT_AUTHOR_NAME='Wayne Conrad' GIT_AUTHOR_EMAIL='wconrad@yagni.com' GIT_AUTHOR_DATE="$1" \

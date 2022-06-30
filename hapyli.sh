@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 commit() {
   GIT_AUTHOR_NAME="$1" GIT_AUTHOR_EMAIL="$2" GIT_AUTHOR_DATE="$3" \

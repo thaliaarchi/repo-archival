@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/shi-mo/yukicoder shimo-yukicoder
+. base.sh
+copy_submodule shimo-yukicoder
 cd shimo-yukicoder
 git filter-repo --subdirectory-filter whitespace \
   --message-callback 'return re.sub(b"whitespace/", b"", message)'

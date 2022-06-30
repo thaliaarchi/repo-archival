@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 # Philippe is likely in Germany, but I don't know whether the archive
 # times are local or UTC, so I won't set the location.

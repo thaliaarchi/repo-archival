@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 wget https://files.pythonhosted.org/packages/76/aa/ee00fea23bfc7abcbce61e8e52896758277d330c129624746385281e7b13/whiteplanes-0.0.1.tar.gz
 tar xvf whiteplanes-0.0.1.tar.gz

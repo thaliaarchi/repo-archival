@@ -1,6 +1,8 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/ILikePython256/Whitespace_UnC ilikepython256-whitespace-unc
+. base.sh
+
+copy_submodule ilikepython256-whitespace-unc
 cd ilikepython256-whitespace-unc
 
 echo '# Whitespace UnC (Web)==># Whitespace UnC' > ../replacements.txt

@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/qeedquan/misc_utilities qeedquan-go
+. base.sh
+copy_submodule qeedquan-go
 cd qeedquan-go
 git filter-repo --subdirectory-filter esolang/whitespace --path AUTHORS --path LICENSE
 git branch -m master main

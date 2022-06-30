@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 git svn clone --stdlayout https://svn.code.sf.net/p/spacedide/code spacedide
 git -C spacedide filter-repo --force \

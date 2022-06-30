@@ -1,6 +1,8 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/BackupTheBerlios/wsdebug
+. base.sh
+
+copy_submodule ssiegl-wsdebug
 cd wsdebug
 
 # Author/committer: stesie <stesie>

@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/RemiGascou/small-projects remigascou-c
+. base.sh
+copy_submodule remigascou-c
 cd remigascou-c
 git filter-repo --subdirectory-filter C/whitespace
 git branch -m master main

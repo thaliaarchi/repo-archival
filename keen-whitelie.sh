@@ -1,9 +1,9 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 . base.sh
 
-git clone https://github.com/KeenS/whitelie keen-whitelie
-git clone https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keen-whitelie-asm
+copy_submodule keen-whitelie/whitelie keen-whitelie
+copy_submodule keen-whitelie/asm keen-whitelie-asm
 
 # Overwrite synthetic time of 2020-04-01 00:00:00 +0000
 git -C keen-whitelie filter-repo --commit-callback '

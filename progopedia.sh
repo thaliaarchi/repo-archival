@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 # Revisions cannot be viewed on Progopedia, so only selected revisions
 # are available through the Internet Archive.

@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/Aniket965/Hello-world aniket-hacktoberfest
+. base.sh
+copy_submodule aniket-hacktoberfest
 cd aniket-hacktoberfest
 # Ignore dirty tree from conflicting case-sensitive files with --force
 git filter-repo --force \

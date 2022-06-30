@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 git init pdewacht-tetris
 cd pdewacht-tetris

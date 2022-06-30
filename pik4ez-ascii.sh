@@ -1,4 +1,6 @@
-#!/bin/sh -e
+#!/bin/bash -e
+
+. base.sh
 
 # https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 brooks
 # https://gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4 hopper
@@ -26,7 +28,7 @@
 #    delete rameev.ws
 #    delete shura-bura.ws
 
-git clone https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 pik4ez-ascii
+copy_submodule pik4ez-ascii/brooks pik4ez-ascii
 cd pik4ez-ascii
 
 # Remove file deletions and fix lamarr.ws filename:

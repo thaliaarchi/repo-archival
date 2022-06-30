@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 # TODO merge in the wiki from here:
 # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=http://grass-mud-horse.googlecode.com/svn/
 
@@ -12,7 +14,7 @@
 # https://web.archive.org/web/20160114184907/https://grass-mud-horse.googlecode.com/files/Grass-Mud-Horse-beta1-src-bin.zip
 # https://web.archive.org/web/20160114184914/https://grass-mud-horse.googlecode.com/files/Grass-Mud-Horse-beta1-src-bin.rar
 
-git clone https://github.com/google-code-export/grass-mud-horse bearice-grassmudhorse
+copy_submodule bearice-grassmudhorse
 cd bearice-grassmudhorse
 
 git filter-repo \

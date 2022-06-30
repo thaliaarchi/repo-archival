@@ -1,6 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
-git clone https://github.com/hostilefork/whitespacers akers-lolcode
+. base.sh
+copy_submodule hostilefork-whitespacers akers-lolcode
 cd akers-lolcode
 git filter-repo --subdirectory-filter lolcode
 git branch -m master main
