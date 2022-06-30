@@ -20,7 +20,7 @@ repos, and clean git histories.
 - res-trans32-python - TODO
 - rosettacode - TODO
 - [smithers-bluespace](https://github.com/wspace/smithers-bluespace)
-- [stephenchappell-python](https://github.com/wspace/stephenchappell-python) - TODO automate
+- [stephenchappell-python](https://github.com/wspace/stephenchappell-python)
 - [tetris](https://github.com/wspace/tetris)
 - tokigun-esotope-ws - TODO
 - [wconrad-ruby](https://github.com/wspace/wconrad-ruby)

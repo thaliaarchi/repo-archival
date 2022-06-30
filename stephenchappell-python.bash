@@ -59,6 +59,17 @@ git -C ActiveState filter-repo \
 # - Revision diffs have revision dates with second precision
 # - The revision history list has revision dates with minute precision
 
+# Title and description from Whitespace Language set
+# https://code.activestate.com/recipes/sets/12/
+echo '# Whitespace Language
+
+These programs support the Whitespace Programming Language by way of implementing an assembler and interpreter in Python.' > README.md
+
+# Add license from GitHub repo
+cp ActiveState/577109_Whitespace_Helpers/LICENSE.md LICENSE.md
+echo >> LICENSE.md
+git add LICENSE.md
+
 get_revisions() {
   local id="$1" title="$2" filename="$3" revision_dates=("${@:4}")
 
@@ -74,11 +85,6 @@ get_revisions() {
   } >> README.md
   git add README.md
 
-  # Add license from GitHub repo; year ranges need to be fixed manually
-  cp "ActiveState/$recipe_dir/LICENSE.md" LICENSE.md
-  echo >> LICENSE.md
-  git add LICENSE.md
-
   mkdir -p "$(dirname "$filename")"
   local date
   local revision=1
@@ -90,8 +96,22 @@ get_revisions() {
       htmlq --text '#content pre.prettyprint:first-child' > "$filename"
     # Remove superfluous LF at the end of the file from htmlq serialization
     truncate -s-1 "$filename"
-
+    if [[ $filename = *.py ]]; then
+      chmod +x "$filename"
+    fi
     git add "$filename"
+
+    # Update license year range
+    local year="${date:0:4}"
+    if [[ $year = 2010 ]]; then
+      # Since the commits are not-yet ordered, it may collapse the range
+      sed -E -i.bak 's/^Copyright 2010(-20..)? /Copyright 2010 /' LICENSE.md
+    else
+      sed -E -i.bak "s/^Copyright 2010(-20..)? /Copyright 2010-$year /" LICENSE.md
+    fi
+    rm LICENSE.md.bak # For compatibility between GNU and BSD sed
+    git add LICENSE.md
+
     GIT_AUTHOR_NAME='Stephen "Zero" Chappell' GIT_AUTHOR_EMAIL='Noctis.Skytower@gmail.com' GIT_AUTHOR_DATE="$date +0000" \
     GIT_COMMITTER_NAME='Stephen "Zero" Chappell' GIT_COMMITTER_EMAIL='Noctis.Skytower@gmail.com' GIT_COMMITTER_DATE="$date +0000" \
     git commit -q -m "Recipe $id: $title, revision $revision
@@ -110,14 +130,25 @@ ${revision_url}"
   rm "$filename.raw"
 }
 
-# Title and description from Whitespace Language set
-# https://code.activestate.com/recipes/sets/12/
-echo '# Whitespace Language
-
-These programs support the Whitespace Programming Language by way of implementing an assembler and interpreter in Python.' > README.md
-
 get_revisions 577108 'Whitespace Assembler'        Assembler.py                '2010-03-14 15:35:04' '2010-05-24 12:01:13' '2011-07-17 19:48:14'
 get_revisions 577109 'Whitespace Helpers'          Helpers.py                  '2010-03-14 15:36:02'
 get_revisions 577110 'Whitespace Interpreter'      Interpreter.py              '2010-03-14 15:36:52' '2010-05-24 12:02:11'
 get_revisions 577112 'Whitespace Stack Calculator' Assembly/stack_calc.wsa     '2010-03-14 18:03:23'
 get_revisions 577673 'Whitespace Memory Manager'   Assembly/memory_manager.wsa '2011-04-21 12:16:12' '2011-04-21 12:34:56' '2011-07-17 19:45:38'
+
+# Sort commits by author date
+git config user.name 'Stephen "Zero" Chappell'
+git config user.email 'Noctis.Skytower@gmail.com'
+GIT_SEQUENCE_EDITOR="git log --format='%ai,pick %h %s' | sort | cut -d, -f2- > " \
+git rebase -i --committer-date-is-author-date --root
+git config --unset user.name
+git config --unset user.email
+
+# Check that the constructed files match the expected latest revisions:
+cmp Assembler.py ActiveState/Assembler.py
+cmp Helpers.py ActiveState/Helpers.py
+cmp Interpreter.py ActiveState/Interpreter.py
+cmp Assembly/stack_calc.wsa ActiveState/Assembly/stack_calc.wsa
+cmp Assembly/memory_manager.wsa ActiveState/Assembly/memory_manager.wsa
+
+git remote add origin https://github.com/wspace/stephenchappell-python
