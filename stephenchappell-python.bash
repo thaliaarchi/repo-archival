@@ -1,16 +1,12 @@
 #!/bin/bash -e
 
-# Metadata from files:
-# Author: Stephen "Zero" Chappell <Noctis.Skytower@gmail.com>
-# Assembler.py:   2010-03-14, revision 3
-# Helpers.py:     2010-03-14, revision 1
-# Interpreter.py: 2010-03-14, revision 4
+git init stephenchappell-python
+cd stephenchappell-python
 
 # Exact paths for all files, except for memory_manager.wsa, are written in
 # comments. memory_manager.wsa is inferred from label names in the program.
-git clone https://github.com/ActiveState/code activestate
-cd activestate
-git filter-repo \
+git clone https://github.com/ActiveState/code ActiveState
+git -C ActiveState filter-repo \
   --path LICENSE.md \
   --path recipes/Python/577108_Whitespace_Assembler \
   --path recipes/Python/577109_Whitespace_Helpers \
@@ -24,12 +20,14 @@ git filter-repo \
   --path-rename recipes/Python/577673_Whitespace_Memory_Manager/recipe-577673.py:Assembly/memory_manager.wsa \
   --path-rename recipes/Python/:
 
-# Revision dates are collected from multiple sources:
-# - GitHub recipe README.md files have "Originally published" and "Last updated"
-#   with second precision
-# - Revision diffs have revision dates with second precision
-# - The revision history list has revision dates with minute precision
+# Metadata in file comments:
+# Author: Stephen "Zero" Chappell <Noctis.Skytower@gmail.com>
+# Assembler.py:   2010-03-14, revision 3
+# Helpers.py:     2010-03-14, revision 1
+# Interpreter.py: 2010-03-14, revision 4
 
+# Recipe revisions:
+#
 # Recipe 577108: Whitespace Assembler
 # - Published:  2010-03-14 15:35:04 https://code.activestate.com/recipes/577108-whitespace-assembler/
 # - Revision 1: 2010-03-14 15:35:06 https://code.activestate.com/recipes/577108-whitespace-assembler/history/1/
@@ -54,32 +52,72 @@ git filter-repo \
 # - Revision 1: 2011-04-21 12:16:13 https://code.activestate.com/recipes/577673-whitespace-memory-manager/history/1/
 # - Revision 2: 2011-04-21 12:34:56 https://code.activestate.com/recipes/577673-whitespace-memory-manager/history/2/
 # - Revision 3: 2011-07-17 19:45:38 https://code.activestate.com/recipes/577673-whitespace-memory-manager/history/3/
+#
+# Revision dates are collected from multiple sources:
+# - GitHub recipe README.md files have "Originally published" and "Last updated"
+#   with second precision
+# - Revision diffs have revision dates with second precision
+# - The revision history list has revision dates with minute precision
 
 get_revisions() {
-  local url="$1"
-  local filename="$2"
-  local revision
+  local id="$1" title="$2" filename="$3" revision_dates=("${@:4}")
+
+  local slug recipe_dir
+  slug="$(tr '[:upper:]' '[:lower:]' <<< "$title" | tr ' ' -)"
+  recipe_dir="${id}_$(tr ' ' _ <<< "$title")"
+  local url="https://code.activestate.com/recipes/$id-$slug/"
+
+  # Add section to README.md, using description from GitHub repo
+  { echo -ne "\n## $title\n\n"
+    tail -n+6 "ActiveState/$recipe_dir/README.md" | tr -d '\r'
+    echo
+  } >> README.md
+  git add README.md
+
+  # Add license from GitHub repo; year ranges need to be fixed manually
+  cp "ActiveState/$recipe_dir/LICENSE.md" LICENSE.md
+  echo >> LICENSE.md
+  git add LICENSE.md
+
   mkdir -p "$(dirname "$filename")"
-  for revision in "${@:3}"; do
-    echo "Downloading $filename revision $revision"
+  local date
+  local revision=1
+  for date in "${revision_dates[@]}"; do
+    local revision_url="${url}history/$revision/"
+    echo "Downloading $filename revision $revision ($date)"
     # Extract code block from page
-    curl --no-progress-meter "${url}history/$revision/" |
-      htmlq --text '#content pre.prettyprint:first-child' > "$filename.r$revision"
+    curl --no-progress-meter "$revision_url" |
+      htmlq --text '#content pre.prettyprint:first-child' > "$filename"
     # Remove superfluous LF at the end of the file from htmlq serialization
-    truncate -s-1 "$filename.r$revision"
+    truncate -s-1 "$filename"
+
+    git add "$filename"
+    GIT_AUTHOR_NAME='Stephen "Zero" Chappell' GIT_AUTHOR_EMAIL='Noctis.Skytower@gmail.com' GIT_AUTHOR_DATE="$date +0000" \
+    GIT_COMMITTER_NAME='Stephen "Zero" Chappell' GIT_COMMITTER_EMAIL='Noctis.Skytower@gmail.com' GIT_COMMITTER_DATE="$date +0000" \
+    git commit -q -m "Recipe $id: $title, revision $revision
+
+${revision_url}"
+
+    ((revision++))
   done
+
   echo "Downloading $filename latest"
-  curl --no-progress-meter -o "$filename.latest" "${url}download/1/"
-  # Verify that htmlq serialization is consistent with raw-downloaded version
-  cmp "$filename.r$revision" "$filename.latest"
-  rm "$filename.latest"
+  curl --no-progress-meter -o "$filename.raw" "${url}download/1/"
+  if ! cmp "$filename" "$filename.raw"; then
+    echo "$filename: Extracted HTML code block does not match raw file" >&2
+    exit 1
+  fi
+  rm "$filename.raw"
 }
 
-cd ..
-mkdir stephenchappell-python
-cd stephenchappell-python
-get_revisions https://code.activestate.com/recipes/577108-whitespace-assembler/        Assembler.py                1 2 3
-get_revisions https://code.activestate.com/recipes/577109-whitespace-helpers/          Helpers.py                  1
-get_revisions https://code.activestate.com/recipes/577110-whitespace-interpreter/      Interpreter.py              1 2
-get_revisions https://code.activestate.com/recipes/577112-whitespace-stack-calculator/ Assembly/stack_calc.wsa     1
-get_revisions https://code.activestate.com/recipes/577673-whitespace-memory-manager/   Assembly/memory_manager.wsa 1 2 3
+# Title and description from Whitespace Language set
+# https://code.activestate.com/recipes/sets/12/
+echo '# Whitespace Language
+
+These programs support the Whitespace Programming Language by way of implementing an assembler and interpreter in Python.' > README.md
+
+get_revisions 577108 'Whitespace Assembler'        Assembler.py                '2010-03-14 15:35:04' '2010-05-24 12:01:13' '2011-07-17 19:48:14'
+get_revisions 577109 'Whitespace Helpers'          Helpers.py                  '2010-03-14 15:36:02'
+get_revisions 577110 'Whitespace Interpreter'      Interpreter.py              '2010-03-14 15:36:52' '2010-05-24 12:02:11'
+get_revisions 577112 'Whitespace Stack Calculator' Assembly/stack_calc.wsa     '2010-03-14 18:03:23'
+get_revisions 577673 'Whitespace Memory Manager'   Assembly/memory_manager.wsa '2011-04-21 12:16:12' '2011-04-21 12:34:56' '2011-07-17 19:45:38'
