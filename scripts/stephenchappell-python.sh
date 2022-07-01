@@ -7,7 +7,7 @@ mkdir stephenchappell-python
 # Exact paths for all files, except for memory_manager.wsa, are written in
 # comments. memory_manager.wsa is inferred from label names in the program.
 copy_submodule activestate
-git -C activestate filter-repo \
+git -C activestate filter-repo --quiet \
   --path LICENSE.md \
   --path recipes/Python/577108_Whitespace_Assembler \
   --path recipes/Python/577109_Whitespace_Helpers \
@@ -61,7 +61,7 @@ git -C activestate filter-repo \
 # - The revision history list has revision dates with minute precision
 
 cd stephenchappell-python
-git init
+git init -q
 
 # Title and description from Whitespace Language set
 # https://code.activestate.com/recipes/sets/12/
@@ -144,7 +144,7 @@ get_revisions 577673 'Whitespace Memory Manager'   Assembly/memory_manager.wsa '
 git config user.name 'Stephen "Zero" Chappell'
 git config user.email 'Noctis.Skytower@gmail.com'
 GIT_SEQUENCE_EDITOR="git log --format='%ai,pick %h %s' | sort | cut -d, -f2- > " \
-git rebase -i --committer-date-is-author-date --root
+git rebase -i -q --committer-date-is-author-date --root
 git config --unset user.name
 git config --unset user.email
 

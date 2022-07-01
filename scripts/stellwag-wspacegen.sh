@@ -23,17 +23,17 @@
 # 2004-09-09 12:59:05 +0000 UTC  wspacegen/GNUmakefile
 # 2004-09-09 12:59:08 +0000 UTC  wspacegen/Makefile
 # 2004-09-09 12:59:19 +0000 UTC  wspacegen/
-wget 'https://master.dl.sourceforge.net/project/wspacegen/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz?viasf=1' -O wspacegen-0.1-src.tar.gz
-tar xvf wspacegen-0.1-src.tar.gz
+wget -q 'https://master.dl.sourceforge.net/project/wspacegen/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz?viasf=1' -O wspacegen-0.1-src.tar.gz
+tar xf wspacegen-0.1-src.tar.gz
 mv wspacegen stellwag-wspacegen
 cd stellwag-wspacegen
 
-git init
+git init -q
 git add -A
 
 GIT_AUTHOR_NAME='Philippe Stellwag' GIT_AUTHOR_EMAIL='linux@mp3s.name' GIT_AUTHOR_DATE='2004-09-09 12:59:19 +0000' \
 GIT_COMMITTER_NAME='Philippe Stellwag' GIT_COMMITTER_EMAIL='linux@mp3s.name' GIT_COMMITTER_DATE='2004-09-09 12:59:19 +0000' \
-git commit -m 'Release wspacegen pre-alpha 0.1
+git commit -q -m 'Release wspacegen pre-alpha 0.1
 
 https://sourceforge.net/projects/wspacegen/files/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz/download'
 

@@ -4,10 +4,10 @@
 
 # TODO extract programs from more repos
 
-git clone https://github.com/wspace/stephenchappell-python
-git -C stephenchappell-python filter-repo \
+git clone -q https://github.com/wspace/stephenchappell-python
+git -C stephenchappell-python filter-repo --quiet \
   --path LICENSE.md \
-  --path Assembly --path-rename Assembly/: \
+  --subdirectory-filter Assembly \
   --blob-callback 'if b"bmp.py" in blob.data: blob.skip()' \
   --commit-callback '
     if len(commit.file_changes) == 1 and commit.file_changes[0].filename == b"LICENSE.md":

@@ -2,7 +2,7 @@
 
 . base.sh
 git svn clone --stdlayout https://svn.code.sf.net/p/spacedide/code spacedide
-git -C spacedide filter-repo --force \
+git -C spacedide filter-repo -f \
   --message-callback '
     return b"Initial commit\n" if message.startswith(b"Initial commit") else re.sub(
       br"^\n+git-svn-id: https://svn.code.sf.net/p/spacedide/code@(\d+) 253eaa7e-a5eb-43a2-a586-e43a4db1c6d0\n$", br"r\1\n", message)' \

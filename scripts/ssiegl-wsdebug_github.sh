@@ -7,7 +7,7 @@ cd ssiegl-wsdebug
 
 # Author/committer: stesie <stesie>
 # Author and committer dates equal
-git filter-repo \
+git filter-repo --quiet \
   --message-callback '
     return b"" if message == b"*** empty log message ***\n" else message' \
   --commit-callback '

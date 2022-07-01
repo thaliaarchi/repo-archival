@@ -6,12 +6,12 @@ copy_submodule smithers-bluespace
 cd smithers-bluespace
 
 mkdir programs
-wget https://cpjsmith.uk/downloads/whitespace/99.wsp -P programs
-wget https://cpjsmith.uk/downloads/whitespace/quine-cs.ws -P programs
-wget https://cpjsmith.uk/downloads/whitespace/quine-cs.wsa -P programs
-wget https://cpjsmith.uk/downloads/whitespace/quine-cs-3.ws -P programs
-wget https://cpjsmith.uk/downloads/whitespace/quine-cs-3.wsa -P programs
-wget https://cpjsmith.uk/whitespace -O index.html
+wget -q https://cpjsmith.uk/downloads/whitespace/99.wsp -P programs
+wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs.ws -P programs
+wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs.wsa -P programs
+wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs-3.ws -P programs
+wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs-3.wsa -P programs
+wget -q https://cpjsmith.uk/whitespace -O index.html
 
 # Last-Modified in UTC       Last-Modified in BST
 # 2014-07-10 18:59:10 +0000  2014-07-10 19:59:10 +0100  quine-cs.ws
@@ -25,7 +25,7 @@ wget https://cpjsmith.uk/whitespace -O index.html
 git add programs/*
 
 GIT_AUTHOR_NAME='Chris Smith' GIT_AUTHOR_EMAIL='chrissmithers888@gmail.com' GIT_AUTHOR_DATE='2015-06-28 13:35:26 +0100' \
-git commit -m 'Add programs from website'
+git commit -q -m 'Add programs from website'
 
 git branch -m master main
 git remote set-url origin https://github.com/wspace/smithers-bluespace

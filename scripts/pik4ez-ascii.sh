@@ -32,7 +32,7 @@ copy_submodule pik4ez-ascii/brooks pik4ez-ascii
 cd pik4ez-ascii
 
 # Remove file deletions and fix lamarr.ws filename:
-git filter-repo \
+git filter-repo --quiet \
   --path-rename gistfile1.txt:lamarr.ws \
   --path-rename hedi_ascii.ws:lamarr.ws \
   --commit-callback '
@@ -47,13 +47,15 @@ git filter-repo \
 git rebase -i --committer-date-is-author-date --root
 
 # Set messages to names of files, since only changes are now adds:
-git filter-repo --commit-callback '
-  filenames = [c.filename for c in commit.file_changes]
-  if len(filenames) > 1:
-    filenames[-1] = b"and " + filenames[-1]
-  commit.message = b"Add " + b", ".join(filenames)
-  commit.committer_name = commit.author_name
-  commit.committer_email = commit.author_email'
+git filter-repo --quiet \
+  --commit-callback '
+    filenames = [c.filename for c in commit.file_changes]
+    if len(filenames) > 1:
+      filenames[-1] = b"and " + filenames[-1]
+    commit.message = b"Add " + b", ".join(filenames)
+    commit.committer_name = commit.author_name
+    commit.committer_email = commit.author_email
+  '
 
 git branch -m master main
 git remote add origin https://github.com/wspace/pik4ez-ascii

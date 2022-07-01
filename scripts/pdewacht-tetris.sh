@@ -4,13 +4,13 @@
 
 mkdir pdewacht-tetris
 cd pdewacht-tetris
-git init
+git init -q
 
 # Last modified: 2008-01-02 23:14:30 +0000 GMT
 # Contents:
 # tetris.ws  2008-01-02 22:59:54 +0000 UTC (or local?)
-wget https://web.archive.org/web/20150817151110id_/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20080103/20651c47/attachment.zip
-unzip attachment.zip
+wget -q https://web.archive.org/web/20150817151110id_/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20080103/20651c47/attachment.zip
+unzip -q attachment.zip
 
 # Posted: 2008-01-02 23:14:16 +0000 GMT
 # https://web.archive.org/web/20141011193149/http://compsoc.dur.ac.uk/archives/whitespace/2008-January/000067.html
@@ -32,7 +32,7 @@ EOF
 git add tetris.ws README
 GIT_AUTHOR_NAME='Peter De Wachter' GIT_AUTHOR_EMAIL='pdewacht@gmail.com' GIT_AUTHOR_DATE='2008-01-02 22:59:54 +0000' \
 GIT_COMMITTER_NAME='Peter De Wachter' GIT_COMMITTER_EMAIL='pdewacht@gmail.com' GIT_COMMITTER_DATE='2008-01-02 22:59:54 +0000' \
-git commit -m 'Implement Tetris in Whitespace
+git commit -q -m 'Implement Tetris in Whitespace
 
 https://web.archive.org/web/20141011193149/http://compsoc.dur.ac.uk/archives/whitespace/2008-January/000067.html
 https://web.archive.org/web/20150817151110/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20080103/20651c47/attachment.zip'

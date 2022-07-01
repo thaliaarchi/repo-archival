@@ -52,8 +52,8 @@ copy_submodule() {
 merge_repo() {
   local repo="$1"
   git remote add "$repo" "../$repo"
-  git fetch "$repo"
-  git merge --allow-unrelated-histories --no-edit "$repo/main"
+  git fetch -q "$repo"
+  git merge -q --allow-unrelated-histories --no-edit "$repo/main"
   git remote remove "$repo"
   rm -rf "../$repo"
 }

@@ -17,7 +17,7 @@
 copy_submodule bearice-grassmudhorse
 cd bearice-grassmudhorse
 
-git filter-repo \
+git filter-repo --quiet \
   --message-callback 'return message if message.endswith(b"\n") or message == b"" else message + b"\n"' \
   --mailmap <(echo '
 Bearice Ren <bearice@icybear.net> bearice <bearice@2d120894-194e-11de-9433-ad2e3fad96c5>

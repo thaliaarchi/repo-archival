@@ -35,27 +35,27 @@
 # 2004-09-14 22:31:01 +0000 UTC  wsdebug-0.1/stamp-h.in
 # 2004-10-16 15:14:32 +0000 UTC  wsdebug-0.1/
 # 2004-10-16 15:14:32 +0000 UTC  wsdebug-0.1/Makefile.in
-wget https://master.dl.sourceforge.net/project/wsdebug.berlios/wsdebug-0.1.tar.gz?viasf=1 -O wsdebug-0.1.tar.gz
-tar xvf wsdebug-0.1.tar.gz
+wget -q https://master.dl.sourceforge.net/project/wsdebug.berlios/wsdebug-0.1.tar.gz?viasf=1 -O wsdebug-0.1.tar.gz
+tar xf wsdebug-0.1.tar.gz
 mv wsdebug-0.1 ssiegl-wsdebug
 cd ssiegl-wsdebug
 
 # Last modified: 2004-09-11 09:46:20 +0000 GMT
-wget https://web.archive.org/web/20041102163053/http://wsdebug.berlios.de:80/wsbfi-1.ws
+wget -q https://web.archive.org/web/20041102163053/http://wsdebug.berlios.de:80/wsbfi-1.ws
 
-git init
+git init -q
 
 git add wsbfi-1.ws
 GIT_AUTHOR_NAME='Stefan Siegl' GIT_AUTHOR_EMAIL='ssiegl@gmx.de' GIT_AUTHOR_DATE='2004-09-11 09:46:20 +0000' \
 GIT_COMMITTER_NAME='Stefan Siegl' GIT_COMMITTER_EMAIL='ssiegl@gmx.de' GIT_COMMITTER_DATE='2004-09-11 09:46:20 +0000' \
-git commit -m 'Add Brainfuck interpreter in Whitespace
+git commit -q -m 'Add Brainfuck interpreter in Whitespace
 
 https://web.archive.org/web/20041102163053/http://wsdebug.berlios.de:80/wsbfi-1.ws'
 
 git add -A
 GIT_AUTHOR_NAME='Stefan Siegl' GIT_AUTHOR_EMAIL='ssiegl@gmx.de' GIT_AUTHOR_DATE='2004-10-16 15:14:32 +0000' \
 GIT_COMMITTER_NAME='Stefan Siegl' GIT_COMMITTER_EMAIL='ssiegl@gmx.de' GIT_COMMITTER_DATE='2004-10-16 15:14:32 +0000' \
-git commit -m 'Release wsdebug 0.1
+git commit -q -m 'Release wsdebug 0.1
 
 https://sourceforge.net/projects/wsdebug.berlios/files/wsdebug-0.1.tar.gz/download'
 
