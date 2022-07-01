@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 # Revisions cannot be viewed on Progopedia, so only selected revisions
 # are available through the Internet Archive.
 

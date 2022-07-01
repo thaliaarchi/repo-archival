@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 wconrad_commit() {
   GIT_AUTHOR_NAME='Wayne Conrad' GIT_AUTHOR_EMAIL='wconrad@yagni.com' GIT_AUTHOR_DATE="$1" \
   GIT_COMMITTER_NAME='Wayne Conrad' GIT_COMMITTER_EMAIL='wconrad@yagni.com' GIT_COMMITTER_DATE="$1" \

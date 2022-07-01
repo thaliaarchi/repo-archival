@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 # Philippe is likely in Germany, but I don't know whether the archive
 # times are local or UTC, so I won't set the location.
 

@@ -2,7 +2,7 @@
 
 . base.sh
 
-copy_submodule ilikepython256-whitespace-unc
+copy_submodule ilikepython256-whitespace-unc/master ilikepython256-whitespace-unc
 cd ilikepython256-whitespace-unc
 
 echo '# Whitespace UnC (Web)==># Whitespace UnC' > ../replacements.txt

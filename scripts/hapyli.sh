@@ -1,12 +1,14 @@
 #!/bin/bash -e
 
+. base.sh
+
 commit() {
   GIT_AUTHOR_NAME="$1" GIT_AUTHOR_EMAIL="$2" GIT_AUTHOR_DATE="$3" \
   GIT_COMMITTER_NAME="$1" GIT_COMMITTER_EMAIL="$2" GIT_COMMITTER_DATE="$3" \
   git commit -m "$4"
 }
 
-cp -rp aux/hapyli .
+cp -rp ../aux/hapyli .
 git init hapyli
 cd hapyli
 

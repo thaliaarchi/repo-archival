@@ -3,7 +3,7 @@
 . base.sh
 
 copy_submodule ssiegl-wsdebug
-cd wsdebug
+cd ssiegl-wsdebug
 
 # Author/committer: stesie <stesie>
 # Author and committer dates equal

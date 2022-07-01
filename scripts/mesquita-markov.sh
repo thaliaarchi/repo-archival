@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 git init mesquita-markov
 cd mesquita-markov
 

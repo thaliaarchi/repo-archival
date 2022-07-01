@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 git init pdewacht-tetris
 cd pdewacht-tetris
 

@@ -3,9 +3,9 @@
 . base.sh
 
 # Repos have simple histories with only one file and one commit
-copy_submodule ytaka-whitespace/pumpkin  # https://gist.github.com/y-taka-23/7353571
-copy_submodule ytaka-whitespace/fizzbuzz # https://gist.github.com/y-taka-23/7353594
-copy_submodule ytaka-whitespace/sieve    # https://gist.github.com/y-taka-23/7353612
+copy_submodule ytaka-whitespace/pumpkin
+copy_submodule ytaka-whitespace/fizzbuzz
+copy_submodule ytaka-whitespace/sieve
 
 # Don't bother with "and" because each repo has only one file
 git -C pumpkin filter-repo --commit-callback 'commit.message = b"Add " + b", ".join([c.filename for c in commit.file_changes])'

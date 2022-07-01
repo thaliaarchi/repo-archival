@@ -68,7 +68,7 @@ echo '# Whitespace Language
 These programs support the Whitespace Programming Language by way of implementing an assembler and interpreter in Python.' > README.md
 
 # Add license from GitHub repo
-cp activestate/577109_Whitespace_Helpers/LICENSE.md LICENSE.md
+cp ../activestate/577109_Whitespace_Helpers/LICENSE.md LICENSE.md
 echo >> LICENSE.md
 git add LICENSE.md
 
@@ -82,7 +82,7 @@ get_revisions() {
 
   # Add section to README.md, using description from GitHub repo
   { echo -ne "\n## $title\n\n"
-    tail -n+6 "activestate/$recipe_dir/README.md" | tr -d '\r'
+    tail -n+6 "../activestate/$recipe_dir/README.md" | tr -d '\r'
     echo
   } >> README.md
   git add README.md
@@ -147,10 +147,11 @@ git config --unset user.name
 git config --unset user.email
 
 # Check that the constructed files match the expected latest revisions:
-cmp Assembler.py activestate/Assembler.py
-cmp Helpers.py activestate/Helpers.py
-cmp Interpreter.py activestate/Interpreter.py
-cmp Assembly/stack_calc.wsa activestate/Assembly/stack_calc.wsa
-cmp Assembly/memory_manager.wsa activestate/Assembly/memory_manager.wsa
+cmp Assembler.py ../activestate/Assembler.py
+cmp Helpers.py ../activestate/Helpers.py
+cmp Interpreter.py ../activestate/Interpreter.py
+cmp Assembly/stack_calc.wsa ../activestate/Assembly/stack_calc.wsa
+cmp Assembly/memory_manager.wsa ../activestate/Assembly/memory_manager.wsa
+rm -rf ../activestate
 
 git remote add origin https://github.com/wspace/stephenchappell-python

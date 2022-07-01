@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 # TODO extract programs from more repos
 
 git clone https://github.com/wspace/stephenchappell-python
