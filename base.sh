@@ -18,12 +18,11 @@ copy_submodule() {
     echo "Destination exists: $dest_from_toplevel" >&2
     return 1
   fi
-  submodule="$toplevel/$submodule"
-  cp -rp "$submodule" "$dest"
+  cp -rp "$toplevel/$submodule" "$dest"
 
   # If the submodule had its git dir absorbed, copy it from .git/modules
   local git_file git_dir
-  git_file="$submodule/.git"
+  git_file="$toplevel/$submodule/.git"
   git_dir="$(git --git-dir "$git_file" rev-parse --absolute-git-dir)"
   if [[ "$git_file" != "$git_dir" ]]; then
     rm -rf "$dest/.git"
@@ -39,6 +38,9 @@ copy_submodule() {
     branch_at_head="$(git --git-dir "$dest/.git" for-each-ref refs/heads --points-at HEAD --format='%(refname:lstrip=2)' | head -n1)"
     if [[ -n "$branch_at_head" ]]; then
       git --git-dir "$dest/.git" checkout -q "$branch_at_head"
+    else
+      echo "$submodule: No branch points to head. Maybe the submodule is out of sync?" >&2
+      return 1
     fi
   fi
 
