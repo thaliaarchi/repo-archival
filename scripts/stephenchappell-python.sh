@@ -97,7 +97,7 @@ get_revisions() {
     echo "Downloading $filename revision $revision ($date)"
     # Extract code block from page
     curl --no-progress-meter "$revision_url" |
-      htmlq --text '#content pre.prettyprint:first-child' > "$filename"
+      htmlq --text '#content pre.prettyprint:first-child' -o "$filename"
     # Remove superfluous LF at the end of the file from htmlq serialization
     truncate -s-1 "$filename"
     if [[ $filename = *.py ]]; then
