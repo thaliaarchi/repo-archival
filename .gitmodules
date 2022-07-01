@@ -13,6 +13,7 @@
 [submodule "git/aniket-hacktoberfest"]
 	path = git/aniket-hacktoberfest
 	url = https://github.com/Aniket965/Hello-world
+	ignore = dirty
 [submodule "git/bearice-grassmudhorse"]
 	path = git/bearice-grassmudhorse
 	url = https://github.com/google-code-export/grass-mud-horse
