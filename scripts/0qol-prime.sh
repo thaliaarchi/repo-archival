@@ -3,24 +3,20 @@
 . base.sh
 
 mkdir 0qol-prime
+git init -q 0qol-prime
 
-copy_submodule 0qol-prime/check1
-copy_submodule 0qol-prime/check2
-copy_submodule 0qol-prime/factor
-
-git -C check1 filter-repo --quiet --prune-empty=always --commit-callback 'commit.message = commit.author_date'
-git -C check2 filter-repo --quiet --prune-empty=always --commit-callback 'commit.message = commit.author_date'
-git -C factor filter-repo --quiet --prune-empty=always --commit-callback 'commit.message = commit.author_date'
-
-git -C check1 branch -m master main
-git -C check2 branch -m master main
-git -C factor branch -m master main
+for repo in check1 check2 factor; do
+  copy_submodule "0qol-prime/$repo"
+  git -C "$repo" filter-repo --quiet \
+    --prune-empty=always \
+    --commit-callback 'commit.message = commit.author_date'
+  git -C "$repo" branch -m master main
+  cd 0qol-prime
+  merge_repo "$repo"
+  cd ..
+done
 
 cd 0qol-prime
-git init -q
-merge_repo check1
-merge_repo check2
-merge_repo factor
 git rebase -q --committer-date-is-author-date --root
 
 git filter-repo -f --quiet \
