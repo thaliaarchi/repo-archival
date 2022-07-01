@@ -2,8 +2,9 @@
 
 . base.sh
 
-git init pdewacht-tetris
+mkdir pdewacht-tetris
 cd pdewacht-tetris
+git init
 
 # Last modified: 2008-01-02 23:14:30 +0000 GMT
 # Contents:

@@ -8,8 +8,9 @@ wconrad_commit() {
   git commit -m "$2"
 }
 
-git init wconrad-ruby
+mkdir wconrad-ruby
 cd wconrad-ruby
+git init
 
 wget https://web.archive.org/web/20030723091413id_/http://www.yagni.com:80/whitespace/whitespace -O whitespace
 chmod +x whitespace

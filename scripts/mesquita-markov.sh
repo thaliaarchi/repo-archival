@@ -2,8 +2,9 @@
 
 . base.sh
 
-git init mesquita-markov
+mkdir mesquita-markov
 cd mesquita-markov
+git init
 
 # Last modified: 2007-02-25 00:14:15 +0000 GMT
 # Contents:

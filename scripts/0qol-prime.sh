@@ -2,6 +2,8 @@
 
 . base.sh
 
+mkdir 0qol-prime
+
 copy_submodule 0qol-prime/check1
 copy_submodule 0qol-prime/check2
 copy_submodule 0qol-prime/factor
@@ -14,8 +16,8 @@ git -C check1 branch -m master main
 git -C check2 branch -m master main
 git -C factor branch -m master main
 
-git init 0qol-prime
 cd 0qol-prime
+git init
 merge_repo check1
 merge_repo check2
 merge_repo factor

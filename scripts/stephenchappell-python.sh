@@ -2,8 +2,7 @@
 
 . base.sh
 
-git init stephenchappell-python
-cd stephenchappell-python
+mkdir stephenchappell-python
 
 # Exact paths for all files, except for memory_manager.wsa, are written in
 # comments. memory_manager.wsa is inferred from label names in the program.
@@ -60,6 +59,9 @@ git -C activestate filter-repo \
 #   with second precision
 # - Revision diffs have revision dates with second precision
 # - The revision history list has revision dates with minute precision
+
+cd stephenchappell-python
+git init
 
 # Title and description from Whitespace Language set
 # https://code.activestate.com/recipes/sets/12/

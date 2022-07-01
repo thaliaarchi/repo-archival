@@ -5,8 +5,9 @@
 # Revisions cannot be viewed on Progopedia, so only selected revisions
 # are available through the Internet Archive.
 
-git init progopedia
+mkdir progopedia
 cd progopedia
+git init
 
 # 2010-09-14 18:31 Nickolas "New article."
 # 2010-09-14 08:41 Nickolas "Changed text."

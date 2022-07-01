@@ -2,6 +2,8 @@
 
 . base.sh
 
+mkdir ytaka-whitespace
+
 # Repos have simple histories with only one file and one commit
 copy_submodule ytaka-whitespace/pumpkin
 copy_submodule ytaka-whitespace/fizzbuzz
@@ -15,8 +17,8 @@ git -C pumpkin branch -m master main
 git -C fizzbuzz branch -m master main
 git -C sieve branch -m master main
 
-git init ytaka-whitespace
 cd ytaka-whitespace
+git init
 merge_repo pumpkin
 merge_repo fizzbuzz
 merge_repo sieve
