@@ -63,6 +63,7 @@ repos, and clean git histories.
 - [edwinb-ws-idr](https://github.com/wspace/edwinb-ws-idr)
 - [eia-java](https://github.com/wspace/eia-java)
 - [jmesyou-erasure](https://github.com/wspace/jmesyou-erasure)
+- [joaquin-rossi-esoteric](https://github.com/wspace/joaquin-rossi-esoteric)
 - [koturn-c](https://github.com/wspace/koturn-c)
 - [meeees-csharp](https://github.com/wspace/meeees-csharp)
 - [pavelshub-cpp](https://github.com/wspace/pavelshub-cpp)
