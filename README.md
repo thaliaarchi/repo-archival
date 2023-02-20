@@ -27,9 +27,9 @@ repos, and clean git histories.
 
 ## From archives
 
-- burghard-wsa - TODO
-- burghard-wsintercpp - TODO
-- burghard-wsinterws - TODO
+- [burghard-wsa](https://github.com/wspace/burghard-wsa)
+- [burghard-wsintercpp](https://github.com/wspace/burghard-wsintercpp)
+- [burghard-wsinterws](https://github.com/wspace/burghard-wsinterws)
 - edwinb-wspace - TODO
 - [nutcrack-whiteplanes](https://github.com/wspace/nutcrack-whiteplanes)
 - [phlip-pywhitespace](https://github.com/wspace/phlip-pywhitespace) - TODO automate
