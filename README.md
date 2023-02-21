@@ -75,17 +75,18 @@ repos, and clean git histories.
 
 - [zrneely-rust](https://github.com/wspace/zrneely-rust)
 
+## Converted from Mercurial
+
+- [re1](https://github.com/thaliaarchi/re1-archive)
+- whitecoder - [TODO](https://code.google.com/archive/p/whitecoder/)
+
 ## Converted from SVN
 
+- [bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) - TODO include wiki and forks
 - kreutzer-spacedide - [TODO](kreutzer-spacedide.sh)
 - marktraceur-redlandside - TODO convert from SVN and merge with git repo
+- whitespacesdk - [TODO](https://code.google.com/archive/p/whitespacesdk/)
 
 ## Converted from CVS
 
 - whitespaceide-java - TODO
-
-## Migrated from Google Code
-
-- [bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) - TODO include wiki and forks
-- whitecoder - [TODO](https://code.google.com/archive/p/whitecoder/)
-- whitespacesdk - [TODO](https://code.google.com/archive/p/whitespacesdk/)
