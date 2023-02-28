@@ -1,0 +1,47 @@
+Standard Mersenne Twister and outputs (1998-04-09)
+
+File            HTTP Last-Modified
+ver980409.html  2006-03-03 22:05:38 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/ver980409.html
+mt19937int.c    2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937int.c
+mt19937int.out  2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937int.out
+mt19937-1.c     2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937-1.c
+mt19937-1.out   2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937-1.out
+mt19937-2.c     2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937-2.c
+mt19937-2.out   2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937-2.out
+
+Standard Mersenne Twister and outputs, 1999-10-29 version. 2002-01-08, a (0,1)-version added.
+
+ver991029.html  2006-03-03 22:05:38 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/ver991029.html
+mt19937int.c    2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/991029/mt19937int.c
+mt19937int.out  2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/991029/mt19937int.out
+mt19937-1.c     2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/991029/mt19937-1.c
+mt19937-1.out   2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/991029/mt19937-1.out
+mt19937-2.c     2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/991029/mt19937-2.c
+mt19937-2.out   2006-03-03 22:05:40 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/991029/mt19937-2.out
+mt19937-3.c     2001-09-28 11:26:57 UTC  https://web.archive.org/web/20021010030219/http://www.math.keio.ac.jp/~nisimura/random/real3/mt19937-3.c
+mt19937-3.out   2001-09-28 11:27:03 UTC  https://web.archive.org/web/20021010025511/http://www.math.keio.ac.jp/~nisimura/random/real3/mt19937-3.out
+
+Mersenne Twister with improved initialization (2002)
+
+File           tar modtime              HTTP Last-Modified
+*                                       2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.tgz
+/              2004-03-03 00:09:10 UTC
+mt19937ar.c    2004-03-03 00:08:31 UTC  2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c
+mt19937ar.out  2004-03-02 14:54:06 UTC  2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.out
+readme-mt.txt  2004-03-02 14:54:06 UTC  2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/readme-mt.txt
+
+Mersenne Twister 64bit version
+
+http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/mt19937-64.c
+http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt19937-64.out.txt
+http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt19937-64.tgz
+http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt19937-64stdint.tgz
+
+Patches
+
+HTTP Last-Modified
+2007-02-15 00:55:17 UTC http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/Ierymenko.html
+
+License
+
+https://web.archive.org/web/20040619024601/http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/elicense.html
