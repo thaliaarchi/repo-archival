@@ -1,3 +1,49 @@
+Takuji Nishimura's site
+
+                                         Filesystem
+Path                                     Last modified     HTTP Last-Modified       URL
+random/                                                                             https://web.archive.org/web/20020804170007/http://www.math.keio.ac.jp:80/~nisimura/random/
+random/dc/                               2001-09-28 01:30
+random/doc/                              1999-01-06 12:31
+random/doc/mt.pdf                        1999-01-06 12:31  1999-01-06 03:31:11 UTC  https://web.archive.org/web/20000829080027/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.pdf
+random/doc/mt.ps                         1998-04-21 13:55  1998-04-21 04:55:18 UTC  https://web.archive.org/web/20000829080010/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.ps
+random/doc/mt.ps.gz                      1998-04-21 14:07  1998-04-21 05:07:24 UTC  https://web.archive.org/web/20000829080016/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.ps.gz
+random/int/                              2000-12-14 17:41
+random/int/mt19937int.c                  ?                 1999-10-28 13:19:42 UTC  https://web.archive.org/web/19991110074420/http://www.math.keio.ac.jp:80/~nisimura/random/int/mt19937int.c
+^                                        2000-12-14 17:41  2000-12-14 08:41:48 UTC  https://web.archive.org/web/20011203144707/http://www.math.keio.ac.jp:80/~nisimura/random/int/mt19937int.c
+random/int/mt19937int.out                ?                 1998-04-06 06:55:25 UTC  https://web.archive.org/web/19991006231247/http://www.math.keio.ac.jp:80/%7Enisimura/random/int/mt19937int.out
+^                                        1999-10-28 22:19  1999-10-28 13:19:45 UTC  https://web.archive.org/web/19991110100826/http://www.math.keio.ac.jp:80/~nisimura/random/int/mt19937int.out
+random/old/                              1999-10-28 22:18
+random/old/19991028/                     1999-10-28 22:18
+random/old/19991028/int/                 1999-10-28 22:19
+random/old/19991028/int/mt19937int.c     1998-12-15 15:54  1998-12-15 06:54:13 UTC  https://web.archive.org/web/20001002172719/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/int/mt19937int.c
+random/old/19991028/int/mt19937int.out   1998-04-06 15:55  1998-04-06 06:55:25 UTC  https://web.archive.org/web/20001121023800/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/int/mt19937int.out
+random/old/19991028/real/                1999-10-28 22:20
+random/old/19991028/real/mt19937.c       1998-12-15 15:54  ?                        not saved
+random/old/19991028/real/mt19937.out     1998-04-06 15:55  ?                        not saved
+random/old/19991028/real1/               1999-10-28 22:20
+random/old/19991028/real1/mt19937-1.c    ?                 1998-12-15 06:54:45 UTC  https://web.archive.org/web/20001002172732/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real1/mt19937-1.c
+random/old/19991028/real1/mt19937-1.out  ?                 1998-04-06 06:56:21 UTC  https://web.archive.org/web/20001002172737/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real1/mt19937-1.out
+random/old/19991028/real2/               1999-10-28 22:21
+random/old/19991028/real2/mt19937-2.c    1998-12-15 15:54  1998-12-15 06:54:58 UTC  https://web.archive.org/web/20001002172742/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real2/mt19937-2.c
+random/old/19991028/real2/mt19937-2.out  1998-04-06 15:56  1998-04-06 06:56:59 UTC  https://web.archive.org/web/20001002172748/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real2/mt19937-2.out
+random/real/                             2000-12-14 17:42
+random/real/mt19937.c                    2000-12-14 17:42  2000-12-14 08:42:06 UTC  https://web.archive.org/web/20020724012641/http://www.math.keio.ac.jp:80/~nisimura/random/real/mt19937.c
+random/real/mt19937.out                  1999-10-28 22:20  1999-10-28 13:20:10 UTC  https://web.archive.org/web/20020214230728/http://www.math.keio.ac.jp:80/~nisimura/random/real/mt19937.out
+random/real1/                            2000-12-14 17:42
+random/real1/mt19937-1.c                 ?                 1998-12-15 06:54:45 UTC  https://web.archive.org/web/19991007005824/http://www.math.keio.ac.jp:80/%7Enisimura/random/real1/mt19937-1.c
+^                                        ?                 1999-10-28 13:20:46 UTC  https://web.archive.org/web/19991110112008/http://www.math.keio.ac.jp:80/~nisimura/random/real1/mt19937-1.c
+^                                        2000-12-14 17:42  2000-12-14 08:42:30 UTC  https://web.archive.org/web/20020725215208/http://www.math.keio.ac.jp:80/~nisimura/random/real1/mt19937-1.c
+random/real1/mt19937-1.out               1999-10-28 22:20  1999-10-28 13:20:46 UTC  https://web.archive.org/web/20001002172821/http://www.math.keio.ac.jp:80/~nisimura/random/real1/mt19937-1.out
+random/real2/                            2000-12-14 17:42
+random/real2/mt19937-2.c                 ?                 1999-10-28 13:21:36 UTC  https://web.archive.org/web/20001002172828/http://www.math.keio.ac.jp:80/~nisimura/random/real2/mt19937-2.c
+^                                        ?                 2000-12-14 08:42:50 UTC  https://web.archive.org/web/20021010024851/http://www.math.keio.ac.jp:80/~nisimura/random/real2/mt19937-2.c
+random/real2/mt19937-2.out               ?                 1998-04-06 06:56:59 UTC  https://web.archive.org/web/19991007020740/http://www.math.keio.ac.jp:80/%7Enisimura/random/real2/mt19937-2.out
+^                                        ?                 1999-10-28 13:21:37 UTC  https://web.archive.org/web/20000520221954/http://www.math.keio.ac.jp:80/~nisimura/random/real2/mt19937-2.out
+random/real3/                            2001-09-28 20:27
+random/real3/mt19937-3.c                 2001-09-28 20:26  2001-09-28 11:26:57 UTC  https://web.archive.org/web/20021010030219/http://www.math.keio.ac.jp:80/~nisimura/random/real3/mt19937-3.c
+random/real3/mt19937-3.out               2001-09-28 20:27  2001-09-28 11:27:03 UTC  https://web.archive.org/web/20021010025511/http://www.math.keio.ac.jp:80/~nisimura/random/real3/mt19937-3.out
+
 Standard Mersenne Twister and outputs (1998-04-09)
 
 File            HTTP Last-Modified
