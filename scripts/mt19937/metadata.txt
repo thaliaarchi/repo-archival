@@ -1,7 +1,7 @@
-Takuji Nishimura's site
+Mersenne Twister from 1998 to 2001
 
                                          Filesystem                                 Last modified                                                                                                                                                                                                                                HTTP Last-Modified
-Path                                     Last modified     HTTP Last-Modified       in inferred local time     URL                                                                                                                         URL of duplicate from Matsumoto's site                                                from Matsumoto's site
+Path                                     Last modified     HTTP Last-Modified       in inferred local time     URL from Nishimura's site                                                                                                   URL from Matsumoto's site                                                             from Matsumoto's site
 ---------------------------------------  ----------------  -----------------------  -------------------------  --------------------------------------------------------------------------------------------------------------------------  ------------------------------------------------------------------------------------  -----------------------
 random/                                                                                                        https://web.archive.org/web/20020804170007/http://www.math.keio.ac.jp:80/~nisimura/random/
 random/dc/                               2001-09-28 01:30                           2001-09-28 01:30    +0900
@@ -20,8 +20,8 @@ random/old/19991028/int/                 1999-10-28 22:19                       
 random/old/19991028/int/mt19937int.c     1998-12-15 15:54  1998-12-15 06:54:13 UTC  1998-12-15 15:54:13 +0900  https://web.archive.org/web/20001002172719/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/int/mt19937int.c     http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937int.c    2006-03-03 22:05:40 UTC
 random/old/19991028/int/mt19937int.out   1998-04-06 15:55  1998-04-06 06:55:25 UTC  1998-04-06 15:55:25 +0900  https://web.archive.org/web/20001121023800/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/int/mt19937int.out   http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937int.out  2006-03-03 22:05:40 UTC
 random/old/19991028/real/                1999-10-28 22:20                           1999-10-28 22:20    +0900
-random/old/19991028/real/mt19937.c       1998-12-15 15:54  ?                        1998-12-15 15:54    +0900  not saved
-random/old/19991028/real/mt19937.out     1998-04-06 15:55  ?                        1998-04-06 15:55    +0900  not saved
+random/old/19991028/real/mt19937.c       1998-12-15 15:54  ?                        1998-12-15 15:54    +0900  not archived
+random/old/19991028/real/mt19937.out     1998-04-06 15:55  ?                        1998-04-06 15:55    +0900  not archived
 random/old/19991028/real1/               1999-10-28 22:20                           1999-10-28 22:20    +0900
 random/old/19991028/real1/mt19937-1.c    ?                 1998-12-15 06:54:45 UTC  1998-12-15 15:54:45 +0900  https://web.archive.org/web/20001002172732/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real1/mt19937-1.c    http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937-1.c     2006-03-03 22:05:40 UTC
 random/old/19991028/real1/mt19937-1.out  ?                 1998-04-06 06:56:21 UTC  1998-04-06 15:56:21 +0900  https://web.archive.org/web/20001002172737/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real1/mt19937-1.out  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/980409/mt19937-1.out   2006-03-03 22:05:40 UTC
@@ -44,24 +44,21 @@ random/real2/mt19937-2.out               ?                 1998-04-06 06:56:59 U
 random/real3/                            2001-09-28 20:27                           2001-09-28 20:27    +0900
 random/real3/mt19937-3.c                 2001-09-28 20:26  2001-09-28 11:26:57 UTC  2001-09-28 20:26:57 +0900  https://web.archive.org/web/20021010030219/http://www.math.keio.ac.jp:80/~nisimura/random/real3/mt19937-3.c
 random/real3/mt19937-3.out               2001-09-28 20:27  2001-09-28 11:27:03 UTC  2001-09-28 20:27:03 +0900  https://web.archive.org/web/20021010025511/http://www.math.keio.ac.jp:80/~nisimura/random/real3/mt19937-3.out
-
-Standard Mersenne Twister and outputs (1998-04-09)
-
-File            HTTP Last-Modified
-ver980409.html  2006-03-03 22:05:38 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/ver980409.html
-
-Standard Mersenne Twister and outputs, 1999-10-29 version. 2002-01-08, a (0,1)-version added.
-
-ver991029.html  2006-03-03 22:05:38 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/ver991029.html
+ver980409.html                                                                                                                                                                                                                             http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/ver980409.html         2006-03-03 22:05:38 UTC
+ver991029.html                                                                                                                                                                                                                             http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/ver991029.html         2006-03-03 22:05:38 UTC
 
 Mersenne Twister with improved initialization (2002)
 
-File           tar modtime              HTTP Last-Modified
-*                                       2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.tgz
+                                        Archived
+File           tar modtime              HTTP Last-Modified       Archived URL                                                                                                              Live Last-Modified       Live URL
+-------------  -----------------------  -----------------------  ------------------------------------------------------------------------------------------------------------------------  -----------------------  -------------------------------------------------------------------------
+*                                       2004-03-05 05:42:05 UTC  https://web.archive.org/web/20040622083702/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.tgz  2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.tgz
 /              2004-03-03 00:09:10 UTC
-mt19937ar.c    2004-03-03 00:08:31 UTC  2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c
-mt19937ar.out  2004-03-02 14:54:06 UTC  2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.out
-readme-mt.txt  2004-03-02 14:54:06 UTC  2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/readme-mt.txt
+mt19937ar.c    2004-03-03 00:08:31 UTC  2004-03-05 05:42:05 UTC  https://web.archive.org/web/20040609140246/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.c    2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c
+mt19937ar.out  2004-03-02 14:54:06 UTC  2004-03-05 05:42:05 UTC  https://web.archive.org/web/20040614202858/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.out  2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.out
+readme-mt.txt  2004-03-02 14:54:06 UTC  2004-03-05 05:42:06 UTC  https://web.archive.org/web/20040614203124/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/readme-mt.txt  2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/readme-mt.txt
+
+https://web.archive.org/web/20051223131843/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.sep.tgz
 
 Mersenne Twister 64bit version
 
