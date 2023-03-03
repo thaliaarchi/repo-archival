@@ -8,16 +8,16 @@ copy_submodule() {
   local dest="${2-"${submodule##*/}"}"
 
   # Operate relative to the script, so it can be called from any directory
-  local script_dir toplevel dest_from_toplevel
+  local script_dir toplevel
   script_dir="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
   toplevel="$(git -C "$script_dir" rev-parse --show-toplevel)"
-  dest_from_toplevel="$(realpath --relative-to "$toplevel" "$dest")"
 
-  echo "Copying submodule $submodule to $dest_from_toplevel"
+  echo "Copying submodule $submodule to target/$dest"
   if [[ -e $dest ]]; then
-    echo "Destination exists: $dest_from_toplevel" >&2
+    echo "Destination exists: $dest" >&2
     return 1
   fi
+  mkdir -p "$(dirname "$dest")"
   cp -rp "$toplevel/$submodule" "$dest"
 
   # If the submodule had its git dir absorbed, copy it from .git/modules

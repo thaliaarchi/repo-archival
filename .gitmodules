@@ -1,120 +1,120 @@
-[submodule "git/0qol-prime/check1"]
-	path = git/0qol-prime/check1
-	url = https://gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc
-[submodule "git/0qol-prime/check2"]
-	path = git/0qol-prime/check2
+[submodule "git/gist.github.com/0qol/55ab44a35c0faba659448f340af8db70"]
+	path = git/gist.github.com/0qol/55ab44a35c0faba659448f340af8db70
 	url = https://gist.github.com/0qol/55ab44a35c0faba659448f340af8db70
-[submodule "git/0qol-prime/factor"]
-	path = git/0qol-prime/factor
+[submodule "git/gist.github.com/0qol/a317e241860518a79a36c879e710de38"]
+	path = git/gist.github.com/0qol/a317e241860518a79a36c879e710de38
 	url = https://gist.github.com/0qol/a317e241860518a79a36c879e710de38
-[submodule "git/activestate"]
-	path = git/activestate
+[submodule "git/gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc"]
+	path = git/gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc
+	url = https://gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc
+[submodule "git/gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870"]
+	path = git/gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
+	url = https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
+[submodule "git/gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4"]
+	path = git/gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4
+	url = https://gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4
+[submodule "git/gist.github.com/pik4ez/8274216220511d0e42de7881eca782da"]
+	path = git/gist.github.com/pik4ez/8274216220511d0e42de7881eca782da
+	url = https://gist.github.com/pik4ez/8274216220511d0e42de7881eca782da
+[submodule "git/gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3"]
+	path = git/gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3
+	url = https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3
+[submodule "git/gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1"]
+	path = git/gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1
+	url = https://gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1
+[submodule "git/gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd"]
+	path = git/gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd
+	url = https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd
+[submodule "git/gist.github.com/y-taka-23/7353571"]
+	path = git/gist.github.com/y-taka-23/7353571
+	url = https://gist.github.com/y-taka-23/7353571
+[submodule "git/gist.github.com/y-taka-23/7353594"]
+	path = git/gist.github.com/y-taka-23/7353594
+	url = https://gist.github.com/y-taka-23/7353594
+[submodule "git/gist.github.com/y-taka-23/7353612"]
+	path = git/gist.github.com/y-taka-23/7353612
+	url = https://gist.github.com/y-taka-23/7353612
+[submodule "git/github.com/ActiveState/code"]
+	path = git/github.com/ActiveState/code
 	url = https://github.com/ActiveState/code
-[submodule "git/aniket-hacktoberfest"]
-	path = git/aniket-hacktoberfest
+[submodule "git/github.com/Aniket965/Hello-world"]
+	path = git/github.com/Aniket965/Hello-world
 	url = https://github.com/Aniket965/Hello-world
 	ignore = dirty
-[submodule "git/bearice-grassmudhorse"]
-	path = git/bearice-grassmudhorse
-	url = https://github.com/google-code-export/grass-mud-horse
-[submodule "git/dpohanlon-wsint"]
-	path = git/dpohanlon-wsint
-	url = https://github.com/dpohanlon/wsInt
-[submodule "git/edwinb-ws-idr"]
-	path = git/edwinb-ws-idr
-	url = https://github.com/edwinb/WS-idr
-[submodule "git/eia-java"]
-	path = git/eia-java
+[submodule "git/github.com/BackupTheBerlios/wsdebug"]
+	path = git/github.com/BackupTheBerlios/wsdebug
+	url = https://github.com/BackupTheBerlios/wsdebug
+[submodule "git/github.com/EIA-University/WhiteSpaceInterpreter"]
+	path = git/github.com/EIA-University/WhiteSpaceInterpreter
 	url = https://github.com/EIA-University/WhiteSpaceInterpreter
-[submodule "git/emilbahnsen-assembler"]
-	path = git/emilbahnsen-assembler
+[submodule "git/github.com/EmilBahnsen/projects"]
+	path = git/github.com/EmilBahnsen/projects
 	url = https://github.com/EmilBahnsen/projects
-[submodule "git/hogelog-c"]
-	path = git/hogelog-c
-	url = https://github.com/hogelog/hogel.org-old
-[submodule "git/hostilefork-whitespacers"]
-	path = git/hostilefork-whitespacers
-	url = https://github.com/hostilefork/whitespacers
-[submodule "git/ilikepython256-whitespace-unc/master"]
-	path = git/ilikepython256-whitespace-unc/master
+[submodule "git/github.com/ILikePython256/Whitespace_UnC@master"]
+	path = git/github.com/ILikePython256/Whitespace_UnC@master
 	url = https://github.com/ILikePython256/Whitespace_UnC
 	branch = master
-[submodule "git/ilikepython256-whitespace-unc/web"]
-	path = git/ilikepython256-whitespace-unc/web
+[submodule "git/github.com/ILikePython256/Whitespace_UnC@web"]
+	path = git/github.com/ILikePython256/Whitespace_UnC@web
 	url = https://github.com/ILikePython256/Whitespace_UnC
 	branch = web
-[submodule "git/jmesyou-erasure"]
-	path = git/jmesyou-erasure
-	url = https://github.com/jmesyou/erasure
-[submodule "git/joaquin-rossi-esoteric"]
-	path = git/joaquin-rossi-esoteric
-	url = https://github.com/joaquin-rossi/esoteric
-[submodule "git/keen-whitelie/asm"]
-	path = git/keen-whitelie/asm
-	url = https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
-[submodule "git/keen-whitelie/whitelie"]
-	path = git/keen-whitelie/whitelie
+[submodule "git/github.com/KeenS/whitelie"]
+	path = git/github.com/KeenS/whitelie
 	url = https://github.com/KeenS/whitelie
-[submodule "git/koturn-c"]
-	path = git/koturn-c
-	url = https://github.com/koturn/Whitespace
-[submodule "git/meeees-csharp"]
-	path = git/meeees-csharp
-	url = https://github.com/meeees/Whitespace
-[submodule "git/omurakazuaki-rust"]
-	path = git/omurakazuaki-rust
-	url = https://github.com/omurakazuaki/WriteCodeEveryDay
-[submodule "git/pavelshub-cpp"]
-	path = git/pavelshub-cpp
-	url = https://github.com/pavel987/wspace
-[submodule "git/pik4ez-ascii/brooks"]
-	path = git/pik4ez-ascii/brooks
-	url = https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3
-[submodule "git/pik4ez-ascii/hopper"]
-	path = git/pik4ez-ascii/hopper
-	url = https://gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4
-[submodule "git/pik4ez-ascii/lamarr"]
-	path = git/pik4ez-ascii/lamarr
-	url = https://gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1
-[submodule "git/pik4ez-ascii/rameev"]
-	path = git/pik4ez-ascii/rameev
-	url = https://gist.github.com/pik4ez/8274216220511d0e42de7881eca782da
-[submodule "git/pik4ez-ascii/shura-bura"]
-	path = git/pik4ez-ascii/shura-bura
-	url = https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd
-[submodule "git/qeedquan-go"]
-	path = git/qeedquan-go
-	url = https://github.com/qeedquan/misc_utilities
-[submodule "git/rdebath-c"]
-	path = git/rdebath-c
-	url = https://github.com/rdebath/whitespace
-[submodule "git/shimo-yukicoder"]
-	path = git/shimo-yukicoder
-	url = https://github.com/shi-mo/yukicoder
-[submodule "git/smithers-bluespace"]
-	path = git/smithers-bluespace
+[submodule "git/github.com/Smithers888/BlueSpace"]
+	path = git/github.com/Smithers888/BlueSpace
 	url = https://github.com/Smithers888/BlueSpace
-[submodule "git/ssiegl-wsdebug"]
-	path = git/ssiegl-wsdebug
-	url = https://github.com/BackupTheBerlios/wsdebug
-[submodule "git/technohippy-go"]
-	path = git/technohippy-go
+[submodule "git/github.com/dpohanlon/wsInt"]
+	path = git/github.com/dpohanlon/wsInt
+	url = https://github.com/dpohanlon/wsInt
+[submodule "git/github.com/edwinb/WS-idr"]
+	path = git/github.com/edwinb/WS-idr
+	url = https://github.com/edwinb/WS-idr
+[submodule "git/github.com/google-code-export/grass-mud-horse"]
+	path = git/github.com/google-code-export/grass-mud-horse
+	url = https://github.com/google-code-export/grass-mud-horse
+[submodule "git/github.com/hogelog/hogel.org-old"]
+	path = git/github.com/hogelog/hogel.org-old
+	url = https://github.com/hogelog/hogel.org-old
+[submodule "git/github.com/hostilefork/whitespacers"]
+	path = git/github.com/hostilefork/whitespacers
+	url = https://github.com/hostilefork/whitespacers
+[submodule "git/github.com/jmesyou/erasure"]
+	path = git/github.com/jmesyou/erasure
+	url = https://github.com/jmesyou/erasure
+[submodule "git/github.com/joaquin-rossi/esoteric"]
+	path = git/github.com/joaquin-rossi/esoteric
+	url = https://github.com/joaquin-rossi/esoteric
+[submodule "git/github.com/koturn/Whitespace"]
+	path = git/github.com/koturn/Whitespace
+	url = https://github.com/koturn/Whitespace
+[submodule "git/github.com/meeees/Whitespace"]
+	path = git/github.com/meeees/Whitespace
+	url = https://github.com/meeees/Whitespace
+[submodule "git/github.com/omurakazuaki/WriteCodeEveryDay"]
+	path = git/github.com/omurakazuaki/WriteCodeEveryDay
+	url = https://github.com/omurakazuaki/WriteCodeEveryDay
+[submodule "git/github.com/pavel987/wspace"]
+	path = git/github.com/pavel987/wspace
+	url = https://github.com/pavel987/wspace
+[submodule "git/github.com/qeedquan/misc_utilities"]
+	path = git/github.com/qeedquan/misc_utilities
+	url = https://github.com/qeedquan/misc_utilities
+[submodule "git/github.com/rdebath/whitespace"]
+	path = git/github.com/rdebath/whitespace
+	url = https://github.com/rdebath/whitespace
+[submodule "git/github.com/shi-mo/yukicoder"]
+	path = git/github.com/shi-mo/yukicoder
+	url = https://github.com/shi-mo/yukicoder
+[submodule "git/github.com/technohippy/go-whitespace"]
+	path = git/github.com/technohippy/go-whitespace
 	url = https://github.com/technohippy/go-whitespace
-[submodule "git/timvandermeij-cpp"]
-	path = git/timvandermeij-cpp
+[submodule "git/github.com/timvandermeij/whitespace-interpreter"]
+	path = git/github.com/timvandermeij/whitespace-interpreter
 	url = https://github.com/timvandermeij/whitespace-interpreter
-[submodule "git/wysang-java"]
-	path = git/wysang-java
+[submodule "git/github.com/wysang/Whitespace-Compiler"]
+	path = git/github.com/wysang/Whitespace-Compiler
 	url = https://github.com/wysang/Whitespace-Compiler
-[submodule "git/ytaka-whitespace/fizzbuzz"]
-	path = git/ytaka-whitespace/fizzbuzz
-	url = https://gist.github.com/y-taka-23/7353594
-[submodule "git/ytaka-whitespace/pumpkin"]
-	path = git/ytaka-whitespace/pumpkin
-	url = https://gist.github.com/y-taka-23/7353571
-[submodule "git/ytaka-whitespace/sieve"]
-	path = git/ytaka-whitespace/sieve
-	url = https://gist.github.com/y-taka-23/7353612
-[submodule "git/zrneely-rust"]
-	path = git/zrneely-rust
+[submodule "git/gitlab.com/zrneely/whitespace.git"]
+	path = git/gitlab.com/zrneely/whitespace.git
 	url = https://gitlab.com/zrneely/whitespace.git
