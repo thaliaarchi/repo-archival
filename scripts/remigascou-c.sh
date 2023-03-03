@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+echo 'Repo https://github.com/RemiGascou/small-projects now offline'
+git clone https://github.com/RemiGascou/small-projects remigascou-c
+exit
+
 . base.sh
 copy_submodule remigascou-c
 cd remigascou-c

@@ -39,7 +39,7 @@ copy_submodule() {
     if [[ -n "$branch_at_head" ]]; then
       git --git-dir "$dest/.git" checkout -q "$branch_at_head"
     else
-      echo "$submodule: No branch points to head. Maybe the submodule is out of sync?" >&2
+      echo "$submodule: No branch points to HEAD. Maybe the submodule is out of sync?" >&2
       return 1
     fi
   fi

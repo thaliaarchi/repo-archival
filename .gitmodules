@@ -88,9 +88,6 @@
 [submodule "git/rdebath-c"]
 	path = git/rdebath-c
 	url = https://github.com/rdebath/whitespace
-[submodule "git/remigascou-c"]
-	path = git/remigascou-c
-	url = https://github.com/RemiGascou/small-projects
 [submodule "git/shimo-yukicoder"]
 	path = git/shimo-yukicoder
 	url = https://github.com/shi-mo/yukicoder

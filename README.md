@@ -45,7 +45,7 @@ repos, and clean git histories.
 - [hogelog-c](https://github.com/wspace/hogelog-c)
 - [omurakazuaki-rust](https://github.com/wspace/omurakazuaki-rust)
 - [qeedquan-go](https://github.com/wspace/qeedquan-go)
-- [remigascou-c](https://github.com/wspace/remigascou-c)
+- [remigascou-c](https://github.com/wspace/remigascou-c) (now offline)
 - [shimo-yukicoder](https://github.com/wspace/shimo-yukicoder)
 - [wysang-java](https://github.com/wspace/wysang-java)
 
