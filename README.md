@@ -84,7 +84,6 @@ Most of these scripts are to archive Whitespace projects for the
 ## Converted from Mercurial
 
 - [re1](https://github.com/thaliaarchi/re1-archive)
-- wspace/whitecoder - [TODO](https://code.google.com/archive/p/whitecoder/)
 
 ## Converted from SVN
 
