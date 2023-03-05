@@ -1,16 +1,14 @@
 #!/bin/bash -e
 
-mkdir -p target
+SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
+TOPLEVEL="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel)"
+
+mkdir -p cache target
 cd target
 
 copy_submodule() {
   local submodule="git/$1"
   local dest="${2-"${submodule##*/}"}"
-
-  # Operate relative to the script, so it can be called from any directory
-  local script_dir toplevel
-  script_dir="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
-  toplevel="$(git -C "$script_dir" rev-parse --show-toplevel)"
 
   echo "Copying submodule $submodule to target/$dest"
   if [[ -e $dest ]]; then
@@ -18,11 +16,11 @@ copy_submodule() {
     return 1
   fi
   mkdir -p "$(dirname "$dest")"
-  cp -rp "$toplevel/$submodule" "$dest"
+  cp -rp "$TOPLEVEL/$submodule" "$dest"
 
   # If the submodule had its git dir absorbed, copy it from .git/modules
   local git_file git_dir
-  git_file="$toplevel/$submodule/.git"
+  git_file="$TOPLEVEL/$submodule/.git"
   git_dir="$(git --git-dir "$git_file" rev-parse --absolute-git-dir)"
   if [[ "$git_file" != "$git_dir" ]]; then
     rm -rf "$dest/.git"
@@ -56,4 +54,15 @@ merge_repo() {
   git merge -q --allow-unrelated-histories --no-edit "$repo/main"
   git remote remove "$repo"
   rm -rf "../$repo"
+}
+
+wget-cache() {
+  url="$1"
+  url_out="${url##*/}"
+  out="${2-"$url_out"}"
+  cache="$TOPLEVEL/cache/$out"
+  if [ ! -f "$cache" ]; then
+    wget -q "$url" -O "$cache"
+  fi
+  cp -p "$cache" "$out"
 }

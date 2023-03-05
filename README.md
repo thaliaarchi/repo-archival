@@ -16,6 +16,7 @@ Most of these scripts are to archive Whitespace projects for the
 - wspace/dcode-php - TODO
 - wspace/ebrady-compsoc - [TODO](scripts/wspace/fetch_compsoc.sh)
 - [wspace/hapyli](https://github.com/wspace/hapyli)
+- wspace/kevincruijssen-codegolf - [WIP](scripts/wspace/kevincruijssen-codegolf.sh)
 - wspace/lmitchell-elisp - TODO
 - [wspace/mesquita-markov](https://github.com/wspace/mesquita-markov)
 - [wspace/meth0dz-c](https://github.com/wspace/meth0dz-c) - TODO automate
