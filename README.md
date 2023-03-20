@@ -14,7 +14,7 @@ Most of these scripts are to archive Whitespace projects for the
 - wspace/arnauld-javascript - TODO
 - wspace/brunokim-java - TODO
 - wspace/dcode-php - TODO
-- wspace/ebrady-compsoc - [TODO](scripts/wspace/fetch_compsoc.sh)
+- wspace/edwinb-wspace - WIP
 - [wspace/hapyli](https://github.com/wspace/hapyli)
 - wspace/kevincruijssen-codegolf - [WIP](scripts/wspace/kevincruijssen-codegolf.sh)
 - wspace/lmitchell-elisp - TODO
@@ -36,7 +36,6 @@ Most of these scripts are to archive Whitespace projects for the
 - [wspace/burghard-wsa](https://github.com/wspace/burghard-wsa)
 - [wspace/burghard-wsintercpp](https://github.com/wspace/burghard-wsintercpp)
 - [wspace/burghard-wsinterws](https://github.com/wspace/burghard-wsinterws)
-- wspace/edwinb-wspace - TODO
 - [wspace/nutcrack-whiteplanes](https://github.com/wspace/nutcrack-whiteplanes)
 - [wspace/phlip-pywhitespace](https://github.com/wspace/phlip-pywhitespace) - TODO automate
 - [wspace/ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug) - TODO [merge with GitHub repo](scripts/wspace/ssiegl-wsdebug_github.sh)
