@@ -2,6 +2,13 @@
 
 commit_urls=''
 
+# TODO:
+# - Ierymenko's patch
+# - 64-bit version
+# - Not everything for the C project is archived. Go through the timemap to try
+#   and get everything. I haven't touched 64-bit yet. I am not doing
+#   implementations in other languages by other authors.
+
 push_commit_url() {
   commit_urls="$commit_urls
 $(printf '%-16s' "$1")$2"
