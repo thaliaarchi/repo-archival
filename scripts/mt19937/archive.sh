@@ -83,7 +83,7 @@ add_file  mt19937.c      '1997-11-02 14:15:44 +0900' https://web.archive.org/web
 # the changes from the 1998-12-15 snapshots.
 add_local mt19937int.c    -                          1997-11-02_mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
 
-commit '1997-11-02 14:15:44 +0000' 'Initial commit' 'Makoto Matsumoto' 'matumoto@math.keio.ac.jp'
+commit '1997-11-02 14:15:44 +0000' 'Initial commit' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
 # Add the date to the headers and generate mt19937.out.
 add_local mt19937.c      -                           1998-04-06_mt19937.c '(reconstructed)'
