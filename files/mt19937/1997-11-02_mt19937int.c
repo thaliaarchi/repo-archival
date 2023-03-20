@@ -1,12 +1,11 @@
-/* A C-program for MT19937: Real number version  (1998/4/6)    */
-/*   genrand() generates one pseudorandom real number (double) */
-/* which is uniformly distributed on [0,1]-interval, for each  */
-/* call. sgenrand(seed) set initial values to the working area */
-/* of 624 words. Before genrand(), sgenrand(seed) must be      */
-/* called once. (seed is any 32-bit integer except for 0).     */
-/* Integer generator is obtained by modifying two lines.       */
-/*   Coded by Takuji Nishimura, considering the suggestions by */
-/* Topher Cooper and Marc Rieffel in July-Aug. 1997.           */
+/* A C-program for MT19937: Integer     version                   */
+/*  genrand() generates one pseudorandom unsigned integer (32bit) */
+/* which is uniformly distributed among 0 to 2^32-1  for each     */
+/* call. sgenrand(seed) set initial values to the working area    */
+/* of 624 words. Before genrand(), sgenrand(seed) must be         */
+/* called once. (seed is any 32-bit integer except for 0).        */
+/*   Coded by Takuji Nishimura, considering the suggestions by    */
+/* Topher Cooper and Marc Rieffel in July-Aug. 1997.              */
 
 /* This library is free software; you can redistribute it and/or   */
 /* modify it under the terms of the GNU Library General Public     */
@@ -60,8 +59,7 @@ sgenrand(seed)
         mt[mti] = (69069 * mt[mti-1]) & 0xffffffff;
 }
 
-double /* generating reals */
-/* unsigned long */ /* for integer generation */
+unsigned long 
 genrand()
 {
     unsigned long y;
@@ -94,8 +92,7 @@ genrand()
     y ^= TEMPERING_SHIFT_T(y) & TEMPERING_MASK_C;
     y ^= TEMPERING_SHIFT_L(y);
 
-    return ( (double)y * 2.3283064370807974e-10 ); /* reals */
-    /* return y; */ /* for integer generation */
+    return y; 
 }
 
 /* this main() outputs first 1000 generated numbers  */
@@ -105,7 +102,7 @@ main()
 
     sgenrand(4357); /* any nonzero integer can be used as a seed */
     for (j=0; j<1000; j++) {
-        printf("%10.8f ", genrand());
+        printf("%10lu ", genrand());
         if (j%8==7) printf("\n");
     }
     printf("\n");

@@ -74,19 +74,21 @@ cd mt19937
 git init
 
 add_file  mt19937.c      '1997-11-02 14:15:44 +0900' https://web.archive.org/web/20000829080032/http://www.math.keio.ac.jp:80/matumoto/mt19937.c
-commit '1997-11-02 14:15:44 +0000' 'Initial commit' 'Makoto Matsumoto' 'matumoto@math.keio.ac.jp'
-
-# This revision of mt19937.out was not archived, but its modified time was
-# saved. Generate it from running mt19937.c.
-add_local mt19937.out    '1998-04-06 15:55 +0900'    1998-04-06_mt19937.out '(reconstructed)' # (not archived) http://www.math.keio.ac.jp/~nisimura/random/old/19991028/real/mt19937.out
 
 # This version of mt19937int.c is from 2000-12-13 on Matumoto's site. It doesn't
 # contain any of the changes from Nishimura's site, but has a license header
 # just the ones that Nishimura puts in on 2000-12-14. This implies that at least
-# the changes after the initial revision were made by Nishimura. It was likely
-# created after 1997-11-02, as it wasn't captured at the same time as mt19937.c,
-# but before 1998-12-15, as it is missing those changes, so I place it here.
-add_local mt19937int.c    -                          1998-04-06_mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
+# the changes after the initial revision were made by Nishimura. It was probably
+# created before 1998-04-06, because it doesn't have 1998/4/6 in the header or
+# the changes from the 1998-12-15 snapshots.
+add_local mt19937int.c    -                          1997-11-02_mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
+
+commit '1997-11-02 14:15:44 +0000' 'Initial commit' 'Makoto Matsumoto' 'matumoto@math.keio.ac.jp'
+
+# Add the date to the headers and generate mt19937.out.
+add_local mt19937.c      -                           1998-04-06_mt19937.c '(reconstructed)'
+add_local mt19937.out    '1998-04-06 15:55 +0900'    1998-04-06_mt19937.out '(reconstructed)' # (not archived) http://www.math.keio.ac.jp/~nisimura/random/old/19991028/real/mt19937.out
+add_local mt19937int.c    -                          1998-04-06_mt19937int.c '(reconstructed)'
 add_file  mt19937int.out '1998-04-06 15:55:25 +0900' https://web.archive.org/web/19991006231247/http://www.math.keio.ac.jp:80/%7Enisimura/random/int/mt19937int.out
 
 # Reverse the 1998-12-15 changes, by analogy to mt19937int.c. These would have
@@ -108,6 +110,8 @@ add_file  mt19937int.c   '1998-12-15 15:54:13 +0900' https://web.archive.org/web
 add_file  mt19937-1.c    '1998-12-15 15:54:45 +0900' https://web.archive.org/web/19991007005824/http://www.math.keio.ac.jp:80/%7Enisimura/random/real1/mt19937-1.c
 add_file  mt19937-2.c    '1998-12-15 15:54:58 +0900' https://web.archive.org/web/20001002172742/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real2/mt19937-2.c
 commit '1998-12-15 15:54:58 +0900' 'Reference paper in headers' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
+
+git tag mt19937-1998
 
 add_file doc/mt.pdf     '1999-01-06 12:31:11 +0900' https://web.archive.org/web/20000829080027/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.pdf
 commit '1999-01-06 12:31:11 +0900' 'Convert paper to PDF' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
@@ -138,6 +142,8 @@ add_file  mt19937-1.c    '2000-12-14 17:42:30 +0900' https://web.archive.org/web
 add_file  mt19937-2.c    '2000-12-14 17:42:50 +0900' https://web.archive.org/web/20021010024851/http://www.math.keio.ac.jp:80/~nisimura/random/real2/mt19937-2.c
 commit '2000-12-14 17:42:50 +0900' 'Update headers in remaining files' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
+git tag mt19937-1999
+
 add_archive https://web.archive.org/web/20010824083746/http://www.math.keio.ac.jp:80/matumoto/mt19937.tar
 commit '2001-04-02 10:48:59 UTC' 'Relicense for release' 'Makoto Matsumoto' 'matumoto@math.keio.ac.jp'
 
@@ -153,6 +159,8 @@ commit '2004-02-26 09:41:33 +0900' 'Change slightly for C++' 'Takuji Nishimura' 
 
 add_archive https://web.archive.org/web/20040622083702/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.tgz
 commit '2004-03-03 09:09:10 +0900' 'Update contact information to Hiroshima University' 'Makoto Matsumoto' 'm-mat@math.sci.hiroshima-u.ac.jp'
+
+git tag mt19937ar-2002
 
 add_archive http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.sep.tgz
 commit '2005-04-26 12:16:40 +0900' 'Separate library from main' 'Mutsuo Saito' 'saito@math.sci.hiroshima-u.ac.jp'

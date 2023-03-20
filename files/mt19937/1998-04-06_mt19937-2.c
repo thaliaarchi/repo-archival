@@ -1,4 +1,4 @@
-/* A C-program for MT19937: Real number version([0,1)-interval)*/
+/* A C-program for MT19937: Real number version([0,1)-interval) (1998/4/6) */
 /*   genrand() generates one pseudorandom real number (double) */
 /* which is uniformly distributed on [0,1)-interval, for each  */
 /* call. sgenrand(seed) set initial values to the working area */
