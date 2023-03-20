@@ -107,7 +107,7 @@ add_file  mt19937-2.out  '1998-04-06 15:56:59 +0900' https://web.archive.org/web
 
 commit '1998-04-06 15:56:59 +0900' 'Add integer and other real versions' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
-add_file  doc/mt.ps      '1998-04-21 13:55:18 +0900' https://web.archive.org/web/20000829080010/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.ps
+add_file  mt.ps          '1998-04-21 13:55:18 +0900' https://web.archive.org/web/20000829080010/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.ps
 commit '1998-04-21 13:55:18 +0900' 'Add paper' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
 # This revision of mt19937.c was not archived, but its modified time was saved.
@@ -120,7 +120,7 @@ commit '1998-12-15 15:54:58 +0900' 'Reference paper in headers' 'Takuji Nishimur
 
 git tag mt19937-1998
 
-add_file doc/mt.pdf     '1999-01-06 12:31:11 +0900' https://web.archive.org/web/20000829080027/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.pdf
+add_file  mt.pdf         '1999-01-06 12:31:11 +0900' https://web.archive.org/web/20000829080027/http://www.math.keio.ac.jp:80/~nisimura/random/doc/mt.pdf
 commit '1999-01-06 12:31:11 +0900' 'Convert paper to PDF' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
 # Reverse the 2000-12-14 changes.
@@ -171,3 +171,7 @@ git tag mt19937ar-2002
 
 add_archive http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.sep.tgz
 commit '2005-04-26 12:16:40 +0900' 'Separate library from main' 'Mutsuo Saito' 'saito@math.sci.hiroshima-u.ac.jp'
+
+add_local README.md      '2023-03-20 06:09:06 -0600' README.md -
+commit_urls=''
+commit '2023-03-20 06:09:06 -0600' 'Add README.md with archive information' 'Thalia Archibald' 'thalia@archibald.dev'
