@@ -42,12 +42,13 @@ add_local() {
 
 add_archive() {
   local url="$1"
-  local archive="../${url##*/}"
+  local archive="${url##*/}"
 
   git rm -r -- *
-  [ -f "$archive" ] || wget --quiet "$url" -P ..
+  wget --quiet "$url"
   push_commit_url "$url"
   tar xf "$archive"
+  rm "$archive"
   find . \( -type d -name .git -prune \) -o \( -type f -print0 \) | xargs -0 chmod 644
   git add -A
 }
@@ -144,9 +145,14 @@ add_file  mt19937-3.c    '2001-09-28 20:26:57 +0900' https://web.archive.org/web
 add_file  mt19937-3.out  '2001-09-28 20:27:03 +0900' https://web.archive.org/web/20021010025511/http://www.math.keio.ac.jp:80/~nisimura/random/real3/mt19937-3.out
 commit '2001-09-28 20:27:03 +0900' 'Generate reals on (0,1)-interval' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
-add_archive http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.tgz
-# Unknown time
-commit '2002-01-26 00:00:00 +0900 / 2004-03-03 09:09:10 +0900' 'Improve initialization' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
+add_archive https://web.archive.org/web/20020409022857/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/mt19937ar.tgz
+commit '2002-01-26 16:27:37 +0000 / 2002-02-25 20:58:40 +0900' 'Improve initialization' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
+
+add_file  mt19937ar.c    '2004-02-26 09:41:33 +0900' https://web.archive.org/web/20040229101121/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/mt19937ar.c
+commit '2004-02-26 09:41:33 +0900' 'Change slightly for C++' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
+
+add_archive https://web.archive.org/web/20040622083702/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.tgz
+commit '2004-03-03 09:09:10 +0900' 'Update contact information to Hiroshima University' 'Makoto Matsumoto' 'm-mat@math.sci.hiroshima-u.ac.jp'
 
 add_archive http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.sep.tgz
 commit '2005-04-26 12:16:40 +0900' 'Separate library from main' 'Mutsuo Saito' 'saito@math.sci.hiroshima-u.ac.jp'

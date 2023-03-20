@@ -66,11 +66,20 @@ Mersenne Twister with improved initialization (2002)
                                         Archived
 File           tar modification time    HTTP Last-Modified       Archived URL                                                                                                                  Live Last-Modified       Live URL
 -------------  -----------------------  -----------------------  ----------------------------------------------------------------------------------------------------------------------------  -----------------------  -------------------------------------------------------------------------
+*                                       2002-03-04 08:01:59 UTC  https://web.archive.org/web/20020409022857/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/mt19937ar.tgz
+mt19937ar.c    2002-02-25 11:31:45 UTC  2002-02-25 11:31:45 UTC  https://web.archive.org/web/20020409021653/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/mt19937ar.c
+mt19937ar.out  2002-01-26 07:27:37 UTC  2002-01-26 07:27:37 UTC  https://web.archive.org/web/20020615090115/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/mt19937ar.out
+readme-mt.txt  2002-02-25 11:58:40 UTC  2002-02-25 11:58:40 UTC  https://web.archive.org/web/20020615090832/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/readme-mt.txt
+
+mt19937ar.c                             2004-02-26 00:41:33 UTC  https://web.archive.org/web/20040229101121/http://www.math.keio.ac.jp:80/matumoto/CODES/MT2002/mt19937ar.c
+
 *                                       2004-03-05 05:42:05 UTC  https://web.archive.org/web/20040622083702/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.tgz      2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.tgz
 /              2004-03-03 00:09:10 UTC
 mt19937ar.c    2004-03-03 00:08:31 UTC  2004-03-05 05:42:05 UTC  https://web.archive.org/web/20040609140246/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.c        2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c
 mt19937ar.out  2004-03-02 14:54:06 UTC  2004-03-05 05:42:05 UTC  https://web.archive.org/web/20040614202858/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.out      2006-03-03 22:05:31 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.out
 readme-mt.txt  2004-03-02 14:54:06 UTC  2004-03-05 05:42:06 UTC  https://web.archive.org/web/20040614203124/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/readme-mt.txt      2006-03-03 22:05:32 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/readme-mt.txt
+
+Mersenne Twister with separate files (2005)
 
 *                                       2005-04-27 01:00:13 UTC  https://web.archive.org/web/20051223131843/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/MT2002/CODES/mt19937ar.sep.tgz  2006-03-03 22:05:33 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.sep.tgz
 mt19937ar.c    2005-04-26 02:27:36 UTC
@@ -79,17 +88,28 @@ mt19937ar.out  2004-03-02 14:54:06 UTC
 mtTest.c       2005-04-26 02:18:39 UTC
 readme-mt.txt  2005-04-26 03:16:40 UTC
 
-Mersenne Twister 64bit version
+Patches
+
+Comment time   HTTP Last-Modified
+2004-03-15     2006-03-03 22:05:40 URC  https://web.archive.org/web/20211017082146/http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/mt19937ar-nrl.c
+
+Mersenne Twister 64-bit version
 
 http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/mt19937-64.c
 http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt19937-64.out.txt
 http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt19937-64.tgz
 http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt19937-64stdint.tgz
 
-Patches
+https://web.archive.org/web/20051223111649/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/mt19937-64.out.txt
+https://web.archive.org/web/20051223102336/http://www.math.sci.hiroshima-u.ac.jp:80/~m-mat/MT/mt19937-64.tgz
+https://web.archive.org/web/20110514120332/http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/mt19937-64.tgz
+https://web.archive.org/web/20150924110311/http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/mt19937-64stdint.tgz
+https://web.archive.org/web/20210702172142/http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/VERSIONS/C-LANG/mt19937-64.c
 
-HTTP Last-Modified
-2007-02-15 00:55:17 UTC http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/Ierymenko.html
+64-bit Patches
+
+Noted time     HTTP Last-Modified
+2007-02-08     2007-02-15 00:55:17 UTC  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/Ierymenko.html  http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/emt64.html
 
 License
 
@@ -100,7 +120,7 @@ Emails from publications
 Makoto Matsumoto
   matumoto@math.keio.ac.jp          as of Jan 1998
   matumoto@math.kyushu-u.ac.jp      as of Jul 1999
-  m-mat@math.sci.hiroshima-u.ac.jp  as of Jun 2005–2008
+  m-mat@math.sci.hiroshima-u.ac.jp  as of Mar 2004–2008
   matsumoto@ms.u-tokyo.ac.jp        as of Jun 2010–Feb 2013
 
 Takuji Nishimura
