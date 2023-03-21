@@ -14,7 +14,7 @@ Most of these scripts are to archive Whitespace projects for the
 - wspace/arnauld-javascript - TODO
 - wspace/brunokim-java - TODO
 - wspace/dcode-php - TODO
-- wspace/edwinb-wspace - WIP
+- wspace/edwinb-wspace - [WIP](scripts/wspace/edwinb-wspace/archive.sh)
 - [wspace/hapyli](https://github.com/wspace/hapyli)
 - wspace/kevincruijssen-codegolf - [WIP](scripts/wspace/kevincruijssen-codegolf.sh)
 - wspace/lmitchell-elisp - TODO
