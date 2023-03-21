@@ -56,13 +56,29 @@ merge_repo() {
   rm -rf "../$repo"
 }
 
+url_to_ia_raw() {
+  sed -E 's,(^https://web.archive.org/web/[0-9]+)/,\1id_/,' <<< "$1"
+}
+
+url_to_cache_path() {
+  # Escape / in URLs. Does not sanitize for Windows paths.
+  #   / -> (
+  #   \ -> \\
+  #   ( -> \(
+  echo -n "$TOPLEVEL/cache/"
+  sed -e 's/(/<ESCAPE_PAREN>/g' \
+      -e 's/\//(/g; s/\\/\\\\/g' \
+      -e 's/<ESCAPE_PAREN>/\\(/g' <<< "$1"
+}
+
 wget-cache() {
-  url="$1"
-  url_out="${url##*/}"
-  out="${2-"$url_out"}"
-  cache="$TOPLEVEL/cache/$out"
-  if [ ! -f "$cache" ]; then
-    wget -q "$url" -O "$cache"
+  local url="$1"
+  local url_out="${url##*/}"
+  local out="${2-"$url_out"}"
+  local cached
+  cached="$(url_to_cache_path "$url")"
+  if [ ! -f "$cached" ]; then
+    wget -q "$url" -O "$cached"
   fi
-  cp -p "$cache" "$out"
+  cp -p "$cached" "$out"
 }
