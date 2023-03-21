@@ -1,4 +1,4 @@
-Downloads (single revisions)
+CompSoc downloads (single revisions)
 
                                                        HTTP Last-Modified
 Filename                      HTTP Last-Modified       in inferred local time     URL                                                                                                             Digest
@@ -33,7 +33,7 @@ wspace.tgz                    2003-03-31 15:35:26 UTC  2003-03-31 16:35:26 +0100
 wspace_osx.gz                 2003-04-01 18:35:10 UTC  2003-04-01 19:35:10 +0100  https://web.archive.org/web/20060218224133/http://compsoc.dur.ac.uk:80/whitespace/wspace_osx.gz                 HUQP6Q6AHA5TNK4MBAOYDQKFDYTFRT7W
 wspace_solaris.gz             2003-04-01 19:30:34 UTC  2003-04-01 20:30:34 +0100  https://web.archive.org/web/20060218224258/http://compsoc.dur.ac.uk:80/whitespace/wspace_solaris.gz             QT5Y3XAJ73P4UHITSVT3H3MDOV5V3VU5
 
-PHP files (multiple revisions)
+CompSoc PHP files (multiple revisions)
 
                                                        HTTP Last-Modified
 Filename                      HTTP Date                in inferred local time     URL                                                                                                             Digest
@@ -48,8 +48,8 @@ download.php                  2004-12-10 10:16:50 UTC  2004-12-10 10:16:50 +0000
 download.php                  2007-08-15 22:01:51 UTC  2007-08-15 23:01:51 +0100  https://web.archive.org/web/20070815220151/http://compsoc.dur.ac.uk:80/whitespace/download.php                  O4IPBLOBSEE2NVJVRMDX3BH5L5Q2BZJ3
 examples.php                  2003-04-05 09:16:24 UTC  2003-04-05 10:16:24 +0100  https://web.archive.org/web/20030405091634/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  SPQ6U5OQNAPCF6ERDJC5T26SO4GJFOMN
 examples.php                  2003-06-21 21:53:15 UTC  2003-06-21 22:53:15 +0100  https://web.archive.org/web/20030621215315/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  NOS46EDGOVHTUDKTMJS5RUVG4PLQMZIY
-examples.php                  2004-01-06 12:52:03 UTC  2004-01-06 12:52:03 +0000  https://web.archive.org/web/20040606125206/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  DTH7YZYRBQS63BEE5PVGEB3KOFDZJNA6
 examples.php                  2004-02-03 19:26:29 UTC  2004-02-03 19:26:29 +0000  https://web.archive.org/web/20040203192629/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  NTVAUQMDCMSPRJH2QP6FMB5OLKY4RFJN
+examples.php                  2004-06-06 12:52:03 UTC  2004-06-06 13:52:03 +0100  https://web.archive.org/web/20040606125206/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  DTH7YZYRBQS63BEE5PVGEB3KOFDZJNA6
 examples.php                  2004-10-28 07:35:28 UTC  2004-10-28 08:35:28 +0100  https://web.archive.org/web/20041028073529/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  MI4ARUU3T4Z5YLCDABQI7MG3EVJK727Q
 examples.php                  2007-08-23 15:38:21 UTC  2007-08-23 16:38:21 +0100  https://web.archive.org/web/20070823153821/http://compsoc.dur.ac.uk:80/whitespace/examples.php                  RNP2E6ESCQNFJQELR3WSXUYXPMWLU43O
 explanation.php               2003-04-05 14:08:45 UTC  2003-04-05 15:08:45 +0100  https://web.archive.org/web/20030405140846/http://compsoc.dur.ac.uk:80/whitespace/explanation.php               VNGGW5PYOOU645KZVQSQMSXHPDR3FAR2
@@ -83,7 +83,7 @@ tutorial.php                  2004-06-06 13:57:41 UTC  2004-06-06 14:57:41 +0100
 tutorial.php                  2004-10-30 01:29:32 UTC  2004-10-30 02:29:32 +0100  https://web.archive.org/web/20041030012935/http://compsoc.dur.ac.uk:80/whitespace/tutorial.php                  QERXU42HLYPUCTWLS3IFM4L4ON5T3CA4
 tutorial.php                  2007-08-15 21:08:46 UTC  2007-08-15 22:08:46 +0100  https://web.archive.org/web/20070815210846/http://compsoc.dur.ac.uk:80/whitespace/tutorial.php                  6K5SPIIIXD77EHCJWQA2YLLK2TS7OOJ2
 
-Redirects
+CompSoc redirects
 
 Filename      URL                                                                                          Status  Digest
 ------------  ----------------------------------------------------------------------------------------------  ---  --------------------------------
@@ -99,7 +99,7 @@ tools.ph      https://web.archive.org/web/20031103051839/http://compsoc.dur.ac.u
 tutorial.htm  https://web.archive.org/web/20031103052151/http://compsoc.dur.ac.uk:80/whitespace/tutorial.htm  301  2RR3QONHJPBDAUX6XFN2MVMUM6WQFLXZ
 tutorial.ph   https://web.archive.org/web/20031210071447/http://compsoc.dur.ac.uk:80/whitespace/tutorial.ph   301  AGNY3VMUAGSMTFIL7TL6UYX5CCICWU2O
 
-Whitespace 0.1
+d.j.walrond mirror
                                                                                                                                 Last modified
 Path                                                                           Last modified     Size  HTTP Last-Modified       in inferred local time     URL                                                                                                                                                       Digest
 -----------------------------------------------------------------------------  ----------------  ----  -----------------------  -------------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------  --------------------------------
@@ -145,7 +145,7 @@ whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/                     2
 whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/changelog.Debian.gz  2003-03-31 15:04    1k                           2003-03-31 15:04    +0100  not archived
 whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/copyright            2003-03-31 15:04    1k                           2003-03-31 15:04    +0100  not archived
 whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/examples/            2003-03-31 15:20     -                           2003-03-31 15:20    +0100  not archived
-whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/tutorial.html        2003-03-31 13:47    7k                           2003-03-31 13:47    +0100  not archived
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/tutorial.html        2003-03-31 13:47    7k                           2003-03-31 13:47    +0100  not archived (same as whitespace-0.1/docs/tutorial.html by MD5 sum)
 whitespace-0.1/debian/whitespace/usr/share/man/                                2003-03-31 15:20     -                           2003-03-31 15:20    +0100  https://web.archive.org/web/20030911153559/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/usr/share/man/                 TM5AQ5UNY7BEZHLQZL77KCFEHV6Z4N4P
 whitespace-0.1/debian/whitespace/usr/share/man/man1/                           2003-03-31 15:20     -                           2003-03-31 15:20    +0100  https://web.archive.org/web/20030920035347/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/usr/share/man/man1/            4SK72E7R5LVGZ5MJLIXY6Q4JLZSUXJAF
 whitespace-0.1/debian/whitespace/usr/share/man/man1/wspace.1.gz                2003-03-31 15:04    1k                           2003-03-31 15:04    +0100  not archived
@@ -164,3 +164,48 @@ whitespace_0.1-1_i386.changes                                                  2
 whitespace_0.1-1_i386.deb                                                      2003-03-31 15:20  117k  2003-03-31 14:20:33 UTC  2003-03-31 15:20:33 +0100  https://web.archive.org/web/20030803223310/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_i386.deb                                       6SLAXJM36TTLUOPPTJXQ7BPRNVOB7DDV
 whitespace_0.1-1_source.changes                                                2003-03-31 11:04    1k  2003-03-31 10:04:57 UTC  2003-03-31 11:04:57 +0100  https://web.archive.org/web/20030803223653/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_source.changes                                 OZ4IWIS6M25W45OGDA6SZKGO77FKIP7V
 whitespace_0.1.orig.tar.gz                                                     2003-03-31 13:47   13k                           2003-03-31 13:47    +0100  not archived
+
+Oxford mirror
+
+Filename                   HTTP Last-Modified       URL                                                                                                                Digest
+-------------------------  -----------------------  -----------------------------------------------------------------------------------------------------------------  --------------------------------
+calc.ws                    2003-03-30 22:20:28 UTC  https://web.archive.org/web/20030614173418/http://mirror.ox.ac.uk:80/Mirrors/whitespace/calc.ws                    56JGD2FMH42T4I756K2FDN6EEZXGZDUI
+download.html              2003-04-02 09:22:52 UTC  https://web.archive.org/web/20030813234741/http://mirror.ox.ac.uk:80/Mirrors/whitespace/download.html              KIEJZP337PGKPDKGXU5XC75CD4YZWV73
+examples.html              2003-04-02 09:23:06 UTC  https://web.archive.org/web/20030614101445/http://mirror.ox.ac.uk:80/Mirrors/whitespace/examples.html              D5UOUBKBTISR67WF43IZL5TFJSCG6XPX
+explanation.html           2003-04-02 09:23:18 UTC  https://web.archive.org/web/20040203035616/http://mirror.ox.ac.uk:80/Mirrors/whitespace/explanation.html           JS3TWKXEFSDOLEY3TVMNF2XTHPSLHHKT
+fact.ws                    2003-03-30 22:39:48 UTC  https://web.archive.org/web/20030614173531/http://mirror.ox.ac.uk:80/Mirrors/whitespace/fact.ws                    6JXKGLQ46PVS2HR6JDYZGHGNCQXWQPQB
+feedback.html              2003-04-02 09:23:29 UTC  https://web.archive.org/web/20030614101626/http://mirror.ox.ac.uk:80/Mirrors/whitespace/feedback.html              PLVV4ZW3IPRS5P2XNNL7OKAZLRD3KKTE
+fibonacci.ws               2003-03-31 15:30:52 UTC  https://web.archive.org/web/20030614173420/http://mirror.ox.ac.uk:80/Mirrors/whitespace/fibonacci.ws               XOYLRKC7JM7PJXC7RKVGP5JH336BZBJM
+home.css                   2003-03-30 23:28:06 UTC  https://web.archive.org/web/20030825044404/http://mirror.ox.ac.uk:80/Mirrors/whitespace/home.css                   4VT3W4S44ENMLJU2LIELBIFVQXUQTM7Y
+hworld.ws                  2003-03-30 22:20:28 UTC  https://web.archive.org/web/20040325163854/http://mirror.ox.ac.uk:80/Mirrors/whitespace/hworld.ws                  A5KXRBI555472GGYB37P255TQEWZIZ77
+index.html                 2003-04-02 09:23:43 UTC  https://web.archive.org/web/20030414003351/http://mirror.ox.ac.uk:80/Mirrors/whitespace/                           NF2O6FKZMSIRDTQEBZWPVWJXSBVDB2RO
+name.ws                    2003-03-30 22:20:28 UTC  https://web.archive.org/web/20030825043208/http://mirror.ox.ac.uk:80/Mirrors/whitespace/name.ws                    N4YII5IVJSEO5W3OVA5XR4D4D5ZHBRHW
+tutorial.html              2003-04-02 09:23:53 UTC  https://web.archive.org/web/20030825043811/http://mirror.ox.ac.uk:80/Mirrors/whitespace/tutorial.html              HCZ5J5O2AOUPKKU4EDFNCHPOSUWF2BFL
+whitespace-0.2-1.i386.rpm  2003-04-01 08:42:55 UTC  https://web.archive.org/web/20040325164219/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace-0.2-1.i386.rpm  HLSLOLYUVTH6UCSWCUXOSUJMSJA3MJBI
+whitespace.pl              2003-04-01 18:34:12 UTC  https://web.archive.org/web/20040325163708/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace.pl              S54F6W5UEZYQOAXODDWQ7ER3LOGOPKWG
+whitespace.ws.c            2003-03-31 13:05:46 UTC  https://web.archive.org/web/20030614173447/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace.ws.c            FTD2ZNYKAEYXYA3AC3CO4KPIPHFTKNAF
+whitespace_0.2-1_i386.deb  2003-03-31 15:55:47 UTC  https://web.archive.org/web/20040325164055/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace_0.2-1_i386.deb  SMPPUR525IY3KUWOA4HAYH3GVRNTSBPL
+wspace                     2003-04-01 19:41:42 UTC  https://web.archive.org/web/20040325163702/http://mirror.ox.ac.uk:80/Mirrors/whitespace/wspace                     SHMHJA2QKVW7GNCBKXAPTAJECE6DUZP5
+wspace.tgz                 2003-03-31 14:35:26 UTC  https://web.archive.org/web/20040327100043/http://mirror.ox.ac.uk:80/Mirrors/whitespace/wspace.tgz                 DSZF4HRO63RWL54TWNVNWRD5NHEGANR3
+
+Recorded digests
+
+Path                                                                           Size    MD5 digest                        Digest file(s)
+-----------------------------------------------------------------------------  ------  --------------------------------  ------------------------------------------------------
+whitespace-0.1/debian/whitespace/usr/bin/wspace                                        4a4b8643090853b5ba7635b591fa006f  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/changelog.Debian.gz          4646c3a1f4a0e2670939faa7b3649ce3  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/copyright                    ea0a4af3417f3306f8ca9dc67b37c10f  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/examples/calc.ws             f01bc37ed6cb724b21bab2091f3c0214  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/examples/count.ws            3fd05477f429f8617f8f8ebc2b48e03f  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/examples/fact.ws             2ec071acdfe2c2eaec935f0146774348  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/examples/hworld.ws           ce8ceac2698462d0eef73e9ca64e5234  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/examples/name.ws             894d8bcaa1c9de93a03575670ee67365  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/tutorial.html                919a5d591607698b6bca730ec41dc938  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace-0.1/debian/whitespace/usr/share/man/man1/wspace.1.gz                        12c9810919c51d38c061cdb08ac4e9b6  whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+whitespace_0.1-1.diff.gz                                                       1864    9328b56db3db532511f620827a3856ae  whitespace_0.1-1.dsc and whitespace_0.1-1_i386.changes
+whitespace_0.1-1.diff.gz                                                       1962    9a6b79c222ee7f65e69a4adf2a1c8370  whitespace_0.1-1_source.changes
+whitespace_0.1-1.dsc                                                           339     5c3dd333f4f52de460ba827d485a7e1d  whitespace_0.1-1_source.changes
+whitespace_0.1-1.dsc                                                           577     9a3bb59d06752f3a1188a483cd4b6da7  whitespace_0.1-1_i386.changes
+whitespace_0.1-1_i386.deb                                                      119556  39e08d5f2eda3fd93e1b87e80d6d8b99  whitespace_0.1-1_i386.changes
+whitespace_0.1.orig.tar.gz                                                     13764   e217d970cce5d07a3768e01f5ec14323  whitespace_0.1-1.dsc and whitespace_0.1-1_i386.changes
+whitespace_0.1.orig.tar.gz                                                     4151    c9c29b476a35b8032f6e900b20581844  whitespace_0.1-1_source.changes
