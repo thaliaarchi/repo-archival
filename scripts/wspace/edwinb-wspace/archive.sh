@@ -59,34 +59,74 @@ git init
 add_file    VM.hs                                                                           r1 '2003-03-31 00:12    +0100' -
 add_file    Input.hs                                                                        r1 '2003-03-31 00:12:22 +0100' https://web.archive.org/web/20030624014503/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/Input.hs
 add_file    Tokens.hs                                                                       r1 '2003-03-31 00:12:49 +0100' https://web.archive.org/web/20030624015950/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/Tokens.hs
+# add_file  Input.hs                                                                        r1 '2003-03-31 00:12:22 +0100' wspace.tgz:WSpace/Input.hs
+# add_file  Tokens.hs                                                                       r1 '2003-03-31 00:12:49 +0100' wspace-0.3.tgz:WSpace/Tokens.hs
+# add_file  Tokens.hs                                                                       r1 '2003-03-31 00:12:49 +0100' wspace.tgz:WSpace/Tokens.hs
 commit '2003-03-31 00:12:49 +0100' 'Add VM source'
 
-# These programs are identical between d.j.walrond, CompSoc, and Oxford.
-add_file    calc.ws                                                                         r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624021432/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/calc.ws
-add_file    count.ws                                                                        r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624021255/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/count.ws
-add_file    fact.ws                                                                         r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624022311/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/fact.ws
-add_file    hworld.ws                                                                       r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030818000703/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/hworld.ws
-add_file    name.ws                                                                         r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624023117/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/name.ws
-# add_file  calc.ws                                                                         r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030405142656/http://compsoc.dur.ac.uk:80/whitespace/calc.ws
-# add_file  count.ws                                                                        r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030405165300/http://compsoc.dur.ac.uk:80/whitespace/count.ws
-# add_file  hworld.ws                                                                       r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030405143641/http://compsoc.dur.ac.uk:80/whitespace/hworld.ws
-# add_file  name.ws                                                                         r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030415045931/http://compsoc.dur.ac.uk:80/whitespace/name.ws
-# add_file  calc.ws                                                                         r1 '2003-03-30 23:20:28 +0100' https://web.archive.org/web/20030614173418/http://mirror.ox.ac.uk:80/Mirrors/whitespace/calc.ws
-# add_file  hworld.ws                                                                       r1 '2003-03-30 23:20:28 +0100' https://web.archive.org/web/20040325163854/http://mirror.ox.ac.uk:80/Mirrors/whitespace/hworld.ws
-# add_file  name.ws                                                                         r1 '2003-03-30 23:20:28 +0100' https://web.archive.org/web/20030825043208/http://mirror.ox.ac.uk:80/Mirrors/whitespace/name.ws
+# These programs, except for fact.ws, are identical in all sources.
+# add_file  examples/calc.ws                                                                r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624021432/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/calc.ws
+# add_file  examples/count.ws                                                               r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624021255/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/count.ws
+add_file    examples/fact.ws                                                                r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624022311/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/fact.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030818000703/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-31 00:19:39 +0100' https://web.archive.org/web/20030624023117/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/name.ws
+
+add_file    examples/calc.ws                                                                r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030405142656/http://compsoc.dur.ac.uk:80/whitespace/calc.ws
+add_file    examples/count.ws                                                               r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030405165300/http://compsoc.dur.ac.uk:80/whitespace/count.ws
+add_file    examples/hworld.ws                                                              r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030405143641/http://compsoc.dur.ac.uk:80/whitespace/hworld.ws
+add_file    examples/name.ws                                                                r1 '2003-03-31 00:20:28 +0100' https://web.archive.org/web/20030415045931/http://compsoc.dur.ac.uk:80/whitespace/name.ws
+
+# add_file  examples/calc.ws                                                                r1 '2003-03-30 23:20:28 +0100' https://web.archive.org/web/20030614173418/http://mirror.ox.ac.uk:80/Mirrors/whitespace/calc.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-30 23:20:28 +0100' https://web.archive.org/web/20040325163854/http://mirror.ox.ac.uk:80/Mirrors/whitespace/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-30 23:20:28 +0100' https://web.archive.org/web/20030825043208/http://mirror.ox.ac.uk:80/Mirrors/whitespace/name.ws
+
+# add_file  examples/calc.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace_0.1-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/calc.ws
+# add_file  examples/count.ws                                                               r1 '2003-03-31 00:19:39 +0100' whitespace_0.1-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/count.ws
+# add_file  examples/fact.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace_0.1-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/fact.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-31 00:19:39 +0100' whitespace_0.1-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace_0.1-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/name.ws
+
+# add_file  examples/calc.ws                                                                r1 '2003-03-31 00:19:39 +0100' wspace.tgz:WSpace/calc.ws
+# add_file  examples/count.ws                                                               r1 '2003-03-31 00:19:39 +0100' wspace.tgz:WSpace/count.ws
+# add_file  examples/fact.ws                                                                r1 '2003-03-31 00:19:39 +0100' wspace.tgz:WSpace/fact.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-31 00:19:39 +0100' wspace.tgz:WSpace/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-31 00:19:39 +0100' wspace.tgz:WSpace/name.ws
+
+# add_file  examples/calc.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace_0.2-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/calc.ws
+# add_file  examples/count.ws                                                               r1 '2003-03-31 00:19:39 +0100' whitespace_0.2-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/count.ws
+# add_file  examples/fact.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace_0.2-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/fact.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-31 00:19:39 +0100' whitespace_0.2-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace_0.2-1_i386.deb:data.tar.gz:./usr/share/doc/whitespace/examples/name.ws
+
+# add_file  examples/calc.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace-0.2-1.i386.rpm:./usr/share/doc/whitespace/examples/calc.ws
+# add_file  examples/count.ws                                                               r1 '2003-03-31 00:19:39 +0100' whitespace-0.2-1.i386.rpm:./usr/share/doc/whitespace/examples/count.ws
+# add_file  examples/fact.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace-0.2-1.i386.rpm:./usr/share/doc/whitespace/examples/fact.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-31 00:19:39 +0100' whitespace-0.2-1.i386.rpm:./usr/share/doc/whitespace/examples/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-31 00:19:39 +0100' whitespace-0.2-1.i386.rpm:./usr/share/doc/whitespace/examples/name.ws
+
+# add_file  examples/calc.ws                                                                r1 '2003-03-31 00:19:39 +0100' wspace-0.3.tgz:WSpace/examples/calc.ws
+# add_file  examples/count.ws                                                               r1 '2003-03-31 00:19:39 +0100' wspace-0.3.tgz:WSpace/examples/count.ws
+# add_file  examples/hworld.ws                                                              r1 '2003-03-31 00:19:39 +0100' wspace-0.3.tgz:WSpace/examples/hworld.ws
+# add_file  examples/name.ws                                                                r1 '2003-03-31 00:19:39 +0100' wspace-0.3.tgz:WSpace/examples/name.ws
 commit '2003-03-31 00:19:39 +0100' 'Add example Whitespace programs'
 
-add_file    fact.ws                                                                         r1 '2003-03-31 00:39:48 +0100' https://web.archive.org/web/20030405141644/http://compsoc.dur.ac.uk:80/whitespace/fact.ws
-# add_file  fact.ws                                                                         r1 '2003-03-30 23:39:48 +0100' https://web.archive.org/web/20030614173531/http://mirror.ox.ac.uk:80/Mirrors/whitespace/fact.ws
+add_file    examples/fact.ws                                                                r1 '2003-03-31 00:39:48 +0100' https://web.archive.org/web/20030405141644/http://compsoc.dur.ac.uk:80/whitespace/fact.ws
+# add_file  examples/fact.ws                                                                r1 '2003-03-30 23:39:48 +0100' https://web.archive.org/web/20030614173531/http://mirror.ox.ac.uk:80/Mirrors/whitespace/fact.ws
 commit '2003-03-31 00:39:48 +0100' 'Fix fact.ws base case'
 
 commit_file docs/home.css                                                                   r1 '2003-03-31 00:28:06 +0100' https://web.archive.org/web/20030405142925/http://compsoc.dur.ac.uk:80/whitespace/home.css
 # add_file  docs/home.css                                                                   r1 '2003-03-31 00:28:06 +0100' https://web.archive.org/web/20030825044404/http://mirror.ox.ac.uk:80/Mirrors/whitespace/home.css
-commit_file whitespace_0.1-1_source.changes                                                 r1 '2003-03-31 11:04:57 +0100' https://web.archive.org/web/20030803223653/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_source.changes
+
+# Exclude packaging metadata
+# add_file  whitespace_0.1-1_source.changes                                                 r1 '2003-03-31 11:04:57 +0100' https://web.archive.org/web/20030803223653/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_source.changes
 
 add_file    COPYING                                                                         r1 '2003-03-31 13:35:20 +0100' https://web.archive.org/web/20030818001123/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/COPYING
 add_file    main.hs                                                                         r1 '2003-03-31 13:39:18 +0100' https://web.archive.org/web/20030624022604/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/main.hs
 add_file    Makefile                                                                        r1 '2003-03-31 13:39:29 +0100' https://web.archive.org/web/20030624015551/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/Makefile
+# add_file  COPYING                                                                         r1 '2003-03-31 13:35:20 +0100' wspace-0.3.tgz:WSpace/COPYING
+# add_file  COPYING                                                                         r1 '2003-03-31 13:35:20 +0100' wspace.tgz:WSpace/COPYING
+# add_file  Makefile                                                                        r1 '2003-03-31 13:39:29 +0100' wspace-0.3.tgz:WSpace/Makefile
+# add_file  Makefile                                                                        r1 '2003-03-31 13:39:29 +0100' wspace.tgz:WSpace/Makefile
 commit '2003-03-31 13:39:29 +0100' 'Add main and build'
 
 # tutorial.html in debian/ was not archived, but md5sums indicates it is the
@@ -95,27 +135,26 @@ add_file    docs/tutorial.html                                                  
 # add_file  whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/tutorial.html         r1 '2003-03-31 13:47    +0100' -
 commit '2003-03-31 13:47:05 +0100' 'Add language tutorial'
 
-commit_file whitespace_0.1.orig.tar.gz                                                      r1 '2003-03-31 13:47    +0100' -
-commit_file whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/changelog.Debian.gz   r1 '2003-03-31 15:04    +0100' -
-commit_file whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/copyright             r1 '2003-03-31 15:04    +0100' -
-commit_file whitespace-0.1/debian/whitespace/usr/share/man/man1/wspace.1.gz                 r1 '2003-03-31 15:04    +0100' -
-commit_file whitespace-0.1/debian/changelog                                                 r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030827083557/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/changelog
-commit_file whitespace-0.1/debian/compat                                                    r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629104608/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/compat
-commit_file whitespace-0.1/debian/control                                                   r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629104803/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/control
-commit_file whitespace-0.1/debian/copyright                                                 r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629105053/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/copyright
-commit_file whitespace-0.1/debian/rules                                                     r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110105/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/rules
-commit_file whitespace-0.1/debian/whitespace.examples                                       r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110008/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.examples
-commit_file whitespace-0.1/debian/whitespace.install                                        r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110020/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.install
-commit_file whitespace-0.1/debian/whitespace.manpages                                       r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110513/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.manpages
-commit_file whitespace-0.1/debian/wspace.1                                                  r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629111334/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/wspace.1
+# Exclude packaging metadata
+# add_file  whitespace_0.1.orig.tar.gz                                                      r1 '2003-03-31 13:47    +0100' -
+# add_file  whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/changelog.Debian.gz   r1 '2003-03-31 15:04    +0100' -
+# add_file  whitespace-0.1/debian/whitespace/usr/share/doc/whitespace/copyright             r1 '2003-03-31 15:04    +0100' -
+# add_file  whitespace-0.1/debian/whitespace/usr/share/man/man1/wspace.1.gz                 r1 '2003-03-31 15:04    +0100' -
+# add_file  whitespace-0.1/debian/changelog                                                 r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030827083557/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/changelog
+# add_file  whitespace-0.1/debian/compat                                                    r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629104608/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/compat
+# add_file  whitespace-0.1/debian/control                                                   r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629104803/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/control
+# add_file  whitespace-0.1/debian/copyright                                                 r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629105053/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/copyright
+# add_file  whitespace-0.1/debian/rules                                                     r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110105/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/rules
+# add_file  whitespace-0.1/debian/whitespace.examples                                       r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110008/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.examples
+# add_file  whitespace-0.1/debian/whitespace.install                                        r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110020/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.install
+# add_file  whitespace-0.1/debian/whitespace.manpages                                       r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629110513/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.manpages
+# add_file  whitespace-0.1/debian/wspace.1                                                  r1 '2003-03-31 15:04:14 +0100' https://web.archive.org/web/20030629111334/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/wspace.1
 
-add_file    whitespace.ws.c                                                                 r1 '2003-03-31 15:05:46 +0100' https://web.archive.org/web/20030405144531/http://compsoc.dur.ac.uk:80/whitespace/whitespace.ws.c
-# add_file  whitespace.ws.c                                                                 r1 '2003-03-31 14:05:46 +0100' https://web.archive.org/web/20030614173447/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace.ws.c
+add_file    contrib/whitespace.ws.c                                                         r1 '2003-03-31 15:05:46 +0100' https://web.archive.org/web/20030405144531/http://compsoc.dur.ac.uk:80/whitespace/whitespace.ws.c
+# add_file  contrib/whitespace.ws.c                                                         r1 '2003-03-31 14:05:46 +0100' https://web.archive.org/web/20030614173447/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace.ws.c
 commit '2003-03-31 15:05:46 +0100' 'Add Whitespace and C polyglot program'
 
-commit_file whitespace-0.1/debian/whitespace.docs                                           r1 '2003-03-31 15:19    +0100' -
 commit_file whitespace-0.1/debian/whitespace/usr/bin/wspace                                 r1 '2003-03-31 15:20    +0100' -
-commit_file whitespace_0.1-1.diff.gz                                                        r1 '2003-03-31 15:20    +0100' -
 
 add_file    Tokens.hi                                                                       r1 '2003-03-31 15:20:13 +0100' https://web.archive.org/web/20030624015422/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/Tokens.hi
 add_file    Tokens.o                                                                        r1 '2003-03-31 15:20:14 +0100' https://web.archive.org/web/20030624015825/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/Tokens.o
@@ -126,32 +165,36 @@ add_file    Input.o                                                             
 add_file    Main.hi                                                                         r1 '2003-03-31 15:20:27 +0100' https://web.archive.org/web/20030624015054/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/Main.hi
 add_file    main.o                                                                          r1 '2003-03-31 15:20:28 +0100' https://web.archive.org/web/20030624022631/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/main.o
 add_file    wspace                                                                          r1 '2003-03-31 15:20:30 +0100' https://web.archive.org/web/20030817182401/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/wspace
-# build-stamp is just an empty file.
-# add_file  build-stamp                                                                     r1 '2003-03-31 15:20:30 +0100' https://web.archive.org/web/20030624021150/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/build-stamp
 commit '2003-03-31 15:20:30 +0100' 'Compile Whitespace 0.1'
 
-commit_file whitespace-0.1/debian/files                                                     r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030827091055/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/files
-commit_file whitespace-0.1/debian/whitespace.substvars                                      r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030629110823/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.substvars
-commit_file whitespace-0.1/debian/whitespace/DEBIAN/control                                 r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030910053927/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/DEBIAN/control
-commit_file whitespace-0.1/debian/whitespace/DEBIAN/md5sums                                 r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030910054636/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/DEBIAN/md5sums
-commit_file whitespace_0.1-1_i386.deb                                                       r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030803223310/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_i386.deb
-commit_file whitespace_0.1-1.dsc                                                            r1 '2003-03-31 15:20:40 +0100' https://web.archive.org/web/20030621215923/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1.dsc
-commit_file whitespace_0.1-1_i386.changes                                                   r1 '2003-03-31 15:20:43 +0100' https://web.archive.org/web/20030621220500/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_i386.changes
+# Exclude packaging metadata
+# add_file  whitespace-0.1/debian/whitespace.docs                                           r1 '2003-03-31 15:19    +0100' -
+# add_file  whitespace_0.1-1.diff.gz                                                        r1 '2003-03-31 15:20    +0100' -
+# add_file  whitespace-0.1/build-stamp                                                      r1 '2003-03-31 15:20:30 +0100' https://web.archive.org/web/20030624021150/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/build-stamp
+# add_file  whitespace-0.1/debian/files                                                     r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030827091055/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/files
+# add_file  whitespace-0.1/debian/whitespace.substvars                                      r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030629110823/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.substvars
+# add_file  whitespace-0.1/debian/whitespace/DEBIAN/control                                 r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030910053927/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/DEBIAN/control
+# add_file  whitespace-0.1/debian/whitespace/DEBIAN/md5sums                                 r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030910054636/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/DEBIAN/md5sums
+# add_file  whitespace_0.1-1_i386.deb                                                       r1 '2003-03-31 15:20:33 +0100' https://web.archive.org/web/20030803223310/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_i386.deb
+# add_file  whitespace_0.1-1.dsc                                                            r1 '2003-03-31 15:20:40 +0100' https://web.archive.org/web/20030621215923/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1.dsc
+# add_file  whitespace_0.1-1_i386.changes                                                   r1 '2003-03-31 15:20:43 +0100' https://web.archive.org/web/20030621220500/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_i386.changes
 
 # Oxford version is identical, but decompressed.
 commit_file wspace.tgz                                                                      r1 '2003-03-31 16:35:26 +0100' https://web.archive.org/web/20030423000836/http://compsoc.dur.ac.uk:80/whitespace/wspace.tgz
 # add_file  wspace.tgz                                                                      r1 '2003-03-31 15:35:26 +0100' https://web.archive.org/web/20040327100043/http://mirror.ox.ac.uk:80/Mirrors/whitespace/wspace.tgz
 
-add_file    fibonacci.ws                                                                    r1 '2003-03-31 17:30:52 +0100' https://web.archive.org/web/20030405143602/http://compsoc.dur.ac.uk:80/whitespace/fibonacci.ws
-# add_file  fibonacci.ws                                                                    r1 '2003-03-31 16:30:52 +0100' https://web.archive.org/web/20030614173420/http://mirror.ox.ac.uk:80/Mirrors/whitespace/fibonacci.ws
+add_file    examples/fibonacci.ws                                                           r1 '2003-03-31 17:30:52 +0100' https://web.archive.org/web/20030405143602/http://compsoc.dur.ac.uk:80/whitespace/fibonacci.ws
+# add_file  examples/fibonacci.ws                                                           r1 '2003-03-31 16:30:52 +0100' https://web.archive.org/web/20030614173420/http://mirror.ox.ac.uk:80/Mirrors/whitespace/fibonacci.ws
 commit '2003-03-31 17:30:52 +0100' 'Add Fibonacci program'
 
 # Remove Whitespace 0.1 binaries
 git rm -- *.hi *.o wspace
-commit_file whitespace_0.2-1.dsc                                                            r1 '2003-03-31 17:36:05 +0100' https://web.archive.org/web/20040120123855/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1.dsc
-commit_file whitespace_0.2-1_i386.deb                                                       r1 '2003-03-31 17:55:47 +0100' https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb
+
+# Don't include packages
+# add_file  whitespace_0.2-1.dsc                                                            r1 '2003-03-31 17:36:05 +0100' https://web.archive.org/web/20040120123855/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1.dsc
+# add_file  whitespace_0.2-1_i386.deb                                                       r1 '2003-03-31 17:55:47 +0100' https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb
 # add_file  whitespace_0.2-1_i386.deb                                                       r1 '2003-03-31 16:55:47 +0100' https://web.archive.org/web/20040325164055/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace_0.2-1_i386.deb
-commit_file whitespace-0.2-1.i386.rpm                                                       r1 '2003-04-01 10:42:55 +0100' https://web.archive.org/web/20030422235920/http://compsoc.dur.ac.uk:80/whitespace/whitespace-0.2-1.i386.rpm
+# add_file  whitespace-0.2-1.i386.rpm                                                       r1 '2003-04-01 10:42:55 +0100' https://web.archive.org/web/20030422235920/http://compsoc.dur.ac.uk:80/whitespace/whitespace-0.2-1.i386.rpm
 # add_file  whitespace-0.2-1.i386.rpm                                                       r1 '2003-04-01 09:42:55 +0100' https://web.archive.org/web/20040325164219/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace-0.2-1.i386.rpm
 
 # wspace_osx.gz and wspace_solaris.gz are returned decompressed by IA. Rather
@@ -184,17 +227,17 @@ add_file    docs/explanation.php                                                
 add_file    docs/feedback.php                                                              ~r1 '2003-04-05 15:20:10 +0100' https://web.archive.org/web/20030405142010/http://compsoc.dur.ac.uk:80/whitespace/feedback.php
 commit '2003-04-05 10:16:24 +0100' 'Convert site to PHP'
 
-commit_file quine.ws                                                                        r1 '2003-04-07 22:13:12 +0100' https://web.archive.org/web/20030430002837/http://compsoc.dur.ac.uk:80/whitespace/quine.ws
-commit_file rot13.ws                                                                        r1 '2003-04-07 23:23:47 +0100' https://web.archive.org/web/20030430003031/http://compsoc.dur.ac.uk:80/whitespace/rot13.ws
+commit_file contrib/quine.ws                                                                r1 '2003-04-07 22:13:12 +0100' https://web.archive.org/web/20030430002837/http://compsoc.dur.ac.uk:80/whitespace/quine.ws
+commit_file contrib/rot13.ws                                                                r1 '2003-04-07 23:23:47 +0100' https://web.archive.org/web/20030430003031/http://compsoc.dur.ac.uk:80/whitespace/rot13.ws
 
-add_file    quine-2.ws                                                                      r1 '2003-04-08 10:08:50 +0100' https://web.archive.org/web/20030430005123/http://compsoc.dur.ac.uk:80/whitespace/quine-2.ws
+add_file    contrib/quine-2.ws                                                              r1 '2003-04-08 10:08:50 +0100' https://web.archive.org/web/20030430005123/http://compsoc.dur.ac.uk:80/whitespace/quine-2.ws
 commit '2003-04-08 10:08:50 +0100' 'Add another quine by Benjamin Lerman'
 
 add_file    embed                                                                           r1 '2003-04-08 11:41:56 +0100' https://web.archive.org/web/20030427090844/http://compsoc.dur.ac.uk:80/whitespace/embed
 add_file    embed.hs                                                                        r1 '2003-04-08 11:41:56 +0100' https://web.archive.org/web/20030430004837/http://compsoc.dur.ac.uk:80/whitespace/embed.hs
 commit '2003-04-08 11:41:56 +0100' 'Add a tool to embed a Whitespace program in a text file'
 
-commit_file quine-copy.ws                                                                   r1 '2003-04-08 12:19:26 +0100' https://web.archive.org/web/20030430003318/http://compsoc.dur.ac.uk:80/whitespace/quine-copy.ws
+commit_file contrib/quine-copy.ws                                                           r1 '2003-04-08 12:19:26 +0100' https://web.archive.org/web/20030430003318/http://compsoc.dur.ac.uk:80/whitespace/quine-copy.ws
 
 git rm docs/index.html
 commit_file docs/index.php                                                                 ~r1 '2003-04-12 21:19:16 +0100' https://web.archive.org/web/20030412201917/http://compsoc.dur.ac.uk:80/whitespace/
@@ -212,7 +255,7 @@ commit_file docs/feedback.php                                                   
 add_file    docs/tools.php                                                                 ~r2 '2003-08-16 13:32:42 +0100' https://web.archive.org/web/20030816123242/http://compsoc.dur.ac.uk:80/whitespace/tools.php
 commit '2003-08-16 13:32:42 +0100' "Link to Oliver Burghard's tools"
 
-add_file    hanoi.ws                                                                        r1 '2003-12-08 18:22:35 +0000' https://web.archive.org/web/20040218112203/http://compsoc.dur.ac.uk:80/whitespace/hanoi.ws
+add_file    examples/hanoi.ws                                                               r1 '2003-12-08 18:22:35 +0000' https://web.archive.org/web/20040218112203/http://compsoc.dur.ac.uk:80/whitespace/hanoi.ws
 # Modified between 2003-12-06 07:38:21 +0000 and 2004-02-03 19:26:29 +0000.
 add_file    docs/examples.php                                                              ~r3 '2004-02-03 19:26:29 +0000' https://web.archive.org/web/20040203192629/http://compsoc.dur.ac.uk:80/whitespace/examples.php
 commit '2003-12-08 18:22:35 +0000' 'Add Towers of Hanoi solver'
