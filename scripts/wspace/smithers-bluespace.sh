@@ -6,12 +6,14 @@ copy_submodule github.com/Smithers888/BlueSpace wspace/smithers-bluespace
 cd wspace/smithers-bluespace
 
 mkdir programs
-wget -q https://cpjsmith.uk/downloads/whitespace/99.wsp -P programs
-wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs.ws -P programs
-wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs.wsa -P programs
-wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs-3.ws -P programs
-wget -q https://cpjsmith.uk/downloads/whitespace/quine-cs-3.wsa -P programs
-wget -q https://cpjsmith.uk/whitespace -O index.html
+cd programs
+get_cached https://cpjsmith.uk/downloads/whitespace/99.wsp
+get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs.ws
+get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs.wsa
+get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs-3.ws
+get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs-3.wsa
+# cd ..
+# get_cached https://cpjsmith.uk/whitespace index.html
 
 # Last-Modified in UTC       Last-Modified in BST
 # 2014-07-10 18:59:10 +0000  2014-07-10 19:59:10 +0100  quine-cs.ws

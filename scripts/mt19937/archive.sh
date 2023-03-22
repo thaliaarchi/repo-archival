@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. base.sh
+
 commit_urls=''
 
 # TODO:
@@ -30,7 +32,7 @@ add_file() {
   if [ "$url" = "-" ]; then
     touch "$file"
   else
-    wget --quiet "$(ia_raw "$url")" -O "$file"
+    get_cached "$(ia_raw "$url")" "$file"
     push_commit_url "$file" "$url"
   fi
   git add "$file"
@@ -42,7 +44,7 @@ add_local() {
   local local_file="$3"
   local url="$4"
 
-  cp "../files/mt19937/$local_file" "$file"
+  cp "../../files/mt19937/$local_file" "$file"
   git add "$file"
   push_commit_url "~$file" "$url"
 }
@@ -52,7 +54,7 @@ add_archive() {
   local archive="${url##*/}"
 
   git rm -r -- *
-  wget --quiet "$url"
+  get_cached "$url"
   push_commit_url "$url"
   tar xf "$archive"
   rm "$archive"

@@ -5,8 +5,7 @@
 mkdir re1
 
 # https://code.google.com/archive/p/re1/
-wget -q https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/re1/source-archive.zip -O re1.zip
-unzip -q re1.zip
+unzip -q "$(get_cached_path https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/re1/source-archive.zip)"
 mv re1 re1-hg
 
 git init re1
