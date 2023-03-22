@@ -16,10 +16,6 @@ push_commit_url() {
 $(printf '%-16s' "$1")$2"
 }
 
-ia_raw() {
-  sed -E 's,(^https://web.archive.org/web/[0-9]+)/,\1id_/,' <<< "$1"
-}
-
 add_file() {
   local file="$1"
   local date="$2" # Just for reference
@@ -32,7 +28,7 @@ add_file() {
   if [ "$url" = "-" ]; then
     touch "$file"
   else
-    get_cached "$(ia_raw "$url")" "$file"
+    get_cached "$url" "$file"
     push_commit_url "$file" "$url"
   fi
   git add "$file"
