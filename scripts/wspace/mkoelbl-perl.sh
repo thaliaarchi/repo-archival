@@ -9,7 +9,7 @@ mkdir mkoelbl-perl
 cd mkoelbl-perl
 git init -q
 
-get_cached https://web.archive.org/web/20030423000132id_/http://compsoc.dur.ac.uk:80/whitespace/whitespace.pl
+get_cached https://web.archive.org/web/20030423000132/http://compsoc.dur.ac.uk:80/whitespace/whitespace.pl
 git add whitespace.pl
 
 GIT_AUTHOR_NAME='Michael Kölbl' GIT_AUTHOR_EMAIL='mrk21@infradead.org' GIT_AUTHOR_DATE='2003-04-01 19:34:12 +0000' \

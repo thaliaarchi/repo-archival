@@ -74,6 +74,7 @@ cache_path() {
 get_cached_path() {
   local url="$1"
   local cached
+  url="$(ia_raw_url "$url")"
   cached="$(cache_path "$url")"
   if [ ! -f "$cached" ]; then
     wget -q "$url" -O "$cached"

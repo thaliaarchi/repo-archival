@@ -58,12 +58,12 @@ https://esolangs.org/wiki/User:Marinus/Brainfuck_interpreters#HaPyLi'
 # 2011-02-19 15:50:17 +0000 https://web.archive.org/web/20110219155019/http://hapyli.webs.com:80/variablesandtheheap.htm
 # 2011-02-19 16:25:25 +0000 https://web.archive.org/web/20110219162526/http://hapyli.webs.com:80/embeddingwhitespace.htm
 # 2012-07-12 02:48:54 +0000 https://web.archive.org/web/20120712024855/http://hapyli.webs.com:80/apps/forums/
-get_cached https://web.archive.org/web/20110212015726id_/http://hapyli.webs.com:80/                        tutorial/index.htm
-get_cached https://web.archive.org/web/20110213102200id_/http://hapyli.webs.com:80/functions.htm           tutorial/functions.htm
-get_cached https://web.archive.org/web/20110217145734id_/http://hapyli.webs.com:80/examples.htm            tutorial/examples.htm
-get_cached https://web.archive.org/web/20110219132710id_/http://hapyli.webs.com:80/expressions.htm         tutorial/expressions.htm
-get_cached https://web.archive.org/web/20110219155019id_/http://hapyli.webs.com:80/variablesandtheheap.htm tutorial/variablesandtheheap.htm
-get_cached https://web.archive.org/web/20110219162526id_/http://hapyli.webs.com:80/embeddingwhitespace.htm tutorial/embeddingwhitespace.htm
+get_cached https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/                        tutorial/index.htm
+get_cached https://web.archive.org/web/20110213102200/http://hapyli.webs.com:80/functions.htm           tutorial/functions.htm
+get_cached https://web.archive.org/web/20110217145734/http://hapyli.webs.com:80/examples.htm            tutorial/examples.htm
+get_cached https://web.archive.org/web/20110219132710/http://hapyli.webs.com:80/expressions.htm         tutorial/expressions.htm
+get_cached https://web.archive.org/web/20110219155019/http://hapyli.webs.com:80/variablesandtheheap.htm tutorial/variablesandtheheap.htm
+get_cached https://web.archive.org/web/20110219162526/http://hapyli.webs.com:80/embeddingwhitespace.htm tutorial/embeddingwhitespace.htm
 git add tutorial/*.htm
 git add tutorial/*.hpl # manually extracted from HTML files
 GIT_AUTHOR_NAME='Cybis' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE='2010-05-23 02:20:21 +0000' \

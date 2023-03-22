@@ -34,7 +34,7 @@ git init -q
 # 2010-09-14 18:31 Nickolas "New article."
 # 2010-09-14 08:41 Nickolas "Changed text."
 # 2010-09-14 18:47 Nickolas "Changed text."
-get_article https://web.archive.org/web/20100918234350id_/http://progopedia.com:80/language/whitespace/ whitespace.html
+get_article https://web.archive.org/web/20100918234350/http://progopedia.com:80/language/whitespace/ whitespace.html
 git add whitespace.html
 commit_nickolas '2010-09-14 18:31:00 +0000' '2010-09-14 18:47:00 +0000' \
 'Whitespace: New article.
@@ -54,7 +54,7 @@ https://web.archive.org/web/20100918234350/http://progopedia.com:80/language/whi
 # 2010-12-02 18:54 Nickolas "Changed text."
 # 2010-12-03 19:39 Nickolas "Changed paradigms."
 # 2010-12-03 20:08 Nickolas "Changed text."
-get_article https://web.archive.org/web/20101225071422id_/http://progopedia.com:80/language/whitespace/ whitespace.html
+get_article https://web.archive.org/web/20101225071422/http://progopedia.com:80/language/whitespace/ whitespace.html
 git add whitespace.html
 commit_nickolas '2010-11-30 20:36:00 +0000' '2010-12-03 20:08:00 +0000' \
 'Whitespace: Changed text.
@@ -78,7 +78,7 @@ Whitespace: Changed text.
 https://web.archive.org/web/20101225071422/http://progopedia.com:80/language/whitespace/'
 
 # 2011-07-27 15:33 Nickolas "Changed text."
-get_article https://web.archive.org/web/20110827074120id_/http://progopedia.com:80/language/whitespace/ whitespace.html
+get_article https://web.archive.org/web/20110827074120/http://progopedia.com:80/language/whitespace/ whitespace.html
 git add whitespace.html
 commit_nickolas '2011-07-27 15:33:00 +0000' '2011-07-27 15:33:00 +0000' \
 'Whitespace: Changed text.
