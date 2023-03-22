@@ -12,7 +12,7 @@ git init -q
 # Last modified: 2008-01-02 23:14:30 +0000 GMT
 # Contents:
 # tetris.ws  2008-01-02 22:59:54 +0000 UTC (or local?)
-wget -q https://web.archive.org/web/20150817151110id_/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20080103/20651c47/attachment.zip
+get_cached https://web.archive.org/web/20150817151110id_/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20080103/20651c47/attachment.zip
 unzip -q attachment.zip
 
 # Posted: 2008-01-02 23:14:16 +0000 GMT

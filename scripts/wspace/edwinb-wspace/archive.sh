@@ -25,7 +25,7 @@ add_file() {
   if [ "$url" = "-" ]; then
     echo 'File not archived' > "$file"
   else
-    wget-cache "$(url_to_ia_raw "$url")" "$file"
+    get_cached "$(ia_raw_url "$url")" "$file"
   fi
   git add -f "$file"
 }

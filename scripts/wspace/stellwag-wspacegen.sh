@@ -26,8 +26,7 @@ cd wspace
 # 2004-09-09 12:59:05 +0000 UTC  wspacegen/GNUmakefile
 # 2004-09-09 12:59:08 +0000 UTC  wspacegen/Makefile
 # 2004-09-09 12:59:19 +0000 UTC  wspacegen/
-wget -q 'https://master.dl.sourceforge.net/project/wspacegen/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz?viasf=1' -O wspacegen-0.1-src.tar.gz
-tar xf wspacegen-0.1-src.tar.gz
+tar xf "$(get_cached_path 'https://master.dl.sourceforge.net/project/wspacegen/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz?viasf=1')"
 mv wspacegen stellwag-wspacegen
 cd stellwag-wspacegen
 

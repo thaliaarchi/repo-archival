@@ -40,7 +40,7 @@ commit() {
 mkdir -p wspace
 cd wspace
 
-wget -q https://web.archive.org/web/20060506022832id_/http://www.burghard.info:80/homepagenew/code/whitespace/wsa.zip
+get_cached https://web.archive.org/web/20060506022832id_/http://www.burghard.info:80/homepagenew/code/whitespace/wsa.zip
 unzip -q wsa.zip
 mv wsa burghard-wsa
 cd burghard-wsa
@@ -61,7 +61,7 @@ https://web.archive.org/web/20030629154300/http://www.burghard.info:80/code/whit
 git remote add origin https://github.com/wspace/burghard-wsa
 
 cd ..
-wget -q https://web.archive.org/web/20060506022719id_/http://www.burghard.info:80/homepagenew/code/whitespace/wsintercpp.zip
+get_cached https://web.archive.org/web/20060506022719id_/http://www.burghard.info:80/homepagenew/code/whitespace/wsintercpp.zip
 unzip -q wsintercpp.zip
 mv pack burghard-wsintercpp
 cd burghard-wsintercpp
@@ -80,7 +80,7 @@ https://web.archive.org/web/20030629125208/http://www.burghard.info:80/code/whit
 git remote add origin https://github.com/wspace/burghard-wsintercpp
 
 cd ..
-wget -q https://web.archive.org/web/20060428020415id_/http://www.burghard.info:80/homepagenew/code/whitespace/wsinterws.zip
+get_cached https://web.archive.org/web/20060428020415id_/http://www.burghard.info:80/homepagenew/code/whitespace/wsinterws.zip
 unzip -q wsinterws.zip
 mv wsinterws burghard-wsinterws
 cd burghard-wsinterws
