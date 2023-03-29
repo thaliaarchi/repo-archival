@@ -10,16 +10,25 @@ commit_bin() {
   local email="$5"
   local url="$6"
   local msg="${msg:-"Binary-only non-maintainer upload for $arch; no source changes."}"
+  local wspace="wspace_${version}_${arch}"
 
   ar -p "$(get_cached_path "$url")" data.tar.gz | gunzip | tar -x usr/bin/wspace
   mkdir -p bin
-  mv usr/bin/wspace "bin/wspace_${version}_${arch}"
+  mv usr/bin/wspace "bin/$wspace"
   rm -r usr
 
-  git add bin
+  git add "bin/$wspace"
   GIT_AUTHOR_NAME="$author" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
   GIT_COMMITTER_NAME="$author" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="$date" \
   git commit -q -m "$msg"
+}
+
+apply_diff() {
+  local url="$1"
+  rm -rf debian
+  mkdir debian
+  gunzip -c "$(get_cached_path "$1")" | patch -s -d debian
+  git add -f debian
 }
 
 mkdir -p wspace
@@ -27,14 +36,6 @@ cd wspace
 mkdir stribb-debian
 cd stribb-debian
 git init -q
-
-# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1.diff.gz
-# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1.dsc
-# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
-
-# get_cached https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2.diff.gz
-# get_cached https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2.dsc
-# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
 
 diff "$(get_cached_path https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb)" \
      "$(get_cached_path https://web.archive.org/web/20040325164055/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace_0.2-1_i386.deb)"
@@ -45,6 +46,10 @@ commit_bin '2003-03-31 10:36:08 +0100' 0.1-1    i386          'Andrew Stribblehi
 
 msg='New upstream release' \
 commit_bin '2003-03-31 17:33:02 +0100' 0.2-1    i386          'Andrew Stribblehill'         'ads@debian.org'                        https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb
+
+# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1.dsc
+# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
+apply_diff https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1.diff.gz
 
 # The changelog records 2004-04-30 00:17:41 +0100 as the time for this release,
 # but whitespace-mode.el was modified at 2004-05-04 17:35:24 +0100, so I use the
@@ -67,6 +72,10 @@ commit_bin '2004-05-19 14:45:34 UTC'   0.3-1    ia64          ''                
 commit_bin '2004-06-07 14:24:05 UTC'   0.3-1    amd64         ''                            ''                                      https://snapshot.debian.org/archive/debian-archive/20090802T004153Z/debian-amd64/pool/main/w/whitespace/whitespace_0.3-1_amd64.deb
 commit_bin '2004-06-21 16:42:51 UTC'   0.3-1    sparc         ''                            ''                                      https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1_sparc.deb
 commit_bin '2004-08-16 18:53:18 UTC'   0.3-1    mips          ''                            ''                                      https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1_mips.deb
+
+# get_cached https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2.dsc
+# get_cached https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
+apply_diff https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2.diff.gz
 
 msg='Rebuild again for the C++ ABI change (closes #329277).' \
 commit_bin '2005-09-21 18:04:51 +0100' 0.3-2    i386          'Andrew Stribblehill'         'ads@debian.org'                        https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2_i386.deb
