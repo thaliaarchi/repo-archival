@@ -30,6 +30,14 @@ commit_bin() {
   git commit -q -m "$msg"
 }
 
+add_file() {
+  local file="$2"
+  local url="$3"
+  mkdir -p "$(dirname "$file")"
+  get_cached "$url" "$file"
+  git add -f "$file"
+}
+
 apply_diff() {
   local url="$1"
   rm -rf debian
@@ -44,7 +52,7 @@ merge_changelogs() {
   git checkout HEAD~ -- changelog
   patch -s changelog changelog.diff
   rm changelog.diff
-  git add changelog
+  git add -f changelog
   GIT_COMMITTER_NAME="$(git show -s --format=%an --date=raw)" \
   GIT_COMMITTER_EMAIL="$(git show -s --format=%ae --date=raw)" \
   GIT_COMMITTER_DATE="$(git show -s --format=%ad --date=raw)" \
@@ -61,9 +69,28 @@ git init -q
 diff "$(get_cached_path https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb)" \
      "$(get_cached_path https://web.archive.org/web/20040325164055/http://mirror.ox.ac.uk:80/Mirrors/whitespace/whitespace_0.2-1_i386.deb)"
 
+add_file '2003-03-31 15:04:14 +0100' debian/changelog                                                https://web.archive.org/web/20030827083557/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/changelog
+add_file '2003-03-31 15:04:14 +0100' debian/compat                                                   https://web.archive.org/web/20030629104608/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/compat
+add_file '2003-03-31 15:04:14 +0100' debian/control                                                  https://web.archive.org/web/20030629104803/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/control
+add_file '2003-03-31 15:04:14 +0100' debian/copyright                                                https://web.archive.org/web/20030629105053/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/copyright
+add_file '2003-03-31 15:20:33 +0100' debian/files                                                    https://web.archive.org/web/20030827091055/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/files
+add_file '2003-03-31 15:04:14 +0100' debian/rules                                                    https://web.archive.org/web/20030629110105/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/rules
+add_file '2003-03-31 15:04:14 +0100' debian/whitespace.examples                                      https://web.archive.org/web/20030629110008/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.examples
+add_file '2003-03-31 15:04:14 +0100' debian/whitespace.install                                       https://web.archive.org/web/20030629110020/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.install
+add_file '2003-03-31 15:04:14 +0100' debian/whitespace.manpages                                      https://web.archive.org/web/20030629110513/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.manpages
+add_file '2003-03-31 15:20:33 +0100' debian/whitespace.substvars                                     https://web.archive.org/web/20030629110823/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.substvars
+add_file '2003-03-31 15:04:14 +0100' debian/wspace.1                                                 https://web.archive.org/web/20030629111334/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/wspace.1
+# add_file '2003-03-31 15:19    +0100' debian/whitespace.docs                                        not archived
+echo 'docs/*' > debian/whitespace.docs
+git add debian/whitespace.docs
+
 # The dates of Andrew's releases are from the times recorded in the changelog.
 msg='Initial packaging.' \
 commit_bin '2003-03-31 10:36:08 +0100' 0.1-1    i386          'Andrew Stribblehill'         'ads@debian.org'                        https://web.archive.org/web/20030803223310/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1_i386.deb
+
+# Hypothesized
+echo 'whitespace_0.2-1_i386.deb interpreters optional' > debian/files
+git add debian/files
 
 msg='New upstream release' \
 commit_bin '2003-03-31 17:33:02 +0100' 0.2-1    i386          'Andrew Stribblehill'         'ads@debian.org'                        https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb
