@@ -10,21 +10,22 @@ commit_bin() {
   local email="$5"
   local url="$6"
   local msg="${msg:-"Binary-only non-maintainer upload for $arch; no source changes."}"
-  local wspace="wspace_${version}_${arch}"
+  local dir="whitespace_${version}/${arch}"
 
-  ar -p "$(get_cached_path "$url")" data.tar.gz | gunzip |
-    tar -x usr/bin/wspace \
-           usr/share/doc/whitespace/changelog.Debian.gz \
-           usr/share/doc/whitespace/copyright \
-           usr/share/man/man1/wspace.1.gz
+  ar -p "$(get_cached_path "$url")" control.tar.gz data.tar.gz | gunzip |
+    gtar -ix ./control \
+             ./usr/bin/wspace \
+             ./usr/share/doc/whitespace/changelog.Debian.gz \
+             ./usr/share/doc/whitespace/copyright \
+             ./usr/share/man/man1/wspace.1.gz
   gunzip usr/share/doc/whitespace/changelog.Debian.gz usr/share/man/man1/wspace.1.gz
-  mkdir -p bin debian
-  mv usr/bin/wspace "bin/$wspace"
+  mkdir -p "$dir" debian
+  mv control usr/bin/wspace "$dir"
   mv usr/share/doc/whitespace/changelog.Debian debian/changelog
   mv usr/share/doc/whitespace/copyright usr/share/man/man1/wspace.1 debian/
   rm -r usr
 
-  git add "bin/$wspace" debian/changelog
+  git add "$dir" debian/changelog
   GIT_AUTHOR_NAME="$author" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
   GIT_COMMITTER_NAME="$author" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="$date" \
   git commit -q -m "$msg"
