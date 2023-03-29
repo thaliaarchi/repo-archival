@@ -40,7 +40,7 @@ Most of these scripts are to archive Whitespace projects for the
 - [wspace/phlip-pywhitespace](https://github.com/wspace/phlip-pywhitespace) - TODO automate
 - [wspace/ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug) - TODO [merge with GitHub repo](scripts/wspace/ssiegl-wsdebug_github.sh)
 - [wspace/stellwag-wspacegen](https://github.com/wspace/stellwag-wspacegen)
-- wspace/stribb-debian - [WIP](scripts/wspace/stribb-debian.sh)
+- [wspace/stribb-debian](https://github.com/wspace/stribb-debian)
 
 ## Extracted from git subtree
 
