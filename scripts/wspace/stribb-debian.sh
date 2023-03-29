@@ -12,12 +12,19 @@ commit_bin() {
   local msg="${msg:-"Binary-only non-maintainer upload for $arch; no source changes."}"
   local wspace="wspace_${version}_${arch}"
 
-  ar -p "$(get_cached_path "$url")" data.tar.gz | gunzip | tar -x usr/bin/wspace
-  mkdir -p bin
+  ar -p "$(get_cached_path "$url")" data.tar.gz | gunzip |
+    tar -x usr/bin/wspace \
+           usr/share/doc/whitespace/changelog.Debian.gz \
+           usr/share/doc/whitespace/copyright \
+           usr/share/man/man1/wspace.1.gz
+  gunzip usr/share/doc/whitespace/changelog.Debian.gz usr/share/man/man1/wspace.1.gz
+  mkdir -p bin debian
   mv usr/bin/wspace "bin/$wspace"
+  mv usr/share/doc/whitespace/changelog.Debian debian/changelog
+  mv usr/share/doc/whitespace/copyright usr/share/man/man1/wspace.1 debian/
   rm -r usr
 
-  git add "bin/$wspace"
+  git add "bin/$wspace" debian/changelog
   GIT_AUTHOR_NAME="$author" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
   GIT_COMMITTER_NAME="$author" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="$date" \
   git commit -q -m "$msg"
@@ -29,6 +36,20 @@ apply_diff() {
   mkdir debian
   gunzip -c "$(get_cached_path "$1")" | patch -s -d debian
   git add -f debian
+}
+
+merge_changelogs() {
+  cd debian
+  diff changelog.bak changelog > changelog.diff || :
+  git checkout HEAD~ -- changelog
+  patch -s changelog changelog.diff
+  rm changelog.diff
+  git add changelog
+  GIT_COMMITTER_NAME="$(git show -s --format=%an --date=raw)" \
+  GIT_COMMITTER_EMAIL="$(git show -s --format=%ae --date=raw)" \
+  GIT_COMMITTER_DATE="$(git show -s --format=%ad --date=raw)" \
+  git commit -q --amend --no-edit
+  cd ..
 }
 
 mkdir -p wspace
@@ -95,6 +116,8 @@ commit_bin '2006-11-04 21:33:16 UTC'   0.3-2    arm           ''                
 commit_bin '2007-01-19 14:51:39 UTC'   0.3-2    hurd-i386     ''                            ''                                      https://snapshot.debian.org/archive/debian/20070120T000000Z/pool/main/w/whitespace/whitespace_0.3-2_hurd-i386.deb
 commit_bin '2008-01-06 06:40:11 UTC'   0.3-2    armel         ''                            ''                                      https://snapshot.debian.org/archive/debian/20080209T000000Z/pool/main/w/whitespace/whitespace_0.3-2_armel.deb
 
+cp debian/changelog{,.bak}
+
 # These dates and authors are as recorded in the changelog.
 msg='Binary-only non-maintainer upload for amd64; no source changes.
 
@@ -105,8 +128,12 @@ msg='Binary-only non-maintainer upload for ia64; no source changes.
 
 Build against new version of ghc6 6.8.2dfsg1-1.1.' \
 commit_bin '2009-12-31 20:16:55 UTC'   0.3-2+b1 ia64          'Debian/IA64 Build Daemon'    'buildd@mundy.debian.org'               https://snapshot.debian.org/archive/debian/20100103T050638Z/pool/main/w/whitespace/whitespace_0.3-2%2Bb1_ia64.deb
+merge_changelogs
 
 msg='Binary-only non-maintainer upload for alpha; no source changes.
 
 Build against new version of ghc6 6.8.2dfsg1-1.1.' \
 commit_bin '2009-12-31 22:22:51 UTC'   0.3-2+b1 alpha         'alpha Build Daemon (goetz)'  'buildd_alpha-goetz@buildd.debian.org'  https://snapshot.debian.org/archive/debian/20100103T050638Z/pool/main/w/whitespace/whitespace_0.3-2%2Bb1_alpha.deb
+merge_changelogs
+
+rm debian/changelog.bak
