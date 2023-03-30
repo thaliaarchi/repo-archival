@@ -67,20 +67,22 @@ mkdir stribb-debian
 cd stribb-debian
 git init -q
 
-add_file '2003-03-31 15:04:14 +0100' debian/changelog                                                https://web.archive.org/web/20030827083557/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/changelog
-add_file '2003-03-31 15:04:14 +0100' debian/compat                                                   https://web.archive.org/web/20030629104608/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/compat
-add_file '2003-03-31 15:04:14 +0100' debian/control                                                  https://web.archive.org/web/20030629104803/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/control
-add_file '2003-03-31 15:04:14 +0100' debian/copyright                                                https://web.archive.org/web/20030629105053/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/copyright
-add_file '2003-03-31 15:20:33 +0100' debian/files                                                    https://web.archive.org/web/20030827091055/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/files
-add_file '2003-03-31 15:04:14 +0100' debian/rules                                                    https://web.archive.org/web/20030629110105/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/rules
-add_file '2003-03-31 15:04:14 +0100' debian/whitespace.examples                                      https://web.archive.org/web/20030629110008/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.examples
-add_file '2003-03-31 15:04:14 +0100' debian/whitespace.install                                       https://web.archive.org/web/20030629110020/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.install
-add_file '2003-03-31 15:04:14 +0100' debian/whitespace.manpages                                      https://web.archive.org/web/20030629110513/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.manpages
-add_file '2003-03-31 15:20:33 +0100' debian/whitespace.substvars                                     https://web.archive.org/web/20030629110823/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.substvars
-add_file '2003-03-31 15:04:14 +0100' debian/wspace.1                                                 https://web.archive.org/web/20030629111334/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/wspace.1
-# add_file '2003-03-31 15:19    +0100' debian/whitespace.docs                                        not archived
+add_file   '2003-03-31 15:04:14 +0100' debian/changelog            https://web.archive.org/web/20030827083557/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/changelog
+add_file   '2003-03-31 15:04:14 +0100' debian/compat               https://web.archive.org/web/20030629104608/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/compat
+add_file   '2003-03-31 15:04:14 +0100' debian/control              https://web.archive.org/web/20030629104803/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/control
+add_file   '2003-03-31 15:04:14 +0100' debian/copyright            https://web.archive.org/web/20030629105053/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/copyright
+add_file   '2003-03-31 15:20:33 +0100' debian/files                https://web.archive.org/web/20030827091055/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/files
+add_file   '2003-03-31 15:04:14 +0100' debian/rules                https://web.archive.org/web/20030629110105/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/rules
+add_file   '2003-03-31 15:04:14 +0100' debian/whitespace.examples  https://web.archive.org/web/20030629110008/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.examples
+add_file   '2003-03-31 15:04:14 +0100' debian/whitespace.install   https://web.archive.org/web/20030629110020/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.install
+add_file   '2003-03-31 15:04:14 +0100' debian/whitespace.manpages  https://web.archive.org/web/20030629110513/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.manpages
+add_file   '2003-03-31 15:20:33 +0100' debian/whitespace.substvars https://web.archive.org/web/20030629110823/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace.substvars
+add_file   '2003-03-31 15:04:14 +0100' debian/wspace.1             https://web.archive.org/web/20030629111334/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/wspace.1
+# add_file '2003-03-31 15:19    +0100' debian/whitespace.docs      not archived
 echo 'docs/*' > debian/whitespace.docs
 git add debian/whitespace.docs
+
+add_file   '2003-03-31 15:20:40 +0100' whitespace_0.1-1/whitespace_0.1-1.dsc https://web.archive.org/web/20030621215923/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace_0.1-1.dsc
 
 # The dates of Andrew's releases are from the times recorded in the changelog.
 msg='Initial packaging.' \
@@ -90,10 +92,12 @@ commit_bin '2003-03-31 10:36:08 +0100' 0.1-1    i386          'Andrew Stribblehi
 echo 'whitespace_0.2-1_i386.deb interpreters optional' > debian/files
 git add debian/files
 
+add_file   '2003-03-31 17:36:05 +0100' whitespace_0.2-1/whitespace_0.2-1.dsc https://web.archive.org/web/20040120123855/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1.dsc
+
 msg='New upstream release' \
 commit_bin '2003-03-31 17:33:02 +0100' 0.2-1    i386          'Andrew Stribblehill'         'ads@debian.org'                        https://web.archive.org/web/20030423000129/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1_i386.deb
 
-# get_cached http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1.dsc
+add_file   '2005-09-22 10:02:30 +0100' whitespace_0.3-1/whitespace_0.3-1.dsc http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1.dsc
 apply_diff http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1.diff.gz
 
 # The changelog records 2004-04-30 00:17:41 +0100 as the time for this release,
@@ -118,7 +122,7 @@ commit_bin '2004-06-07 14:24:05 UTC'   0.3-1    amd64         ''                
 commit_bin '2004-06-21 16:42:51 UTC'   0.3-1    sparc         ''                            ''                                      http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1_sparc.deb
 commit_bin '2004-08-16 18:53:18 UTC'   0.3-1    mips          ''                            ''                                      http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1_mips.deb
 
-# get_cached http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2.dsc
+add_file   '2005-09-22 10:02:30 +0100' whitespace_0.3-2/whitespace_0.3-2.dsc http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2.dsc
 apply_diff http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2.diff.gz
 
 msg='Rebuild again for the C++ ABI change (closes #329277).' \
