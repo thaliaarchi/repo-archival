@@ -16,6 +16,8 @@ ad938cf52c1f586a162e148a04e5d5e589369b53  https://snapshot.debian.org/archive/de
 ad938cf52c1f586a162e148a04e5d5e589369b53  https://snapshot.debian.org/archive/debian-archive/20090802T004153Z/debian/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
 ad938cf52c1f586a162e148a04e5d5e589369b53  https://snapshot.debian.org/archive/debian-archive/20090802T004153Z/debian-amd64/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
 
+2770f2d7fd13227960e1d715347d7ce721c58835  https://web.archive.org/web/20051109171340/http://ftp.debian.org:80/debian/pool/main/w/whitespace/whitespace_0.3.orig.tar.gz
+
 9d1618bf7621f5c5333ddf6ab7ea59803b0600aa  http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1.diff.gz
 9d1618bf7621f5c5333ddf6ab7ea59803b0600aa  http://archive.debian.org/debian-archive/debian/pool/main/w/whitespace/whitespace_0.3-1.diff.gz
 9d1618bf7621f5c5333ddf6ab7ea59803b0600aa  http://archive.debian.org/debian-amd64/pool/main/w/whitespace/whitespace_0.3-1.diff.gz
@@ -31,6 +33,7 @@ f5c63403a4f4147dc87db0e39de9e01bfc99efd0  http://archive.debian.org/debian-archi
 f5c63403a4f4147dc87db0e39de9e01bfc99efd0  https://snapshot.debian.org/archive/debian/20050312T000000Z/pool/main/w/whitespace/whitespace_0.3-1.dsc
 f5c63403a4f4147dc87db0e39de9e01bfc99efd0  https://snapshot.debian.org/archive/debian-archive/20090802T004153Z/debian/pool/main/w/whitespace/whitespace_0.3-1.dsc
 f5c63403a4f4147dc87db0e39de9e01bfc99efd0  https://snapshot.debian.org/archive/debian-archive/20090802T004153Z/debian-amd64/pool/main/w/whitespace/whitespace_0.3-1.dsc
+f5c63403a4f4147dc87db0e39de9e01bfc99efd0  https://web.archive.org/web/20041125135944/http://ftp.debian.org:80/debian/pool/main/w/whitespace/whitespace_0.3-1.dsc
 
 10d71df2b07c238a67585bb93402fd29354fa946  http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-1_alpha.deb
 10d71df2b07c238a67585bb93402fd29354fa946  http://archive.debian.org/debian-archive/debian/pool/main/w/whitespace/whitespace_0.3-1_alpha.deb
@@ -86,10 +89,13 @@ d179a96fbb0149e51ca61b1eb4a511c6b4bafa73  http://archive.debian.org/debian-archi
 d179a96fbb0149e51ca61b1eb4a511c6b4bafa73  https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2.diff.gz
 d179a96fbb0149e51ca61b1eb4a511c6b4bafa73  https://snapshot.debian.org/archive/debian-archive/20110127T084257Z/debian/pool/main/w/whitespace/whitespace_0.3-2.diff.gz
 
+1017d242fe5716e36655af61c931bede6bca6d70  https://web.archive.org/web/20060223063755/http://ftp.debian.org:80/debian/pool/main/w/whitespace/whitespace_0.3-2.diff.gz
+
 00e24fd38fa63541bfe61fd879a26800f2753a27  http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2.dsc
 00e24fd38fa63541bfe61fd879a26800f2753a27  http://archive.debian.org/debian-archive/debian/pool/main/w/whitespace/whitespace_0.3-2.dsc
 00e24fd38fa63541bfe61fd879a26800f2753a27  https://snapshot.debian.org/archive/debian/20050923T000000Z/pool/main/w/whitespace/whitespace_0.3-2.dsc
 00e24fd38fa63541bfe61fd879a26800f2753a27  https://snapshot.debian.org/archive/debian-archive/20110127T084257Z/debian/pool/main/w/whitespace/whitespace_0.3-2.dsc
+00e24fd38fa63541bfe61fd879a26800f2753a27  https://web.archive.org/web/20060223063741/http://ftp.debian.org:80/debian/pool/main/w/whitespace/whitespace_0.3-2.dsc
 
 6883083009a962f85985cbe9b87bdd06f657c0e9  http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2_alpha.deb
 6883083009a962f85985cbe9b87bdd06f657c0e9  http://archive.debian.org/debian-archive/debian/pool/main/w/whitespace/whitespace_0.3-2_alpha.deb
