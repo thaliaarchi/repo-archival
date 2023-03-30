@@ -1,0 +1,49 @@
+Description: Update to modern Haskell and fix version in usage
+Author: Thalia Archibald <thalia@archibald.dev>
+Index: stribb-debian/Makefile
+===================================================================
+--- stribb-debian.orig/Makefile
++++ stribb-debian/Makefile
+@@ -3,7 +3,7 @@ GHCI = ghci
+ 
+ SRCS = main.hs Input.hs VM.hs Tokens.hs
+ OBJS = main.o Input.o VM.o Tokens.o
+-OPTS = -O -fvia-C
++OPTS = -O
+ 
+ TARGET = wspace
+ 
+Index: stribb-debian/VM.hs
+===================================================================
+--- stribb-debian.orig/VM.hs
++++ stribb-debian/VM.hs
+@@ -1,6 +1,6 @@
+ module VM where
+ 
+-import IO
++import System.IO
+ 
+ {- Stack machine for running whitespace programs -}
+ 
+Index: stribb-debian/main.hs
+===================================================================
+--- stribb-debian.orig/main.hs
++++ stribb-debian/main.hs
+@@ -26,7 +26,7 @@ import Input
+ import VM
+ import Tokens
+ 
+-import System(getArgs)
++import System.Environment(getArgs)
+ 
+ main :: IO ()
+ main = do
+@@ -37,7 +37,7 @@ main = do
+ 
+ usage :: IO ()
+ usage = do
+-	putStrLn "wspace 0.2 (c) 2003 Edwin Brady"
++	putStrLn "wspace 0.3 (c) 2003 Edwin Brady"
+ 	putStrLn "-------------------------------"
+ 	putStrLn "Usage: wspace [file]"
+ 

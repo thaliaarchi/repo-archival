@@ -1,0 +1,8 @@
+/debian/.debhelper/
+/debian/whitespace/
+/.pc
+/wspace
+*.hi
+*.o
+build-stamp
+*.tar.gz
