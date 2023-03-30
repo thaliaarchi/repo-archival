@@ -2,6 +2,16 @@
 
 . base.sh
 
+commit() {
+  local date="$1"
+  local author="$2"
+  local email="$3"
+  local msg="$4"
+  GIT_AUTHOR_NAME="$author" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
+  GIT_COMMITTER_NAME="$author" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="$date" \
+  git commit -q -m "$msg"
+}
+
 commit_bin() {
   local date="$1"
   local version="$2"
@@ -26,9 +36,7 @@ commit_bin() {
   rm -r usr
 
   git add "$dir" debian/changelog
-  GIT_AUTHOR_NAME="$author" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
-  GIT_COMMITTER_NAME="$author" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="$date" \
-  git commit -q -m "$msg"
+  commit "$date" "$author" "$email" "$msg"
 }
 
 add_file() {
@@ -66,6 +74,8 @@ cd wspace
 mkdir stribb-debian
 cd stribb-debian
 git init -q
+
+add_file   '2003-03-31 13:35:20 +0100' COPYING                     https://web.archive.org/web/20030818001123/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/COPYING
 
 add_file   '2003-03-31 15:04:14 +0100' debian/changelog            https://web.archive.org/web/20030827083557/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/changelog
 add_file   '2003-03-31 15:04:14 +0100' debian/compat               https://web.archive.org/web/20030629104608/http://www.dur.ac.uk:80/d.j.walrond/whitespace/whitespace-0.1/debian/compat
@@ -164,3 +174,9 @@ commit_bin '2009-12-31 22:22:51 UTC'   0.3-2+b1 alpha         'alpha Build Daemo
 merge_changelogs
 
 rm debian/changelog.bak
+
+cp ../../../files/wspace/stribb-debian/README.md .
+git add README.md
+commit '2023-03-29 20:31:15 -0600' 'Thalia Archibald' 'thalia@archibald.dev' 'Add README.md with archive information'
+
+git remote add origin https://github.com/wspace/stribb-debian
