@@ -6,6 +6,11 @@ It was originally packaged by [Andrew Stribblehill](https://github.com/stribb).
 
 ## Releases
 
+Versions 0.1-1 and 0.2-1 were distributed manually on the Whitespace homepage
+and were only partially saved. Version 0.3-1 was accepted into Debian
+[on 2004-05-06](https://tracker.debian.org/news/660789/accepted-whitespace-03-1-i386-source/).
+The package was removed [on 2009-05-07](https://tracker.debian.org/news/660791/bug525505-fixed/).
+
 - whitespace 0.1-1
   - Source:
       whitespace_0.1.orig.tar.gz (not archived),
@@ -66,17 +71,34 @@ It was originally packaged by [Andrew Stribblehill](https://github.com/stribb).
       [amd64](http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2+b1_amd64.deb),
       [ia64](http://archive.debian.org/debian/pool/main/w/whitespace/whitespace_0.3-2+b1_ia64.deb)
 
-## Bug reports (fixed)
-
-- [#246309](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246309) whitespace: bug in fact.ws example
-- [#246569](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246569) whitespace_0.2-1(ia64/unstable): FTBFS: please migrate to ghc6
-- [#329277](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329277) whitespace: Uninstallable, depends on libgmp3
-
 ## Sources
 
-- http://archive.debian.org/debian/pool/main/w/whitespace/
-- http://archive.debian.org/debian-amd64/pool/main/w/whitespace/
-- http://archive.debian.org/debian-archive/debian/pool/main/w/whitespace/
-- http://archive.debian.org/debian-archive/debian-amd64/pool/main/w/whitespace/
-- https://snapshot.debian.org/package/whitespace/
-- https://web.archive.org/web/20041211033033/http://ftp.debian.org:80/debian/pool/main/w/whitespace/
+- Source overview:
+    [stable](https://web.archive.org/web/20080605174425/http://packages.debian.org/stable/interpreters/whitespace),
+    [testing](https://web.archive.org/web/20040831122917/http://packages.debian.org/testing/interpreters/whitespace),
+    [unstable](https://web.archive.org/web/20040815201820/http://packages.debian.org/unstable/interpreters/whitespace),
+    [sarge (archive)](https://web.archive.org/web/20151001180909/http://archive.debian.net/sarge/interpreters/whitespace),
+    [etch (archive)](https://web.archive.org/web/20150929065943/http://archive.debian.net/etch/interpreters/whitespace),
+    [lenny (archive)](https://web.archive.org/web/20151019042837/http://archive.debian.net/lenny/interpreters/whitespace)
+- Package archives:
+    [snapshot archive](https://snapshot.debian.org/package/whitespace/),
+    [debian](http://archive.debian.org/debian/pool/main/w/whitespace/),
+    [debian (amd64)](http://archive.debian.org/debian-amd64/pool/main/w/whitespace/),
+    [debian-archive](http://archive.debian.org/debian-archive/debian/pool/main/w/whitespace/),
+    [debian-archive (amd64)](http://archive.debian.org/debian-archive/debian-amd64/pool/main/w/whitespace/),
+    [ftp](https://web.archive.org/web/20041211033033/http://ftp.debian.org:80/debian/pool/main/w/whitespace/)
+- Package tracker:
+    [new](https://tracker.debian.org/pkg/whitespace),
+    [old](https://packages.qa.debian.org/w/whitespace.html),
+    [archive](https://web.archive.org/web/20051226165714/http://packages.qa.debian.org/w/whitespace.html)
+
+## Bug reports
+
+- [#246309](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246309)
+  whitespace: bug in fact.ws example
+- [#246569](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246569)
+  whitespace_0.2-1(ia64/unstable): FTBFS: please migrate to ghc6
+- [#329277](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329277)
+  whitespace: Uninstallable, depends on libgmp3
+- [#525505](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=525505)
+  RM: whitespace -- out of date, unmaintained, dead upstream, low popcon
