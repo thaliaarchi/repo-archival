@@ -1,0 +1,15 @@
+Source: whitespace
+Section: interpreters
+Priority: optional
+Maintainer: Andrew Stribblehill <ads@debian.org>
+Standards-Version: 4.6.2.0
+Build-Depends: debhelper (>= 4.0.0), ghc
+
+Package: whitespace
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Programming language where only whitespace counts
+ Most modern programming languages do not consider white space characters
+ (spaces, tabs and newlines) syntax, ignoring them, as if they weren't there.
+ Whitespace is a language that seeks to redress the balance. Any non whitespace
+ characters are ignored; only spaces, tabs and newlines are considered syntax.
