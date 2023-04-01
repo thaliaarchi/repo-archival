@@ -94,11 +94,16 @@ The package was removed [on 2009-05-07](https://tracker.debian.org/news/660791/b
 
 ## Bug reports
 
-- [#246309](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246309)
+- [#187116](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=187116):
+  ITP: whitespace -- Programming language where only whitespace counts
+  [[debian-devel](https://lists.debian.org/debian-devel/2003/04/msg00007.html),
+  [archive](https://web.archive.org/web/20040120063011/http://lists.debian.org/debian-devel/2003/debian-devel-200304/msg00007.html)]
+  (Intent to Package)
+- [#246309](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246309):
   whitespace: bug in fact.ws example
-- [#246569](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246569)
+- [#246569](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=246569):
   whitespace_0.2-1(ia64/unstable): FTBFS: please migrate to ghc6
-- [#329277](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329277)
+- [#329277](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329277):
   whitespace: Uninstallable, depends on libgmp3
-- [#525505](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=525505)
+- [#525505](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=525505):
   RM: whitespace -- out of date, unmaintained, dead upstream, low popcon
