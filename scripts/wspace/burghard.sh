@@ -28,13 +28,21 @@
 # wsinterws/wsinterws.ws   2003-04-24 18:52:12 +0000  2003-09-16 20:40:28 +0000  YUYXXSHFC7GNMXN2SBEUP5RHNBVVTAT6  https://web.archive.org/web/20030622164645/http://www.burghard.info:80/code/whitespace/wsinterws/wsinterws.ws
 # wsinterws/wsinterws.wsa  2003-04-24 18:52:13 +0000  2003-09-16 20:40:28 +0000  LGFOH3ZXO5CGHFXH4PYMUHL5HVMK4LP7  https://web.archive.org/web/20030622165242/http://www.burghard.info:80/code/whitespace/wsinterws/wsinterws.wsa
 
-
+# X-Archive-Orig-Last-Modified 2008-10-29 07:56:50 +0000
 # “All programs are released under the GPL” https://web.archive.org/web/20090123074209/http://burghard.info:80/Code/index.html
 
 commit() {
   GIT_AUTHOR_NAME='Oliver Burghard' GIT_AUTHOR_EMAIL='oliver@burghard.info' GIT_AUTHOR_DATE="$1" \
   GIT_COMMITTER_NAME='Oliver Burghard' GIT_COMMITTER_EMAIL='oliver@burghard.info' GIT_COMMITTER_DATE="$1" \
   git commit -q -m "$2"
+}
+
+commit_license() {
+  cp ../../../files/wspace/burghard/LICENSE .
+  git add LICENSE
+  commit "2008-10-29 07:56:50 +0000" "Release under the GPL
+
+https://web.archive.org/web/20090123074209/http://burghard.info:80/Code/index.html"
 }
 
 mkdir -p wspace
@@ -45,19 +53,14 @@ unzip -q wsa.zip
 mv wsa burghard-wsa
 cd burghard-wsa
 git init -q
-
-echo 'Whitespace Assembler
-
-An Assembler for Whitespace, quite complex already. It is written in Haskell.
-Features are Includes, options(defines in cpp), extended syntax ...
-There is already an Assembler like this, but I did not know of its existence when I started writing this.' > README
-
+cp ../../../files/wspace/burghard/README_wsa README
 git add -A
 
 commit '2003-04-24 18:52:09 +0000' 'Create Whitespace Assembler
 
 https://web.archive.org/web/20030629154300/http://www.burghard.info:80/code/whitespace/wsa/index.html'
 
+commit_license
 git remote add origin https://github.com/wspace/burghard-wsa
 
 cd ..
@@ -66,17 +69,14 @@ unzip -q wsintercpp.zip
 mv pack burghard-wsintercpp
 cd burghard-wsintercpp
 git init -q
-
-echo 'Whitespace Interpreter in C++
-
-A Whitespace interpreter written in C++. It is very fast.' > README
-
+cp ../../../files/wspace/burghard/README_wsintercpp README
 git add -A
 
 commit '2003-04-10 13:29:10 +0000' 'Create Whitespace Interpreter in C++
 
 https://web.archive.org/web/20030629125208/http://www.burghard.info:80/code/whitespace/wsintercpp/index.html'
 
+commit_license
 git remote add origin https://github.com/wspace/burghard-wsintercpp
 
 cd ..
@@ -85,17 +85,12 @@ unzip -q wsinterws.zip
 mv wsinterws burghard-wsinterws
 cd burghard-wsinterws
 git init -q
-
-echo 'Whitespace Interpreter in Whitespace
-
-What you have been dreaming of ! My newest program ! It is a Whitespace interpreter written in Whitespace itself !
-It is quite stable. It was captable of running itself and a prim number searcher within itself !
-(Cpp Interpreter -> Ws Interpreter -> Ws Interpreter -> prim.ws) (although it took days to complete)' > README
-
+cp ../../../files/wspace/burghard/README_wsinterws README
 git add -A
 
 commit '2003-04-24 18:52:13 +0000' 'Create Whitespace Interpreter in Whitespace
 
 https://web.archive.org/web/20030608024503/http://www.burghard.info:80/code/whitespace/wsinterws/index.html'
 
+commit_license
 git remote add origin https://github.com/wspace/burghard-wsinterws
