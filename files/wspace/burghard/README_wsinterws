@@ -1,0 +1,5 @@
+Whitespace Interpreter in Whitespace
+
+What you have been dreaming of ! My newest program ! It is a Whitespace interpreter written in Whitespace itself !
+It is quite stable. It was captable of running itself and a prim number searcher within itself !
+(Cpp Interpreter -> Ws Interpreter -> Ws Interpreter -> prim.ws) (although it took days to complete)
