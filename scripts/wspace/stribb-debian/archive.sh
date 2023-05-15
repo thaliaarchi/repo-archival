@@ -181,7 +181,7 @@ git add README.md
 commit '2023-03-29 20:31:15 -0600' 'Thalia Archibald' 'thalia@archibald.dev' 'Add README.md with archive information'
 
 cp -R ../../../files/wspace/stribb-debian/ .
-git add -A
+git add -Af
 commit '2023-03-29 22:18:44 -0600' 'Thalia Archibald' 'thalia@archibald.dev' 'Update to modern Debian and Haskell'
 
 git remote add origin https://github.com/wspace/stribb-debian

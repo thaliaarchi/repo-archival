@@ -9,7 +9,7 @@ commit() {
   local committer_date="${date#* / }"
   GIT_AUTHOR_NAME='Edwin Brady' GIT_AUTHOR_EMAIL='e.c.brady@durham.ac.uk' GIT_AUTHOR_DATE="$author_date" \
   GIT_COMMITTER_NAME='Edwin Brady' GIT_COMMITTER_EMAIL='e.c.brady@durham.ac.uk' GIT_COMMITTER_DATE="$committer_date" \
-  git commit -m "$message"
+  git commit -q -m "$message"
 }
 
 add_file() {
@@ -46,7 +46,7 @@ mkdir -p wspace
 cd wspace
 mkdir edwinb-wspace
 cd edwinb-wspace
-git init
+git init -q
 
 # The latest date of a group of files is used for the commit date. The exception
 # is for PHP files, where the only available date is the HTTP Date header, which
