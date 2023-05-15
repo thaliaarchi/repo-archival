@@ -73,10 +73,15 @@ https://pastebin.com/f761fc4b5'
 # Public release announcement:
 # 2010-05-23 02:20:21 +0000 Cybis FDP <cybis-fdp@hotmail.com> https://web.archive.org/web/20130926170259/http://compsoc.dur.ac.uk:80/archives/whitespace/2010-May/000075.html
 
-# Untracked files in SVN:
-# 2010-12-18 22:26:06 +0000  99bottles.hpl
-# 2010-12-18 22:27:46 +0000  99bottles.ws
-# 2009-05-20 03:57:48 +0000  hosting.txt    (do not commit)
+# Untracked and ignored files:
+# zip modified time        Stat Filename
+# 2010-12-18 22:26:06 +0000  ?  99bottles.hpl
+# 2010-12-18 22:27:46 +0000  ?  99bottles.ws
+# 2015-06-26 02:27:44 +0000  I  WSpace/*
+# 2009-05-20 03:57:48 +0000  ?  hosting.txt
+# 2009-05-10 07:44:54 +0000  I  hwc/*.pyc
+# 2009-04-28 05:21:52 +0000  I  wspace.exe
+
 cp -p ../hapyli-svn/99bottles.{hpl,ws} .
 git add 99bottles.{hpl,ws}
 GIT_AUTHOR_NAME='Marinus Oosters' GIT_AUTHOR_EMAIL='marinuso@gmail.com' GIT_AUTHOR_DATE='2010-11-27 00:00:00 +0000' \
