@@ -1,0 +1,39 @@
+# HaPyLi emails
+
+## 2023-03-31 19:50:37
+
+From: Thalia Archibald \<thalia@archibald.dev>  
+To: Cybis FDP \<cybis-fdp@hotmail.com>  
+Subject: HaPyLi and the Whitespace 20th anniversary  
+Date: Fri, 31 Mar 2023 13:50:37 -0600
+
+Hello Cybis,
+
+The 20th anniversary of the Whitespace programming language is tomorrow and I'm writing a retrospective on it. Since your language HaPyLi is the largest language that compiles to Whitespace, I'd like to talk about it, but I can't find its compiler anywhere. When your hapyli.webs.com site was archived by the Internet Archive, the compiler source was not saved. Do you still have the files for it somewhere?
+
+Additionally, your compiler for Brainfuck, which you also wrote a Sudoku solver with, seems interesting. Did you ever publish the source for that?
+
+Thanks,  
+Thalia Archibald
+
+## 2023-05-15 02:13:22
+
+From: Cybis FDP \<cybis-fdp@hotmail.com>  
+To: Thalia Archibald \<thalia@archibald.dev>  
+Subject: Re: HaPyLi and the Whitespace 20th anniversary  
+Date: Mon, 15 May 2023 02:13:22 +0000
+
+My goodness. My apologies for the late reply since I don't use this email very often anymore. I'm guessing it's too late for the 20th anniversary. In any case... I do still have the HaPyLi interpreter, as well as the brainfuck compiler to a language I've called "CyBF" (short for Cybis Brainfuck - I've never been good at naming things).
+
+I indeed haven't posted my HaPyLi interpreter info anywhere else since the webs.com site shut down. I've been meaning to one day, but.. well... it's a lot of work to write a complete tutorial to a programming language and I've just never gotten around to doing so.
+
+I've attached both to this email. I think HaPyLi comes with my preliminary tutorial notes.
+
+CyBF, however, I never wrote a tutorial for so... I'm guessing it won't be too helpful to you, but it does include the original source code to the sudoku solver and a rudimentary "CyBF Standard Library" (which includes string operations, math operations, and a List data structure) so you can see what the language looks like. CyBF uses a rather unique type system that allows for C++ style references and generics, despite Brainfuck using only unaddressable tape memory. Functions are implemented more as macros - expanded in-line, so they cannot be recursive.
+
+Again, my apologies for abandoning these projects. One day I'll create a Github profile with everything I've made over the years - probably sooner now than later, given the interest. Thank you for your interest in them!
+
+-Kevin
+
+[HaPyLi.zip](HaPyLi.zip)  
+[CyBF.zip](CyBF.zip)
