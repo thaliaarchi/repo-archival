@@ -15,7 +15,6 @@ Most of these scripts are to archive Whitespace projects for the
 - wspace/brunokim-java - TODO
 - wspace/dcode-php - TODO
 - wspace/edwinb-wspace - [WIP](scripts/wspace/edwinb-wspace/archive.sh)
-- [wspace/hapyli](https://github.com/wspace/hapyli)
 - wspace/kevincruijssen-codegolf - [WIP](scripts/wspace/kevincruijssen-codegolf.sh)
 - wspace/lmitchell-elisp - TODO
 - [wspace/mesquita-markov](https://github.com/wspace/mesquita-markov)
@@ -88,7 +87,9 @@ Most of these scripts are to archive Whitespace projects for the
 
 ## Converted from SVN
 
+- cybis-cybf - [TODO](scripts/cybis/cybf.sh)
 - [wspace/bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) - TODO include wiki and forks
+- [wspace/cybis-hapyli](https://github.com/wspace/cybis-hapyli)
 - wspace/kreutzer-spacedide - [TODO](scripts/wspace/kreutzer-spacedide.sh)
 - wspace/marktraceur-redlandside - TODO convert from SVN and merge with git repo
 - wspace/whitespacesdk - [TODO](https://code.google.com/archive/p/whitespacesdk/)
