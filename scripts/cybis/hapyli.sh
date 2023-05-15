@@ -103,21 +103,19 @@ git commit -q -m 'Add Brainfuck interpreter in HaPyLi
 
 https://esolangs.org/wiki/User:Marinus/Brainfuck_interpreters#HaPyLi'
 
-# HTTP Date                 URL
-# 2011-02-12 01:57:25 +0000 https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/
-# 2011-02-13 10:22:00 +0000 https://web.archive.org/web/20110213102200/http://hapyli.webs.com:80/functions.htm
-# 2011-02-13 17:20:27 +0000 https://web.archive.org/web/20110213172035/http://hapyli.webs.com:80/apps/forums/
-# 2011-02-17 14:57:28 +0000 https://web.archive.org/web/20110217145734/http://hapyli.webs.com:80/examples.htm
-# 2011-02-19 13:27:10 +0000 https://web.archive.org/web/20110219132710/http://hapyli.webs.com:80/expressions.htm
-# 2011-02-19 15:50:17 +0000 https://web.archive.org/web/20110219155019/http://hapyli.webs.com:80/variablesandtheheap.htm
-# 2011-02-19 16:25:25 +0000 https://web.archive.org/web/20110219162526/http://hapyli.webs.com:80/embeddingwhitespace.htm
-# 2012-07-12 02:48:54 +0000 https://web.archive.org/web/20120712024855/http://hapyli.webs.com:80/apps/forums/
-get_cached https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/                        Tutorials/web/index.html
-get_cached https://web.archive.org/web/20110213102200/http://hapyli.webs.com:80/functions.htm           Tutorials/web/Functions.html
-get_cached https://web.archive.org/web/20110217145734/http://hapyli.webs.com:80/examples.htm            Tutorials/web/Examples.html
-get_cached https://web.archive.org/web/20110219132710/http://hapyli.webs.com:80/expressions.htm         Tutorials/web/Expressions.html
-get_cached https://web.archive.org/web/20110219155019/http://hapyli.webs.com:80/variablesandtheheap.htm Tutorials/web/Variables.html
-get_cached https://web.archive.org/web/20110219162526/http://hapyli.webs.com:80/embeddingwhitespace.htm Tutorials/web/Assembler.html
+# Apply the differences from the Webs site to the local tutorial, as if it was
+# not mangled by the site builder tool.
+#
+# HTTP Date                  URL                                                                                           Path
+# 2011-02-12 01:57:25 +0000  https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/                         Tutorials/web/index.html
+# 2011-02-13 10:22:00 +0000  https://web.archive.org/web/20110213102200/http://hapyli.webs.com:80/functions.htm            Tutorials/web/Functions.html
+# 2011-02-13 17:20:27 +0000  https://web.archive.org/web/20110213172035/http://hapyli.webs.com:80/apps/forums/
+# 2011-02-17 14:57:28 +0000  https://web.archive.org/web/20110217145734/http://hapyli.webs.com:80/examples.htm             Tutorials/web/Examples.html
+# 2011-02-19 13:27:10 +0000  https://web.archive.org/web/20110219132710/http://hapyli.webs.com:80/expressions.htm          Tutorials/web/Expressions.html
+# 2011-02-19 15:50:17 +0000  https://web.archive.org/web/20110219155019/http://hapyli.webs.com:80/variablesandtheheap.htm  Tutorials/web/Variables.html
+# 2011-02-19 16:25:25 +0000  https://web.archive.org/web/20110219162526/http://hapyli.webs.com:80/embeddingwhitespace.htm  Tutorials/web/Assembler.html
+# 2012-07-12 02:48:54 +0000  https://web.archive.org/web/20120712024855/http://hapyli.webs.com:80/apps/forums/
+cp -R ../../../files/cybis/hapyli/Tutorials/web/*.html Tutorials/web/
 git add Tutorials/web
 GIT_AUTHOR_NAME='Kevin Gundlach' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE='2010-05-23 02:20:21 +0000' \
 GIT_COMMITTER_NAME='Kevin Gundlach' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE='2011-02-12 01:57:25 +0000' \
