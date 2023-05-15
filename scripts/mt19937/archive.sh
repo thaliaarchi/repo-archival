@@ -55,7 +55,7 @@ add_archive() {
   tar xf "$archive"
   rm "$archive"
   find . \( -type d -name .git -prune \) -o \( -type f -print0 \) | xargs -0 chmod 644
-  git add -A
+  git add -Af
 }
 
 commit() {
@@ -68,7 +68,7 @@ commit() {
 
   GIT_AUTHOR_NAME="$author_name" GIT_AUTHOR_EMAIL="$author_email" GIT_AUTHOR_DATE="$author_date" \
   GIT_COMMITTER_NAME="$author_name" GIT_COMMITTER_EMAIL="$author_email" GIT_COMMITTER_DATE="$committer_date" \
-  git commit -m "$message
+  git commit -q -m "$message
 $commit_urls"
 
   commit_urls=''
@@ -76,7 +76,7 @@ $commit_urls"
 
 mkdir mt19937
 cd mt19937
-git init
+git init -q
 
 add_file  mt19937.c      '1997-11-02 14:15:44 +0900' https://web.archive.org/web/20000829080032/http://www.math.keio.ac.jp:80/matumoto/mt19937.c
 

@@ -48,13 +48,12 @@ https://web.archive.org/web/20090123074209/http://burghard.info:80/Code/index.ht
 mkdir -p wspace
 cd wspace
 
-get_cached https://web.archive.org/web/20060506022832/http://www.burghard.info:80/homepagenew/code/whitespace/wsa.zip
-unzip -q wsa.zip
+unzip -q "$(get_cached_path https://web.archive.org/web/20060506022832/http://www.burghard.info:80/homepagenew/code/whitespace/wsa.zip)"
 mv wsa burghard-wsa
 cd burghard-wsa
 git init -q
 cp ../../../files/wspace/burghard/README_wsa README
-git add -A
+git add -Af
 
 commit '2003-04-24 18:52:09 +0000' 'Create Whitespace Assembler
 
@@ -64,13 +63,12 @@ commit_license
 git remote add origin https://github.com/wspace/burghard-wsa
 
 cd ..
-get_cached https://web.archive.org/web/20060506022719/http://www.burghard.info:80/homepagenew/code/whitespace/wsintercpp.zip
-unzip -q wsintercpp.zip
+unzip -q "$(get_cached_path https://web.archive.org/web/20060506022719/http://www.burghard.info:80/homepagenew/code/whitespace/wsintercpp.zip)"
 mv pack burghard-wsintercpp
 cd burghard-wsintercpp
 git init -q
 cp ../../../files/wspace/burghard/README_wsintercpp README
-git add -A
+git add -Af
 
 commit '2003-04-10 13:29:10 +0000' 'Create Whitespace Interpreter in C++
 
@@ -80,13 +78,12 @@ commit_license
 git remote add origin https://github.com/wspace/burghard-wsintercpp
 
 cd ..
-get_cached https://web.archive.org/web/20060428020415/http://www.burghard.info:80/homepagenew/code/whitespace/wsinterws.zip
-unzip -q wsinterws.zip
+unzip -q "$(get_cached_path https://web.archive.org/web/20060428020415/http://www.burghard.info:80/homepagenew/code/whitespace/wsinterws.zip)"
 mv wsinterws burghard-wsinterws
 cd burghard-wsinterws
 git init -q
 cp ../../../files/wspace/burghard/README_wsinterws README
-git add -A
+git add -Af
 
 commit '2003-04-24 18:52:13 +0000' 'Create Whitespace Interpreter in Whitespace
 
