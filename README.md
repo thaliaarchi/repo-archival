@@ -87,7 +87,7 @@ Most of these scripts are to archive Whitespace projects for the
 
 ## Converted from SVN
 
-- cybis-cybf - [TODO](scripts/cybis/cybf.sh)
+- [cybf](https://github.com/thaliaarchi/cybf-archive)
 - [wspace/bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) - TODO include wiki and forks
 - [wspace/cybis-hapyli](https://github.com/wspace/cybis-hapyli)
 - wspace/kreutzer-spacedide - [TODO](scripts/wspace/kreutzer-spacedide.sh)
