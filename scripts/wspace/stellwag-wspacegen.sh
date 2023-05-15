@@ -31,7 +31,7 @@ mv wspacegen stellwag-wspacegen
 cd stellwag-wspacegen
 
 git init -q
-git add -A
+git add -Af
 
 GIT_AUTHOR_NAME='Philippe Stellwag' GIT_AUTHOR_EMAIL='linux@mp3s.name' GIT_AUTHOR_DATE='2004-09-09 12:59:19 +0000' \
 GIT_COMMITTER_NAME='Philippe Stellwag' GIT_COMMITTER_EMAIL='linux@mp3s.name' GIT_COMMITTER_DATE='2004-09-09 12:59:19 +0000' \

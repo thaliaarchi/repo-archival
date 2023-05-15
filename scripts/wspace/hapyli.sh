@@ -11,7 +11,7 @@ commit() {
 mkdir -p wspace
 cd wspace
 
-cp -rp ../../files/wspace/hapyli .
+cp -R ../../files/wspace/hapyli .
 git init -q hapyli
 cd hapyli
 
