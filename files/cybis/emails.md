@@ -37,3 +37,23 @@ Again, my apologies for abandoning these projects. One day I'll create a Github 
 
 [HaPyLi.zip](HaPyLi.zip)  
 [CyBF.zip](CyBF.zip)
+
+## 2023-05-16 05:34:10
+
+From: Thalia Archibald \<thalia@archibald.dev>  
+To: Cybis FDP \<cybis-fdp@hotmail.com>  
+Subject: Re: HaPyLi and the Whitespace 20th anniversary  
+Date: Mon, 15 May 2023 21:34:10 -0600
+
+Kevin,
+
+Wow! I never expected to ever hear back from you. Thank you so much for the source code! This’ll be fun to play with.
+
+I’m already thinking of porting HaPyLi to Rust and integrating it with some other Whitespace tools I’ve written. CyBF uses some interesting techniques I hadn’t considered.
+
+To make sure it’s properly archived and accessible, I’ve converted the SVN client checkouts you sent to git repos, reconstructing as much of the history as I could, at https://github.com/wspace/cybis-hapyli and https://github.com/thaliaarchi/cybf-archive. I also resurrected and updated the HaPyLi site at https://wspace.github.io/cybis-hapyli/.
+
+Do you by chance still have the SVN server repos? The checkouts only have the latest revision (which is already fantastic), but it would be great to have the full history. They would have been at C:\svn\{hapyli,CyBF}, according to the metadata I see.
+
+Thanks!  
+Thalia
