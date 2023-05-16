@@ -3,15 +3,15 @@
 . base.sh
 
 commit() {
-  GIT_AUTHOR_NAME='Kevin Gundlach' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_NAME='Kevin Gundlach' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE="$1" \
+  GIT_AUTHOR_NAME='Kevin' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE="$1" \
+  GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE="$1" \
   git commit -q -m "$2"
 }
 
 mkdir -p cybis
 cd cybis
 
-unzip -q ../../files/cybis/CyBF.zip
+unzip -q ../../files/cybis/checkouts/CyBF.zip
 mv CyBF cybf-svn
 cd cybf-svn
 
@@ -50,7 +50,7 @@ cp ../../../files/cybis/cybf/CyBF/.gitignore CyBF/
 git add -Af
 commit '2017-05-19 08:28:52 +0000' 'Revision 60
 
-https://github.com/thaliaarchi/repo-archival/blob/main/files/cybis/CyBF.zip'
+https://github.com/thaliaarchi/repo-archival/blob/main/files/cybis/checkouts/CyBF.zip'
 
 # Untracked and ignored files:
 # zip modified time                Stat Filename
