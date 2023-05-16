@@ -35,8 +35,8 @@ Again, my apologies for abandoning these projects. One day I'll create a Github 
 
 -Kevin
 
-[HaPyLi.zip](HaPyLi.zip)  
-[CyBF.zip](CyBF.zip)
+[HaPyLi.zip](checkouts/HaPyLi.zip)  
+[CyBF.zip](checkouts/CyBF.zip)
 
 ## 2023-05-16 05:34:10
 
@@ -57,3 +57,25 @@ Do you by chance still have the SVN server repos? The checkouts only have the la
 
 Thanks!  
 Thalia
+
+## 2023-05-16 12:40:48
+
+From: Cybis FDP \<cybis-fdp@hotmail.com>  
+To: Thalia Archibald \<thalia@archibald.dev>  
+Subject: Re: HaPyLi and the Whitespace 20th anniversary  
+Date: Tue, 16 May 2023 12:40:48 +0000
+
+I indeed do still have the svn server repos. Here you are. I've been using Tortoise SVN for years for personal projects and still do. I know it's a bit outdated by today's standard, but it still serves me well.
+
+Thank you for all your work regarding bringing HaPyLi back to life. The github page is awesome!
+
+If you don't mind my asking... where did you get my email address or full name from? Not that I mind and I'm thrilled you were able to reach out. It's just I don't recall attaching that information to either the esolang.org page, nor the webs site, nor the dailywtf forum. I can't imagine where else it would be.
+
+CyBF actually compiles to an intermediate language, which I dubbed BFIL (Brainfuck Intermediate Language). It's that which ultimately gets compiled to brainfuck. I know it's a weird langauge without a tutorial, so let me know if you ever have any questions about it.
+
+Thank you again!
+
+-Kevin
+
+[Hapyli.zip](repos/Hapyli.zip)  
+[CyBF.zip](repos/CyBF.zip)
