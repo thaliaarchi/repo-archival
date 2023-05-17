@@ -10,12 +10,12 @@ cd kevincruijssen-codegolf
 git init -q
 
 commit() {
-  date="$1"
-  slug="$2"
-  author="$3"
-  message="$4"
-  revision_url="$5"
-  source_url="$6"
+  local date="$1"
+  local slug="$2"
+  local author="$3"
+  local message="$4"
+  local revision_url="$5"
+  local source_url="$6"
 
   mkdir -p "$slug"
   wget-cache "$source_url" "$slug/answer.html"

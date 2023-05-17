@@ -43,19 +43,14 @@ git filter-repo -f --quiet \
 # v1.0 subsumes and changes nothing from v1.0@27
 git branch -q -D trunk V2 v1.0@27
 
-# Insert sudoku commit in sequence
 git config user.name Kevin
 git config user.email cybis-fdp@hotmail.com
-commit_before_sudoku="$(
-  ( git log --format='%ad %H'; echo '2009-05-19 23:53:16 +0000 insert' ) |
-  sort | grep -B1 insert | head -n1 | cut -c27-)"
-GIT_SEQUENCE_EDITOR="sed -i~ '1s/^/break\n/'" \
-git rebase -i -q --committer-date-is-author-date "$commit_before_sudoku"
 
 # sudoku.ws
 # 2009-05-19 23:53:16.030 +0000 Huf_Lungdung                                      https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace
 # 2009-05-20 16:30:21 +0000     Huf Lungdung                                      https://pastebin.com/f761fc4b5
 # 2009-11-19 22:42:24 +0000     Cybis FDP <cybis-fdp@hotmail.com>, signed "Cybis" https://web.archive.org/web/20141011193156/http://compsoc.dur.ac.uk/archives/whitespace/2009-November/000072.html
+rebase_break_before_date '2009-05-19 23:53:16 +0000'
 get_cached https://pastebin.com/raw/f761fc4b5 sudoku.ws
 git add sudoku.ws
 GIT_AUTHOR_NAME='Kevin' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE='2009-05-19 23:53:16 +0000' \
@@ -63,8 +58,8 @@ GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMI
 git commit -q -m 'Compile sudoku solver
 
 https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace'
-
 git rebase --continue
+
 git config --unset user.name
 git config --unset user.email
 

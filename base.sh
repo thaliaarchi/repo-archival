@@ -56,6 +56,16 @@ merge_repo() {
   rm -rf "../$repo"
 }
 
+# Break just before a date, to insert a commit into the sequence
+rebase_break_before_date() {
+  local date="$1"
+  commit_before="$(
+    ( git log --format='%ad %H'; echo "$date insert" ) |
+    sort | grep -B1 insert | head -n1 | cut -c27-)"
+  GIT_SEQUENCE_EDITOR="sed -i~ '1s/^/break\n/'" \
+  git rebase -i -q --committer-date-is-author-date "$commit_before"
+}
+
 ia_raw_url() {
   sed -E 's,(^https://web.archive.org/web/[0-9]+)/,\1id_/,' <<< "$1"
 }
