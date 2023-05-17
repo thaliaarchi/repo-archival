@@ -32,6 +32,8 @@ cd cybf
 # Convert svn:ignore to .gitignore
 # TODO convert .gitignore for all revisions
 git svn create-ignore
+find . -name .gitignore -exec unix2dos -q {} \;
+git add '*.gitignore'
 GIT_COMMITTER_NAME="$(git show -s --format=%an)" \
 GIT_COMMITTER_EMAIL="$(git show -s --format=%ae)" \
 GIT_COMMITTER_DATE="$(git show -s --format=%ai)" \
