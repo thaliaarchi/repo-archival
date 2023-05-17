@@ -49,7 +49,7 @@ add_archive() {
   local url="$1"
   local archive="${url##*/}"
 
-  git rm -r -- *
+  git rm -rq -- *
   get_cached "$url"
   push_commit_url "$url"
   tar xf "$archive"
@@ -86,21 +86,21 @@ add_file  mt19937.c      '1997-11-02 14:15:44 +0900' https://web.archive.org/web
 # the changes after the initial revision were made by Nishimura. It was probably
 # created before 1998-04-06, because it doesn't have 1998/4/6 in the header or
 # the changes from the 1998-12-15 snapshots.
-add_local mt19937int.c    -                          1997-11-02_mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
+add_local mt19937int.c    -                          1997-11-02/mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
 
 commit '1997-11-02 14:15:44 +0000' 'Initial commit' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
 # Add the date to the headers and generate mt19937.out.
-add_local mt19937.c      -                           1998-04-06_mt19937.c '(reconstructed)'
-add_local mt19937.out    '1998-04-06 15:55 +0900'    1998-04-06_mt19937.out '(reconstructed)' # (not archived) http://www.math.keio.ac.jp/~nisimura/random/old/19991028/real/mt19937.out
-add_local mt19937int.c    -                          1998-04-06_mt19937int.c '(reconstructed)'
+add_local mt19937.c      -                           1998-04-06/mt19937.c '(reconstructed)'
+add_local mt19937.out    '1998-04-06 15:55 +0900'    1998-04-06/mt19937.out '(reconstructed)' # (not archived) http://www.math.keio.ac.jp/~nisimura/random/old/19991028/real/mt19937.out
+add_local mt19937int.c    -                          1998-04-06/mt19937int.c '(reconstructed)'
 add_file  mt19937int.out '1998-04-06 15:55:25 +0900' https://web.archive.org/web/19991006231247/http://www.math.keio.ac.jp:80/%7Enisimura/random/int/mt19937int.out
 
 # Reverse the 1998-12-15 changes, by analogy to mt19937int.c. These would have
 # existed, to complement the .out files.
-add_local mt19937-1.c    -                           1998-04-06_mt19937-1.c '(reconstructed)'
+add_local mt19937-1.c    -                           1998-04-06/mt19937-1.c '(reconstructed)'
 add_file  mt19937-1.out  '1998-04-06 15:56:21 +0900' https://web.archive.org/web/20001002172737/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/real1/mt19937-1.out
-add_local mt19937-2.c    -                           1998-04-06_mt19937-2.c '(reconstructed)'
+add_local mt19937-2.c    -                           1998-04-06/mt19937-2.c '(reconstructed)'
 add_file  mt19937-2.out  '1998-04-06 15:56:59 +0900' https://web.archive.org/web/19991007020740/http://www.math.keio.ac.jp:80/%7Enisimura/random/real2/mt19937-2.out
 
 commit '1998-04-06 15:56:59 +0900' 'Add integer and other real versions' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
@@ -109,7 +109,7 @@ add_file  mt.ps          '1998-04-21 13:55:18 +0900' https://web.archive.org/web
 commit '1998-04-21 13:55:18 +0900' 'Add paper' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
 # This revision of mt19937.c was not archived, but its modified time was saved.
-add_local mt19937.c      '1998-12-15 15:54 +0900'    1998-12-15_mt19937.c '(reconstructed)' # (not archived) http://www.math.keio.ac.jp/~nisimura/random/old/19991028/real/mt19937.c
+add_local mt19937.c      '1998-12-15 15:54 +0900'    1998-12-15/mt19937.c '(reconstructed)' # (not archived) http://www.math.keio.ac.jp/~nisimura/random/old/19991028/real/mt19937.c
 
 add_file  mt19937int.c   '1998-12-15 15:54:13 +0900' https://web.archive.org/web/20001002172719/http://www.math.keio.ac.jp:80/~nisimura/random/old/19991028/int/mt19937int.c
 add_file  mt19937-1.c    '1998-12-15 15:54:45 +0900' https://web.archive.org/web/19991007005824/http://www.math.keio.ac.jp:80/%7Enisimura/random/real1/mt19937-1.c
@@ -122,7 +122,7 @@ add_file  mt.pdf         '1999-01-06 12:31:11 +0900' https://web.archive.org/web
 commit '1999-01-06 12:31:11 +0900' 'Convert paper to PDF' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
 
 # Reverse the 2000-12-14 changes.
-add_local mt19937.c      -                           1999-10-28_mt19937.c '(reconstructed)'
+add_local mt19937.c      -                           1999-10-28/mt19937.c '(reconstructed)'
 
 add_file  mt19937.out    '1999-10-28 22:20:10 +0900' https://web.archive.org/web/20020214230728/http://www.math.keio.ac.jp:80/~nisimura/random/real/mt19937.out
 add_file  mt19937int.c   '1999-10-28 22:19:42 +0900' https://web.archive.org/web/19991110074420/http://www.math.keio.ac.jp:80/~nisimura/random/int/mt19937int.c
@@ -135,8 +135,8 @@ commit '1999-10-28 22:21:37 +0900' 'Modify sgenrand seeding and add lsgenrand' '
 
 # These snapshots are early versions, that were later modified to link to the MT
 # homepage.
-add_local mt19937.c     '2000-12-13 12:33:10 +0900' 2000-12-13_mt19937.c    https://web.archive.org/web/20010806224916/http://www.math.keio.ac.jp:80/matumoto/mt19937.c
-add_local mt19937int.c  '2000-12-13 12:35:03 +0900' 2000-12-13_mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
+add_local mt19937.c     '2000-12-13 12:33:10 +0900' 2000-12-13/mt19937.c    https://web.archive.org/web/20010806224916/http://www.math.keio.ac.jp:80/matumoto/mt19937.c
+add_local mt19937int.c  '2000-12-13 12:35:03 +0900' 2000-12-13/mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
 commit '2000-12-13 12:35:03 +0900' 'Link to the MT home page' 'Makoto Matsumoto' 'matumoto@math.keio.ac.jp'
 
 # This mt19937.c revision has a lot of changes since its last snapshot, so those
