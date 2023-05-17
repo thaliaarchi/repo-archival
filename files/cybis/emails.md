@@ -79,3 +79,34 @@ Thank you again!
 
 [Hapyli.zip](repos/Hapyli.zip)  
 [CyBF.zip](repos/CyBF.zip)
+
+## 2023-05-17 20:44:05 -0600
+
+From: Thalia Archibald \<thalia@archibald.dev>  
+To: Cybis FDP \<cybis-fdp@hotmail.com>  
+Subject: Re: HaPyLi and the Whitespace 20th anniversary  
+Date: Wed, 17 May 2023 14:44:05 -0600
+
+Kevin
+
+Thanks for the repos! I’ve now rebased the two GitHub repos onto those histories. I think the git conversions have come together quite nicely, and I’ve updated HaPyLi to work with Python 3 and included other community .hpl programs.
+
+It took a lot of sleuthing: I first heard about HaPyLi either from your page on the Esolang wiki\[0], which links to hapyli.webs.com\[1] but doesn’t mention sudoku, or from sudoku.ws in Hostile Fork’s Whitespace Collection\[2], which links to The Daily WTF\[3] but doesn’t mention HaPyLi by name. Desperate to find the HaPyLi compiler, I searched around for “hapyli” and “cybis”, but the only trace indexed by search engines was a Stack Overflow question by you\[4]. Later while reviewing the Whitespace mailing list for something else, I found your posts releasing sudoku.ws\[5] and hapyli.webs.com\[6], which show your email address. I then emailed you without success in 2020 and 2021, then was lucky this time around. I also tried emailing Marinus, who wrote the 99 bottles program\[7] and a Brainfuck interpreter\[8] in HaPyLi and may be the only other person who’s written code in HaPyLi. Yours was certainly the most difficult to track down of the 345 Whitespace projects I’ve documented in the Whitespace Corpus\[9].
+
+I didn’t know your first or last name until you emailed with the HaPyLi code. The usage text printed in main.py has your full name and commits are signed as Kevin1 in HaPyLi and Kevin in CyBF. Anywhere online I’ve seen, you’re Cybis or Cybis FDP and, in the case of The Daily WTF, Huf Lungdung. I’ve now replaced where I had written your name in the repos and tutorial with Cybis and in the commits with Kevin \<cybis-fdp@hotmail.com>. Is that how you’d rather be referred to?
+
+It’s fun to read through the revision history and I figure you’d enjoy what I found. It looks like HaPyLi was the first project you used Tortoise SVN with (“[r26] I love Tortoise SVN. This is so much easier to work with than VSS. It just behaves.”). And you’ve long wanted to make sudoku in Brainfuck. When posting sudoku.ws in 2009\[6], you wrote “Maybe one of these days I'll try writing a sudoku solver in Brainfuck ;)”, which was fulfilled in 2017 with CyBF (“[r76] ^_^ I did it! I finally have a Sudoku solver in Brainfuck! Umm... it's a 3.75 MB program though. LOL.”). That reminds me of some of my long-time compiler ideas for Whitespace, that are running on 5 years now and I’ll hopefully finish eventually. I’ve done a fair amount of work with Brainfuck too, but Whitespace was and still is my first love in esolangs and has pushed me into a career in programming language theory.
+
+Thanks!  
+Thalia
+
+\[0]: https://esolangs.org/wiki/HaPyLi  
+\[1]: https://web.archive.org/web/20120905174811/http://hapyli.webs.com/  
+\[2]: https://github.com/hostilefork/whitespacers/blob/master/examples/sudoku.ws  
+\[3]: https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace  
+\[4]: https://stackoverflow.com/questions/607830/use-of-haskell-state-monad-a-code-smell  
+\[5]: https://web.archive.org/web/20131109103417/http://compsoc.dur.ac.uk:80/archives/whitespace/2009-November/000072.html  
+\[6]: https://web.archive.org/web/20130926170259/http://compsoc.dur.ac.uk:80/archives/whitespace/2010-May/000075.html  
+\[7]: https://www.99-bottles-of-beer.net/language-hapyli-2556.html  
+\[8]: https://esolangs.org/wiki/User:Marinus/Brainfuck_interpreters#HaPyLi  
+\[9]: https://github.com/wspace/corpus
