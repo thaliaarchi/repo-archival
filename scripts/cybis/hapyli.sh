@@ -5,57 +5,52 @@
 mkdir -p cybis
 cd cybis
 
-# First mention
-# 2009-03-03 19:44:31 +0000 Cybis https://stackoverflow.com/questions/607830/use-of-haskell-state-monad-a-code-smell
+# SVN repo
+unzip -q ../../files/cybis/repos/Hapyli.zip
+mv Hapyli hapyli-svn
+svnadmin upgrade hapyli-svn
 
+# SVN checkout
 unzip -q ../../files/cybis/checkouts/HaPyLi.zip
-mv HaPyLi hapyli-svn
-cd hapyli-svn
+mv HaPyLi hapyli-svn-checkout
+svn upgrade -q hapyli-svn-checkout
+svn relocate "file://$(pwd)/hapyli-svn/Trunk" hapyli-svn-checkout
 
-# Upgrade format of working copy for newer clients
-svn upgrade -q
-
-# Repo metadata:
-#
-# $ svn info
-#
-# URL: file:///C:/svn/hapyli/Trunk
-# Relative URL: ^/Trunk
-# Repository Root: file:///C:/svn/hapyli
-# Repository UUID: f8cf23a9-8c7d-2043-a475-f83fdb64c9a1
-# Revision: 67
-# Node Kind: directory
-# Schedule: normal
-# Last Changed Author: Kevin1
-# Last Changed Rev: 67
-# Last Changed Date: 2009-05-09 08:29:10 +0000 (Sat, 09 May 2009)
-
-# File metadata:
-#
-# $ sqlite3 -json .svn/wc.db 'SELECT * FROM nodes'
-
-# Create a clean directory tree
-svn export -q . ../hapyli
-cd ../hapyli
-git init -q
-git config core.autocrlf false
+# git conversion
+git svn clone "file://$(pwd)/hapyli-svn" hapyli \
+  --trunk=Trunk --branches=Branches \
+  --authors-file=<(echo 'Kevin1 = Kevin <cybis-fdp@hotmail.com>')
+cd hapyli
 
 # Convert svn:ignore to .gitignore
-#
-# $ svn propget svn:ignore -R
-#
-# . - WSpace
-# wspace.exe
-#
-cp ../../../files/cybis/hapyli/.gitignore .
+# TODO convert .gitignore for all revisions
+git svn create-ignore
+GIT_COMMITTER_NAME="$(git show -s --format=%an)" \
+GIT_COMMITTER_EMAIL="$(git show -s --format=%ae)" \
+GIT_COMMITTER_DATE="$(git show -s --format=%ai)" \
+git commit --amend --no-edit
 
-# SVN working copies have no history, so commit the latest revision
-git add -Af
-GIT_AUTHOR_NAME='Kevin' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE='2009-05-09 08:29:10 +0000' \
-GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE='2009-05-09 08:29:10 +0000' \
-git commit -q -m 'Revision 67
+# Reformat git-svn metadata
+git filter-repo -f --quiet \
+  --message-callback '
+    message = re.sub(br"^([\s\S]*?)\n*git-svn-id: .*@(\d+) f8cf23a9-8c7d-2043-a475-f83fdb64c9a1\n$", br"[r\2] \1\n", message)
+    message = re.sub(br"^(\[r\d+\])\s+$", br"\1\n", message)
+    return message'
 
-https://github.com/thaliaarchi/repo-archival/blob/main/files/cybis/checkouts/HaPyLi.zip'
+# Delete superfluous branches:
+# main is identical to trunk
+# V2 was renamed to v1.1 in r26
+# v1.0 subsumes and changes nothing from v1.0@27
+git branch -q -D trunk V2 v1.0@27
+
+# Insert sudoku commit in sequence
+git config user.name Kevin
+git config user.email cybis-fdp@hotmail.com
+commit_before_sudoku="$(
+  ( git log --format='%ad %H'; echo '2009-05-19 23:53:16 +0000 insert' ) |
+  sort | grep -B1 insert | head -n1 | cut -c27-)"
+GIT_SEQUENCE_EDITOR="sed -i~ '1s/^/break\n/'" \
+git rebase -i -q --committer-date-is-author-date "$commit_before_sudoku"
 
 # sudoku.ws
 # 2009-05-19 23:53:16.030 +0000 Huf_Lungdung                                      https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace
@@ -67,14 +62,16 @@ GIT_AUTHOR_NAME='Kevin' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE
 GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE='2009-05-19 23:53:16 +0000' \
 git commit -q -m 'Compile sudoku solver
 
-https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace
-https://web.archive.org/web/20131109103417/http://compsoc.dur.ac.uk:80/archives/whitespace/2009-November/000072.html
-https://pastebin.com/f761fc4b5'
+https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace'
+
+git rebase --continue
+git config --unset user.name
+git config --unset user.email
 
 # Public release announcement:
 # 2010-05-23 02:20:21 +0000 Cybis FDP <cybis-fdp@hotmail.com> https://web.archive.org/web/20130926170259/http://compsoc.dur.ac.uk:80/archives/whitespace/2010-May/000075.html
 
-# Untracked and ignored files:
+# Untracked and ignored files in SVN checkout:
 # zip modified time        Stat Filename
 # 2010-12-18 22:26:06 +0000  ?  99bottles.hpl
 # 2010-12-18 22:27:46 +0000  ?  99bottles.ws
@@ -83,7 +80,7 @@ https://pastebin.com/f761fc4b5'
 # 2009-05-10 07:44:54 +0000  I  hwc/*.pyc
 # 2009-04-28 05:21:52 +0000  I  wspace.exe
 
-cp -p ../hapyli-svn/99bottles.{hpl,ws} .
+cp -p ../hapyli-svn-checkout/99bottles.{hpl,ws} .
 git add 99bottles.{hpl,ws}
 GIT_AUTHOR_NAME='Marinus Oosters' GIT_AUTHOR_EMAIL='marinuso@gmail.com' GIT_AUTHOR_DATE='2010-11-27 00:00:00 +0000' \
 GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE='2010-12-18 22:27:46 +0000' \
@@ -124,7 +121,5 @@ git commit -q -m 'Release publicly
 
 https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/
 https://web.archive.org/web/20130926170259/http://compsoc.dur.ac.uk:80/archives/whitespace/2010-May/000075.html'
-
-rm -rf ../hapyli-svn
 
 git remote add origin https://github.com/wspace/cybis-hapyli
