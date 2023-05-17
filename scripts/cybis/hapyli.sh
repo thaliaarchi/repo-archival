@@ -25,6 +25,8 @@ cd hapyli
 # Convert svn:ignore to .gitignore
 # TODO convert .gitignore for all revisions
 git svn create-ignore
+find . -name .gitignore -exec unix2dos -q {} \;
+git add '*.gitignore'
 GIT_COMMITTER_NAME="$(git show -s --format=%an)" \
 GIT_COMMITTER_EMAIL="$(git show -s --format=%ae)" \
 GIT_COMMITTER_DATE="$(git show -s --format=%ai)" \
@@ -120,6 +122,8 @@ https://esolangs.org/wiki/User:Marinus/Brainfuck_interpreters#HaPyLi'
 
 cp -Rp ../../../files/cybis/hapyli/2010-12-18/ .
 cp -p ../hapyli-svn-checkout/99bottles.ws .
+# 99bottles.ws was generated as LF, but would have been committed as CRLF.
+unix2dos -q 99bottles.ws
 git add -A
 GIT_AUTHOR_NAME='Kevin' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE='2010-12-18 22:27:46 +0000' \
 GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE='2010-12-18 22:27:46 +0000' \
