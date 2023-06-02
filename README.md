@@ -56,6 +56,7 @@ Most of these scripts are to archive Whitespace projects for the
 ## Merged git histories
 
 - [hostilefork/rebol-whitespacers](https://github.com/hostilefork/rebol-whitespacers) - with manual rebasing
+- quine-relay-spoiler - [WIP](scripts/quine-relay/spoiler.md)
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) - with manual rewording
 - [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) - with manual rebasing
 - [wspace/keen-whitelie](https://github.com/wspace/keen-whitelie) - with manual rebasing
