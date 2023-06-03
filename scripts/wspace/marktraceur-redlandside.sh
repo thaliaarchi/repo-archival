@@ -10,7 +10,7 @@ git svn clone svn://svn.code.sf.net/p/redlandside/code/ marktraceur-redlandside 
   --no-metadata \
   --authors-file=<(echo '
 marktraceur = Mark Holmquist <marktraceur@gmail.com>
-lostinaudio89 = Logan May <lostinaudio89>
+lostinaudio89 = Logan May <lostinaudio89@users.sourceforge.net>
 ')
 cd marktraceur-redlandside
 git branch svn
