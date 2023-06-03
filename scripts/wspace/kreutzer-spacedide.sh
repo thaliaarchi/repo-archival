@@ -1,11 +1,21 @@
 #!/bin/bash -e
 
 . base.sh
-git svn clone --stdlayout https://svn.code.sf.net/p/spacedide/code wspace/spacedide
-git -C wspace/spacedide filter-repo -f \
+
+mkdir -p wspace
+cd wspace
+
+git svn clone --stdlayout https://svn.code.sf.net/p/spacedide/code kreutzer-spacedide
+cd kreutzer-spacedide
+
+git filter-repo -f --quiet \
   --message-callback '
-    return b"Initial commit\n" if message.startswith(b"Initial commit") else re.sub(
-      br"^\n+git-svn-id: https://svn.code.sf.net/p/spacedide/code@(\d+) 253eaa7e-a5eb-43a2-a586-e43a4db1c6d0\n$", br"r\1\n", message)' \
-  --commit-callback '
-    commit.author_email = commit.author_name + b"@users.sourceforge.net"
-    commit.committer_email = commit.committer_name + b"@users.sourceforge.net"'
+    message = re.sub(br"^([\s\S]*?)\n*git-svn-id: .*@(\d+) 253eaa7e-a5eb-43a2-a586-e43a4db1c6d0\n$", br"[r\2] \1\n", message)
+    message = re.sub(br"^(\[r\d+\])\s+$", br"\1\n", message)
+    return message' \
+  --mailmap <(echo '
+Sebastian Kreutzer <spacedide@users.sourceforge.net> spacedide <spacedide@253eaa7e-a5eb-43a2-a586-e43a4db1c6d0>
+Apache Allura <allura> allura <allura@253eaa7e-a5eb-43a2-a586-e43a4db1c6d0>
+')
+
+git remote add origin https://github.com/wspace/kreutzer-spacedide
