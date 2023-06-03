@@ -56,6 +56,11 @@ merge_repo() {
   rm -rf "../$repo"
 }
 
+rebase_with_metadata() {
+  git -c rebase.instructionFormat="%s%nexec GIT_COMMITTER_NAME='%cn' GIT_COMMITTER_EMAIL='%ce' GIT_COMMITTER_DATE='%ci' git commit -q --amend --no-edit --allow-empty --allow-empty-message" \
+    rebase "$@"
+}
+
 # Break just before a date, to insert a commit into the sequence
 rebase_break_before_date() {
   local date="$1"
