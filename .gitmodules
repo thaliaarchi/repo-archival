@@ -88,6 +88,14 @@
 [submodule "git/github.com/koturn/Whitespace"]
 	path = git/github.com/koturn/Whitespace
 	url = https://github.com/koturn/Whitespace
+[submodule "git/github.com/mame/quine-relay@master"]
+	path = git/github.com/mame/quine-relay@master
+	url = https://github.com/mame/quine-relay
+	branch = master
+[submodule "git/github.com/mame/quine-relay@spoiler"]
+	path = git/github.com/mame/quine-relay@spoiler
+	url = https://github.com/mame/quine-relay
+	branch = spoiler
 [submodule "git/github.com/meeees/Whitespace"]
 	path = git/github.com/meeees/Whitespace
 	url = https://github.com/meeees/Whitespace
