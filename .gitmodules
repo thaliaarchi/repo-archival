@@ -61,6 +61,9 @@
 [submodule "git/github.com/KeenS/whitelie"]
 	path = git/github.com/KeenS/whitelie
 	url = https://github.com/KeenS/whitelie
+[submodule "git/github.com/MarkTraceur/redlandside"]
+	path = git/github.com/MarkTraceur/redlandside
+	url = https://github.com/MarkTraceur/redlandside
 [submodule "git/github.com/Smithers888/BlueSpace"]
 	path = git/github.com/Smithers888/BlueSpace
 	url = https://github.com/Smithers888/BlueSpace
