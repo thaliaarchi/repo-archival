@@ -37,7 +37,6 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/burghard-wsinterws](https://github.com/wspace/burghard-wsinterws) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/nutcrack-whiteplanes](https://github.com/wspace/nutcrack-whiteplanes) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
 - [wspace/phlip-pywhitespace](https://github.com/wspace/phlip-pywhitespace) - TODO automate
-- [wspace/ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug) [[sh](scripts/wspace/ssiegl-wsdebug.sh)] - TODO [merge with GitHub repo](scripts/wspace/ssiegl-wsdebug_github.sh)
 - [wspace/stellwag-wspacegen](https://github.com/wspace/stellwag-wspacegen) [[sh](scripts/wspace/stellwag-wspacegen.sh)]
 - [wspace/stribb-debian](https://github.com/wspace/stribb-debian) [[sh](scripts/wspace/stribb-debian/archive.sh)]
 
@@ -52,6 +51,10 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/remigascou-c](https://github.com/wspace/remigascou-c) [[sh](scripts/wspace/remigascou-c.sh)] - source now offline
 - [wspace/shimo-yukicoder](https://github.com/wspace/shimo-yukicoder) [[sh](scripts/wspace/shimo-yukicoder.sh)]
 - [wspace/wysang-java](https://github.com/wspace/wysang-java) [[sh](scripts/wspace/wysang-java.sh)]
+
+## Cleaned git history
+
+- [wspace/ssiegl-wsdebug](https://github.com/wspace/ssiegl-wsdebug) [[sh](scripts/wspace/ssiegl-wsdebug.sh)]
 
 ## Merged git histories
 
