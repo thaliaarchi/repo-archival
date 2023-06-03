@@ -92,7 +92,7 @@ Most of these scripts are to archive Whitespace projects for the
 - [wspace/bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) - TODO include wiki and forks
 - [wspace/cybis-hapyli](https://github.com/wspace/cybis-hapyli)
 - wspace/kreutzer-spacedide - [TODO](scripts/wspace/kreutzer-spacedide.sh)
-- wspace/marktraceur-redlandside - TODO convert from SVN and merge with git repo
+- [wspace/marktraceur-redlandside](https://github.com/wspace/marktraceur-redlandside)
 - wspace/whitespacesdk - [TODO](https://code.google.com/archive/p/whitespacesdk/)
 
 ## Converted from CVS
