@@ -2,10 +2,13 @@
 
 . base.sh
 
+NAME='Cybis'
+EMAIL='cybis-fdp@hotmail.com'
+
 commit() {
-  GIT_AUTHOR_NAME='Kevin' GIT_AUTHOR_EMAIL='cybis-fdp@hotmail.com' GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_NAME='Kevin' GIT_COMMITTER_EMAIL='cybis-fdp@hotmail.com' GIT_COMMITTER_DATE="$1" \
-  git commit -q -m "$2"
+  GIT_AUTHOR_DATE="$1" GIT_COMMITTER_DATE="$1" \
+  git -c user.name="$NAME" -c user.email="$EMAIL" \
+    commit -q -m "$2"
 }
 
 mkdir -p cybis
@@ -26,7 +29,7 @@ svn relocate "file://$(pwd)/cybf-svn" cybf-svn-checkout
 # directories, which are used more like subprojects than branches and multiple
 # are sometimes updated in the same commit, so I don't use --stdlayout.
 git svn clone "file://$(pwd)/cybf-svn" cybf \
-  --authors-file=<(echo 'Kevin = Kevin <cybis-fdp@hotmail.com>')
+  --authors-file=<(echo "Kevin = $NAME <$EMAIL>")
 cd cybf
 
 # Convert svn:ignore to .gitignore
