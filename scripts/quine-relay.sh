@@ -75,9 +75,9 @@ for pair in "${commit_pairs[@]}"; do
   # Select the later date
   date="$( (git show -s --format=%cd --date=raw "$master" &&
             git show -s --format=%cd --date=raw "$spoiler" | sed s/+0000/+0900/) | sort -r | head -n1)"
-  GIT_AUTHOR_NAME="Yusuke Endoh" GIT_AUTHOR_EMAIL="mame@ruby-lang.org" GIT_AUTHOR_DATE="$date" \
-  GIT_COMMITTER_NAME="Yusuke Endoh" GIT_COMMITTER_EMAIL="mame@ruby-lang.org" GIT_COMMITTER_DATE="$date" \
-  git commit -m 'Merge spoiler'
+  GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" \
+  git -c user.name='Yusuke Endoh' -c user.email='mame@ruby-lang.org' \
+    commit -m 'Merge spoiler'
 
   cd spoiler
   sha1sum --quiet -c ../SHA1SUMS

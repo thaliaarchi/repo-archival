@@ -7,9 +7,8 @@ commit() {
   local author="$2"
   local email="$3"
   local msg="$4"
-  GIT_AUTHOR_NAME="$author" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
-  GIT_COMMITTER_NAME="$author" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="$date" \
-  git commit -q -m "$msg"
+  GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" \
+  git -c user.name="$author" -c user.email="$email" commit -q -m "$msg"
 }
 
 commit_bin() {

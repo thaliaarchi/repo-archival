@@ -66,9 +66,8 @@ commit() {
   local author_date="${date% / *}"
   local committer_date="${date#* / }"
 
-  GIT_AUTHOR_NAME="$author_name" GIT_AUTHOR_EMAIL="$author_email" GIT_AUTHOR_DATE="$author_date" \
-  GIT_COMMITTER_NAME="$author_name" GIT_COMMITTER_EMAIL="$author_email" GIT_COMMITTER_DATE="$committer_date" \
-  git commit -q -m "$message
+  GIT_AUTHOR_DATE="$author_date" GIT_COMMITTER_DATE="$committer_date" \
+  git -c user.name="$author_name" -c user.email="$author_email" commit -q -m "$message
 $commit_urls"
 
   commit_urls=''
