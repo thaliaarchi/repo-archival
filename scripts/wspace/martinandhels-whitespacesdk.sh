@@ -19,6 +19,16 @@ martinandhels@yahoo.co.uk = MArtin SHerratt <martinandhels@yahoo.co.uk>
 spike.chris = spike.chris <spike.chris>
 ')
 
-# Snapshot 0.1 is identical to commit 2010-04-28 05:39:20 +0000 "Program exit
+# MArtin is in the UK in UTC+1, as evidenced by the UTC commits being an hour
+# ahead of corresponding local modification times in whitespace_snapshot_0.1.zip
+# and the .co.uk TLDs. It is unclear for spike.chris.
+cd martinandhels-whitespacesdk
+git filter-repo -f \
+  --commit-callback '
+    if commit.author_name == b"MArtin SHerratt":
+      commit.author_date = commit.author_date.replace(b"+0000", b"+0100")
+      commit.committer_date = commit.committer_date.replace(b"+0000", b"+0100")'
+
+# Snapshot 0.1 is identical to commit 2010-04-28 06:39:20 +0100 "Program exit
 # and Exception handling.".
 # https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/whitespacesdk/whitespace_snapshot_0.1.zip
