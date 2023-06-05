@@ -44,6 +44,12 @@
 [submodule "git/github.com/BackupTheBerlios/wsdebug"]
 	path = git/github.com/BackupTheBerlios/wsdebug
 	url = https://github.com/BackupTheBerlios/wsdebug
+[submodule "git/github.com/BackupTheBerlios/wsdebug-devel-maillist"]
+	path = git/github.com/BackupTheBerlios/wsdebug-devel-maillist
+	url = https://github.com/BackupTheBerlios/wsdebug-devel-maillist
+[submodule "git/github.com/BackupTheBerlios/wsdebug-users-maillist"]
+	path = git/github.com/BackupTheBerlios/wsdebug-users-maillist
+	url = https://github.com/BackupTheBerlios/wsdebug-users-maillist
 [submodule "git/github.com/EIA-University/WhiteSpaceInterpreter"]
 	path = git/github.com/EIA-University/WhiteSpaceInterpreter
 	url = https://github.com/EIA-University/WhiteSpaceInterpreter
