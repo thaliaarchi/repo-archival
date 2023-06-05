@@ -76,7 +76,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [cybf](https://github.com/thaliaarchi/cybf-archive) [[sh](scripts/cybis/cybf.sh)]
 - [wspace/bearice-grassmudhorse](https://github.com/wspace/bearice-grassmudhorse) [[sh](scripts/wspace/bearice-grassmudhorse.sh)] - TODO include wiki and forks
 - [wspace/cybis-hapyli](https://github.com/wspace/cybis-hapyli) [[sh](scripts/cybis/hapyli.sh)]
-- [wspace/kreutzer-spacedide](https://github.com/wspace/kreutzer-spacedide) [[sh](scripts/wspace/kreutzer-spacedide.sh)]
+- [wspace/kreutzer-spacedide](https://github.com/wspace/kreutzer-spacedide) [[sh](scripts/wspace/kreutzer-spacedide.sh)] - TODO include SourceForge README
 - [wspace/marktraceur-redlandside](https://github.com/wspace/marktraceur-redlandside) [[sh](scripts/wspace/marktraceur-redlandside.sh)]
 - [wspace/martinandhels-whitespacesdk](https://github.com/wspace/martinandhels-whitespacesdk) [[sh](scripts/wspace/martinandhels-whitespacesdk.sh)]
 - wspace/nicolasff-spacesharp - TODO convert SVN and join with git
