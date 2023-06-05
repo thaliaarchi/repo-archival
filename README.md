@@ -78,7 +78,8 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/cybis-hapyli](https://github.com/wspace/cybis-hapyli) [[sh](scripts/cybis/hapyli.sh)]
 - [wspace/kreutzer-spacedide](https://github.com/wspace/kreutzer-spacedide) [[sh](scripts/wspace/kreutzer-spacedide.sh)]
 - [wspace/marktraceur-redlandside](https://github.com/wspace/marktraceur-redlandside) [[sh](scripts/wspace/marktraceur-redlandside.sh)]
-- wspace/whitespacesdk - [TODO](https://code.google.com/archive/p/whitespacesdk/)
+- wspace/martinandhels-whitespacesdk [[sh](scripts/wspace/martinandhels-whitespacesdk.sh)]
+- wspace/nicolasff-spacesharp - TODO convert SVN and join with git
 
 ## Converted from CVS
 
