@@ -2,6 +2,9 @@
 
 . base.sh
 
+# TODO convert from svn
+# https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/grass-mud-horse/repo.svndump.gz
+
 # TODO merge in the wiki from here:
 # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=http://grass-mud-horse.googlecode.com/svn/
 
