@@ -44,9 +44,9 @@ git filter-repo -f \
 rebase_break_before_date '2010-04-28 06:55:47 +0100'
 as_martin '2010-04-28 06:55:47 +0100' git tag -a v0.1 -m 'Snapshot v0.1'
 
-# Commit the repository Markdown summary. Google Code records no dates for when
-# the repository page was created or modified, so use the upload date of
-# snapshot v0.1 as a proxy for that.
+# Commit the repository Markdown summary. Google Code no longer exposes the list
+# of updates and it was not archived, so I have no dates for changes to the
+# repository and use the upload date of snapshot v0.1 as a proxy for that.
 jq -r '"# \(.name)\n\n\(.summary)\n\n\(.description)"' "$(get_cached_path https://storage.googleapis.com/google-code-archive/v2/code.google.com/whitespacesdk/project.json)" > README.md
 git add README.md
 as_martin '2010-04-28 06:55:47 +0100' git commit -q -m 'Uploaded snapshot v0.1'
