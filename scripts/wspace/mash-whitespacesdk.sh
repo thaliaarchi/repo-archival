@@ -12,11 +12,11 @@ mkdir -p wspace
 cd wspace
 
 # https://code.google.com/archive/p/whitespacesdk/
-svnadmin create martinandhels-whitespacesdk-svn
+svnadmin create mash-whitespacesdk-svn
 gunzip -c "$(get_cached_path https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/whitespacesdk/repo.svndump.gz)" |
-  svnadmin load martinandhels-whitespacesdk-svn
+  svnadmin load mash-whitespacesdk-svn
 
-git svn clone "file://$(pwd)/martinandhels-whitespacesdk-svn" martinandhels-whitespacesdk \
+git svn clone "file://$(pwd)/mash-whitespacesdk-svn" mash-whitespacesdk \
   --stdlayout \
   --no-metadata \
   --authors-file=<(echo '
@@ -28,7 +28,7 @@ spike.chris = spike.chris <spike.chris>
 # MArtin is in the UK in UTC+1, as evidenced by the UTC commits being an hour
 # ahead of corresponding local modification times in whitespace_snapshot_0.1.zip
 # and the .co.uk TLDs. It is unclear for spike.chris.
-cd martinandhels-whitespacesdk
+cd mash-whitespacesdk
 git filter-repo -f \
   --commit-callback '
     if commit.author_name == b"MArtin SHerratt":
@@ -52,4 +52,4 @@ git add README.md
 as_martin '2010-04-28 06:55:47 +0100' git commit -q -m 'Uploaded snapshot v0.1'
 git rebase --continue
 
-git remote add origin https://github.com/wspace/martinandhels-whitespacesdk
+git remote add origin https://github.com/wspace/mash-whitespacesdk
