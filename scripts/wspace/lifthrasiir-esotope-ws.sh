@@ -31,6 +31,7 @@ cd lifthrasiir-esotope-ws
 
 # Adjust UTC times to +0900
 git filter-repo --quiet \
+  --message-callback 'return re.sub(br"\n*$", b"\n", message)' \
   --commit-callback '
     commit.author_date = re.sub(br"\+0000", b"+0900", commit.author_date)
     commit.committer_date = re.sub(br"\+0000", b"+0900", commit.committer_date)'
