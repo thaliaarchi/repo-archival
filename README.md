@@ -17,17 +17,17 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - wspace/arnauld-javascript - TODO
 - wspace/edwinb-wspace [[sh](scripts/wspace/edwinb-wspace/archive.sh)] - WIP
 - wspace/kevincruijssen-codegolf [[sh](scripts/wspace/kevincruijssen-codegolf.sh)] - WIP
+- wspace/lifthrasiir-esotope-ws - TODO
 - wspace/lmitchell-elisp - TODO
-- [wspace/mesquita-markov](https://github.com/wspace/mesquita-markov) [[sh](scripts/wspace/mesquita-markov.sh)]
 - [wspace/meth0dz-c](https://github.com/wspace/meth0dz-c) - TODO automate
+- [wspace/mrbubble-markov](https://github.com/wspace/mrbubble-markov) [[sh](scripts/wspace/mrbubble-markov.sh)]
 - [wspace/mkoelbl-perl](https://github.com/wspace/mkoelbl-perl) [[sh](scripts/wspace/mkoelbl-perl.sh)]
 - [wspace/peasley-cpp](https://github.com/wspace/peasley-cpp) - TODO automate
 - [wspace/progopedia](https://github.com/wspace/progopedia) [[sh](scripts/wspace/progopedia.sh)] - TODO add all Whitespace pages
 - wspace/rosettacode - TODO
-- [wspace/smithers-bluespace](https://github.com/wspace/smithers-bluespace) [[sh](scripts/wspace/smithers-bluespace.sh)]
+- [wspace/smithers888-bluespace](https://github.com/wspace/smithers888-bluespace) [[sh](scripts/wspace/smithers888-bluespace.sh)]
 - [wspace/stephenchappell-python](https://github.com/wspace/stephenchappell-python) [[sh](scripts/wspace/stephenchappell-python.sh)]
 - [wspace/tetris](https://github.com/wspace/tetris) [[sh](scripts/wspace/pdewacht-tetris.sh)]
-- wspace/tokigun-esotope-ws - TODO
 - [wspace/wconrad-ruby](https://github.com/wspace/wconrad-ruby) [[sh](scripts/wspace/wconrad-ruby.sh)]
 
 ## From archives
@@ -42,8 +42,8 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Extracted from git subtree
 
-- [wspace/akers-lolcode](https://github.com/wspace/akers-lolcode) [[sh](scripts/wspace/akers-lolcode.sh)]
-- [wspace/aniket-hacktoberfest](https://github.com/wspace/aniket-hacktoberfest) [[sh](scripts/wspace/aniket-hacktoberfest.sh)]
+- [wspace/0x0dea-lolcode](https://github.com/wspace/0x0dea-lolcode) [[sh](scripts/wspace/0x0dea-lolcode.sh)]
+- [wspace/aniket965-hacktoberfest](https://github.com/wspace/aniket965-hacktoberfest) [[sh](scripts/wspace/aniket965-hacktoberfest.sh)]
 - [wspace/emilbahnsen-assembler](https://github.com/wspace/emilbahnsen-assembler) [[sh](scripts/wspace/emilbahnsen-assembler.sh)]
 - [wspace/hogelog-c](https://github.com/wspace/hogelog-c) [[sh](scripts/wspace/hogelog-c.sh)]
 - [wspace/omurakazuaki-rust](https://github.com/wspace/omurakazuaki-rust) [[sh](scripts/wspace/omurakazuaki-rust.sh)]
@@ -62,10 +62,10 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [quine-relay-spoiler](https://github.com/thaliaarchi/quine-relay-spoiler) [[sh](scripts/quine-relay.sh)]
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) [[sh](scripts/wspace/0qol-prime.sh)] - with manual rewording
 - [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) [[sh](scripts/wspace/ilikepython256-whitespace-unc.sh)] - with manual rebasing
-- [wspace/keen-whitelie](https://github.com/wspace/keen-whitelie) [[sh](scripts/wspace/keen-whitelie.sh)] - with manual rebasing
+- [wspace/keens-whitelie](https://github.com/wspace/keens-whitelie) [[sh](scripts/wspace/keens-whitelie.sh)] - with manual rebasing
 - [wspace/pik4ez-ascii](https://github.com/wspace/pik4ez-ascii) [[sh](scripts/wspace/pik4ez-ascii.sh)] - with manual squashing
 - wspace/programs [[sh](scripts/wspace/programs.sh)] - TODO collect programs from originating projects
-- [wspace/ytaka-whitespace](https://github.com/wspace/ytaka-whitespace) [[sh](scripts/wspace/ytaka-whitespace.sh)]
+- [wspace/ytaka23-whitespace](https://github.com/wspace/ytaka23-whitespace) [[sh](scripts/wspace/ytaka23-whitespace.sh)]
 
 ## Converted from Mercurial
 

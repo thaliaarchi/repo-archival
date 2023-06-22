@@ -5,8 +5,8 @@
 mkdir -p wspace
 cd wspace
 
-mkdir mesquita-markov
-cd mesquita-markov
+mkdir mrbubble-markov
+cd mrbubble-markov
 git init -q
 
 # Last modified: 2007-02-25 00:14:15 +0000 GMT
@@ -54,4 +54,4 @@ git commit -q -m 'Send to Whitespace mailing list
 https://web.archive.org/web/20070830102217/http://compsoc.dur.ac.uk:80/archives/whitespace/2007-February/000054.html
 https://web.archive.org/web/20070831081100/http://compsoc.dur.ac.uk:80/archives/whitespace/2007-February/000055.html'
 
-git remote add origin https://github.com/wspace/mesquita-markov
+git remote add origin https://github.com/wspace/mrbubble-markov

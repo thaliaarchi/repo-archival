@@ -5,27 +5,27 @@
 mkdir -p wspace
 cd wspace
 
-copy_submodule github.com/KeenS/whitelie keen-whitelie
-copy_submodule gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keen-whitelie-asm
+copy_submodule github.com/KeenS/whitelie keens-whitelie
+copy_submodule gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keens-whitelie-asm
 
 # Overwrite synthetic time of 2020-04-01 00:00:00 +0000
-git -C keen-whitelie filter-repo --quiet \
+git -C keens-whitelie filter-repo --quiet \
   --commit-callback '
     if commit.message == b"create it\n": commit.author_date = commit.committer_date'
 # Adjust UTC times from GitHub Gist to +0900
-git -C keen-whitelie-asm filter-repo --quiet \
+git -C keens-whitelie-asm filter-repo --quiet \
   --commit-callback '
     commit.author_date = re.sub(br"\+0000", b"+0900", commit.author_date)
     commit.committer_date = re.sub(br"\+0000", b"+0900", commit.committer_date)'
 
-git -C keen-whitelie branch -m master main
-git -C keen-whitelie-asm branch -m master main
+git -C keens-whitelie branch -m master main
+git -C keens-whitelie-asm branch -m master main
 
-cd keen-whitelie
-merge_repo keen-whitelie-asm
+cd keens-whitelie
+merge_repo keens-whitelie-asm
 
 git log --format='%ad %h %s'
-# 2021-08-07 22:57:55 +0200 83a234c Merge remote-tracking branch 'keen-whitelie-asm/main'
+# 2021-08-07 22:57:55 +0200 83a234c Merge remote-tracking branch 'keens-whitelie-asm/main'
 # 2020-04-02 09:27:41 +0900 ef7f438 fix a bug of program size calcuration
 # 2020-04-02 09:24:44 +0900 f1c5d46
 # 2020-04-02 00:19:19 +0900 7b9d613 add README
@@ -64,4 +64,4 @@ git log --format='%ad %h %s'
 # 2020-04-01 23:52:26 +0900 a373ecd add assembler and copying
 # 2020-03-31 23:46:45 +0900 419aa00 create it
 
-git remote add origin https://github.com/wspace/keen-whitelie
+git remote add origin https://github.com/wspace/keens-whitelie
