@@ -17,7 +17,6 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - wspace/arnauld-javascript - TODO
 - wspace/edwinb-wspace [[sh](scripts/wspace/edwinb-wspace/archive.sh)] - WIP
 - wspace/kevincruijssen-codegolf [[sh](scripts/wspace/kevincruijssen-codegolf.sh)] - WIP
-- wspace/lifthrasiir-esotope-ws - TODO
 - wspace/lmitchell-elisp - TODO
 - [wspace/meth0dz-c](https://github.com/wspace/meth0dz-c) - TODO automate
 - [wspace/mrbubble-markov](https://github.com/wspace/mrbubble-markov) [[sh](scripts/wspace/mrbubble-markov.sh)]
@@ -66,6 +65,10 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/pik4ez-ascii](https://github.com/wspace/pik4ez-ascii) [[sh](scripts/wspace/pik4ez-ascii.sh)] - with manual squashing
 - wspace/programs [[sh](scripts/wspace/programs.sh)] - TODO collect programs from originating projects
 - [wspace/ytaka23-whitespace](https://github.com/wspace/ytaka23-whitespace) [[sh](scripts/wspace/ytaka23-whitespace.sh)]
+
+## Restored from the Software Heritage archive
+
+- [wspace/lifthrasiir-esotope-ws](https://github.com/wspace/lifthrasiir-esotope-ws) [[sh](scripts/wspace/lifthrasiir-esotope-ws.sh)]
 
 ## Converted from Mercurial
 
