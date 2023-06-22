@@ -2,8 +2,8 @@
 
 . base.sh
 
-copy_submodule github.com/Smithers888/BlueSpace wspace/smithers-bluespace
-cd wspace/smithers-bluespace
+copy_submodule github.com/Smithers888/BlueSpace wspace/smithers888-bluespace
+cd wspace/smithers888-bluespace
 
 mkdir programs
 cd programs
@@ -30,4 +30,4 @@ GIT_AUTHOR_NAME='Chris Smith' GIT_AUTHOR_EMAIL='chrissmithers888@gmail.com' GIT_
 git commit -q -m 'Add programs from website'
 
 git branch -m master main
-git remote set-url origin https://github.com/wspace/smithers-bluespace
+git remote set-url origin https://github.com/wspace/smithers888-bluespace
