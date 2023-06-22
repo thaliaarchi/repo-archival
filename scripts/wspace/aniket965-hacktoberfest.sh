@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
 . base.sh
-copy_submodule github.com/Aniket965/Hello-world wspace/aniket-hacktoberfest
-cd wspace/aniket-hacktoberfest
+copy_submodule github.com/Aniket965/Hello-world wspace/aniket965-hacktoberfest
+cd wspace/aniket965-hacktoberfest
 # Ignore dirty tree from conflicting case-sensitive files with --force
 git filter-repo -f --quiet \
   --subdirectory-filter Whitespace --path LICENSE \
@@ -17,4 +17,4 @@ git filter-repo --quiet \
     commit.author_name, _, commit.committer_name = commit.author_name.partition(b"|")
     commit.author_email, _, commit.committer_email = commit.author_email.partition(b"|")'
 git branch -m master main
-git remote add origin https://github.com/wspace/aniket-hacktoberfest
+git remote add origin https://github.com/wspace/aniket965-hacktoberfest
