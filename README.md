@@ -68,6 +68,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Restored from the Software Heritage archive
 
+- [wspace/lifthrasiir-esotope](https://github.com/wspace/lifthrasiir-esotope) [[sh](scripts/wspace/lifthrasiir-esotope.sh)]
 - [wspace/lifthrasiir-esotope-ws](https://github.com/wspace/lifthrasiir-esotope-ws) [[sh](scripts/wspace/lifthrasiir-esotope-ws.sh)]
 
 ## Converted from Mercurial
