@@ -36,6 +36,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/burghard-wsinterws](https://github.com/wspace/burghard-wsinterws) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/nutcrack-whiteplanes](https://github.com/wspace/nutcrack-whiteplanes) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
 - [wspace/phlip-pywhitespace](https://github.com/wspace/phlip-pywhitespace) - TODO automate
+- [wspace/res0001-trans32](https://github.com/wspace/res0001-trans32) [[sh](scripts/wspace/res0001-trans32.sh)]
 - [wspace/stellwag-wspacegen](https://github.com/wspace/stellwag-wspacegen) [[sh](scripts/wspace/stellwag-wspacegen.sh)]
 - [wspace/stribb-debian](https://github.com/wspace/stribb-debian) [[sh](scripts/wspace/stribb-debian/archive.sh)]
 
