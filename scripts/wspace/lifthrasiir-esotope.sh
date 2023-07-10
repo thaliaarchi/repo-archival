@@ -23,7 +23,7 @@ cd wspace
 #   done
 
 tar xf ../../files/wspace/lifthrasiir-esotope/swh_1_rev_89cd61de9d2dda065ed587bd38df31d3c09ca915.git.tar
-git clone swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git lifthrasiir-esotope
+git clone -q swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git lifthrasiir-esotope
 rm -rf swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git
 
 cd lifthrasiir-esotope
