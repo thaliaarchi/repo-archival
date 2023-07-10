@@ -51,7 +51,7 @@ add_archive() {
 
   git rm -rq -- *
   get_cached "$url"
-  push_commit_url "$url"
+  push_commit_url "$url" ''
   tar xf "$archive"
   rm "$archive"
   find . \( -type d -name .git -prune \) -o \( -type f -print0 \) | xargs -0 chmod 644
@@ -172,3 +172,5 @@ commit '2005-04-26 12:16:40 +0900' 'Separate library from main' 'Mutsuo Saito' '
 add_local README.md      '2023-03-20 06:09:06 -0600' README.md -
 commit_urls=''
 commit '2023-03-20 06:09:06 -0600' 'Add README.md with archive information' 'Thalia Archibald' 'thalia@archibald.dev'
+
+git remote add origin https://github.com/thaliaarchi/mt19937-archive
