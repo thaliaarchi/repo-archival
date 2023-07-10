@@ -79,6 +79,9 @@
 [submodule "git/github.com/edwinb/WS-idr"]
 	path = git/github.com/edwinb/WS-idr
 	url = https://github.com/edwinb/WS-idr
+[submodule "git/github.com/foones/lenguajes"]
+	path = git/github.com/foones/lenguajes
+	url = https://github.com/foones/lenguajes
 [submodule "git/github.com/google-code-export/grass-mud-horse"]
 	path = git/github.com/google-code-export/grass-mud-horse
 	url = https://github.com/google-code-export/grass-mud-horse
