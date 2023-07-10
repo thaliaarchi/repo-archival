@@ -48,7 +48,7 @@ commit_pairs=(
   'd9745f8666c86f56c3602dd24f5c00783b1f2cd4,285bf2502f5393c5d1ffd1883f4ffb5cd32e32bd' # 2023-05-18 04:08:57 +0900 / 2023-05-18 03:45:23 +0900
 )
 
-git clone https://github.com/mame/quine-relay quine-relay-spoiler
+git clone -q https://github.com/mame/quine-relay quine-relay-spoiler
 cd quine-relay-spoiler
 
 # Fetch all orphaned spoiler commits
