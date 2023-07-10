@@ -2,8 +2,11 @@
 
 . base.sh
 
-copy_submodule github.com/Smithers888/BlueSpace wspace/smithers888-bluespace
-cd wspace/smithers888-bluespace
+mkdir -p wspace
+cd wspace
+
+copy_submodule github.com/Smithers888/BlueSpace smithers888-bluespace
+cd smithers888-bluespace
 
 mkdir programs
 cd programs
@@ -12,7 +15,7 @@ get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs.ws
 get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs.wsa
 get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs-3.ws
 get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs-3.wsa
-# cd ..
+cd ..
 # get_cached https://cpjsmith.uk/whitespace index.html
 
 # Last-Modified in UTC       Last-Modified in BST
@@ -24,7 +27,7 @@ get_cached https://cpjsmith.uk/downloads/whitespace/quine-cs-3.wsa
 
 # Commits are in GMT/BST
 
-git add programs/*
+git add programs
 
 GIT_AUTHOR_NAME='Chris Smith' GIT_AUTHOR_EMAIL='chrissmithers888@gmail.com' GIT_AUTHOR_DATE='2015-06-28 13:35:26 +0100' \
 git commit -q -m 'Add programs from website'

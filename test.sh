@@ -1,35 +1,70 @@
 #!/bin/bash -e
 
-if [[ -e target ]]; then
-  echo 'target/ already exists' >&2
-  exit 1
-fi
-
-# Automatic (git-only)
-GIT_ONLY=(
-  akers-lolcode
-  aniket-hacktoberfest
-  bearice-grassmudhorse
-  emilbahnsen-assembler
-  hogelog-c
-  omurakazuaki-rust
-  remigascou-c
-  shimo-yukicoder
-  ssiegl-wsdebug_github
-  ytaka-whitespace
+SCRIPTS=(
+  'cybis/cybf'
+  'cybis/hapyli'
+  'foones/cratylus'
+  'foones/eightfold'
+  'mt19937/archive, mt19937'
+  'quine-relay'
+  're1'
+  # 'wspace/0qol-prime' # manual rebase
+  'wspace/0x0dea-lolcode'
+  'wspace/aniket965-hacktoberfest'
+  'wspace/bearice-grassmudhorse'
+  'wspace/burghard, wspace/burghard-wsa'
+  'wspace/burghard, wspace/burghard-wsintercpp'
+  'wspace/burghard, wspace/burghard-wsinterws'
+  # 'wspace/edwinb-wspace/archive, wspace/edwinb-wspace' # unfinished
+  'wspace/emilbahnsen-assembler'
+  'wspace/hogelog-c'
+  # 'wspace/ilikepython256-whitespace-unc' # manual rebase
+  # 'wspace/keens-whitelie' # manual rebase
+  # 'wspace/kevincruijssen-codegolf' # unfinished
+  'wspace/kreutzer-spacedide'
+  'wspace/lifthrasiir-esotope'
+  'wspace/lifthrasiir-esotope-ws'
+  'wspace/marktraceur-redlandside'
+  'wspace/mash-whitespacesdk'
+  'wspace/mkoelbl-perl'
+  'wspace/mrbubble-markov'
+  'wspace/nutcrack-whiteplanes'
+  'wspace/omurakazuaki-rust'
+  'wspace/pdewacht-tetris'
+  # 'wspace/pik4ez-ascii' # manual rebase
+  'wspace/progopedia'
+  # 'wspace/programs' # unfinished
+  'wspace/qeedquan-go'
+  # 'wspace/remigascou-c' # repo offline
+  'wspace/res0001-trans32'
+  'wspace/shimo-yukicoder'
+  'wspace/smithers888-bluespace' # commit has new timestamp
+  'wspace/ssiegl-wsdebug'
+  'wspace/stellwag-wspacegen'
+  'wspace/stephenchappell-python'
+  'wspace/stribb-debian/archive, wspace/stribb-debian'
+  'wspace/wconrad-ruby'
+  'wspace/wysang-java' # commit has new timestamp
+  'wspace/ytaka23-whitespace'
 )
+
 errors=()
-for script in "${GIT_ONLY[@]}"; do
-  ./scripts/"$script.sh"
-  repo="${script%%_*}" # Hack for ssiegl-wsdebug_github, for now
-  pushd "target/$repo"
-  git fetch origin
+for entry in "${SCRIPTS[@]}"; do
+  script="${entry%, *}"
+  repo="${entry#*, }"
+  echo "Testing $repo"
+  if [[ ! -e target/$repo ]]; then
+    scripts/"$script.sh"
+  fi
+  pushd "target/$repo" > /dev/null
+  git fetch -q origin
   git branch --set-upstream-to origin/main
   ahead="$(git rev-list '@{u}..@' --count)"
   if [[ $ahead -gt 0 ]]; then
     errors+=("Generated $repo is $ahead commits ahead of remote")
   fi
-  popd
+  popd > /dev/null
+  echo
 done
 if [[ ${#errors[@]} -gt 0 ]]; then
   echo >&2
@@ -39,30 +74,3 @@ if [[ ${#errors[@]} -gt 0 ]]; then
   done
   exit 1
 fi
-
-# Automatic, non-deterministic (git-only)
-# - pik4ez-ascii
-# - qeedquan-go
-# - wysang-java
-
-# Automatic (online)
-# - hapyli
-# - kreutzer-spacedide
-# - mesquita-markov
-# - mkoelbl-perl
-# - nutcrack-whiteplanes
-# - pdewacht-tetris
-# - progopedia
-# - programs
-# - ssiegl-wsdebug
-# - stellwag-wspacegen
-# - stephenchappell-python
-# - wconrad-ruby
-
-# Automatic, non-deterministic (online)
-# - smithers-bluespace
-
-# Manual rebase
-# - 0qol-prime
-# - ilikepython256-whitespace-unc
-# - keen-whitelie

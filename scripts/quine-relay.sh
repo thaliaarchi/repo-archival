@@ -48,11 +48,11 @@ commit_pairs=(
   'd9745f8666c86f56c3602dd24f5c00783b1f2cd4,285bf2502f5393c5d1ffd1883f4ffb5cd32e32bd' # 2023-05-18 04:08:57 +0900 / 2023-05-18 03:45:23 +0900
 )
 
-git clone -q https://github.com/mame/quine-relay quine-relay-spoiler
-cd quine-relay-spoiler
+copy_submodule github.com/mame/quine-relay@master quine-relay
+cd quine-relay
 
 # Fetch all orphaned spoiler commits
-git fetch origin "${commit_pairs[@]%%,*}"
+git fetch -q origin "${commit_pairs[@]%%,*}"
 
 # Checkout the first master commit that has a corresponding spoiler commit
 git checkout -b main "${commit_pairs[0]#*,}"
@@ -83,3 +83,5 @@ for pair in "${commit_pairs[@]}"; do
   sha1sum --quiet -c ../SHA1SUMS
   cd ..
 done
+
+git remote set-url origin https://github.com/thaliaarchi/quine-relay-spoiler

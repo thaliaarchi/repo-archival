@@ -18,7 +18,7 @@ commit() {
   local source_url="$6"
 
   mkdir -p "$slug"
-  wget-cache "$source_url" "$slug/answer.html"
+  get_cached "$source_url" "$slug/answer.html"
 
   # Extract answer from page
   htmlq --text 'body > pre' -o "$slug/README.md" < "$slug/answer.html"
