@@ -8,6 +8,12 @@ TOPLEVEL="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel)"
 mkdir -p cache target
 cd target
 
+# Initialize a dummy repo in target/, to protect against accidentally modifying
+# repo-archival.
+if [[ ! -e .git ]]; then
+  git init -q
+fi
+
 copy_submodule() {
   local submodule="git/$1"
   local dest="${2-"${submodule##*/}"}"
