@@ -1,0 +1,2 @@
+ChangeLog.txt is converted from https://www.nand2tetris.org/_files/ugd/44046b_2a164674985a4d42a7a2770659606f85.pdf
+Readme.txt is partially converted from https://www.nand2tetris.org/_files/ugd/44046b_9a0f3b6169c2451b9b37ed62595dc169.pdf
