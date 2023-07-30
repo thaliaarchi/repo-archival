@@ -31,6 +31,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## From archives
 
+- nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
 - [wspace/burghard-wsa](https://github.com/wspace/burghard-wsa) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/burghard-wsintercpp](https://github.com/wspace/burghard-wsintercpp) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/burghard-wsinterws](https://github.com/wspace/burghard-wsinterws) [[sh](scripts/wspace/burghard.sh)]
