@@ -10,19 +10,14 @@ cd wspace
 #
 # esotope-ws within was last modified 2004-12-07 15:00:00 +0000
 
-# The repo was saved on the Software Heritage archive
-# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/lifthrasiir/esotope-ws
-#
-# To request a cooked git-bare archive for the latest revision on master:
-# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:c52fda8bec0d3d686e3ea670dcb90fa42540c4de/
-# (API docs: https://archive.softwareheritage.org/api/1/vault/git-bare/doc/)
-#
 # To get the time zone offset, in seconds west of UTC, from the Mercurial commit
 # metadata:
 # $ curl https://archive.softwareheritage.org/api/1/revision/c52fda8bec0d3d686e3ea670dcb90fa42540c4de/ |
 #     jq -r '.extra_headers[] | select(.[0] == "time_offset_seconds") | .[1]'
 # -32400
 
+# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/lifthrasiir/esotope-ws
+# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:c52fda8bec0d3d686e3ea670dcb90fa42540c4de/
 tar xf ../../swh/bitbucket.org/lifthrasiir/esotope-ws/swh_1_rev_c52fda8bec0d3d686e3ea670dcb90fa42540c4de.git.tar
 git clone -q swh:1:rev:c52fda8bec0d3d686e3ea670dcb90fa42540c4de.git lifthrasiir-esotope-ws
 rm -rf swh:1:rev:c52fda8bec0d3d686e3ea670dcb90fa42540c4de.git

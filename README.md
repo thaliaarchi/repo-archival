@@ -74,6 +74,16 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [foones-eightfold](https://github.com/thaliaarchi/foones-eightfold) [[sh](scripts/foones/eightfold.sh)]
 - [wspace/lifthrasiir-esotope](https://github.com/wspace/lifthrasiir-esotope) [[sh](scripts/wspace/lifthrasiir-esotope.sh)]
 - [wspace/lifthrasiir-esotope-ws](https://github.com/wspace/lifthrasiir-esotope-ws) [[sh](scripts/wspace/lifthrasiir-esotope-ws.sh)]
+- [wspace/nutcrack-whiteplanes.cs](https://github.com/wspace/nutcrack-whiteplanes.cs) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.fs](https://github.com/wspace/nutcrack-whiteplanes.fs) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.jl](https://github.com/wspace/nutcrack-whiteplanes.jl) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.js](https://github.com/wspace/nutcrack-whiteplanes.js) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.php](https://github.com/wspace/nutcrack-whiteplanes.php) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.py](https://github.com/wspace/nutcrack-whiteplanes.py) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.r](https://github.com/wspace/nutcrack-whiteplanes.r) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.rb](https://github.com/wspace/nutcrack-whiteplanes.rb) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.swift](https://github.com/wspace/nutcrack-whiteplanes.swift) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/nutcrack-whiteplanes.github.io](https://github.com/wspace/nutcrack-whiteplanes.github.io) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
 
 ## Converted from Mercurial
 
