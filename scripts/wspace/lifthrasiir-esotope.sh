@@ -8,13 +8,6 @@ cd wspace
 # A directory snapshot was saved on BitBucket:
 # https://web.archive.org/web/20200622005938/https://bitbucket.org/lifthrasiir/esotope-esotope/get/2a3f6489a176.zip
 
-# The repo was saved on the Software Heritage archive
-# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/lifthrasiir/esotope-esotope
-#
-# To request a cooked git-bare archive for the latest revision on master:
-# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915/
-# (API docs: https://archive.softwareheritage.org/api/1/vault/git-bare/doc/)
-#
 # All commits are in +0900:
 # $ for commit in $(git log --reverse --format=%H); do
 #     echo "$commit"
@@ -22,6 +15,8 @@ cd wspace
 #       jq -r '.extra_headers[] | select(.[0] == "time_offset_seconds") | .[1]'
 #   done
 
+# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/lifthrasiir/esotope-esotope
+# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915/
 tar xf ../../swh/bitbucket.org/lifthrasiir/esotope-esotope/swh_1_rev_89cd61de9d2dda065ed587bd38df31d3c09ca915.git.tar
 git clone -q swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git lifthrasiir-esotope
 rm -rf swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git
