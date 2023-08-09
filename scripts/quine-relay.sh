@@ -8,6 +8,9 @@
 # so I have gathered the hashes of older versions preserved in GitHub forks and
 # Software Heritage archive snapshots.
 
+# Recent pushes can be queried with:
+# $ curl 'https://api.github.com/repos/mame/quine-relay/events' | jq '.[] | select(.payload.ref == "refs/heads/spoiler")'
+
 # Commits on the spoiler branch with corresponding commits on master
 commit_pairs=(
   # spoiler commit                          master commit                               spoiler committer date      master committer date
@@ -42,10 +45,14 @@ commit_pairs=(
   '34af6f4d45e4bd43f7aea048eb4e86d912c7ec74,52c1fbba873e3a665f3575d56704d8110567ce5a' # 2021-11-03 03:47:24 +0900 / 2021-11-03 03:23:52 +0900
   '1425be38287dfca9a49c652b7f5e28c1821d71d1,51fa40f4cc88927e50a704acbc29c63cf557b5c0' # 2022-04-22 09:46:27 +0900 / 2022-04-22 05:31:46 +0900
   '8092641321c0f683e3293c90dd908348b4ab3506,39c0ba8e366ddd868c14caeebb795343a9b42191' # 2022-06-03 12:23:49 +0900 / 2022-06-03 12:00:36 +0900
+  # '? (created by GitHub Actions)         ,8982189ceab07c445a97583c19607d6ce5e8aa8a' #                           / 2022-10-26 04:31:39 +0900
+  # '? (created by GitHub Actions)         ,c637133d9d17585f65d92eb93531b66b4106435d' #                           / 2022-10-26 04:54:38 +0900
   '6f431b584914a84f035d20cf5113d9a7af56cedb,0e2b7a5b4f85c573bb71ef0a6d364591b54b83a8' # 2022-10-26 05:14:21 +0900 / 2022-10-26 04:57:07 +0900
   '13d818a389d63b71df320cd9d3817be96c365c98,eb58b7ccd47c631a9eedaa72d3a265884ff63b8b' # 2022-10-31 17:24:24 +0900 / 2022-10-31 17:06:01 +0900
   'bc0943336c6e83ae2977a41788f0eff217287bc9,5dfdada5aa58f6a97ae85b84f86c7eb091225a8c' # 2023-04-30 01:36:59 +0900 / 2023-04-30 01:11:56 +0900
+  # '? (created by GitHub Actions)         ,c9caa30f5e64d3ebb14e647878c727f5d5da52f7' #                           / 2023-05-18 03:37:33 +0900
   'd9745f8666c86f56c3602dd24f5c00783b1f2cd4,285bf2502f5393c5d1ffd1883f4ffb5cd32e32bd' # 2023-05-18 04:08:57 +0900 / 2023-05-18 03:45:23 +0900
+  '284629f632290b99212909d10c6c489e97913027,ce091888ce0903ff44e7fef2194f7c29e6b17b73' # 2023-08-08 23:10:17 +0900 / 2023-08-08 20:16:52 +0800
 )
 
 copy_submodule github.com/mame/quine-relay@master quine-relay
