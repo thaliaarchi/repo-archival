@@ -5,6 +5,9 @@
 mkdir -p wspace
 cd wspace
 
+# The full Mercurial repo was saved on the SWH:
+# https://bitbucket-archive.softwareheritage.org/projects/li/lifthrasiir/esotope-ws.html
+
 # A directory snapshot was saved on BitBucket:
 # https://web.archive.org/web/20200622105820/https://bitbucket.org/lifthrasiir/esotope-ws/get/51fb8e8aed54.zip
 #
