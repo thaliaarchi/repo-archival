@@ -72,6 +72,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 - [foones-cratylus](https://github.com/thaliaarchi/foones-cratylus) [[sh](scripts/foones/cratylus.sh)]
 - [foones-eightfold](https://github.com/thaliaarchi/foones-eightfold) [[sh](scripts/foones/eightfold.sh)]
+- [unity-termsofservice](https://github.com/thaliaarchi/unity-termsofservice) [[sh](scripts/unity-termsofservice.sh)]
 - [wspace/lifthrasiir-esotope](https://github.com/wspace/lifthrasiir-esotope) [[sh](scripts/wspace/lifthrasiir-esotope.sh)]
 - [wspace/lifthrasiir-esotope-ws](https://github.com/wspace/lifthrasiir-esotope-ws) [[sh](scripts/wspace/lifthrasiir-esotope-ws.sh)]
 - [wspace/nutcrack-whiteplanes.cs](https://github.com/wspace/nutcrack-whiteplanes.cs) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
