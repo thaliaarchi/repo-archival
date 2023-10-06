@@ -53,13 +53,16 @@ commit_pairs=(
   # '? (created by GitHub Actions)         ,c9caa30f5e64d3ebb14e647878c727f5d5da52f7' #                           / 2023-05-18 03:37:33 +0900
   'd9745f8666c86f56c3602dd24f5c00783b1f2cd4,285bf2502f5393c5d1ffd1883f4ffb5cd32e32bd' # 2023-05-18 04:08:57 +0900 / 2023-05-18 03:45:23 +0900
   '284629f632290b99212909d10c6c489e97913027,ce091888ce0903ff44e7fef2194f7c29e6b17b73' # 2023-08-08 23:10:17 +0900 / 2023-08-08 20:16:52 +0800
+  '4ae0f033435800f0825f9b72b3a25b862d011e6e,880a0061be06cc50a33b20fcff4ea4f3c2f29204' # 2023-10-01 23:47:55 +0900 / 2023-10-01 23:30:54 +0900
+  'ba25e3f907ce75331a897ce0e4ba5128e70ac13e,3c4a882af448d33c9dc1edfea431894e3187595b' # 2023-10-02 01:41:52 +0900 / 2023-10-02 01:19:29 +0900
+  '4f2049459c3e561e3f3d4032a431133c80483452,e16a2ceeaa974e897587820f8bfb9c9a823c235e' # 2023-10-05 13:17:38 +0900 / 2023-10-05 12:55:48 +0900
 )
+
+# Fetch all orphaned spoiler commits
+git -C "$TOPLEVEL/git/github.com/mame/quine-relay@master" fetch -q origin "${commit_pairs[@]%%,*}"
 
 copy_submodule github.com/mame/quine-relay@master quine-relay
 cd quine-relay
-
-# Fetch all orphaned spoiler commits
-git fetch -q origin "${commit_pairs[@]%%,*}"
 
 # Checkout the first master commit that has a corresponding spoiler commit
 git checkout -b main "${commit_pairs[0]#*,}"
