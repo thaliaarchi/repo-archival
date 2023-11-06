@@ -81,10 +81,10 @@ add_file  mt19937.c      '1997-11-02 14:15:44 +0900' https://web.archive.org/web
 
 # This version of mt19937int.c is from 2000-12-13 on Matumoto's site. It doesn't
 # contain any of the changes from Nishimura's site, but has a license header
-# just the ones that Nishimura puts in on 2000-12-14. This implies that at least
-# the changes after the initial revision were made by Nishimura. It was probably
-# created before 1998-04-06, because it doesn't have 1998/4/6 in the header or
-# the changes from the 1998-12-15 snapshots.
+# just like the ones that Nishimura puts in on 2000-12-14. This implies that at
+# least the changes after the initial revision were made by Nishimura. It was
+# probably created before 1998-04-06, because it doesn't have 1998/4/6 in the
+# header or the changes from the 1998-12-15 snapshots.
 add_local mt19937int.c    -                          1997-11-02/mt19937int.c https://web.archive.org/web/20010806225716/http://www.math.keio.ac.jp:80/matumoto/mt19937int.c
 
 commit '1997-11-02 14:15:44 +0000' 'Initial commit' 'Takuji Nishimura' 'nisimura@comb.math.keio.ac.jp'
