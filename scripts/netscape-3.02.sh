@@ -9,8 +9,8 @@
 # The earliest file modtime is 1995-08-15 10:05:23 UTC (ns302/nspr/include/os/Makefile)
 # and the latest file modtime is 2004-11-02 23:45:24 UTC (ns302/lib/libmime/Makefile).
 # Several directories were modified 2010-09-01 10:37:42 UTC, possibly when it
-# was archived. It was uploaded to the Internet Archive 2011-10-28 by Jason
-# Scott.
+# was archived. It was uploaded to the Internet Archive 2011-10-28 22:20:21 UTC
+# by Jason Scott.
 #
 # Netscape 3.02 was released some time between August 1996 and July 1997 (https://en.wikipedia.org/wiki/Netscape_(web_browser)#Release_history).
 # For comparison, the first commit in the Gecko source tree was
@@ -25,12 +25,18 @@ tar xf "$(get_cached_path https://archive.org/download/netscape-communicator-3-0
 mv ns302 netscape-3.02
 
 cd netscape-3.02
-git init
+git init -q
 git add -Af
 
-# Use the date of the last modified file in the archive.
+# Uses the date of the last modified file in the archive.
 GIT_AUTHOR_NAME='Jamie Zawinski' GIT_AUTHOR_EMAIL='jwz@netscape.com' GIT_AUTHOR_DATE='2004-11-02 23:45:24 +0000' \
-GIT_COMMITTER_NAME='Jamie Zawinski' GIT_COMMITTER_EMAIL='jwz@netscape.com' GIT_COMMITTER_DATE='2004-11-02 23:45:24 +0000' \
-git commit -m ''
+GIT_COMMITTER_NAME='Jason Scott' GIT_COMMITTER_EMAIL='jason@textfiles.com' GIT_COMMITTER_DATE='2011-10-28 22:20:21 +0000' \
+git commit -q -m 'Netscape 3.02 with changes' --trailer Source:https://archive.org/details/netscape-communicator-3-0-2-source
+
+git rm -qr CVS dist
+find . -name .cvsignore -execdir git mv .cvsignore .gitignore \;
+GIT_AUTHOR_NAME='Thalia Archibald' GIT_AUTHOR_EMAIL='thalia@archibald.dev' GIT_AUTHOR_DATE='2023-11-15 17:55:33 -0800' \
+GIT_COMMITTER_NAME='Thalia Archibald' GIT_COMMITTER_EMAIL='thalia@archibald.dev' GIT_COMMITTER_DATE='2023-11-15 17:55:33 -0800' \
+git commit -q -m 'Convert to git'
 
 git remote add origin https://github.com/thaliaarchi/netscape-3.02
