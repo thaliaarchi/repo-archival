@@ -71,6 +71,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Restored from the Software Heritage archive
 
+- cuchaz-minecraft-mappings [[sh](scripts/minecraft/cuchaz-mappings.sh)]
 - [foones-cratylus](https://github.com/thaliaarchi/foones-cratylus) [[sh](scripts/foones/cratylus.sh)]
 - [foones-eightfold](https://github.com/thaliaarchi/foones-eightfold) [[sh](scripts/foones/eightfold.sh)]
 - [unity-termsofservice](https://github.com/thaliaarchi/unity-termsofservice) [[sh](scripts/unity-termsofservice.sh)]
