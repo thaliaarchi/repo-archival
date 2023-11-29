@@ -112,3 +112,16 @@ get_cached() {
   local out="${2-"$url_out"}"
   cp -p "$(get_cached_path "$url")" "$out"
 }
+
+list_swh_branches() {
+  local origin="$1"
+  curl -s "$(curl -s "https://archive.softwareheritage.org/api/1/origin/$origin/visit/latest/" | jq -r .snapshot_url)" |
+  jq -r '
+    if .next_branch != null then "has another page of branches" | error end |
+    .branches |
+    .HEAD.target as $HEAD | del(.HEAD) |
+    to_entries[] |
+    if .value.target_type != "revision" then "branch is not a revision: \(.)" | error end |
+    "\(.key | sub("^branch-tip/"; "")): \(.value.target)\(if $HEAD == .key then " (HEAD)" else "" end)"
+  '
+}
