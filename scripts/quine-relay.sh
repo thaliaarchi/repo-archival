@@ -9,7 +9,11 @@
 # Software Heritage archive snapshots.
 
 # Recent pushes can be queried with:
-# $ curl 'https://api.github.com/repos/mame/quine-relay/events' | jq '.[] | select(.payload.ref == "refs/heads/spoiler")'
+# curl 'https://api.github.com/repos/mame/quine-relay/events?per_page=100&page=1' > events1.json
+# curl 'https://api.github.com/repos/mame/quine-relay/events?per_page=100&page=2' > events2.json
+# curl 'https://api.github.com/repos/mame/quine-relay/events?per_page=100&page=3' > events3.json
+# jq '.[] | select(.payload.ref == "refs/heads/spoiler") |
+#     { head: .payload.head, before: .payload.before, created_at }' events1.json events2.json events3.json
 
 # Commits on the spoiler branch with corresponding commits on master
 commit_pairs=(
@@ -56,6 +60,13 @@ commit_pairs=(
   '4ae0f033435800f0825f9b72b3a25b862d011e6e,880a0061be06cc50a33b20fcff4ea4f3c2f29204' # 2023-10-01 23:47:55 +0900 / 2023-10-01 23:30:54 +0900
   'ba25e3f907ce75331a897ce0e4ba5128e70ac13e,3c4a882af448d33c9dc1edfea431894e3187595b' # 2023-10-02 01:41:52 +0900 / 2023-10-02 01:19:29 +0900
   '4f2049459c3e561e3f3d4032a431133c80483452,e16a2ceeaa974e897587820f8bfb9c9a823c235e' # 2023-10-05 13:17:38 +0900 / 2023-10-05 12:55:48 +0900
+  'b97f1718d395e88a8112ef9ed9f015938c4aad05,b6dc00456383021c5cdf523e2b1017ca55250dbf' # 2023-11-01 05:16:08 +0900 / 2023-11-01 04:58:19 +0900
+  'b96f6e5c1925f4a8d2743c783803b177b8f5a51e,db6a83478ef37ad264163c7317190443ed4a44a0' # 2023-11-01 05:22:48 +0900 / 2023-11-01 05:00:43 +0900
+  'aa24e677d9384c118c173e2be37e410381dc1dba,f1ced6b5f3e9bae3b8313da3268b76f28c38e71c' # 2023-11-01 05:23:36 +0900 / 2023-11-01 05:02:48 +0900
+  'fb717555c236bbc09efa111f4ff60f301c1b5f6c,0943fd45b6cb1ffdad926b949d897eea0b4ffe34' # 2023-11-01 05:34:43 +0900 / 2023-11-01 05:14:36 +0900
+  '4cf3bd08251fe6c2b7952d2691adfe58b0cc7979,df3323ea460879b92b59fd8d6b71de9753206db9' # 2023-11-01 05:41:42 +0900 / 2023-11-01 05:23:44 +0900
+  'a760af845a332b96282302c8f437c0e3508154e1,2e2103eb44e67023b51fde35d3e2ebe68b24047e' # 2023-11-01 05:48:11 +0900 / 2023-11-01 05:27:11 +0900
+  'b7e24f2e6be5e8090a3990f0c1f6beb5e8778540,26066d1ede0b91720baceecbd99dbdf7e4d3240b' # 2023-11-01 06:00:49 +0900 / 2023-11-01 05:39:34 +0900
 )
 
 # Fetch all orphaned spoiler commits
