@@ -44,6 +44,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Extracted from git subtree
 
+- python-re [[sh](scripts/python-re.sh)]
 - [wspace/0x0dea-lolcode](https://github.com/wspace/0x0dea-lolcode) [[sh](scripts/wspace/0x0dea-lolcode.sh)]
 - [wspace/aniket965-hacktoberfest](https://github.com/wspace/aniket965-hacktoberfest) [[sh](scripts/wspace/aniket965-hacktoberfest.sh)]
 - [wspace/emilbahnsen-assembler](https://github.com/wspace/emilbahnsen-assembler) [[sh](scripts/wspace/emilbahnsen-assembler.sh)]
