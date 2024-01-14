@@ -117,6 +117,9 @@
 [submodule "git/github.com/pavel987/wspace"]
 	path = git/github.com/pavel987/wspace
 	url = https://github.com/pavel987/wspace
+[submodule "git/github.com/python/cpython"]
+	path = git/github.com/python/cpython
+	url = https://github.com/python/cpython
 [submodule "git/github.com/qeedquan/misc_utilities"]
 	path = git/github.com/qeedquan/misc_utilities
 	url = https://github.com/qeedquan/misc_utilities
