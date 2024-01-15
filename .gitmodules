@@ -34,6 +34,9 @@
 [submodule "git/gist.github.com/y-taka-23/7353612"]
 	path = git/gist.github.com/y-taka-23/7353612
 	url = https://gist.github.com/y-taka-23/7353612
+[submodule "git/github.com/9fans/plan9port"]
+	path = git/github.com/9fans/plan9port
+	url = https://github.com/9fans/plan9port
 [submodule "git/github.com/ActiveState/code"]
 	path = git/github.com/ActiveState/code
 	url = https://github.com/ActiveState/code
