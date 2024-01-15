@@ -32,7 +32,9 @@ sys/src/ape/lib/regexp/regexec.c
 sys/src/ape/lib/regexp/regsub.c
 sys/src/ape/lib/regexp/rregexec.c
 sys/src/ape/lib/regexp/rregsub.c
+sys/src/cmd/awk/re.c
 sys/src/cmd/sam/regexp.c
+sys/src/cmd/upas/README
 sys/src/libregexp/mkfile
 sys/src/libregexp/regaux.c
 sys/src/libregexp/regcomp.c
@@ -47,6 +49,7 @@ sys/src/libregexp/test.c
 sys/src/libregexp/test2.c
 
 # Second Edition 1995-04-05
+sys/src/ape/cmd/README
 sys/src/ape/cmd/expr/regexp.h
 ## Deleted in Third Edition 2000-06-07
 sys/include/alef/regexp.h
@@ -64,15 +67,42 @@ sys/src/alef/lib/libregexp/rregsub.l
 sys/src/cmd/acme/regx.l
 
 # Third Edition 2000-06-07
+LICENSE
+LICENSE.old
+NOTICE
+NOTICE.old
+README
 sys/src/cmd/acme/regx.c
+sys/src/NOTICE
+sys/src/NOTICE.old
+## Only for Lucida fonts
+#LICENSE.lucida
 
 # Fourth Edition 2002-04-27
+sys/src/ape/cmd/pax/PATCHLEVEL
+sys/src/ape/cmd/pax/README
 sys/src/ape/cmd/pax/regexp.c
 sys/src/ape/cmd/pax/regexp.h
 
 # Fourth Edition 2003-02-26
+sys/src/ape/cmd/diff/COPYING
+sys/src/ape/cmd/diff/NEWS
+sys/src/ape/cmd/diff/README
 sys/src/ape/cmd/diff/regex.c
 sys/src/ape/cmd/diff/regex.h
+
+# Fourth Edition 2003-06-26
+LICENSE.gpl
+
+# Fourth Edition 2003-06-29
+## Only for AFPL Ghostscript
+#LICENSE.afpl
+
+# Fourth Edition 2003-09-20
+sys/src/cmd/upas/bayes/dfa.c
+sys/src/cmd/upas/bayes/dfa.h
+sys/src/cmd/upas/bayes/regcomp.c
+sys/src/cmd/upas/bayes/regen.c
 
 # Fourth Edition 2013-03-01
 ## Deleted in Fourth Edition 2013-03-02
