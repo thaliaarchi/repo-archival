@@ -44,7 +44,8 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Extracted from git subtree
 
-- python-re [[sh](scripts/python-re.sh)]
+- plan9-regexp [[sh](scripts/regexp/plan9.sh)]
+- python-re [[sh](scripts/regexp/python-re.sh)]
 - [wspace/0x0dea-lolcode](https://github.com/wspace/0x0dea-lolcode) [[sh](scripts/wspace/0x0dea-lolcode.sh)]
 - [wspace/aniket965-hacktoberfest](https://github.com/wspace/aniket965-hacktoberfest) [[sh](scripts/wspace/aniket965-hacktoberfest.sh)]
 - [wspace/emilbahnsen-assembler](https://github.com/wspace/emilbahnsen-assembler) [[sh](scripts/wspace/emilbahnsen-assembler.sh)]
@@ -91,7 +92,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## Converted from Mercurial
 
 - cuchaz-minecraft-mappings [[sh](scripts/minecraft/cuchaz-mappings.sh)]
-- [re1](https://github.com/thaliaarchi/re1-archive) [[sh](scripts/re1.sh)]
+- [re1](https://github.com/thaliaarchi/re1-archive) [[sh](scripts/regexp/re1.sh)]
 
 ## Converted from SVN
 

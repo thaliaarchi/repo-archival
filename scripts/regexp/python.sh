@@ -2,8 +2,11 @@
 
 . base.sh
 
-copy_submodule github.com/python/cpython python-re
-cd python-re
+mkdir -p regexp
+cd regexp
+
+copy_submodule github.com/python/cpython python
+cd python
 
 git filter-repo \
   --commit-callback '

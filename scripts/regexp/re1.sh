@@ -2,6 +2,8 @@
 
 . base.sh
 
+mkdir -p regexp
+cd regexp
 mkdir re1
 
 # https://code.google.com/archive/p/re1/
