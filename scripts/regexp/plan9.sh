@@ -121,6 +121,4 @@ git add -A
 # Metadata listed at http://9legacy.org/patch.html
 GIT_AUTHOR_NAME='David du Colombier' GIT_AUTHOR_EMAIL='0intro@gmail.com' GIT_AUTHOR_DATE='2015-08-09 00:00:00 +0000' \
 GIT_COMMITTER_NAME='David du Colombier' GIT_COMMITTER_EMAIL='0intro@gmail.com' GIT_COMMITTER_DATE='2015-08-09 00:00:00 +0000' \
-git commit -q -m 'Various fixes in libregexp
-
-Source: http://9legacy.org/9legacy/patch/libregexp-fixes.diff'
+git commit -q -m 'Various fixes in libregexp' --trailer Source:http://9legacy.org/9legacy/patch/libregexp-fixes.diff
