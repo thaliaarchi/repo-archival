@@ -20,6 +20,31 @@ exit 1
 # yes 2002-05-03 b7b24591a7db843bfad3c8422d030e105c7ea168 (tagged)
 # yes 2002-04-27 9a747e4fd48b9f4522c70c07e8f882a15030f964 (tagged)
 
+# plan9port path          plan9 path                  Assumed plan9port version   Later revisions seemingly not in plan9port
+# src/libbio/bbuffered.c  sys/src/libbio/bbuffered.c  Third Edition 2000-06-07
+# src/libbio/bfildes.c    sys/src/libbio/bfildes.c    First Edition 1992-09-21
+# src/libbio/bflush.c     sys/src/libbio/bflush.c     Third Edition 2000-10-14
+# src/libbio/bgetc.c      sys/src/libbio/bgetc.c      Second Edition 1995-04-05
+# src/libbio/bgetd.c      sys/src/libbio/bgetd.c      First Edition 1992-09-21
+# src/libbio/bgetrune.c   sys/src/libbio/bgetrune.c   Second Edition 1995-04-05
+# src/libbio/binit.c      sys/src/libbio/binit.c      Second Edition 1995-04-05   Revert Third Edition 2000-06-07
+# src/libbio/bio.3        sys/man/2/bio               Fourth Edition 2002-04-27
+# src/libbio/boffset.c    sys/src/libbio/boffset.c    Fourth Edition 2002-12-12
+# src/libbio/bprint.c     sys/src/libbio/bprint.c     Third Edition 2000-06-07    Revert Fourth Edition 2002-04-27
+# src/libbio/bputc.c      sys/src/libbio/bputc.c      First Edition 1992-09-21    Revert Third Edition 2000-06-07
+# src/libbio/bputrune.c   sys/src/libbio/bputrune.c   First Edition 1992-09-21
+# src/libbio/brdline.c    sys/src/libbio/brdline.c    Second Edition 1995-04-05
+# src/libbio/brdstr.c     sys/src/libbio/brdstr.c     Fourth Edition 2002-04-27
+# src/libbio/bread.c      sys/src/libbio/bread.c      Second Edition 1995-04-05   Revert Third Edition 2000-10-14
+# src/libbio/bseek.c      sys/src/libbio/bseek.c      Third Edition 2000-06-07
+# src/libbio/bwrite.c     sys/src/libbio/bwrite.c     First Edition 1992-09-21    Revert Fourth Edition 2002-04-27, Third Edition 2000-06-07
+# src/libbio/mkfile       sys/src/libbio/mkfile       N/A
+
+# Assuming the base revision of libbio used is Fourth Edition 2002-04-27, why do
+# some files have newer revisions?
+# - brdstr.c was added in Fourth Edition 2002-04-27
+# -
+
 cp man/man3/bio.3 src/libbio/bio.3
 cp man/man3/fmtinstall.3 src/libfmt/fmtinstall.3
 cp man/man3/print.3 src/libfmt/print.3
@@ -81,12 +106,13 @@ git commit -m 'libfmt: Revert Fourth Edition 2003-03-28 changes to fmtstr.c
 This partially reverts https://github.com/plan9foundation/plan9/commit/65fa3f8b9a469d1a1f534b0eb39ee25caab832bb'
 
 # Reviewed for abnormal changes:
-# src/lib9
-# src/libbio
-# src/libfmt, through print.c
+# - src/lib9
+# - src/libbio
+# - src/libfmt, through print.c
 
 # TODO:
-# src/libbio/bio.h
-# src/libbio/lib9.h
-# src/libfmt/fmtdef.h
-# src/libfmt/pow10.c might make more sense coming from sys/src/libc/port/pow10.c and reverting
+# - src/libbio/bio.h
+# - src/libbio/lib9.h
+# - src/libfmt/fmtdef.h
+# - src/libfmt/pow10.c makes more sense coming from sys/src/libc/port/pow10.c
+#   and reverting Third Edition 2000-10-14 59cc4ca53493a3c6d2349fe2b7f7c40f7dce7294
