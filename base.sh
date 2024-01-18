@@ -158,5 +158,7 @@ echo_header() {
   local NO_FORMAT="\033[0m"
   local F_BOLD="\033[1m"
   local C_ORANGE1="\033[38;5;214m"
-  echo -e "${F_BOLD}${C_ORANGE1}$1${NO_FORMAT}"
+  local header="$1"
+  local subheader="${2:+": $2"}"
+  echo -e "${F_BOLD}${C_ORANGE1}$header${NO_FORMAT}$subheader"
 }

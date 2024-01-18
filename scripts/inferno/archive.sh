@@ -2,6 +2,11 @@
 
 . base.sh
 
+# Kill sub-processes on exit
+trap 'trap - SIGTERM && kill -- -$$' SIGINT SIGTERM EXIT
+
+repos=()
+
 # Verify that HEAD is contained within the master branch of inferno-os.
 git_verify_is_ancestor() {
   local repo="$1"
@@ -19,26 +24,21 @@ git_verify_is_ancestor() {
   popd > /dev/null
 }
 
-tag_head() {
-  local repo="$1"
-  git -C inferno-os tag "$repo" "$(git -C "$repo" rev-parse HEAD)"
-}
-
-tag_head_and_push() {
+push_tag() {
   local repo="$1"
   git -C inferno-os remote add tag-temp "../$repo"
   git -C inferno-os fetch -q tag-temp main
-  tag_head "$repo"
+  git -C inferno-os tag "$repo" "$(git -C "$repo" rev-parse HEAD)"
   git -C inferno-os remote remove tag-temp
 }
 
 section() {
-  local name="$1"
-  echo_header "$name"
-  if [[ -d $name ]]; then
-    echo 'Already completed'
+  local repo="$1"
+  repos+=("$repo")
+  if [[ -d $repo ]]; then
+    echo_header "$repo" 'Already completed'
   else
-    "$name"
+    ( echo_header "$repo" && "$repo" ) | sponge &
   fi
 }
 
@@ -50,27 +50,30 @@ inferno-1e0() {
 
 # Inferno 4E Mercurial repo
 inferno-os-hg() {
+  local repo=inferno-os-hg
   # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/inferno-os/inferno-os-hg
   # https://bitbucket-archive.softwareheritage.org/projects/in/inferno-os/inferno-os-hg.html
-  mkdir inferno-os-hg
+  mkdir $repo
   tar xf "$(get_cached_path https://bitbucket-archive.softwareheritage.org/new-static/dc/dc139a99-1421-4196-9b08-0479cdc057ae/dc139a99-1421-4196-9b08-0479cdc057ae-repository.tar.gz)" \
     --strip-components=1 \
-    -C inferno-os-hg
+    -C $repo
   # The hg-to-git conversion by SWH does not match commit hashes. Luckily,
   # hg-fast-export produces the same hashes as appear on GitHub.
-  hg_to_git inferno-os-hg
-  git_verify_is_ancestor inferno-os-hg
-  tag_head inferno-os-hg
+  hg_to_git $repo
+  git_verify_is_ancestor $repo
 }
 
 # Inferno 4E Mercurial checkout with Unix executables
 inferno-4e-20150328-unix() {
-  tar xf "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno-20150328.tgz)"
-  fix_perms inferno
-  mv inferno inferno-4e-20150328-unix
-  hg_to_git inferno-4e-20150328-unix
-  git_verify_is_ancestor inferno-4e-20150328-unix
-  cd inferno-4e-20150328-unix
+  local repo=inferno-4e-20150328-unix
+  mkdir $repo-tmp
+  tar xf "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno-20150328.tgz)" -C $repo-tmp
+  mv $repo-tmp/inferno $repo
+  rmdir $repo-tmp
+  fix_perms $repo
+  hg_to_git $repo
+  git_verify_is_ancestor $repo
+  cd $repo
   git add -Af
   # HTTP Last-Modified: 2015-03-28 11:02:31 +0000
   # inferno/ modtime:   2015-03-28 10:58:34 +0000
@@ -79,16 +82,18 @@ inferno-4e-20150328-unix() {
   GIT_COMMITTER_NAME='Charles Forsyth' GIT_COMMITTER_EMAIL='charles.forsyth@gmail.com' GIT_COMMITTER_DATE='2015-03-28 10:58:34 +0000' \
   git commit -q -m 'Compile Unix executables' --trailer Source:https://www.vitanuova.com/dist/4e/inferno-20150328.tgz
   cd ..
-  tag_head_and_push inferno-4e-20150328-unix
 }
 
 # Inferno 4E Mercurial checkout with Windows executables
 inferno-4e-20091219-win() {
-  unzip -q "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno.zip)"
-  mv inferno inferno-4e-20091219-win
-  hg_to_git inferno-4e-20091219-win
-  git_verify_is_ancestor inferno-4e-20091219-win
-  cd inferno-4e-20091219-win
+  local repo=inferno-4e-20091219-win
+  mkdir $repo-tmp
+  unzip -q "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno.zip)" -d $repo-tmp
+  mv $repo-tmp/inferno $repo
+  rmdir $repo-tmp
+  hg_to_git $repo
+  git_verify_is_ancestor $repo
+  cd $repo
   # Ignore execute bit for all files, except for .exe.
   git config core.fileMode false
   git add -Af
@@ -101,7 +106,6 @@ inferno-4e-20091219-win() {
   GIT_COMMITTER_NAME='forsyth' GIT_COMMITTER_EMAIL='forsyth@vitanuova.com' GIT_COMMITTER_DATE='2009-12-19 15:41:26 +0000' \
   git commit -q -m 'Compile Windows executables' --trailer Source:https://www.vitanuova.com/dist/4e/inferno.zip
   cd ..
-  tag_head_and_push inferno-4e-20091219-win
 }
 
 mkdir -p inferno
@@ -112,3 +116,8 @@ section inferno-1e0
 section inferno-os-hg
 section inferno-4e-20150328-unix
 section inferno-4e-20091219-win
+wait
+
+for repo in "${repos[@]}"; do
+  push_tag "$repo"
+done
