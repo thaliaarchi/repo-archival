@@ -16,7 +16,7 @@ cd cybis
 
 # SVN repo
 unzip -q ../../files/cybis/repos/CyBF.zip
-chmod -R u+rwX,go+rX,go-w CyBF
+fix_perms CyBF
 mv CyBF cybf-svn
 
 # SVN checkout
