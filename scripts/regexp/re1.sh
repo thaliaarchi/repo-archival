@@ -10,12 +10,9 @@ mkdir re1
 unzip -q "$(get_cached_path https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/re1/source-archive.zip)"
 mv re1 re1-hg
 
+hg_to_git re1-hg re1
+rm -r re1-hg
 cd re1
-git init -q
-git config core.ignoreCase false
-# https://github.com/frej/fast-export
-hg-fast-export -r ../re1-hg -M main
-git checkout -q HEAD
 
 # Filename          Summary                       Upload date                Corresponding commit       URL
 # re1-20121208.tgz  source tree as of 2012-12-08  2012-12-08 10:02:02 +0000  2012-12-08 02:23:54 +0000  https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/re1/re1-20121208.tgz
@@ -33,7 +30,5 @@ git checkout -q HEAD
 jq -r '"# \(.name)\n\n\(.description)"' "$(get_cached_path https://storage.googleapis.com/google-code-archive/v2/code.google.com/re1/project.json)" > README.md
 git add README.md
 git commit -q --fixup "$(git log --reverse --format=%H | head -n1)"
-
-rm -r ../re1-hg
 
 git remote add origin https://github.com/thaliaarchi/re1-archive

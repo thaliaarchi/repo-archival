@@ -12,11 +12,5 @@ tar xf "$(get_cached_path https://bitbucket-archive.softwareheritage.org/new-sta
   --strip-components=1 \
   -C cuchaz-mappings-hg
 
-cd cuchaz-mappings
-git init -q
-git config core.ignoreCase false
-# https://github.com/frej/fast-export
-hg-fast-export -r ../cuchaz-mappings-hg -M main
-git checkout -q HEAD
-
-rm -r ../cuchaz-mappings-hg
+hg_to_git cuchaz-mappings-hg cuchaz-mappings
+rm -r cuchaz-mappings-hg
