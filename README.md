@@ -64,7 +64,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## Merged git histories
 
 - [hostilefork/rebol-whitespacers](https://github.com/hostilefork/rebol-whitespacers) [[post](scripts/wspace/rebol-whitespacers/post.md)] - with manual rebasing
-- inferno [[sh](scripts/inferno.sh)]
+- inferno [[sh](scripts/inferno/archive.sh)]
 - plan9port-graft [[sh](scripts/plan9port-graft.sh)] - manual
 - [quine-relay-spoiler](https://github.com/thaliaarchi/quine-relay-spoiler) [[sh](scripts/quine-relay.sh)]
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) [[sh](scripts/wspace/0qol-prime.sh)] - with manual rewording
