@@ -59,6 +59,10 @@ inferno-4e-20150328-unix() {
   hg_to_git inferno-4e-20150328-unix
   git_verify_is_ancestor inferno-4e-20150328-unix
   git -C inferno-os tag inferno-4e-20150328-unix "$(git -C inferno-4e-20150328-unix rev-parse HEAD)"
+  cd inferno-4e-20150328-unix
+  git add -Af
+  TZ=UTC git commit -q -m 'Compile Unix executables'
+  cd ..
 }
 
 # Inferno 4E Mercurial checkout with Windows executables
@@ -69,6 +73,13 @@ inferno-4e-20091219-win() {
   hg_to_git inferno-4e-20091219-win
   git_verify_is_ancestor inferno-4e-20091219-win
   git -C inferno-os tag inferno-4e-20091219-win "$(git -C inferno-4e-20091219-win rev-parse HEAD)"
+  cd inferno-4e-20091219-win
+  # Ignore execute bit for all files, except for .exe.
+  git config core.fileMode false
+  git add -Af
+  git update-index --chmod=+x "$(git diff --staged --diff-filter=A --name-only -- '*.exe')"
+  TZ=UTC git commit -q -m 'Compile Windows executables'
+  cd ..
 }
 
 mkdir -p inferno
