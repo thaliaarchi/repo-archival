@@ -82,6 +82,13 @@ https://www.vitanuova.com/dist/4e/inferno.zip
 https://bitbucket-archive.softwareheritage.org/projects/in/inferno-os/inferno-os-hg.html
 https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/inferno-os/inferno-os-hg
 
+Git [inferno-os](https://github.com/inferno-os/inferno-os) continues from
+Mercurial [inferno-os-hg](https://bitbucket.org/inferno-os/inferno-os-hg) on
+[2019-09-19](https://github.com/inferno-os/inferno-os/commit/3f3faa9d79b4d286ade6deb914a16ca715361a05),
+and contains all of its history. The tags were not pushed, but they are just
+redundant dates. It was converted using [hg-fast-export](https://github.com/frej/fast-export),
+or a tool that produces equivalent output.
+
 ### Current repository
 
 https://github.com/inferno-os/inferno-os (current)
