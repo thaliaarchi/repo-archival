@@ -71,6 +71,9 @@ hg_to_git() {
     git -C "$repo" checkout -q HEAD
   else
     git -C "$repo" reset -q --mixed HEAD
+    # Mercurial tags are tracked in .hgtags, but hg-fast-export converts them to
+    # git tags.
+    rm -f .hgtags
   fi
 }
 
