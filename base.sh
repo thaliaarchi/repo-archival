@@ -20,6 +20,29 @@ copy_submodule() {
   git clone -q "$TOPLEVEL/git/$submodule/.git" "$dest"
 }
 
+# `git commit`, using the latest file modification time as the commit and author
+# dates, when GIT_AUTHOR_DATE or GIT_COMMITTER_DATE, respectively, is not set.
+tcommit() {
+  if [[ -z ${tcommit_stat:-} ]]; then
+    if stat --version 2> /dev/null | grep -q 'GNU coreutils'; then
+      tcommit_stat=(stat --format=%Y) # Detected GNU coreutils
+    else
+      tcommit_stat=(stat -f %m) # Fallback to BSD-style
+    fi
+  fi
+
+  # Select the latest modified time of all staged files, excluding deletions.
+  local latest_modified
+  latest_modified="$(git diff --staged --diff-filter=d --name-only -z |
+    xargs -0 "${tcommit_stat[@]}" |
+    sort -rn |
+    head -1)"
+
+  GIT_AUTHOR_DATE="${GIT_AUTHOR_DATE-"$latest_modified"}" \
+  GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$latest_modified"}" \
+  git commit "$@"
+}
+
 merge_repo() {
   local repo="$1"
   git remote add "$repo" "../$repo"
