@@ -94,6 +94,21 @@
 [submodule "git/github.com/hostilefork/whitespacers"]
 	path = git/github.com/hostilefork/whitespacers
 	url = https://github.com/hostilefork/whitespacers
+[submodule "git/github.com/inferno-os/inferno-1e0"]
+	path = git/github.com/inferno-os/inferno-1e0
+	url = https://github.com/inferno-os/inferno-1e0
+[submodule "git/github.com/inferno-os/inferno-1e1"]
+	path = git/github.com/inferno-os/inferno-1e1
+	url = https://github.com/inferno-os/inferno-1e1
+[submodule "git/github.com/inferno-os/inferno-2e"]
+	path = git/github.com/inferno-os/inferno-2e
+	url = https://github.com/inferno-os/inferno-2e
+[submodule "git/github.com/inferno-os/inferno-3e"]
+	path = git/github.com/inferno-os/inferno-3e
+	url = https://github.com/inferno-os/inferno-3e
+[submodule "git/github.com/inferno-os/inferno-os"]
+	path = git/github.com/inferno-os/inferno-os
+	url = https://github.com/inferno-os/inferno-os
 [submodule "git/github.com/jmesyou/erasure"]
 	path = git/github.com/jmesyou/erasure
 	url = https://github.com/jmesyou/erasure
