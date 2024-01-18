@@ -53,7 +53,9 @@ hg_to_git() {
   git init -q "$git_repo"
   pushd "$git_repo" > /dev/null
   git config core.ignoreCase false
-  hg-fast-export -r "$hg_repo" -M main
+  # hg-fast-export logs every revision; suppress stdout with chronic from
+  # moreutils, unless it fails.
+  chronic hg-fast-export -r "$hg_repo" -M main
   git checkout -q HEAD
   popd > /dev/null
 }
@@ -109,4 +111,12 @@ list_swh_branches() {
     if .value.target_type != "revision" then "branch is not a revision: \(.)" | error end |
     "\(.key | sub("^branch-tip/"; "")): \(.value.target)\(if $HEAD == .key then " (HEAD)" else "" end)"
   '
+}
+
+echo_header() {
+  # https://colors.sh/
+  local NO_FORMAT="\033[0m"
+  local F_BOLD="\033[1m"
+  local C_ORANGE1="\033[38;5;214m"
+  echo -e "${F_BOLD}${C_ORANGE1}$1${NO_FORMAT}"
 }
