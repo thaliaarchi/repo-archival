@@ -5,6 +5,20 @@
 echo 'Run manually'
 exit 1
 
+# It seems that plan9port did not start with Plan 9 as the base, as I assumed
+# below. Many “initial” commits on 2003-09-30 imported ported subtrees.
+#
+# The initial import of libregexp and libbio in commit b2cfc4e2e71d0f0a5113ddfbd93c8285cc4d74e4
+# indicates in src/{libregexp,libbio}/README, that they were sourced from
+# Inferno; the sources of libfmt and libutf are unstated.
+#
+# The initial import of sam in commit ed7c8e8d02c02bdbff1e88a6d8d1419f39af48ad
+# indicates in src/cmd/sam/README, that it uses libutf-2.0 and libfmt-2.0 from
+# https://web.archive.org/web/20030625153911/http://www.pdos.lcs.mit.edu/~rsc/software/,
+# and was ported by Scott Schwartz.
+#
+# Perhaps earlier history could be reconstructed from there.
+
 # The fork point of plan9port:
 # at the latest 2003-09-30 f3e9c68aaa10d1977af2e6856bf303a75133e353
 # NO  2003-09-30 f3e9c68aaa10d1977af2e6856bf303a75133e353 for sys/src/libbio/bgetc.c
