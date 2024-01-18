@@ -41,3 +41,10 @@ else
 fi
 
 rm -rf inferno-os-hg
+
+tar xf "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno-20150328.tgz)"
+fix_perms inferno
+mv inferno inferno-4e-20150328-hg
+
+unzip -q "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno.zip)"
+mv inferno inferno-4e-win
