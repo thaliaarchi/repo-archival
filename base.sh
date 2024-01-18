@@ -44,20 +44,34 @@ rebase_break_before_date() {
   rebase_with_metadata -i -q --committer-date-is-author-date "$commit_before"
 }
 
-# Convert a Mercurial repo to git using hg-fast-export
+# Convert a Mercurial repo in-place to git using hg-fast-export
 # https://github.com/frej/fast-export
 hg_to_git() {
-  local hg_repo="$1"
-  local git_repo="$2"
-  hg_repo="$(realpath "$hg_repo")"
-  git init -q "$git_repo"
-  pushd "$git_repo" > /dev/null
+  local repo="$1"
+  repo="$(realpath "$repo")"
+  local git_tmp="${repo}_git"
+  local working_tree_count
+  working_tree_count="$(\ls -f "$repo" | wc -l)"
+
+  git init -q "$git_tmp"
+  pushd "$git_tmp" > /dev/null
   git config core.ignoreCase false
   # hg-fast-export logs every revision; suppress stdout with chronic from
   # moreutils, unless it fails.
-  chronic hg-fast-export -r "$hg_repo" -M main
-  git checkout -q HEAD
+  chronic hg-fast-export -r "$repo" -M main
   popd > /dev/null
+
+  mv "$git_tmp/.git" "$repo/"
+  rmdir "$git_tmp"
+  rm -r "$repo/.hg"
+  # If the original working tree was empty (only . .. and .hg), checkout a fresh
+  # tree; otherwise, use the existing one. Uses [ unquoted, to strip the spaces
+  # from wc.
+  if [ $working_tree_count = 3 ]; then
+    git -C "$repo" checkout -q HEAD
+  else
+    git -C "$repo" reset -q --mixed HEAD
+  fi
 }
 
 ia_raw_url() {

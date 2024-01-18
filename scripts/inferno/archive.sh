@@ -36,7 +36,7 @@ inferno-1e0() {
 }
 
 # Inferno 4E Mercurial repo
-inferno-os-hg-git() {
+inferno-os-hg() {
   # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/inferno-os/inferno-os-hg
   # https://bitbucket-archive.softwareheritage.org/projects/in/inferno-os/inferno-os-hg.html
   mkdir inferno-os-hg
@@ -45,31 +45,37 @@ inferno-os-hg-git() {
     -C inferno-os-hg
   # The hg-to-git conversion by SWH does not match commit hashes. Luckily,
   # hg-fast-export produces the same hashes as appear on GitHub.
-  hg_to_git inferno-os-hg inferno-os-hg-git
-  git_verify_is_ancestor inferno-os-hg-git
-  rm -r inferno-os-hg
+  hg_to_git inferno-os-hg
+  git_verify_is_ancestor inferno-os-hg
+  git -C inferno-os tag inferno-os-hg "$(git -C inferno-os-hg rev-parse HEAD)"
 }
 
 # Inferno 4E Mercurial checkout with Unix executables
-inferno-4e-20150328() {
+# Last-Modified: 2015-03-28 11:02:31 +0000
+inferno-4e-20150328-unix() {
   tar xf "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno-20150328.tgz)"
   fix_perms inferno
-  mv inferno inferno-4e-20150328-hg
-  hg_to_git inferno-4e-20150328-hg inferno-4e-20150328
-  git_verify_is_ancestor inferno-4e-20150328
+  mv inferno inferno-4e-20150328-unix
+  hg_to_git inferno-4e-20150328-unix
+  git_verify_is_ancestor inferno-4e-20150328-unix
+  git -C inferno-os tag inferno-4e-20150328-unix "$(git -C inferno-4e-20150328-unix rev-parse HEAD)"
 }
 
 # Inferno 4E Mercurial checkout with Windows executables
-inferno-4e-win() {
+# Last-Modified: 2009-12-19 16:12:54 +0000
+inferno-4e-20091219-win() {
   unzip -q "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno.zip)"
-  mv inferno inferno-4e-win-hg
-  hg_to_git inferno-4e-win-hg inferno-4e-win
-  git_verify_is_ancestor inferno-4e-win
+  mv inferno inferno-4e-20091219-win
+  hg_to_git inferno-4e-20091219-win
+  git_verify_is_ancestor inferno-4e-20091219-win
+  git -C inferno-os tag inferno-4e-20091219-win "$(git -C inferno-4e-20091219-win rev-parse HEAD)"
 }
 
 mkdir -p inferno
 cd inferno
+
+copy_submodule github.com/inferno-os/inferno-os
 section inferno-1e0
-section inferno-os-hg-git
-section inferno-4e-20150328
-section inferno-4e-win
+section inferno-os-hg
+section inferno-4e-20150328-unix
+section inferno-4e-20091219-win

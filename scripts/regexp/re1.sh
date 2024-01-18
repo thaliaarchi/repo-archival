@@ -8,10 +8,8 @@ mkdir re1
 
 # https://code.google.com/archive/p/re1/
 unzip -q "$(get_cached_path https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/re1/source-archive.zip)"
-mv re1 re1-hg
 
-hg_to_git re1-hg re1
-rm -r re1-hg
+hg_to_git re1
 cd re1
 
 # Filename          Summary                       Upload date                Corresponding commit       URL
