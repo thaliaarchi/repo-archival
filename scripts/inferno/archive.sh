@@ -19,6 +19,19 @@ git_verify_is_ancestor() {
   popd > /dev/null
 }
 
+tag_head() {
+  local repo="$1"
+  git -C inferno-os tag "$repo" "$(git -C "$repo" rev-parse HEAD)"
+}
+
+tag_head_and_push() {
+  local repo="$1"
+  git -C inferno-os remote add tag-temp "../$repo"
+  git -C inferno-os fetch -q tag-temp main
+  tag_head "$repo"
+  git -C inferno-os remote remove tag-temp
+}
+
 section() {
   local name="$1"
   echo_header "$name"
@@ -47,39 +60,48 @@ inferno-os-hg() {
   # hg-fast-export produces the same hashes as appear on GitHub.
   hg_to_git inferno-os-hg
   git_verify_is_ancestor inferno-os-hg
-  git -C inferno-os tag inferno-os-hg "$(git -C inferno-os-hg rev-parse HEAD)"
+  tag_head inferno-os-hg
 }
 
 # Inferno 4E Mercurial checkout with Unix executables
-# Last-Modified: 2015-03-28 11:02:31 +0000
 inferno-4e-20150328-unix() {
   tar xf "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno-20150328.tgz)"
   fix_perms inferno
   mv inferno inferno-4e-20150328-unix
   hg_to_git inferno-4e-20150328-unix
   git_verify_is_ancestor inferno-4e-20150328-unix
-  git -C inferno-os tag inferno-4e-20150328-unix "$(git -C inferno-4e-20150328-unix rev-parse HEAD)"
   cd inferno-4e-20150328-unix
   git add -Af
-  TZ=UTC git commit -q -m 'Compile Unix executables'
+  # HTTP Last-Modified: 2015-03-28 11:02:31 +0000
+  # inferno/ modtime:   2015-03-28 10:58:34 +0000
+  # Previous commit:    2015-03-28 10:58:16 +0000
+  GIT_AUTHOR_NAME='Charles Forsyth' GIT_AUTHOR_EMAIL='charles.forsyth@gmail.com' GIT_AUTHOR_DATE='2015-03-28 10:58:34 +0000' \
+  GIT_COMMITTER_NAME='Charles Forsyth' GIT_COMMITTER_EMAIL='charles.forsyth@gmail.com' GIT_COMMITTER_DATE='2015-03-28 10:58:34 +0000' \
+  git commit -q -m 'Compile Unix executables' --trailer Source:https://www.vitanuova.com/dist/4e/inferno-20150328.tgz
   cd ..
+  tag_head_and_push inferno-4e-20150328-unix
 }
 
 # Inferno 4E Mercurial checkout with Windows executables
-# Last-Modified: 2009-12-19 16:12:54 +0000
 inferno-4e-20091219-win() {
   unzip -q "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno.zip)"
   mv inferno inferno-4e-20091219-win
   hg_to_git inferno-4e-20091219-win
   git_verify_is_ancestor inferno-4e-20091219-win
-  git -C inferno-os tag inferno-4e-20091219-win "$(git -C inferno-4e-20091219-win rev-parse HEAD)"
   cd inferno-4e-20091219-win
   # Ignore execute bit for all files, except for .exe.
   git config core.fileMode false
   git add -Af
-  git update-index --chmod=+x "$(git diff --staged --diff-filter=A --name-only -- '*.exe')"
-  TZ=UTC git commit -q -m 'Compile Windows executables'
+  git diff --staged --diff-filter=A --name-only -z -- '*.exe' |
+    xargs -0 git update-index --chmod=+x
+  # HTTP Last-Modified: 2009-12-19 16:12:54 +0000
+  # inferno/ modtime:   2009-12-19 15:41:26 +0000
+  # Previous commit:    2009-12-19 14:29:25 +0000
+  GIT_AUTHOR_NAME='forsyth' GIT_AUTHOR_EMAIL='forsyth@vitanuova.com' GIT_AUTHOR_DATE='2009-12-19 15:41:26 +0000' \
+  GIT_COMMITTER_NAME='forsyth' GIT_COMMITTER_EMAIL='forsyth@vitanuova.com' GIT_COMMITTER_DATE='2009-12-19 15:41:26 +0000' \
+  git commit -q -m 'Compile Windows executables' --trailer Source:https://www.vitanuova.com/dist/4e/inferno.zip
   cd ..
+  tag_head_and_push inferno-4e-20091219-win
 }
 
 mkdir -p inferno
