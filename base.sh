@@ -78,6 +78,12 @@ get_cached() {
   cp -p "$(get_cached_path "$url")" "$out"
 }
 
+fix_perms() {
+  # Allow the user to read and write and group/other to only read. Keep
+  # executable bit as-is.
+  chmod -R u+rwX,go+rX,go-w "$@"
+}
+
 list_swh_branches() {
   local origin="$1"
   curl -s "$(curl -s "https://archive.softwareheritage.org/api/1/origin/$origin/visit/latest/" | jq -r .snapshot_url)" |
