@@ -44,6 +44,20 @@ rebase_break_before_date() {
   rebase_with_metadata -i -q --committer-date-is-author-date "$commit_before"
 }
 
+# Convert a Mercurial repo to git using hg-fast-export
+# https://github.com/frej/fast-export
+hg_to_git() {
+  local hg_repo="$1"
+  local git_repo="$2"
+  hg_repo="$(realpath "$hg_repo")"
+  git init -q "$git_repo"
+  pushd "$git_repo" > /dev/null
+  git config core.ignoreCase false
+  hg-fast-export -r "$hg_repo" -M main
+  git checkout -q HEAD
+  popd > /dev/null
+}
+
 ia_raw_url() {
   sed -E 's,(^https://web.archive.org/web/[0-9]+)/,\1id_/,' <<< "$1"
 }
