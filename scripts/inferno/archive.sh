@@ -7,6 +7,36 @@ trap 'trap - SIGTERM && kill -- -$$' SIGINT SIGTERM EXIT
 
 repos=()
 
+section() {
+  local repo="$1"
+  repos+=("$repo")
+  if [[ -d $repo ]]; then
+    echo_header "$repo" 'Already completed'
+  else
+    ( echo_header "$repo" && "$repo" 2>&1 ) | sponge &
+  fi
+}
+
+unzip_tar() {
+  local repo="$1"
+  local root_dir="$2"
+  local url="$3"
+  mkdir "$repo.tmp"
+  tar xf "$(get_cached_path "$url")" -C "$repo.tmp"
+  mv "$repo.tmp/$root_dir" "$repo"
+  rmdir "$repo.tmp"
+}
+
+unzip_zip() {
+  local repo="$1"
+  local root_dir="$2"
+  local url="$3"
+  mkdir "$repo.tmp"
+  unzip -q "$(get_cached_path "$url")" -d "$repo.tmp"
+  mv "$repo.tmp/$root_dir" "$repo"
+  rmdir "$repo.tmp"
+}
+
 # Verify that HEAD is contained within the master branch of inferno-os.
 git_verify_is_ancestor() {
   local repo="$1"
@@ -32,16 +62,6 @@ push_tag() {
   git -C inferno-os remote remove tag-temp
 }
 
-section() {
-  local repo="$1"
-  repos+=("$repo")
-  if [[ -d $repo ]]; then
-    echo_header "$repo" 'Already completed'
-  else
-    ( echo_header "$repo" && "$repo" ) | sponge &
-  fi
-}
-
 inferno-1e0() {
   copy_submodule github.com/inferno-os/inferno-1e0
   # Two spurious commits add, then delete .gitignore
@@ -63,34 +83,29 @@ inferno-os-hg() {
   git_verify_is_ancestor $repo
 }
 
-# Inferno 4E Mercurial checkout with Unix executables
-inferno-4e-20150328-unix() {
-  local repo=inferno-4e-20150328-unix
-  mkdir $repo-tmp
-  tar xf "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno-20150328.tgz)" -C $repo-tmp
-  mv $repo-tmp/inferno $repo
-  rmdir $repo-tmp
-  fix_perms $repo
-  hg_to_git $repo
-  git_verify_is_ancestor $repo
+inferno-4e-20070510-unix() {
+  local repo=inferno-4e-20070510-unix
+  local source=https://web.archive.org/web/20070701073142/http://www.vitanuova.com/dist/4e/inferno-20070510.tgz
+  unzip_tar $repo inferno-20070510 $source
   cd $repo
+  copy_submodule github.com/inferno-os/inferno-os .git --bare
+  git --git-dir=.git branch -m master main
+  echo dd7f661c1e9a0167d1d500b21866f267efa8dc5f > .git/refs/heads/main
+  git config core.bare false
   git add -Af
-  # HTTP Last-Modified: 2015-03-28 11:02:31 +0000
-  # inferno/ modtime:   2015-03-28 10:58:34 +0000
-  # Previous commit:    2015-03-28 10:58:16 +0000
-  GIT_AUTHOR_NAME='Charles Forsyth' GIT_AUTHOR_EMAIL='charles.forsyth@gmail.com' GIT_AUTHOR_DATE='2015-03-28 10:58:34 +0000' \
-  GIT_COMMITTER_NAME='Charles Forsyth' GIT_COMMITTER_EMAIL='charles.forsyth@gmail.com' GIT_COMMITTER_DATE='2015-03-28 10:58:34 +0000' \
-  git commit -q -m 'Compile Unix executables' --trailer Source:https://www.vitanuova.com/dist/4e/inferno-20150328.tgz
+  # HTTP Last-Modified: 2007-05-30 23:49:38 +0000
+  # Latest modtime:     2007-05-30 23:47:35 +0000
+  GIT_AUTHOR_NAME='Charles.Forsyth' GIT_AUTHOR_EMAIL='devnull@localhost' GIT_AUTHOR_DATE='2007-05-30 23:47:35 +0000' \
+  GIT_COMMITTER_NAME='Charles.Forsyth' GIT_COMMITTER_EMAIL='devnull@localhost' GIT_COMMITTER_DATE='2007-05-30 23:47:35 +0000' \
+  git commit -q -m '20070510-2347 add fonts' --trailer Source:$source
   cd ..
 }
 
 # Inferno 4E Mercurial checkout with Windows executables
 inferno-4e-20091219-win() {
   local repo=inferno-4e-20091219-win
-  mkdir $repo-tmp
-  unzip -q "$(get_cached_path https://www.vitanuova.com/dist/4e/inferno.zip)" -d $repo-tmp
-  mv $repo-tmp/inferno $repo
-  rmdir $repo-tmp
+  local source=https://web.archive.org/web/20110514212006/http://www.vitanuova.com/dist/4e/inferno.zip
+  unzip_zip $repo inferno $source
   hg_to_git $repo
   git_verify_is_ancestor $repo
   cd $repo
@@ -100,11 +115,47 @@ inferno-4e-20091219-win() {
   git diff --staged --diff-filter=A --name-only -z -- '*.exe' |
     xargs -0 git update-index --chmod=+x
   # HTTP Last-Modified: 2009-12-19 16:12:54 +0000
-  # inferno/ modtime:   2009-12-19 15:41:26 +0000
+  # Root dir modtime:   2009-12-19 15:41:26 +0000
   # Previous commit:    2009-12-19 14:29:25 +0000
   GIT_AUTHOR_NAME='forsyth' GIT_AUTHOR_EMAIL='forsyth@vitanuova.com' GIT_AUTHOR_DATE='2009-12-19 15:41:26 +0000' \
   GIT_COMMITTER_NAME='forsyth' GIT_COMMITTER_EMAIL='forsyth@vitanuova.com' GIT_COMMITTER_DATE='2009-12-19 15:41:26 +0000' \
-  git commit -q -m 'Compile Windows executables' --trailer Source:https://www.vitanuova.com/dist/4e/inferno.zip
+  git commit -q -m 'Compile Windows executables and add fonts' --trailer Source:$source
+  cd ..
+}
+
+inferno-4e-20100120-unix() {
+  local repo=inferno-4e-20100120-unix
+  local source=https://web.archive.org/web/20110514214545/http://www.vitanuova.com/dist/4e/inferno-20100120.tgz
+  unzip_tar $repo inferno $source
+  hg_to_git $repo
+  git_verify_is_ancestor $repo
+  cd $repo
+  git add -Af
+  # HTTP Last-Modified: 2010-01-20 16:58:21 +0000
+  # Latest modtime:     2010-01-20 16:48:30 +0000
+  # Previous commit:    2010-01-20 16:10:53 +0000
+  GIT_AUTHOR_NAME='forsyth' GIT_AUTHOR_EMAIL='forsyth@vitanuova.com' GIT_AUTHOR_DATE='2010-01-20 16:48:30 +0000' \
+  GIT_COMMITTER_NAME='forsyth' GIT_COMMITTER_EMAIL='forsyth@vitanuova.com' GIT_COMMITTER_DATE='2010-01-20 16:48:30 +0000' \
+  git commit -q -m 'Add fonts' --trailer Source:$source
+  cd ..
+}
+
+# Inferno 4E Mercurial checkout with Unix executables
+inferno-4e-20150328-unix() {
+  local repo=inferno-4e-20150328-unix
+  local source=https://web.archive.org/web/20150528191909/http://www.vitanuova.com/dist/4e/inferno-20150328.tgz
+  unzip_tar $repo inferno $source
+  fix_perms $repo
+  hg_to_git $repo
+  git_verify_is_ancestor $repo
+  cd $repo
+  git add -Af
+  # HTTP Last-Modified: 2015-03-28 11:02:31 +0000
+  # Latest modtime:     2015-03-28 10:58:34 +0000
+  # Previous commit:    2015-03-28 10:58:16 +0000
+  GIT_AUTHOR_NAME='Charles Forsyth' GIT_AUTHOR_EMAIL='charles.forsyth@gmail.com' GIT_AUTHOR_DATE='2015-03-28 10:58:34 +0000' \
+  GIT_COMMITTER_NAME='Charles Forsyth' GIT_COMMITTER_EMAIL='charles.forsyth@gmail.com' GIT_COMMITTER_DATE='2015-03-28 10:58:34 +0000' \
+  git commit -q -m 'Compile Unix executables' --trailer Source:$source
   cd ..
 }
 
@@ -114,8 +165,10 @@ cd inferno
 copy_submodule github.com/inferno-os/inferno-os
 section inferno-1e0
 section inferno-os-hg
-section inferno-4e-20150328-unix
+section inferno-4e-20070510-unix
 section inferno-4e-20091219-win
+section inferno-4e-20100120-unix
+section inferno-4e-20150328-unix
 wait
 
 for repo in "${repos[@]}"; do
