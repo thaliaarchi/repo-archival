@@ -10,3 +10,6 @@ init_submodules:
 .PHONY: update_submodules
 update_submodules:
 	git submodule update --remote --jobs 5
+# Compensate for frequent force pushes
+	git -C git/github.com/qeedquan/misc_utilities update-ref refs/heads/master origin/master
+	git -C git/github.com/qeedquan/misc_utilities checkout master
