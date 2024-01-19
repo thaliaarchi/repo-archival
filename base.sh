@@ -17,7 +17,7 @@ fi
 copy_submodule() {
   local submodule="$1"
   local dest="${2-"${submodule##*/}"}"
-  git clone -q "$TOPLEVEL/git/$submodule/.git" "$dest"
+  git clone -q "$TOPLEVEL/git/$submodule/.git" "$dest" "${@:3}"
 }
 
 # `git commit`, using the latest file modification time as the commit and author
