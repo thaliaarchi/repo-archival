@@ -66,8 +66,61 @@ push_tag() {
 
 inferno-1e0() {
   copy_submodule github.com/inferno-os/inferno-1e0
-  # Two spurious commits add, then delete .gitignore
+  # Two spurious commits add, then delete, .gitignore
   git -C inferno-1e0 filter-repo --quiet --invert-path --path .gitignore
+}
+
+inferno-1e0-src() {
+  # HTTP Last-Modified: 2007-10-19 13:03:32 +0000
+  # Modtimes:
+  #   Many dirs:        2007-10-19 12:49:58 +0000 to 2007-10-19 12:52:22 +0000
+  #   1e0/LICENSE:      2007-10-19 12:46:04 +0000
+  #   Initial:          1997-05-16 13:57:23 +0000 to 1997-05-16 14:05:45 +0000
+  local repo=inferno-1e0-src
+  local source=https://web.archive.org/web/20110807071440/http://www.vitanuova.com/dist/old/1e/1e0.tgz
+  unzip_tar $repo 1e0 $source
+}
+
+inferno-1e1-src() {
+  # HTTP Last-Modified: 2007-10-19 13:25:48 +0000
+  # Modtimes:
+  #   Many dirs:        2007-10-19 13:08:13 +0000 to 2007-10-19 13:24:53 +0000
+  #   1e1src/LICENSE:   2007-10-19 13:09:00 +0000
+  #   Sporadic changes: 1996-10-21 14:44:24 +0000 to 1998-01-26 15:35:16 +0000
+  #   Initial:          1996-10-20 23:26:42 +0000 to 1996-10-20 23:43:10 +0000
+  local repo=inferno-1e1-src
+  local source=https://web.archive.org/web/20110807071535/http://www.vitanuova.com/dist/old/1e/1e1src.tgz
+  unzip_tar $repo 1e1src $source
+}
+
+inferno-2e-src() {
+  # HTTP Last-Modified: 2007-10-19 12:23:28 +0000
+  # Modtimes:
+  #   2e/NOTICE:        2007-10-19 12:23:01 +0000
+  #   Many dirs:        2000-01-28 19:48:28 +0000 to 2007-10-19 12:21:00 +0000
+  #   2e/math/NOTICE:   2007-10-19 12:11:19 +0000
+  #   2e/os/sa1100/mkfile: 2007-10-19 11:57:07 +0000
+  #   2e/LICENCE:       2007-10-19 11:35:34 +0000
+  #   Initial:          1999-07-13 14:44:09 +0000 to 1999-07-13 14:51:41 +0000
+  local repo=inferno-2e-src
+  local source=https://web.archive.org/web/20110514213516/http://www.vitanuova.com/dist/old/2e/2e.tgz
+  unzip_tar $repo 2e $source
+}
+
+inferno-3e-src() {
+  # HTTP Last-Modified: 2007-10-18 13:36:41 +0000
+  # Modtimes:
+  local repo=inferno-3e-src
+  local source=https://web.archive.org/web/20110514214020/http://www.vitanuova.com/dist/old/3e/3e.tgz
+  unzip_tar $repo 3e $source
+}
+
+inferno-3econtrib-src() {
+  # HTTP Last-Modified: 2007-10-18 08:16:02 +0000
+  # Modtimes:
+  local repo=inferno-3econtrib-src
+  local source=https://web.archive.org/web/20110514215522/http://www.vitanuova.com/dist/old/3e/3econtrib.tgz
+  unzip_tar $repo 3econtrib $source
 }
 
 # Inferno 4E Mercurial repo
