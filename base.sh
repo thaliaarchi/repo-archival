@@ -67,7 +67,11 @@ rebase_break_before_date() {
   rebase_with_metadata -i -q --committer-date-is-author-date "$commit_before"
 }
 
-# Convert a Mercurial repo in-place to git using hg-fast-export
+# Convert a Mercurial repo in-place to git using hg-fast-export. It must be on
+# exactly commit 723d8032ba69594f86e282cc3b0f31cbe19f19f8, because the next
+# commit, 4c10270302979f76d3bf143a2c3b3374c1b36e2c breaks compatibility for at
+# least Inferno conversions. Create an alias for hg-fast-export.sh as
+# hg-fast-export.
 # https://github.com/frej/fast-export
 hg_to_git() {
   local repo="$1"

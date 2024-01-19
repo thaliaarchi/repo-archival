@@ -5,6 +5,8 @@
 # Kill sub-processes on exit
 trap 'trap - SIGTERM && kill -- -$$' SIGINT SIGTERM EXIT
 
+# See note in base.sh for pinned version of hg-fast-export.
+
 repos=()
 
 section() {
@@ -164,11 +166,11 @@ cd inferno
 
 copy_submodule github.com/inferno-os/inferno-os
 section inferno-1e0
-section inferno-os-hg
 section inferno-4e-20070510-unix
 section inferno-4e-20091219-win
 section inferno-4e-20100120-unix
 section inferno-4e-20150328-unix
+section inferno-os-hg
 wait
 
 for repo in "${repos[@]}"; do
