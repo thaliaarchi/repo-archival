@@ -91,9 +91,9 @@ inferno-4e-20070510-unix() {
   unzip_tar $repo inferno-20070510 $source
   cd $repo
   copy_submodule github.com/inferno-os/inferno-os .git --bare
-  git --git-dir=.git branch -m master main
-  echo dd7f661c1e9a0167d1d500b21866f267efa8dc5f > .git/refs/heads/main
+  git --git-dir=.git update-ref refs/heads/master dd7f661c1e9a0167d1d500b21866f267efa8dc5f
   git config core.bare false
+  git branch -m master main
   git add -Af
   # HTTP Last-Modified: 2007-05-30 23:49:38 +0000
   # Latest modtime:     2007-05-30 23:47:35 +0000
