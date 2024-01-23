@@ -1,5 +1,8 @@
 # TODO
 
+- Plan 9
+  - ISO and tar releases: https://p9f.org/dl/index.html
+  - UC Berkeley GPL: https://github.com/brho/plan9
 - JavaScript 1.0
   - [doodlewind/mocha1995](https://github.com/doodlewind/mocha1995) extracts
     Mocha from the same archive as I am doing. It is done by the Chinese
