@@ -28,7 +28,7 @@
 #    delete rameev.ws
 #    delete shura-bura.ws
 
-copy_submodule gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 wspace/pik4ez-ascii
+clone_submodule https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 wspace/pik4ez-ascii
 cd wspace/pik4ez-ascii
 
 # Remove file deletions and fix lamarr.ws filename:

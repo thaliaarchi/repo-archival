@@ -5,7 +5,7 @@
 mkdir -p wspace
 cd wspace
 
-copy_submodule github.com/BackupTheBerlios/wsdebug ssiegl-wsdebug
+clone_submodule https://github.com/BackupTheBerlios/wsdebug ssiegl-wsdebug
 cd ssiegl-wsdebug
 
 git filter-repo --quiet \
@@ -14,6 +14,8 @@ git filter-repo --quiet \
   --path-rename wsdebug/.cvsignore:wsdebug/.gitignore \
   --path-rename wsdebug/:
 git branch -m master main
+
+# TODO: Merge in tar
 
 # Stefan is in Germany, but I don't know whether the archive times are
 # local or UTC, so I won't set the location.

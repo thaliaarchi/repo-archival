@@ -5,13 +5,8 @@
 mkdir -p foones
 cd foones
 
-# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/foones/eightfold
-# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:f46c932ffb7e88346594ca667cc3758ef27a5692/
-tar xf ../../swh/github.com/foones/eightfold/swh_1_rev_f46c932ffb7e88346594ca667cc3758ef27a5692.git.tar
-git clone -q swh:1:rev:f46c932ffb7e88346594ca667cc3758ef27a5692.git eightfold-base
-rm -rf swh:1:rev:f46c932ffb7e88346594ca667cc3758ef27a5692.git
-
-copy_submodule github.com/foones/lenguajes eightfold
+clone_swh https://github.com/foones/eightfold f46c932ffb7e88346594ca667cc3758ef27a5692 eightfold-base
+clone_submodule https://github.com/foones/lenguajes eightfold
 cd eightfold
 git filter-repo --quiet \
   --subdirectory-filter eightfold \
