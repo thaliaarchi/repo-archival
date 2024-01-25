@@ -53,7 +53,6 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/hogelog-c](https://github.com/wspace/hogelog-c) [[sh](scripts/wspace/hogelog-c.sh)]
 - [wspace/omurakazuaki-rust](https://github.com/wspace/omurakazuaki-rust) [[sh](scripts/wspace/omurakazuaki-rust.sh)]
 - [wspace/qeedquan-go](https://github.com/wspace/qeedquan-go) [[sh](scripts/wspace/qeedquan-go.sh)]
-- [wspace/remigascou-c](https://github.com/wspace/remigascou-c) [[sh](scripts/wspace/remigascou-c.sh)] - source now offline
 - [wspace/shimo-yukicoder](https://github.com/wspace/shimo-yukicoder) [[sh](scripts/wspace/shimo-yukicoder.sh)]
 - [wspace/wysang-java](https://github.com/wspace/wysang-java) [[sh](scripts/wspace/wysang-java.sh)]
 
@@ -91,6 +90,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/nutcrack-whiteplanes.rb](https://github.com/wspace/nutcrack-whiteplanes.rb) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
 - [wspace/nutcrack-whiteplanes.swift](https://github.com/wspace/nutcrack-whiteplanes.swift) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
 - [wspace/nutcrack-whiteplanes.github.io](https://github.com/wspace/nutcrack-whiteplanes.github.io) [[sh](scripts/wspace/nutcrack-whiteplanes.sh)]
+- [wspace/remigascou-c](https://github.com/wspace/remigascou-c) [[sh](scripts/wspace/remigascou-c.sh)]
 
 ## Converted from Mercurial
 
