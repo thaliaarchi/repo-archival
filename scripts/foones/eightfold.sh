@@ -17,13 +17,12 @@ git filter-repo --quiet \
   --subdirectory-filter eightfold \
   --replace-message <(echo 'Added Lumpen==>Moved Makefile')
 
-# Rewrite root commit of the filtered lenguajes to have eightfold from SWH as
-# its parent. (git filter-repo cannot be used for this, because it would replace
-# the root commit, instead of changing its parent.)
+# Graft the earlier history of eightfold from SWH onto the root commit of the
+# later history in the filtered lenguajes.
 git remote add base ../eightfold-base
 git fetch -q base
-FILTER_BRANCH_SQUELCH_WARNING=1 \
-git filter-branch --parent-filter "sed 's/^$/-p $(git rev-parse base/master)/'" master
+git replace --graft "$(git rev-list --max-parents=0 HEAD)" base/master
+git filter-repo -f --quiet
 git remote remove base
 rm -rf ../eightfold-base
 
