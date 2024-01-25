@@ -12,4 +12,3 @@ tar xf "$(get_cached_path https://bitbucket-archive.softwareheritage.org/new-sta
   --strip-components=1 \
   -C cuchaz-mappings
 hg_to_git cuchaz-mappings
-cd cuchaz-mappings

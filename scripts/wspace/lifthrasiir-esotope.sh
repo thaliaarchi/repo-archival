@@ -4,32 +4,21 @@
 
 mkdir -p wspace
 cd wspace
+mkdir lifthrasiir-esotope
 
-# The full Mercurial repo was saved on the SWH:
 # https://bitbucket-archive.softwareheritage.org/projects/li/lifthrasiir/esotope-esotope.html
+# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/lifthrasiir/esotope-esotope
+# https://web.archive.org/web/20181210223811/https://bitbucket.org/lifthrasiir/esotope-esotope/
+# Directory snapshot: https://web.archive.org/web/20200622005938/https://bitbucket.org/lifthrasiir/esotope-esotope/get/2a3f6489a176.zip
 
-# A directory snapshot was saved on BitBucket:
-# https://web.archive.org/web/20200622005938/https://bitbucket.org/lifthrasiir/esotope-esotope/get/2a3f6489a176.zip
-
-# All commits are in +0900:
-# $ for commit in $(git log --reverse --format=%H); do
-#     echo "$commit"
-#     curl -s "https://archive.softwareheritage.org/api/1/revision/$commit/" |
-#       jq -r '.extra_headers[] | select(.[0] == "time_offset_seconds") | .[1]'
-#   done
-
-clone_swh https://bitbucket.org/lifthrasiir/esotope-esotope 89cd61de9d2dda065ed587bd38df31d3c09ca915 lifthrasiir-esotope
+tar xf "$(get_cached_path https://bitbucket-archive.softwareheritage.org/new-static/7e/7ed183a2-b47b-419e-80f8-ae1d222cf866/7ed183a2-b47b-419e-80f8-ae1d222cf866-repository.tar.gz)" \
+  --strip-components=1 \
+  -C lifthrasiir-esotope
+hg_to_git lifthrasiir-esotope
 cd lifthrasiir-esotope
 
-# Adjust UTC times to +0900
-git filter-repo --quiet \
-  --message-callback 'return re.sub(br"\n*$", b"\n", message)' \
-  --commit-callback '
-    commit.author_date = re.sub(br"\+0000", b"+0900", commit.author_date)
-    commit.committer_date = re.sub(br"\+0000", b"+0900", commit.committer_date)' \
+git filter-repo -f --quiet \
   --path-rename .hgignore:.gitignore \
   --replace-text <(echo 'regex:syntax: glob\n==>')
-
-git branch -m master main
 
 git remote add origin https://github.com/wspace/lifthrasiir-esotope
