@@ -72,7 +72,7 @@ commit_pairs=(
 # Fetch all orphaned spoiler commits
 git -C "$TOPLEVEL/git/github.com/mame/quine-relay@master" fetch -q origin "${commit_pairs[@]%%,*}"
 
-copy_submodule github.com/mame/quine-relay@master quine-relay
+clone_submodule https://github.com/mame/quine-relay@master quine-relay
 cd quine-relay
 
 # Checkout the first master commit that has a corresponding spoiler commit

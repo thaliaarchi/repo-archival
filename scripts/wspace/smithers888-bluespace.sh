@@ -5,7 +5,7 @@
 mkdir -p wspace
 cd wspace
 
-copy_submodule github.com/Smithers888/BlueSpace smithers888-bluespace
+clone_submodule https://github.com/Smithers888/BlueSpace smithers888-bluespace
 cd smithers888-bluespace
 
 mkdir programs

@@ -5,7 +5,7 @@
 mkdir -p regexp
 cd regexp
 
-copy_submodule github.com/plan9foundation/plan9
+clone_submodule https://github.com/plan9foundation/plan9
 cd plan9
 
 git filter-repo \

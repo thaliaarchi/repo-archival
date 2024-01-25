@@ -2,7 +2,7 @@
 
 . base.sh
 
-copy_submodule github.com/ILikePython256/Whitespace_UnC@master wspace/ilikepython256-whitespace-unc
+clone_submodule https://github.com/ILikePython256/Whitespace_UnC@master wspace/ilikepython256-whitespace-unc
 cd wspace/ilikepython256-whitespace-unc
 
 # Remove commit "Delete WhitespaceCompiler.py"

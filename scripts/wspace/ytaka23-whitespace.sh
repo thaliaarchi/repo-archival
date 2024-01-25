@@ -10,7 +10,7 @@ git init -q ytaka23-whitespace
 
 # Repos have simple histories with only one file and one commit
 for gist in 7353571 7353594 7353612; do
-  copy_submodule "gist.github.com/y-taka-23/$gist"
+  clone_submodule "https://gist.github.com/y-taka-23/$gist"
   # Don't bother with "and" because each repo has only one file
   git -C "$gist" filter-repo --quiet \
     --commit-callback 'commit.message = b"Add " + b", ".join([c.filename for c in commit.file_changes])'

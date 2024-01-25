@@ -11,7 +11,7 @@ git init -q 0qol-prime
 for gist in a57b28d3353cdef08aac34cce8b1d9dc \
             55ab44a35c0faba659448f340af8db70 \
             a317e241860518a79a36c879e710de38; do
-  copy_submodule "gist.github.com/0qol/$gist"
+  clone_submodule "https://gist.github.com/0qol/$gist"
   git -C "$gist" filter-repo --quiet \
     --prune-empty=always \
     --commit-callback 'commit.message = commit.author_date'

@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 . base.sh
-copy_submodule github.com/shi-mo/yukicoder wspace/shimo-yukicoder
+clone_submodule https://github.com/shi-mo/yukicoder wspace/shimo-yukicoder
 cd wspace/shimo-yukicoder
 git filter-repo --quiet \
   --subdirectory-filter whitespace \

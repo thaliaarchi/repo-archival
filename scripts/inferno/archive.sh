@@ -65,7 +65,7 @@ push_tag() {
 }
 
 inferno-1e0() {
-  copy_submodule github.com/inferno-os/inferno-1e0
+  clone_submodule https://github.com/inferno-os/inferno-1e0
   # Two spurious commits add, then delete, .gitignore
   git -C inferno-1e0 filter-repo --quiet --invert-path --path .gitignore
 }
@@ -143,7 +143,7 @@ inferno-4e-20070510-unix() {
   local source=https://web.archive.org/web/20070701073142/http://www.vitanuova.com/dist/4e/inferno-20070510.tgz
   unzip_tar $repo inferno-20070510 $source
   cd $repo
-  copy_submodule github.com/inferno-os/inferno-os .git --bare
+  clone_submodule https://github.com/inferno-os/inferno-os .git --bare
   git --git-dir=.git update-ref refs/heads/master dd7f661c1e9a0167d1d500b21866f267efa8dc5f
   git config core.bare false
   git branch -m master main
@@ -217,7 +217,6 @@ inferno-4e-20150328-unix() {
 mkdir -p inferno
 cd inferno
 
-copy_submodule github.com/inferno-os/inferno-os
 section inferno-1e0
 section inferno-4e-20070510-unix
 section inferno-4e-20091219-win
@@ -226,6 +225,7 @@ section inferno-4e-20150328-unix
 section inferno-os-hg
 wait
 
+clone_submodule https://github.com/inferno-os/inferno-os
 for repo in "${repos[@]}"; do
   push_tag "$repo"
 done

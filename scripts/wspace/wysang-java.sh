@@ -2,7 +2,7 @@
 
 . base.sh
 
-copy_submodule github.com/wysang/Whitespace-Compiler wspace/wysang-java
+clone_submodule https://github.com/wysang/Whitespace-Compiler wspace/wysang-java
 cd wspace/wysang-java
 
 # Remove commit that adds 8.6MiB "Pragmatic.The Definitive ANTLR 4 Reference.2013.pdf"

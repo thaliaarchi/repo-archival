@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 . base.sh
-copy_submodule github.com/EmilBahnsen/projects wspace/emilbahnsen-assembler
+clone_submodule https://github.com/EmilBahnsen/projects wspace/emilbahnsen-assembler
 cd wspace/emilbahnsen-assembler
 git filter-repo --quiet \
   --path README.md \

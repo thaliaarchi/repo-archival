@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 . base.sh
-copy_submodule github.com/Aniket965/Hello-world wspace/aniket965-hacktoberfest
+clone_submodule https://github.com/Aniket965/Hello-world wspace/aniket965-hacktoberfest
 cd wspace/aniket965-hacktoberfest
 # Ignore dirty tree from conflicting case-sensitive files with --force
 git filter-repo -f --quiet \
