@@ -5,8 +5,8 @@
 mkdir -p wspace
 cd wspace
 
-copy_submodule github.com/KeenS/whitelie keens-whitelie
-copy_submodule gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keens-whitelie-asm
+clone_submodule https://github.com/KeenS/whitelie keens-whitelie
+clone_submodule https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870 keens-whitelie-asm
 
 # Overwrite synthetic time of 2020-04-01 00:00:00 +0000
 git -C keens-whitelie filter-repo --quiet \

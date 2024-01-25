@@ -5,7 +5,7 @@
 mkdir -p wspace
 cd wspace
 
-copy_submodule github.com/hogelog/hogel.org-old
+clone_submodule https://github.com/hogelog/hogel.org-old
 git -C hogel.org-old filter-repo --quiet \
   --path-glob 'content/lib/c/ws*' --path-rename content/lib/c/:
 

@@ -5,13 +5,8 @@
 mkdir -p foones
 cd foones
 
-# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/foones/cratylus
-# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:92066f375c6363830e7e6f83be36b76cefa8d736/
-tar xf ../../swh/github.com/foones/cratylus/swh_1_rev_92066f375c6363830e7e6f83be36b76cefa8d736.git.tar
-git clone -q swh:1:rev:92066f375c6363830e7e6f83be36b76cefa8d736.git cratylus-base
-rm -rf swh:1:rev:92066f375c6363830e7e6f83be36b76cefa8d736.git
-
-copy_submodule github.com/foones/lenguajes cratylus
+clone_swh https://github.com/foones/cratylus 92066f375c6363830e7e6f83be36b76cefa8d736 cratylus-base
+clone_submodule https://github.com/foones/lenguajes cratylus
 cd cratylus
 git filter-repo --quiet --subdirectory-filter cratylus
 

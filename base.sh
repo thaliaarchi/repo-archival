@@ -14,10 +14,23 @@ if [[ ! -e .git ]]; then
   git init -q
 fi
 
-copy_submodule() {
-  local submodule="$1"
-  local dest="${2-"${submodule##*/}"}"
-  git clone -q "$TOPLEVEL/git/$submodule/.git" "$dest" "${@:3}"
+clone_submodule() {
+  local url="${1#https://}"
+  url="${url#http://}"
+  local dest="${2-"${url##*/}"}"
+  git clone -q "$TOPLEVEL/git/$url/.git" "$dest" "${@:3}"
+}
+
+clone_swh() {
+  # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=$url
+  # $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/
+  local url="${1#https://}"
+  url="${url#http://}"
+  local revision="$2"
+  local dest="${3-"${url##*/}"}"
+  tar xf "../../swh/$url/swh_1_rev_$revision.git.tar"
+  git clone -q "swh:1:rev:$revision.git" "$dest" "${@:4}"
+  rm -rf "swh:1:rev:$revision.git"
 }
 
 # `git commit`, using the latest file modification time as the commit and author

@@ -9,7 +9,7 @@ mkdir stephenchappell-python
 
 # Exact paths for all files, except for memory_manager.wsa, are written in
 # comments. memory_manager.wsa is inferred from label names in the program.
-copy_submodule github.com/ActiveState/code activestate
+clone_submodule https://github.com/ActiveState/code activestate
 git -C activestate filter-repo --quiet \
   --path LICENSE.md \
   --path recipes/Python/577108_Whitespace_Assembler \

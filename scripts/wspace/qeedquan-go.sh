@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 . base.sh
-copy_submodule github.com/qeedquan/misc_utilities wspace/qeedquan-go
+clone_submodule https://github.com/qeedquan/misc_utilities wspace/qeedquan-go
 cd wspace/qeedquan-go
 git filter-repo -f --quiet \
   --subdirectory-filter esolang/whitespace \

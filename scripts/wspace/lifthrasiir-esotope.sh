@@ -18,12 +18,7 @@ cd wspace
 #       jq -r '.extra_headers[] | select(.[0] == "time_offset_seconds") | .[1]'
 #   done
 
-# https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/lifthrasiir/esotope-esotope
-# $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915/
-tar xf ../../swh/bitbucket.org/lifthrasiir/esotope-esotope/swh_1_rev_89cd61de9d2dda065ed587bd38df31d3c09ca915.git.tar
-git clone -q swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git lifthrasiir-esotope
-rm -rf swh:1:rev:89cd61de9d2dda065ed587bd38df31d3c09ca915.git
-
+clone_swh https://bitbucket.org/lifthrasiir/esotope-esotope 89cd61de9d2dda065ed587bd38df31d3c09ca915 lifthrasiir-esotope
 cd lifthrasiir-esotope
 
 # Adjust UTC times to +0900

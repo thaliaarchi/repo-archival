@@ -17,7 +17,7 @@
 # https://web.archive.org/web/20160114184907/https://grass-mud-horse.googlecode.com/files/Grass-Mud-Horse-beta1-src-bin.zip
 # https://web.archive.org/web/20160114184914/https://grass-mud-horse.googlecode.com/files/Grass-Mud-Horse-beta1-src-bin.rar
 
-copy_submodule github.com/google-code-export/grass-mud-horse wspace/bearice-grassmudhorse
+clone_submodule https://github.com/google-code-export/grass-mud-horse wspace/bearice-grassmudhorse
 cd wspace/bearice-grassmudhorse
 
 git filter-repo --quiet \
