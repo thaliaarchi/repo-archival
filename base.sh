@@ -94,12 +94,12 @@ hg_to_git() {
   working_tree_count="$(\ls -f "$repo" | wc -l)"
 
   git init -q "$git_tmp"
-  pushd "$git_tmp" > /dev/null
+  cd "$git_tmp"
   git config core.ignoreCase false
   # hg-fast-export logs every revision; suppress stdout with chronic from
   # moreutils, unless it fails.
   chronic hg-fast-export -r "$repo" -M main
-  popd > /dev/null
+  cd - > /dev/null
 
   mv "$git_tmp/.git" "$repo/"
   rmdir "$git_tmp"
