@@ -65,14 +65,14 @@ for entry in "${SCRIPTS[@]}"; do
   if [[ ! -e target/$repo ]]; then
     scripts/"$script.sh"
   fi
-  pushd "target/$repo" > /dev/null
+  cd "target/$repo"
   git fetch -q origin
   git branch --set-upstream-to origin/main
   ahead="$(git rev-list '@{u}..@' --count)"
   if [[ $ahead -gt 0 ]]; then
     errors+=("Generated $repo is $ahead commits ahead of remote")
   fi
-  popd > /dev/null
+  cd - > /dev/null
   echo
 done
 if [[ ${#errors[@]} -gt 0 ]]; then

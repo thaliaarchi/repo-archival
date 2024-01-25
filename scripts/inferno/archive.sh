@@ -42,7 +42,7 @@ unzip_zip() {
 # Verify that HEAD is contained within the master branch of inferno-os.
 git_verify_is_ancestor() {
   local repo="$1"
-  pushd "$repo" > /dev/null
+  cd "$repo"
   git remote add inferno-os "$TOPLEVEL/git/github.com/inferno-os/inferno-os"
   git fetch -q inferno-os
   if git merge-base --is-ancestor HEAD inferno-os/master; then
@@ -53,7 +53,7 @@ git_verify_is_ancestor() {
     exit 1
   fi
   git remote remove inferno-os
-  popd > /dev/null
+  cd - > /dev/null
 }
 
 push_tag() {
