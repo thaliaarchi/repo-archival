@@ -28,7 +28,7 @@ clone_swh() {
   url="${url#http://}"
   local revision="$2"
   local dest="${3-"${url##*/}"}"
-  tar xf "../../swh/$url/swh_1_rev_$revision.git.tar"
+  tar xf "$(get_cached_path "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/")"
   git clone -q "swh:1:rev:$revision.git" "$dest" "${@:4}"
   rm -rf "swh:1:rev:$revision.git"
 }
