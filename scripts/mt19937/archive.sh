@@ -49,7 +49,7 @@ add_archive() {
   local url="$1"
   local archive="${url##*/}"
 
-  git rm -rq -- *
+  git rm -rq '*'
   get_cached "$url"
   push_commit_url "$url" ''
   tar xf "$archive"
