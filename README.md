@@ -67,6 +67,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - plan9port-graft [[sh](scripts/plan9port-graft.sh)] - manual
 - [quine-relay-spoiler](https://github.com/thaliaarchi/quine-relay-spoiler) [[sh](scripts/quine-relay.sh)]
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) [[sh](scripts/wspace/0qol-prime.sh)] - with manual rewording
+- [wspace/andreal2000-scala](https://github.com/wspace/andreal2000-scala) [[sh](scripts/wspace/andreal2000-scala.sh)]
 - [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) [[sh](scripts/wspace/ilikepython256-whitespace-unc.sh)] - with manual rebasing
 - [wspace/keens-whitelie](https://github.com/wspace/keens-whitelie) [[sh](scripts/wspace/keens-whitelie.sh)] - with manual rebasing
 - [wspace/pik4ez-ascii](https://github.com/wspace/pik4ez-ascii) [[sh](scripts/wspace/pik4ez-ascii.sh)] - with manual squashing
