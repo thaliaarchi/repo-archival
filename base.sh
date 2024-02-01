@@ -14,6 +14,12 @@ if [[ ! -e .git ]]; then
   git init -q
 fi
 
+submodule_path() {
+  local url="${1#https://}"
+  url="${url#http://}"
+  echo "$TOPLEVEL/git/$url"
+}
+
 clone_submodule() {
   local url="${1#https://}"
   url="${url#http://}"

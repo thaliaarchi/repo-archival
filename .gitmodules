@@ -7,6 +7,9 @@
 [submodule "git/gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc"]
 	path = git/gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc
 	url = https://gist.github.com/0qol/a57b28d3353cdef08aac34cce8b1d9dc
+[submodule "git/gist.github.com/Andreal2000/8d876ba97b70240b50b68e5993119584"]
+	path = git/gist.github.com/Andreal2000/8d876ba97b70240b50b68e5993119584
+	url = https://gist.github.com/Andreal2000/8d876ba97b70240b50b68e5993119584
 [submodule "git/gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870"]
 	path = git/gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
 	url = https://gist.github.com/KeenS/6081b0c802a4e575ddbacb1930680870
@@ -40,6 +43,9 @@
 [submodule "git/github.com/ActiveState/code"]
 	path = git/github.com/ActiveState/code
 	url = https://github.com/ActiveState/code
+[submodule "git/github.com/Andreal2000/WhitespaceEvaluator"]
+	path = git/github.com/Andreal2000/WhitespaceEvaluator
+	url = https://github.com/Andreal2000/WhitespaceEvaluator
 [submodule "git/github.com/Aniket965/Hello-world"]
 	path = git/github.com/Aniket965/Hello-world
 	url = https://github.com/Aniket965/Hello-world
@@ -156,6 +162,9 @@
 [submodule "git/github.com/timvandermeij/whitespace-interpreter"]
 	path = git/github.com/timvandermeij/whitespace-interpreter
 	url = https://github.com/timvandermeij/whitespace-interpreter
+[submodule "git/github.com/wspace/andreal2000-scala"]
+	path = git/github.com/wspace/andreal2000-scala
+	url = https://github.com/wspace/andreal2000-scala
 [submodule "git/github.com/wysang/Whitespace-Compiler"]
 	path = git/github.com/wysang/Whitespace-Compiler
 	url = https://github.com/wysang/Whitespace-Compiler

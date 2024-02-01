@@ -43,7 +43,7 @@ unzip_zip() {
 git_verify_is_ancestor() {
   local repo="$1"
   cd "$repo"
-  git remote add inferno-os "$TOPLEVEL/git/github.com/inferno-os/inferno-os"
+  git remote add inferno-os "$(submodule_path https://github.com/inferno-os/inferno-os)"
   git fetch -q inferno-os
   if git merge-base --is-ancestor HEAD inferno-os/master; then
     echo "inferno-os continues from $repo at commit"
