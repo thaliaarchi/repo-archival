@@ -39,7 +39,12 @@ request_swh() {
       local status=$?
       local resp
       if resp="$(curl -s -X POST "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/")"; then
-        echo "Requested revision $revision ($(jq -j .status <<< "$resp")) from SWH"
+        local status
+        status="$(jq -j '.status // .exception // .' <<< "$resp" || echo 'jq error')"
+        echo "Requested revision $revision ($status) from SWH"
+        if [[ $status = Throttled ]]; then
+          exit 1
+        fi
       else
         echo "Failed to request revision $revision from SWH"
       fi
