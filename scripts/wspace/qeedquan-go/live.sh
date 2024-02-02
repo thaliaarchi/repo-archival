@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 . base.sh
+
 clone_submodule https://github.com/qeedquan/misc_utilities wspace/qeedquan-go
 cd wspace/qeedquan-go
 git filter-repo -f --quiet \
