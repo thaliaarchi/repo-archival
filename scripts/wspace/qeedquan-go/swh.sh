@@ -56,8 +56,9 @@ fi
 i=1
 git init -q qeedquan-go
 while read -r revision; do
-  clone_swh "$origin_url" "$revision" "snapshot-$i"
-  git -C qeedquan-go remote add "snapshot-$i" "../snapshot-$i"
+  echo "Importing revision $revision as snapshot-$i"
+  clone_swh_bare "$origin_url" "$revision" "snapshot-$i.git"
+  git -C qeedquan-go remote add "snapshot-$i" "../snapshot-$i.git"
   git -C qeedquan-go fetch -q "snapshot-$i"
   i=$((i+1))
 done <<< "$master_revisions"

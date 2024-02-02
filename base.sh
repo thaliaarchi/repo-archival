@@ -57,12 +57,24 @@ request_swh() {
 clone_swh() {
   # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=$url
   local url="${1#https://}"
-  url="${url#http://}"
   local revision="$2"
   local dest="${3-"${url##*/}"}"
+  mkdir "$dest"
+  tar xf "$(get_cached_path "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/")" \
+    -C "$dest"
+  mv "$dest/swh:1:rev:$revision.git" "$dest/.git"
+  git --git-dir="$dest/.git" config core.bare false
+  git -C "$dest" checkout -q
+  mkdir -p "$dest/.git/filter-repo"
+  touch "$dest/.git/filter-repo/already_ran"
+}
+
+clone_swh_bare() {
+  local url="${1#https://}"
+  local revision="$2"
+  local dest="${3-"${url##*/}.git"}"
   tar xf "$(get_cached_path "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/")"
-  git clone -q "swh:1:rev:$revision.git" "$dest" "${@:4}"
-  rm -rf "swh:1:rev:$revision.git"
+  mv "swh:1:rev:$revision.git" "$dest"
 }
 
 # `git commit`, using the latest file modification time as the commit and author
