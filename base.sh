@@ -27,9 +27,30 @@ clone_submodule() {
   git clone -q "$TOPLEVEL/git/$url/.git" "$dest" "${@:3}"
 }
 
+request_swh() {
+  local revision="$1"
+  local raw_url="https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/"
+  local raw_cached
+  raw_cached="$(cache_path "$raw_url")"
+  if [ ! -f "$raw_cached" ]; then
+    if wget -q "$raw_url" -O "$raw_cached"; then
+      echo "Downloaded revision $revision from SWH"
+    else
+      local status=$?
+      local resp
+      if resp="$(curl -s -X POST "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/")"; then
+        echo "Requested revision $revision ($(jq -j .status <<< "$resp")) from SWH"
+      else
+        echo "Failed to request revision $revision from SWH"
+      fi
+      rm "$raw_cached"
+      return $status
+    fi
+  fi
+}
+
 clone_swh() {
   # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=$url
-  # $ curl -X POST https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/
   local url="${1#https://}"
   url="${url#http://}"
   local revision="$2"
@@ -144,7 +165,12 @@ get_cached_path() {
   url="$(ia_raw_url "$url")"
   cached="$(cache_path "$url")"
   if [ ! -f "$cached" ]; then
-    wget -q "$url" -O "$cached"
+    if wget -q "$url" -O "$cached"; then :
+    else
+      local status=$?
+      rm "$cached"
+      return $status
+    fi
   fi
   echo "$cached"
 }
