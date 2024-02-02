@@ -14,6 +14,7 @@ master_revisions="$(
   set -eEuo pipefail &&
   curl -s "https://archive.softwareheritage.org/api/1/origin/$origin_url/visits/?per_page=1000" |
   jq --raw-output0 '
+    if type != "array" then "expected array: \(.)\n" | halt_error(1) end |
     sort_by(.date)[] |
     if .snapshot_url == null and .status != "partial" then
       "non-partial snapshot is missing URL: \(.)\n" | halt_error(1)
