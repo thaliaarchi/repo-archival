@@ -15,7 +15,7 @@ cd andreal2000-scala
 # Graft the hard-fork initial commit onto the wspace repo.
 git remote add wspace "$(submodule_path https://github.com/wspace/andreal2000-scala)"
 git fetch -q wspace
-git replace e98b5b5744051ff49fca267c5506a6cc1edb9bb3 wspace/main
+git replace e98b5b5744051ff49fca267c5506a6cc1edb9bb3 97832fc8875cdab38b139eac9875a1e8ae637654
 git filter-repo -f --quiet
 git remote remove wspace
 
