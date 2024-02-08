@@ -162,9 +162,6 @@
 [submodule "git/github.com/timvandermeij/whitespace-interpreter"]
 	path = git/github.com/timvandermeij/whitespace-interpreter
 	url = https://github.com/timvandermeij/whitespace-interpreter
-[submodule "git/github.com/wspace/andreal2000-scala"]
-	path = git/github.com/wspace/andreal2000-scala
-	url = https://github.com/wspace/andreal2000-scala
 [submodule "git/github.com/wysang/Whitespace-Compiler"]
 	path = git/github.com/wysang/Whitespace-Compiler
 	url = https://github.com/wysang/Whitespace-Compiler
