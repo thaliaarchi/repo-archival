@@ -229,3 +229,5 @@ clone_submodule https://github.com/inferno-os/inferno-os
 for repo in "${repos[@]}"; do
   push_tag "$repo"
 done
+
+trap - SIGINT SIGTERM EXIT
