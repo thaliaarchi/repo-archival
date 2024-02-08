@@ -1,13 +1,17 @@
 #!/bin/bash -e
 
+echo 'The graft that had been performed by this script has been force-pushed to
+https://github.com/Andreal2000/WhitespaceEvaluator and is no longer necessary.'
+exit 0
+
 . base.sh
 
 mkdir -p wspace
 cd wspace
 
 # Initial commit:  https://gist.github.com/Andreal2000/8d876ba97b70240b50b68e5993119584
-# sbt project:     https://github.com/wspace/andreal2000-scala
-# Further commits: https://github.com/Andreal2000/WhitespaceEvaluator
+# sbt project:     https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/wspace/andreal2000-scala&timestamp=2024-01-26T15:30:30Z
+# Further commits: https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/Andreal2000/WhitespaceEvaluator&timestamp=2024-01-26T15:29:23Z
 
 clone_submodule https://github.com/Andreal2000/WhitespaceEvaluator andreal2000-scala
 cd andreal2000-scala
