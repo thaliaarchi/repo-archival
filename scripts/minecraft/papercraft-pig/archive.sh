@@ -466,6 +466,35 @@ git add Script.js Script.txt
 commit_as_tepigmc '2015-03-09 19:45:11 -0800' 'Fixed small bug with ultra mini pig' \
   --trailer=Source:https://web.archive.org/web/20150326203916/http://pixelpapercraft.com/app/generators/minecraft/pig-advanced.zip
 
+# The live version as of 2020-03-24 00:54:05 +0000 is identical to
+# pig-advanced.zip, except Resources.js and Script.js are minified. Do not
+# commit it.
+#
+# HTTP Last-Modified         URL
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/image/background-sprites.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005405/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/image/fold-sprites.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/image/label-sprites.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/image/title-sprites.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005403/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/Resources.js
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005403/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/Script.js
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/faithful/chainmail-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/faithful/diamond-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/faithful/gold-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/faithful/iron-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/faithful/pig.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/faithful/saddle.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/space-pig/armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005405/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/space-pig/pig.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005405/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/space-pig/saddle.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/tepig/audra.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/tepig/elpis.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/vanilla/chainmail-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005401/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/vanilla/diamond-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/vanilla/gold-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005404/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/vanilla/iron-armor.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005402/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/vanilla/pig.png
+# 2016-08-15 08:52:24 +0000  https://web.archive.org/web/20200324005402/http://www.pixelpapercraft.com/app/generators/minecraft/pig-advanced/texture/vanilla/saddle.png
+
 # Extract just the pig generator from the later git history, which started in
 # 2021.
 cd ..
