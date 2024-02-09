@@ -31,9 +31,9 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## From archives
 
+- [minecraft-papercraft-pig](https://github.com/thaliaarchi/minecraft-papercraft-pig) [[sh](scripts/minecraft/papercraft-pig.sh)]
 - nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
-- papercraft-pig [[sh](scripts/minecraft/papercraft-pig.sh)]
 - [wspace/burghard-wsa](https://github.com/wspace/burghard-wsa) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/burghard-wsintercpp](https://github.com/wspace/burghard-wsintercpp) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/burghard-wsinterws](https://github.com/wspace/burghard-wsinterws) [[sh](scripts/wspace/burghard.sh)]

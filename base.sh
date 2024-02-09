@@ -182,7 +182,7 @@ get_cached_path() {
   url="$(ia_raw_url "$url")"
   cached="$(cache_path "$url")"
   if [ ! -f "$cached" ]; then
-    if wget -q "$url" -O "$cached"; then :
+    if wget --no-verbose "$url" -O "$cached"; then :
     else
       local status=$?
       rm "$cached"
@@ -197,6 +197,7 @@ get_cached() {
   local url_out="${url##*/}"
   local url_out="${url_out%%\?*}"
   local out="${2-"$url_out"}"
+  mkdir -p "$(dirname "$out")"
   cp -p "$(get_cached_path "$url")" "$out"
 }
 

@@ -3,15 +3,16 @@ set -eEuo pipefail
 
 . base.sh
 
+commit_as() {
+  GIT_AUTHOR_NAME="$1" GIT_AUTHOR_EMAIL="$2" GIT_AUTHOR_DATE="$3" \
+  GIT_COMMITTER_NAME="$1" GIT_COMMITTER_EMAIL="$2" GIT_COMMITTER_DATE="$3" \
+  git commit -q --allow-empty -m "${@:4}"
+}
 commit_as_tepigmc() {
-  GIT_AUTHOR_NAME='TepigMC' GIT_AUTHOR_EMAIL='andrew@robarchibald.com' GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_NAME='TepigMC' GIT_COMMITTER_EMAIL='andrew@robarchibald.com' GIT_COMMITTER_DATE="$1" \
-  git commit -q --allow-empty -m "${@:2}"
+  commit_as 'TepigMC' 'andrew@robarchibald.com' "$1" "${@:2}"
 }
 commit_as_ppa() {
-  GIT_AUTHOR_NAME='PPA' GIT_AUTHOR_EMAIL='pixelpapercraft@gmail.com' GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_NAME='PPA' GIT_COMMITTER_EMAIL='pixelpapercraft@gmail.com' GIT_COMMITTER_DATE="$1" \
-  git commit -q --allow-empty -m "${@:2}"
+  commit_as 'PPA' 'pixelpapercraft@gmail.com' "$1" "${@:2}"
 }
 
 mkdir -p minecraft
@@ -42,6 +43,7 @@ git init -q
 # - https://web.archive.org/web/20170806190806/http://blog.pixelpapercraft.com/post/113047142588/advanced-pig-generator
 # - https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
 # - https://www.pixelpapercraft.com/print/minecraft-pig
+# - https://www.pixelpapercraft.com/user/tepigmc
 # - Emails
 
 # When my generator was added to the site, it was called minecraft-pig-advanced
@@ -167,6 +169,31 @@ commit_as_tepigmc '2015-01-06 10:18 -0800' 'Sent pig generator'
 # 2015-01-14 16:13:40 (local)  pig-advanced/texture/faithful/diamond-armor.png
 git add texture/{faithful/{diamond-armor.png,pig.png,saddle.png},space-pig/pig.png}
 commit_as_tepigmc '2015-01-14 16:13:40 -0800' 'Added Faithful and Space Pig textures'
+
+# Photo "Overpowered Pig - From My Pig Generator" by TepigMC
+#
+# Uploaded:         2015-01-23 16:05:57 +0000
+# Uploaded (local): 2015-01-23 08:05:57 -0800
+# > I made a pig generator that makes pigs with a removable saddle and armor.
+# > The generator isn't posted yet but I hope it will be soon. There are
+# > hopefully going to be checkboxes that toggle some variables in my code.
+# http://web.archive.org/web/20150128020535/http://pixelpapercraft.com/photo/54c2716775d8d3be59000060
+# This image version was not saved
+#
+# Uploaded: 2015-01-23
+# Updated:  2015-02-01
+# > I made a [pig generator](http://pixelpapercraft.com/print/minecraft-pig-advanced)
+# > that makes pigs with a removable saddle and armor. There are also several
+# > options to customize it.
+# https://www.pixelpapercraft.com/photo/54c2716775d8d3be59000060/overpowered-pig-from-my-pig-generator
+# https://s3.amazonaws.com/pixelpapercraft/photo/1422029157948-800.jpg
+# https://web.archive.org/web/20240209135019/https://s3.amazonaws.com/pixelpapercraft/photo/1422029157948-800.jpg
+#
+# It seems only the description can change for photos, not the photo itself, so
+# I use the upload date.
+get_cached https://web.archive.org/web/20240209135019/https://s3.amazonaws.com/pixelpapercraft/photo/1422029157948-800.jpg photo/overpowered-pig-from-my-pig-generator.jpg
+git add photo/overpowered-pig-from-my-pig-generator.jpg
+commit_as_tepigmc '2015-01-23 08:05:57 -0800' 'Uploaded photo "Overpowered Pig - From My Pig Generator"' --trailer=Source:https://www.pixelpapercraft.com/photo/54c2716775d8d3be59000060/overpowered-pig-from-my-pig-generator
 
 # Email #6 from PPA on 2015-02-07 08:39 +1100
 #
@@ -346,6 +373,31 @@ git add image/{background-sprites.png,label-sprites.png,Readme.md,title-sprites.
         image/seperated/titles/{body.png,boot.png,head.png,helmet.png,nose3D.png,saddle.png}
 commit_as_tepigmc '2015-02-28 12:21 -0800' 'Compacted labels and titles into sprite files; Added "Advanced (Standard)" head'
 
+# Photo "Advanced Pig Generator - With Customizable Options" by TepigMC
+#
+# Uploaded:         2015-02-28 20:25:01 +0000
+# Uploaded (local): 2015-02-28 12:25:01 -0800
+# > I created a VERY customizable [Pig Generator](http://pixelpapercraft.com/print/minecraft-pig-advanced).
+# > It can wear armor (inspired by Pig Companion Mod) and a saddle! Please
+# > comment if you like it or if you think I should make any changes.
+# http://web.archive.org/web/20160815201958/http://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001
+# This image version was not saved
+#
+# Uploaded: 2015-02-28
+# Updated:  2015-03-08
+# > I created a VERY customizable [Pig Generator](http://pixelpapercraft.com/print/minecraft-pig-advanced).
+# > It can wear armor (inspired by Pig Companion Mod) and a saddle! Please
+# > comment if you like it or if you think I should make any changes.
+# https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
+# https://s3.amazonaws.com/pixelpapercraft/photo/1425155101003-800.jpg
+# http://web.archive.org/web/20240209014008/https://s3.amazonaws.com/pixelpapercraft/photo/1425155101003-800.jpg
+#
+# It seems only the description can change for photos, not the photo itself, so
+# I use the upload date.
+get_cached http://web.archive.org/web/20240209014008/https://s3.amazonaws.com/pixelpapercraft/photo/1425155101003-800.jpg photo/advanced-pig-generator-with-customizable-options.jpg
+git add photo/advanced-pig-generator-with-customizable-options.jpg
+commit_as_tepigmc '2015-02-28 12:25:01 -0800' 'Uploaded photo "Advanced Pig Generator - With Customizable Options"' --trailer=Source:https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
+
 # Email #13 from TepigMC on 2015-02-28 13:08 -0800
 #
 # > Please don’t post the version I sent. I am making some changes. I will send
@@ -438,7 +490,23 @@ commit_as_tepigmc '2015-02-28 16:59 -0800' 'Added "Show Helmet Overlay" option; 
 # 2015-03-01 13:58:38 (local)  pig-advanced/texture/tepig/
 # 2015-03-01 13:58:38 (local)  pig-advanced/texture/vanilla/
 # 2015-03-01 15:20:06 (local)  pig-advanced/Resources.js
+#
+# Photos on the generator page:
+#
+# "Advanced Pig Generator - With Customizable Options" (left photo; lower resolution than mine)
+# Last-Modified:                  2015-03-01 05:43:27 +0000
+# Last-Modified (inferred local): 2015-03-01 16:43:27 +1100
+# https://web.archive.org/web/20150315115218/http://pixelpapercraft.com/img/print/home/minecraft-pig-advanced.jpg
+
+# "Overpowered Pig - From My Pig Generator" (right photo; lower resolution than mine)
+# Last-Modified:                  2015-03-01 05:43:27 +0000
+# Last-Modified (inferred local): 2015-03-01 16:43:27 +1100
+# https://web.archive.org/web/20150316143546/http://pixelpapercraft.com/img/print/home/minecraft-pig-advanced-2.jpg
 git add Resources.js
+git rm -q photo/overpowered-pig-from-my-pig-generator.jpg photo/advanced-pig-generator-with-customizable-options.jpg
+get_cached https://web.archive.org/web/20150315115218/http://pixelpapercraft.com/img/print/home/minecraft-pig-advanced.jpg photo/minecraft-pig-advanced.jpg
+get_cached https://web.archive.org/web/20150316143546/http://pixelpapercraft.com/img/print/home/minecraft-pig-advanced-2.jpg photo/minecraft-pig-advanced-2.jpg
+git add photo/{minecraft-pig-advanced.jpg,minecraft-pig-advanced-2.jpg}
 commit_as_ppa '2015-03-01 17:04:09 +1100' 'Release the new version to the site
 
 https://web.archive.org/web/20150302194936/http://pixelpapercraft.com/print/minecraft-pig-advanced'
@@ -524,5 +592,14 @@ git replace --graft "$(git rev-list --max-parents=0 HEAD)" base/main
 git filter-repo -f --quiet
 git remote remove base
 
-cd ..
-rm -rf pig-advanced
+cp -p "$TOPLEVEL/files/minecraft/papercraft-pig/README.md" .
+get_cached https://web.archive.org/web/20240209135019/https://s3.amazonaws.com/pixelpapercraft/photo/1422029157948-800.jpg thumbnail/thumbnail1-500.jpeg
+get_cached http://web.archive.org/web/20240209014008/https://s3.amazonaws.com/pixelpapercraft/photo/1425155101003-800.jpg thumbnail/thumbnail2-500.jpeg
+git add README.md thumbnail/{thumbnail1-500.jpeg,thumbnail2-500.jpeg}
+git mv thumbnail/thumbnail1.jpeg thumbnail/thumbnail1-300.jpeg
+git mv thumbnail/thumbnail2.jpeg thumbnail/thumbnail2-300.jpeg
+commit_as 'Thalia Archibald' 'thalia@archibald.dev' '2024-02-09 06:43:53 -0800' 'Restore and update README and original thumbnails'
+
+git remote add origin https://github.com/thaliaarchi/minecraft-papercraft-pig
+
+rm -rf ../pig-advanced
