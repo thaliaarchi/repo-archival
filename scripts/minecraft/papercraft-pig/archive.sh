@@ -37,11 +37,22 @@ git init -q
 
 # Sources:
 # - https://web.archive.org/web/20150302194936/http://pixelpapercraft.com/print/minecraft-pig-advanced
+# - https://web.archive.org/web/20220415170434/https://www.pixelpapercraft.com/print/minecraft-pig
 # - https://web.archive.org/web/20150326203916/http://pixelpapercraft.com/app/generators/minecraft/pig-advanced.zip
 # - https://web.archive.org/web/20170806190806/http://blog.pixelpapercraft.com/post/113047142588/advanced-pig-generator
 # - https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
 # - https://www.pixelpapercraft.com/print/minecraft-pig
 # - Emails
+
+# When my generator was added to the site, it was called minecraft-pig-advanced
+# and an already existing generator by aaronhawksley was called minecraft-pig.
+# Sometime between 2021-12-04 and 2022-04-15, pig generator was renamed to
+# minecraft-pig and became the only pig generator that uses pig textures
+# (there's also minecraft-pig-character, but it uses player skins).
+#
+# aaronhawksley (before) https://web.archive.org/web/20211204050907/https://www.pixelpapercraft.com/print/minecraft-pig
+# TepigMC (before)       https://web.archive.org/web/20210126043324/https://www.pixelpapercraft.com/print/minecraft-pig-advanced
+# TepigMC (after)        https://web.archive.org/web/20220415170434/https://www.pixelpapercraft.com/print/minecraft-pig
 
 # Changelog from pig-advanced.zip/pig-advanced/Script.txt:
 #
