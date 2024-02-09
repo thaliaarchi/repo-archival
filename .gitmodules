@@ -141,6 +141,9 @@
 [submodule "git/github.com/pavel987/wspace"]
 	path = git/github.com/pavel987/wspace
 	url = https://github.com/pavel987/wspace
+[submodule "git/github.com/pixelpapercraft/pixel-papercraft-generator-builder"]
+	path = git/github.com/pixelpapercraft/pixel-papercraft-generator-builder
+	url = https://github.com/pixelpapercraft/pixel-papercraft-generator-builder
 [submodule "git/github.com/plan9foundation/plan9"]
 	path = git/github.com/plan9foundation/plan9
 	url = https://github.com/plan9foundation/plan9

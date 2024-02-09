@@ -27,6 +27,9 @@ git init -q
 # - https://www.pixelpapercraft.com/print/minecraft-pig
 # - Emails
 
+# Commit message bodies are excerpts from emails and headers are summaries of
+# those.
+
 as_tepigmc '2015-01-01 10:58 -0800' git commit -q --allow-empty -m 'Make papercraft generator for pigs
 
 It has options to enable helmets, boots, and saddles that can be
@@ -102,6 +105,24 @@ rm -r papercraft-pig
 mv pig-advanced papercraft-pig
 cd papercraft-pig
 git add -A
-as_tepigmc '2015-03-09 19:38:30 -0800' git commit -q -m 'Release the generator
+as_tepigmc '2015-03-09 19:38:30 -0800' git commit -q -m 'Release the generator' \
+  --trailer=Source:https://web.archive.org/web/20150326203916/http://pixelpapercraft.com/app/generators/minecraft/pig-advanced.zip
 
-https://web.archive.org/web/20150326203916/http://pixelpapercraft.com/app/generators/minecraft/pig-advanced.zip'
+cd ..
+clone_submodule https://github.com/pixelpapercraft/pixel-papercraft-generator-builder
+cd pixel-papercraft-generator-builder
+git filter-repo \
+  --quiet \
+  --subdirectory-filter src/generators/minecraft-pig/ \
+  --commit-callback '
+    commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: https://github.com/pixelpapercraft/pixel-papercraft-generator-builder/commit/" + commit.original_id + b"\n"
+  '
+
+git remote add base ../papercraft-pig
+git fetch -q base
+git replace --graft "$(git rev-list --max-parents=0 HEAD)" base/main
+git filter-repo -f --quiet
+git remote remove base
+cd ..
+rm -rf papercraft-pig
+mv pixel-papercraft-generator-builder papercraft-pig
