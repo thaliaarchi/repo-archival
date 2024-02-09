@@ -1,0 +1,75 @@
+Based on the emails I have, I have inferred the times they were sent. Reply
+quote the previous message, displaying the time sent in the replier's local time
+zone. Working through the constraints, I have inferred most of the time zones: I
+(TepigMC) am in -0800, PPA is in +1100, Pixel Taj could be in any time zone,
+and, unless the Date headers were modified on my end, PPA's and Pixel Taj's
+email servers seem to be in -0600.
+
+From: TepigMC
+Quoted by PPA:  2015-01-01 10:58 (inferred +1100, range any)
+Inferred UTC:   2015-01-01 23:58 +0000
+Inferred Local: 2015-01-01 15:58 -0800
+- From: PPA
+  Quoted by TepigMC: 2015-01-04 00:13 (inferred -0800)
+  Inferred UTC:      2015-01-04 08:13 +0000
+  Inferred local:    2015-01-04 19:13 +1100
+  - From: TepigMC (sending zip)
+    Quoted by Pixel Taj: 2015-01-06 12:18 (inferred ?, range any)
+    Inferred UTC:        ?
+    Inferred local:      ?
+    - From: Pixel Taj
+      Date header:       2015-01-06 23:37:40 -0600
+      Quoted by TepigMC: 2015-01-06 21:37 (inferred -0800)
+      Inferred UTC:      2015-01-07 05:37:40 +0000
+      Inferred local:    ?
+      - From: TepigMC
+        Quoted by PPA:  2015-01-07 16:50 (inferred +1100, range +1100 to -any)
+        Inferred UTC:   2015-01-07 05:50 +0000
+        Inferred local: 2015-01-06 21:50 -0800
+        - From: PPA (forgetting attachment)
+          Quoted by PPA:     2015-02-07 08:39 (inferred +1100, range +1100)
+          Quoted by TepigMC: 2015-02-06 13:39 (inferred -0800)
+          Inferred UTC:      2015-02-06 21:39 +0000
+          Inferred local:    2015-02-07 08:39 +1100
+          - From: PPA (with attachment)
+            Date header:    2015-02-06 15:43:53 -0600
+            Inferred UTC:   2015-02-06 21:43:53 +0000
+            Inferred local: 2015-02-07 08:43:53 +1100
+          - From: TepigMC
+            Quoted by TepigMC: 2015-02-26 17:19 (inferred -0800)
+            Inferred UTC:      2015-02-27 01:19 +0000
+            Inferred local:    2015-02-26 17:19 -0800
+            - From: TepigMC (updating attachment)
+              Quoted by PPA:  2015-02-27 12:20 (inferred +1100, range +1100 to +0500)
+              Inferred UTC:   2015-02-27 01:20 +0000
+              Inferred local: 2015-02-26 17:20 -0800
+              - From: PPA
+                Date header:       2015-02-27 01:42:06 -0600
+                Quoted by TepigMC: 2015-02-26 23:42 (inferred -0800)
+                Inferred UTC:      2015-02-27 07:42:06 +0000
+                Inferred local:    2015-02-27 18:42:06 +1100
+                - From: TepigMC
+                  Quoted by TepigMC: 2015-02-27 20:21 (inferred -0800)
+                  Inferred UTC:      2015-02-28 04:21 +0000
+                  Inferred local:    2015-02-27 20:21 -0800
+                  - From: TepigMC
+                    Quoted by TepigMC: 2015-02-28 12:21 (inferred -0800)
+                    Inferred UTC:      2015-02-28 20:21 +0000
+                    Inferred local:    2015-02-28 12:21 -0800
+                    - From: TepigMC
+                      Quoted by PPA:  2015-03-01 08:08 (inferred +1100, range +1100 to +0900)
+                      Inferred UTC:   2015-02-28 21:08 +0000
+                      Inferred local: 2015-02-28 13:08 -0800
+                      - From: PPA
+                        Date header:       2015-02-28 17:30:27 -0600
+                        Quoted by TepigMC: 2015-02-28 15:30 (inferred -0800)
+                        Inferred UTC:      2015-02-28 23:30:27 +0000
+                        Inferred local:    2015-03-01 10:30:27 +1100
+                        - From: TepigMC
+                          Quoted by PPA:  2015-03-01 11:59 (inferred +1100, range +1200 to +0600)
+                          Inferred UTC:   2015-03-01 00:59 +0000
+                          Inferred local: 2015-02-28 16:59 -0800
+                          - From: PPA
+                            Date header:    2015-03-01 00:04:09 -0600
+                            Inferred UTC:   2015-03-01 06:04:09 +0000
+                            Inferred local: 2015-03-01 17:04:09 +1100
