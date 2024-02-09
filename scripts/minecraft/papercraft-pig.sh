@@ -22,13 +22,29 @@ git init -q
 
 # Sources:
 # - https://web.archive.org/web/20150302194936/http://pixelpapercraft.com/print/minecraft-pig-advanced
+# - https://web.archive.org/web/20150326203916/http://pixelpapercraft.com/app/generators/minecraft/pig-advanced.zip
 # - https://web.archive.org/web/20170806190806/http://blog.pixelpapercraft.com/post/113047142588/advanced-pig-generator
 # - https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
 # - https://www.pixelpapercraft.com/print/minecraft-pig
 # - Emails
 
-# Commit message bodies are excerpts from emails and headers are summaries of
-# those.
+# Changelog from pig-advanced.zip/pig-advanced/Script.txt:
+#
+# Created by TepigMC
+#
+# 06 Feb 2015 lostminer: Add user variables
+# 13 Feb 2015 lostminer: Update to use new version of generator
+# 25 Feb 2015 TepigMC: Modified images; Fix drawing errors
+# 26 Feb 2015 TepigMC: Removed missing texture checks; Rename files
+# 27 Feb 2015 TepigMC: Compacted backgrounds and folds into sprite files
+# 28 Feb 2015 TepigMC: Compacted labels and titles into sprite files; Added "Advanced (Standard)" head
+#                      Added "Show Helmet Overlay" option; Added texture options
+# 09 Mar 2015 TepigMC: Fixed small bug with ultra mini pig
+
+# Commit message bodies are excerpts from emails and headers are from the above
+# changelog, when there is a corresponding entry. Any times with only minute
+# precision are quoted in text in replies, and I assume they are in the timezone
+# of the quoter (this may not be correct; see 2015-02-06).
 
 as_tepigmc '2015-01-01 10:58 -0800' git commit -q --allow-empty -m 'Make papercraft generator for pigs
 
@@ -37,52 +53,59 @@ attached to the pig or as seperate pieces. The head of the pig fits on
 the pig like in minecraft. The nose is 3D and there is an option to make
 it be flat instead.'
 
-# Sent as zip: 2015-01-06 12:18 -0800
-
+# This was two emails: the first describing it (2015-02-07 08:39, quoted in text
+# locally), and the second with the forgotten attachment
+# (2015-02-06 15:43:53 -0600). I don't know why the second would be earlier than
+# the first. I use the second, because it more closely matches the date in the
+# changelog.
+# Quoted by TepigMC: 2015-02-06 13:39
+# Quoted by PPA:     2015-02-07 08:39
 cp -p "$TOPLEVEL/files/minecraft/papercraft-pig/Script.txt" .
 git add Script.txt
-as_ppa '2015-02-07 08:39 -0600' git commit -q -m 'Add support for user input variables
+as_ppa '2015-02-06 15:43:53 -0600' git commit -q -m 'Add user variables'
+# > I've finally managed to get some time to work on the generator again and
+# > have now added variables for you to use.
+# >
+# > For now I've added support for booleans, select lists and a range of integer
+# > values. You can read about them on the Generator Builder page under "Getting
+# > User Input":
+# > https://web.archive.org/web/20150210000246/http://pixelpapercraft.com/generator-builder
+# >
+# > I've also added your generator to the site so we can test it out and review.
+# > Once we feel it's ready then we can officially announce it.
 
-I'"'"'ve finally managed to get some time to work on the generator again
-and have now added variables for you to use.
+# Unknown time
+as_ppa '2015-02-13 00:00:00 -0600' git commit -q --allow-empty -m 'Update to use new version of generator'
 
-For now I'"'"'ve added support for booleans, select lists and a range of
-integer values. You can read about them on the Generator Builder page
-under "Getting User Input":
-https://web.archive.org/web/20150210000246/http://pixelpapercraft.com/generator-builder
+# Unknown time
+as_tepigmc '2015-02-25 00:00:00 -0800' git commit -q --allow-empty -m 'Modified images; Fix drawing errors'
 
-I'"'"'ve also added your generator to the site so we can test it out and
-review. Once we feel it'"'"'s ready then we can officially announce it.'
+as_tepigmc '2015-02-26 17:19 -0800' git commit -q --allow-empty -m 'Removed missing texture checks; Rename files'
+# > I have done some testing. I was using `Generator.drawTexture` instead of
+# > `Generator.drawImage`, so I fixed that. I also removed the checks for
+# > non-existent textures because that broke it as well. I also changed some
+# > things with the images, drawing, user inputs and probably other stuff too.
 
-as_tepigmc '2015-02-26 17:19 -0800' git commit -q --allow-empty -m 'Various fixes
-
-I have done some testing. I was using `Generator.drawTexture` instead
-of `Generator.drawImage`, so I fixed that. I also removed the checks
-for non-existent textures because that broke it as well. I also changed
-some things with the images, drawing, user inputs and probably other
-stuff too.'
-
-# Resent with current version instead of outdated attachment: 2015-02-27 10:20 -0800
+as_tepigmc '2015-02-27 10:20 -0800' git commit -q --allow-empty -m 'Compacted backgrounds and folds into sprite files'
 
 as_ppa '2015-02-27 01:42:06 -0600' git commit -q --allow-empty -m 'Release generator to the site
 
 https://web.archive.org/web/20150302194936/http://pixelpapercraft.com/print/minecraft-pig-advanced'
 
-as_tepigmc '2015-02-28 12:21 -0800' git commit -q --allow-empty -m 'Use sprite files
+as_tepigmc '2015-02-28 12:21 -0800' git commit -q --allow-empty -m 'Compacted labels and titles into sprite files; Added "Advanced (Standard)" head
+Added "Show Helmet Overlay" option; Added texture options'
+# > I have finished the changes. All the images are compacted into sprite files
+# > (similar to CSS sprites) and the script draws them from there. I added the
+# > standard version for Advanced Head and also an option to enable helmet
+# > overlays (some textures like Sphax have multiple layers). I thoroughly
+# > tested it and it is ready to post.
 
-I have finished the changes. All the images are compacted into sprite
-files (similar to CSS sprites) and the script draws them from there. I
-added the standard version for Advanced Head and also an option to
-enable helmet overlays (some textures like Sphax have multiple layers).
-I thoroughly tested it and it is ready to post.'
-
-as_tepigmc '2015-03-01 09:59 -0800' git commit -q --allow-empty -m 'Finish generator
-
-The generator is officially (I think) complete. You can post it to the
-site and the news now. I also took another picture for the generator
-and changed the readme. The site doesn’t need the folder
-`image\seperated` and `image\Readme.md`. Those files are just to help
-other people change the images.'
+as_tepigmc '2015-03-01 09:59 -0800' git commit -q --allow-empty -m 'Finish generator'
+# > The generator is officially (I think) complete. You can post it to the site
+# > and the news now. I also took another picture for the generator and changed
+# > the readme. The site doesn’t need the folder `image\seperated` and
+# > `image\Readme.md`. Those files are just to help other people change the
+# > images.
 
 as_ppa '2015-03-01 00:04:09 -0600' git commit -q --allow-empty -m 'Release the new version to the site
 
