@@ -19,4 +19,5 @@ cd ..
 git init phpicalendar.git
 cd phpicalendar.git
 git fast-import < ../phpicalendar.fe.patched
+git filter-repo --force --blob-callback 'blob.data = blob.data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")'
 git checkout master
