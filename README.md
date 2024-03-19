@@ -112,4 +112,5 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Converted from CVS
 
+- phpicalendar [[sh](scripts/phpicalendar/archive.sh)]
 - wspace/whitespaceide-java - TODO
