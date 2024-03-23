@@ -5,8 +5,8 @@ set -eEuo pipefail
 
 mkdir -p wspace
 cd wspace
-mkdir whitespaceide-java
-cd whitespaceide-java
+mkdir buge-whitespaceide
+cd buge-whitespaceide
 
 # https://sourceforge.net/projects/whitespaceide/
 rsync -ai a.cvs.sourceforge.net::cvsroot/whitespaceide/ whitespaceide.cvs
@@ -15,5 +15,9 @@ cd whitespaceide.git
 find ../whitespaceide.cvs -name '*,v' |
   cvs-fast-export |
   git fast-import
+git filter-repo --force --mailmap <(echo '
+Philipp Bunge <buge@users.sourceforge.net> buge <buge>')
 git checkout -q master
+
 git branch -m master main
+git remote add origin https://github.com/wspace/buge-whitespaceide
