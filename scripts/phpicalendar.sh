@@ -22,3 +22,4 @@ git fast-import < ../phpicalendar.fe.patched
 # Normalize line endings to improve diffs for files with CR-only line endings.
 git filter-repo --force --blob-callback 'blob.data = blob.data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")'
 git checkout -q master
+git branch -m master main
