@@ -1,0 +1,440 @@
+[
+  {
+    "volume": "1",
+    "title": "Logical Foundations",
+    "slug": "lf",
+    "versions": [
+      {
+        "version": "5.0",
+        "date": "SUMMER 2017",
+        "coq_version": null,
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.0/lf.tgz"
+      },
+      {
+        "version": "5.1",
+        "date": "26 Aug 2017",
+        "coq_version": "8.6",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.1/lf.tgz"
+      },
+      {
+        "version": "5.3",
+        "date": "06 Sep 2017",
+        "coq_version": "8.6",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.3/lf.tgz"
+      },
+      {
+        "version": "5.4",
+        "date": "29 Mar 2018",
+        "coq_version": "8.7.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.4/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.4/lf.tgz"
+      },
+      {
+        "version": "5.5",
+        "date": "02 May 2018",
+        "coq_version": "8.7.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.5/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.5/lf.tgz"
+      },
+      {
+        "version": "5.6",
+        "date": "09 Jan 2019",
+        "coq_version": "8.8.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.6/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.6/lf.tgz"
+      },
+      {
+        "version": "5.8",
+        "date": "2021-05-20 11:48",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-5.8/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-5.8/lf.tgz"
+      },
+      {
+        "version": "6.0",
+        "date": "2021-08-11 15:00",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-6.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-6.0/lf.tgz"
+      },
+      {
+        "version": "6.1",
+        "date": "2022-08-01 17:48",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-6.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-6.1/lf.tgz"
+      },
+      {
+        "version": "6.2",
+        "date": "2022-08-28 10:19",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-6.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-6.2/lf.tgz"
+      },
+      {
+        "version": "6.3",
+        "date": "2023-03-25 11:45",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-6.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-6.3/lf.tgz"
+      },
+      {
+        "version": "6.5",
+        "date": "2023-10-10 11:34",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-6.5/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-6.5/lf.tgz"
+      },
+      {
+        "version": "6.6",
+        "date": "2024-01-03 15:03",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/lf-6.6/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/lf-6.6/lf.tgz"
+      }
+    ]
+  },
+  {
+    "volume": "2",
+    "title": "Programming Language Foundations",
+    "slug": "plf",
+    "versions": [
+      {
+        "version": "5.0",
+        "date": "26 Aug 2017",
+        "coq_version": "8.6",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.0/plf.tgz"
+      },
+      {
+        "version": "5.3",
+        "date": "06 Sep 2017",
+        "coq_version": "8.6",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.3/plf.tgz"
+      },
+      {
+        "version": "5.4",
+        "date": "29 Mar 2018",
+        "coq_version": "8.7.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.4/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.4/plf.tgz"
+      },
+      {
+        "version": "5.5",
+        "date": "02 May 2018",
+        "coq_version": "8.7.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.5/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.5/plf.tgz"
+      },
+      {
+        "version": "5.6",
+        "date": "09 Jan 2019",
+        "coq_version": "8.8.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.6/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.6/plf.tgz"
+      },
+      {
+        "version": "5.7",
+        "date": "08 Feb 2019",
+        "coq_version": "8.8.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.7/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.7/plf.tgz"
+      },
+      {
+        "version": "5.8",
+        "date": "2020-09-09 21:10",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-5.8/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-5.8/plf.tgz"
+      },
+      {
+        "version": "6.0",
+        "date": "2021-05-26 09:59",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.0/plf.tgz"
+      },
+      {
+        "version": "6.1",
+        "date": "2022-08-01 17:52",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.1/plf.tgz"
+      },
+      {
+        "version": "6.2",
+        "date": "2022-08-28 10:22",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.2/plf.tgz"
+      },
+      {
+        "version": "6.3",
+        "date": "2023-03-25 11:47",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.3/plf.tgz"
+      },
+      {
+        "version": "6.4",
+        "date": "2023-07-06 15:52",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.4/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.4/plf.tgz"
+      },
+      {
+        "version": "6.5",
+        "date": "2023-08-23 11:33",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.5/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.5/plf.tgz"
+      },
+      {
+        "version": "6.6",
+        "date": "2024-01-03 15:07",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/plf-6.6/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/plf-6.6/plf.tgz"
+      }
+    ]
+  },
+  {
+    "volume": "3",
+    "title": "Verified Functional Algorithms",
+    "slug": "vfa",
+    "versions": [
+      {
+        "version": "1.0",
+        "date": "26 Aug 2017",
+        "coq_version": "8.6",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.0/vfa.tgz"
+      },
+      {
+        "version": "1.1",
+        "date": "06 Sep 2017",
+        "coq_version": "8.6",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.1/vfa.tgz"
+      },
+      {
+        "version": "1.2",
+        "date": "29 Mar 2018",
+        "coq_version": "8.7.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.2/vfa.tgz"
+      },
+      {
+        "version": "1.3",
+        "date": "02 May 2018",
+        "coq_version": "8.7.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.3/vfa.tgz"
+      },
+      {
+        "version": "1.4",
+        "date": "2020-08-07 17:12",
+        "coq_version": "8.9.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.4/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.4/vfa.tgz"
+      },
+      {
+        "version": "1.5",
+        "date": "2021-05-26 10:02",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.5/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.5/vfa.tgz"
+      },
+      {
+        "version": "1.5.1",
+        "date": "2022-08-01 17:56",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.1/vfa.tgz"
+      },
+      {
+        "version": "1.5.2",
+        "date": "2022-08-29 07:41",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.2/vfa.tgz"
+      },
+      {
+        "version": "1.5.3",
+        "date": "2023-03-25 11:49",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.3/vfa.tgz"
+      },
+      {
+        "version": "1.5.4",
+        "date": "2023-08-23 11:35",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.4/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vfa-1.5.4/vfa.tgz"
+      }
+    ]
+  },
+  {
+    "volume": "4",
+    "title": "QuickCheck: Property-Based Testing in Coq",
+    "slug": "qc",
+    "versions": [
+      {
+        "version": "1.0",
+        "date": "09 Oct 2018",
+        "coq_version": "8.8.1",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.0/qc.tgz"
+      },
+      {
+        "version": "1.1",
+        "date": "2020-10-14 10:24",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.1/qc.tgz"
+      },
+      {
+        "version": "1.2",
+        "date": "2021-05-26 10:04",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.2/qc.tgz"
+      },
+      {
+        "version": "1.2.1",
+        "date": "2021-08-11 15:19",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.2.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.2.1/qc.tgz"
+      },
+      {
+        "version": "1.3.1",
+        "date": "2023-03-25 10:59",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.3.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.3.1/qc.tgz"
+      },
+      {
+        "version": "1.3.2",
+        "date": "2023-08-27 16:21",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.3.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.3.2/qc.tgz"
+      },
+      {
+        "version": "1.3.3",
+        "date": "2023-08-27 16:23",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/qc-1.3.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/qc-1.3.3/qc.tgz"
+      }
+    ]
+  },
+  {
+    "volume": "5",
+    "title": "Verifiable C",
+    "slug": "vc",
+    "versions": [
+      {
+        "version": "1.1.0",
+        "date": "2021-05-26 10:03",
+        "coq_version": "8.13",
+        "vst_version": "2.7 (January 2021)",
+        "index": "https://softwarefoundations.cis.upenn.edu/vc-1.1.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vc-1.1.0/vc.tgz"
+      },
+      {
+        "version": "1.1.1",
+        "date": "2021-08-11 15:23",
+        "coq_version": "8.13",
+        "vst_version": "2.8 (June 2021)",
+        "index": "https://softwarefoundations.cis.upenn.edu/vc-1.1.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vc-1.1.1/vc.tgz"
+      },
+      {
+        "version": "1.2.1",
+        "date": "2023-03-23 21:21",
+        "coq_version": "8.16",
+        "vst_version": "2.10",
+        "index": "https://softwarefoundations.cis.upenn.edu/vc-1.2.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vc-1.2.1/vc.tgz"
+      },
+      {
+        "version": "1.2.2",
+        "date": "2023-03-25 11:50",
+        "coq_version": "8.16",
+        "vst_version": "2.10",
+        "index": "https://softwarefoundations.cis.upenn.edu/vc-1.2.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/vc-1.2.2/vc.tgz"
+      }
+    ]
+  },
+  {
+    "volume": "6",
+    "title": "Separation Logic Foundations",
+    "slug": "slf",
+    "versions": [
+      {
+        "version": "1.0",
+        "date": "2021-05-26 10:04",
+        "coq_version": "8.12",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-1.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-1.0/slf.tgz"
+      },
+      {
+        "version": "1.2",
+        "date": "2022-08-01 17:59",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-1.2/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-1.2/slf.tgz"
+      },
+      {
+        "version": "1.3",
+        "date": "2022-08-28 10:27",
+        "coq_version": "8.15",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-1.3/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-1.3/slf.tgz"
+      },
+      {
+        "version": "1.4",
+        "date": "2023-03-25 11:51",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-1.4/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-1.4/slf.tgz"
+      },
+      {
+        "version": "1.5",
+        "date": "2023-07-06 15:47",
+        "coq_version": "8.16",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-1.5/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-1.5/slf.tgz"
+      },
+      {
+        "version": "1.6",
+        "date": "2023-08-23 12:59",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-1.6/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-1.6/slf.tgz"
+      },
+      {
+        "version": "2.0",
+        "date": "2023-11-29 09:28",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-2.0/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-2.0/slf.tgz"
+      },
+      {
+        "version": "2.1",
+        "date": "2024-01-03 14:54",
+        "coq_version": "8.17",
+        "index": "https://softwarefoundations.cis.upenn.edu/slf-2.1/index.html",
+        "download": "https://softwarefoundations.cis.upenn.edu/slf-2.1/slf.tgz"
+      }
+    ]
+  }
+]
