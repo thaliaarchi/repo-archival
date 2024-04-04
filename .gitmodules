@@ -124,6 +124,9 @@
 [submodule "git/github.com/koturn/Whitespace"]
 	path = git/github.com/koturn/Whitespace
 	url = https://github.com/koturn/Whitespace
+[submodule "git/github.com/kspalaiologos/recreational"]
+	path = git/github.com/kspalaiologos/recreational
+	url = https://github.com/kspalaiologos/recreational
 [submodule "git/github.com/mame/quine-relay@master"]
 	path = git/github.com/mame/quine-relay@master
 	url = https://github.com/mame/quine-relay
@@ -165,6 +168,9 @@
 [submodule "git/github.com/timvandermeij/whitespace-interpreter"]
 	path = git/github.com/timvandermeij/whitespace-interpreter
 	url = https://github.com/timvandermeij/whitespace-interpreter
+[submodule "git/github.com/wspace/kspalaiologos-codegolf"]
+	path = git/github.com/wspace/kspalaiologos-codegolf
+	url = https://github.com/wspace/kspalaiologos-codegolf
 [submodule "git/github.com/wysang/Whitespace-Compiler"]
 	path = git/github.com/wysang/Whitespace-Compiler
 	url = https://github.com/wysang/Whitespace-Compiler
