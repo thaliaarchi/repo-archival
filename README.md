@@ -72,6 +72,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) [[sh](scripts/wspace/0qol-prime.sh)] - with manual rewording
 - [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) [[sh](scripts/wspace/ilikepython256-whitespace-unc.sh)] - with manual rebasing
 - [wspace/keens-whitelie](https://github.com/wspace/keens-whitelie) [[sh](scripts/wspace/keens-whitelie.sh)] - with manual rebasing
+- wspace/kspalaiologos-recreational [[sh](scripts/wspace/kspalaiologos-recreational.sh)]
 - [wspace/pik4ez-ascii](https://github.com/wspace/pik4ez-ascii) [[sh](scripts/wspace/pik4ez-ascii.sh)] - with manual squashing
 - wspace/programs [[sh](scripts/wspace/programs.sh)] - TODO collect programs from originating projects
 - [wspace/ytaka23-whitespace](https://github.com/wspace/ytaka23-whitespace) [[sh](scripts/wspace/ytaka23-whitespace.sh)]
