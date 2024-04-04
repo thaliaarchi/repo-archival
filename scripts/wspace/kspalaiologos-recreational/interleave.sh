@@ -12,12 +12,12 @@ clone_submodule https://github.com/kspalaiologos/recreational kspalaiologos-recr
 codegolf_submodule="$(submodule_path https://github.com/wspace/kspalaiologos-codegolf)"
 cd kspalaiologos-recreational.interleaved
 
-git remote add codegolf "$codegolf_submodule"
-git fetch -q codegolf
+git remote add codegolf-submissions "$codegolf_submodule"
+git fetch -q codegolf-submissions
 
 # Interleave histories in date order, resolving merge conflicts (in README.md)
 # in favor of recreational (“theirs”).
-GIT_SEQUENCE_EDITOR='git log main codegolf/main --format="pick %h %ai %s" --reverse > ' \
+GIT_SEQUENCE_EDITOR='git log main codegolf-submissions/main --format="pick %h %ai %s" --reverse > ' \
 git rebase -i --root -Xtheirs
 
 # Remove now-duplicate files that started in codegolf-submissions and were added
@@ -51,4 +51,4 @@ git rebase --autosquash "$cgse_commit^"
 # - Committer ident is mangled.
 # - Rebased commits are now unsigned.
 
-git remote remove codegolf
+git remote remove codegolf-submissions
