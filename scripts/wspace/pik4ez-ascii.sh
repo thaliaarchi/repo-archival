@@ -2,11 +2,14 @@
 
 . base.sh
 
-# https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 brooks
-# https://gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4 hopper
-# https://gist.github.com/pik4ez/8274216220511d0e42de7881eca782da rameev
-# https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd shura-bura
-# https://gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1 lamarr
+# https://gist.github.com/pik4ez/ff8419892f0a71383aee01588e06e104 jonas.bf
+# https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 brooks.ws
+# https://gist.github.com/pik4ez/61c0678799dbd4a7fc5a6ca08959b7b4 hopper.ws
+# https://gist.github.com/pik4ez/8274216220511d0e42de7881eca782da rameev.ws
+# https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd shura-bura.ws
+# https://gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1 lamarr.ws
+
+# TODO: Incorporate jonas.bf, automate further, and keep hedi_ascii.ws filename.
 
 # brooks contains the entirety of the other repos at earlier dates,
 # however the history is messy:

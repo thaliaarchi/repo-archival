@@ -28,6 +28,9 @@
 [submodule "git/gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd"]
 	path = git/gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd
 	url = https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd
+[submodule "git/gist.github.com/pik4ez/ff8419892f0a71383aee01588e06e104"]
+	path = git/gist.github.com/pik4ez/ff8419892f0a71383aee01588e06e104
+	url = https://gist.github.com/pik4ez/ff8419892f0a71383aee01588e06e104
 [submodule "git/gist.github.com/y-taka-23/7353571"]
 	path = git/gist.github.com/y-taka-23/7353571
 	url = https://gist.github.com/y-taka-23/7353571
