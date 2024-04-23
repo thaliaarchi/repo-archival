@@ -117,4 +117,5 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 - phpicalendar [[sh](scripts/phpicalendar.sh)]
 - sourcepuller [[sh](scripts/sourcepuller.sh)]
+- trn [[sh](scripts/trn.sh)]
 - wspace/buge-whitespaceide [[sh](scripts/wspace/buge-whitespaceide.sh)]
