@@ -117,6 +117,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## Converted from CVS
 
 - phpicalendar [[sh](scripts/phpicalendar.sh)]
+- slrn [[sh](scripts/jedsoft/slrn.sh)] - WIP
 - sourcepuller [[sh](scripts/sourcepuller.sh)]
 - trn [[sh](scripts/trn.sh)]
 - wspace/buge-whitespaceide [[sh](scripts/wspace/buge-whitespaceide.sh)]
