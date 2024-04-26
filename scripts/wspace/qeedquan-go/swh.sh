@@ -43,7 +43,7 @@ master_revisions="$(
 
 all_revisions_cooked=true
 while read -r revision; do
-  if ! request_swh "$revision"; then
+  if ! request_swh "$origin_url" "$revision"; then
     all_revisions_cooked=false
   fi
 done <<< "$master_revisions"

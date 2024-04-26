@@ -28,27 +28,28 @@ clone_submodule() {
 }
 
 request_swh() {
-  local revision="$1"
+  local origin_url="$1"
+  local revision="$2"
   local raw_url="https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/"
   local raw_cached
   raw_cached="$(cache_path "$raw_url")"
   if [ ! -f "$raw_cached" ]; then
     if wget -q "$raw_url" -O "$raw_cached"; then
-      echo "Downloaded revision $revision from SWH"
+      echo "Downloaded $origin_url revision $revision from SWH"
     else
       local status=$?
       local resp
+      rm "$raw_cached"
       if resp="$(curl -s -X POST "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/")"; then
         local exception
         exception="$(jq -j '.status // .exception // .' <<< "$resp" || echo 'jq error')"
-        echo "Requested revision $revision ($exception) from SWH"
+        echo "Requested $origin_url revision $revision ($exception) from SWH"
         if [[ $exception = Throttled ]]; then
           exit 1
         fi
       else
-        echo "Failed to request revision $revision from SWH"
+        echo "Failed to request $origin_url revision $revision from SWH"
       fi
-      rm "$raw_cached"
       return $status
     fi
   fi
@@ -56,11 +57,12 @@ request_swh() {
 
 clone_swh() {
   # https://archive.softwareheritage.org/browse/origin/directory/?origin_url=$url
-  local url="${1#https://}"
+  local origin_url="${1#https://}"
   local revision="$2"
-  local dest="${3-"${url##*/}"}"
+  local dest="${3-"${origin_url##*/}"}"
+  request_swh "$origin_url" "$revision"
   mkdir "$dest"
-  tar xf "$(get_cached_path "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/")" \
+  tar xf "$(cache_path "https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:rev:$revision/raw/")" \
     -C "$dest"
   mv "$dest/swh:1:rev:$revision.git" "$dest/.git"
   git --git-dir="$dest/.git" config core.bare false
@@ -182,7 +184,7 @@ get_cached_path() {
   url="$(ia_raw_url "$url")"
   cached="$(cache_path "$url")"
   if [ ! -f "$cached" ]; then
-    if wget --no-verbose "$url" -O "$cached"; then :
+    if wget -q "$url" -O "$cached"; then :
     else
       local status=$?
       rm "$cached"
