@@ -32,6 +32,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## From archives
 
 - [minecraft-papercraft-pig](https://github.com/thaliaarchi/minecraft-papercraft-pig) [[sh](scripts/minecraft/papercraft-pig.sh)]
+- ms-dos [[sh](scripts/ms-dos.sh)] - WIP
 - nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
 - ncsa-httpd [[sh](scripts/ncsa-httpd.sh)]
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
