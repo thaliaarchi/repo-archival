@@ -141,6 +141,9 @@
 [submodule "git/github.com/meeees/Whitespace"]
 	path = git/github.com/meeees/Whitespace
 	url = https://github.com/meeees/Whitespace
+[submodule "git/github.com/microsoft/MS-DOS"]
+	path = git/github.com/microsoft/MS-DOS
+	url = https://github.com/microsoft/MS-DOS
 [submodule "git/github.com/omurakazuaki/WriteCodeEveryDay"]
 	path = git/github.com/omurakazuaki/WriteCodeEveryDay
 	url = https://github.com/omurakazuaki/WriteCodeEveryDay
