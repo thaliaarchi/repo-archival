@@ -85,6 +85,12 @@ git add Tim_Paterson_16Dec2013_email.txt
 GIT_COMMITTER_DATE='2013-12-19 23:15:52 +0000' \
 commit '2013-12-16 10:34:17 -0800' '2013-12-16: MS-DOS 1.25'
 
+# The microsoft/MS-DOS commits 1.25 in fce0f75 (MS-DOS v1.25 Release)
+# Author:    1982-03-03 16:51:26 -0800  Rich Turner <richturn@microsoft.com>
+# Committer: 2018-09-21 17:51:26 -0700  Rich Turner <richturn@microsoft.com>
+#
+# The author date is obviously fabricated and is inaccurate, because all files
+# are modified after it.
 GIT_COMMITTER_DATE='2013-12-19 23:15:52 +0000' \
 git tag ms-dos-v1.25 -a -m 'MS-DOS 1.25'
 
@@ -349,6 +355,12 @@ commit '1983-10-20 17:28:10 +0000' '1983-10-20: MS-DOS 2.0'
 git add -f src/{WSMSGS.OVR,WSBAUD.BAS,WSOVLY1.OVR}
 commit '2013-02-23 16:45:36 +0000' '2013-02-23: MS-DOS 2.0'
 
+# The microsoft/MS-DOS commits 2.0 in 80ab2fd (MS-DOS v2.0 Release)
+# Author:    1983-08-12 17:53:34 -0700 Rich Turner <richturn@microsoft.com>
+# Committer: 2018-09-21 17:53:34 -0700 Rich Turner <richturn@microsoft.com>
+#
+# The author date is obviously fabricated and is inaccurate, because most files
+# are modified after it.
 GIT_COMMITTER_DATE='2013-02-23 16:45:36 +0000' \
 git tag ms-dos-v2.0 -a -m 'MS-DOS 2.0'
 
