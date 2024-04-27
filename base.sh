@@ -209,6 +209,11 @@ fix_perms() {
   chmod -R u+rwX,go+rX,go-w "$@"
 }
 
+7z() {
+  # Suppress logging, unless it fails.
+  chronic 7z "$@"
+}
+
 list_swh_branches() {
   local origin="$1"
   curl -s "$(curl -s "https://archive.softwareheritage.org/api/1/origin/$origin/visit/latest/" | jq -r .snapshot_url)" |
