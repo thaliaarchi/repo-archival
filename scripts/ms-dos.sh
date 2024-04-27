@@ -4,10 +4,15 @@ set -eEuo pipefail
 . base.sh
 
 # TODO:
-# - Create linear history with the four versions modifying the same directories.
-# - Use the Computer History Museum's version of v1.25 and v2.0.
+# - Add 86-DOS 0.1 and 0.34:
+#   - https://archive.org/details/86-dos-version-0.1-c-serial-11-original-disk
+#   - https://archive.org/details/86-dos-v-0.34-221-81-02-20
+#   - https://archive.org/details/86-dos-version-0.34-c-serial-221-original-disk
 # - Investigate force-pushed commits.
-# - Examine executable file modes.
+# - Set executable file modes. .exe and .com should be executable and .bas
+#   should not.
+# - Reexamine author/committer metadata.
+# - Modify the README to list all versions.
 # - Pick either the original or optimized PNG version for the logo. Where were
 #   they sourced? The PNGs may have useful text (https://www.w3.org/TR/png-3/#11textinfo),
 #   EXIF (https://www.w3.org/TR/png-3/#eXIf), or timestamp (https://www.w3.org/TR/png-3/#11timestampinfo)
@@ -31,15 +36,62 @@ commit() {
   git commit -q -m "$message"
 }
 
+reset_repo() {
+  git rm -rq '*'
+  git checkout -q HEAD "${base_files[@]}"
+}
+
 mkdir ms-dos
 cd ms-dos
 
-git init -q
-git config core.autocrlf false
+
+# The repo was force-pushed to reorganize and remove an insult. Discussed at
+# https://news.ycombinator.com/item?id=40163766. Strangely, both of these cooked
+# repos have many corrupt packed objects.
+clone_swh https://github.com/microsoft/MS-DOS 661305ed4e91e8ab578dcb96ac4816b0f32ece32 force-1
+clone_swh https://github.com/microsoft/MS-DOS 656c98b804c7845b1352a84f08177401caaea866 force-2
+
+clone_submodule https://github.com/microsoft/MS-DOS github
+
+# 1. Remove translated READMEs. With the addition of MS-DOS 4.0, they became out
+#    of date and a5eb02a (Moving localized READMEs, 2024-04-25) moved them to
+#    .readmes/, essentially deprecating them. Since the purpose here is to make
+#    a static, linear development history, these feel out of place.
+# 2. Remove MS-DOS 1.25 and 2.0. The Computer History Museum's sources are
+#    preserved.
+# 3. Move icons to docs/
+#
+# Filtering intermittently fails without --force.
+git -C github filter-repo --quiet --force \
+  --invert-paths \
+  --path-regex 'README[.-].+\.md' \
+  --path-regex .readmes/thanks.md \
+  \
+  --path v1.25 \
+  --path v2.0 \
+  --invert-paths \
+  \
+  --path-rename msdos-logo.png:docs/msdos-logo.png \
+  --path-rename msdos-logo_250x250.png:docs/msdos-logo_250x250.png \
+  --path-rename .readmes/:docs/
+
 
 # MS-DOS 1.25 and 2.0
 # https://computerhistory.org/blog/microsoft-ms-dos-early-source-code/
 unzip -q "$(get_cached_path https://d1yx3ys82bpsa0.cloudfront.net/source/msdos.zip)"
+
+
+git init -q
+git config core.autocrlf false
+
+
+## Open source release information
+
+# Sourced from the final commit, but using the date of the first.
+base_files=(LICENSE README.md SECURITY.md msdos-logo.png msdos-logo_250x250.png)
+cp github/{LICENSE,README.md,SECURITY.md,docs/msdos-logo.png,docs/msdos-logo_250x250.png} .
+git add "${base_files[@]}"
+commit '2018-09-21 17:47:37 -0700' 'Initial commit'
 
 
 ## MS-DOS 1.25
@@ -94,10 +146,11 @@ commit '2013-12-16 10:34:17 -0800' '2013-12-16: MS-DOS 1.25'
 GIT_COMMITTER_DATE='2013-12-19 23:15:52 +0000' \
 git tag ms-dos-v1.25 -a -m 'MS-DOS 1.25'
 
+reset_repo
+
 
 ## MS-DOS 2.0
 
-git rm -rq '*'
 mv msdos/v20object bin
 mv msdos/v20source src
 rmdir msdos
@@ -364,7 +417,7 @@ commit '2013-02-23 16:45:36 +0000' '2013-02-23: MS-DOS 2.0'
 GIT_COMMITTER_DATE='2013-02-23 16:45:36 +0000' \
 git tag ms-dos-v2.0 -a -m 'MS-DOS 2.0'
 
-git rm -rq '*'
+reset_repo
 
 
 ## MS-DOS 3.30
@@ -384,7 +437,7 @@ commit '1988-02-02 06:00:02 +0000' '1988-02-02: MS-DOS 3.30'
 GIT_COMMITTER_DATE='1988-02-02 06:00:02 +0000' \
 git tag ms-dos-v3.30 -a -m 'MS-DOS 3.30'
 
-git rm -rq '*'
+reset_repo
 
 
 ## MS-DOS 6.0
@@ -399,33 +452,3 @@ commit '1999-10-31 19:01:40 +0000' '1999-10-31: MS-DOS 6.0'
 
 GIT_COMMITTER_DATE='1999-10-31 19:01:40 +0000' \
 git tag ms-dos-v6.0 -a -m 'MS-DOS 6.0'
-
-
-# The repo was force-pushed to reorganize and remove an insult. Discussed at
-# https://news.ycombinator.com/item?id=40163766. Strangely, both of these cooked
-# repos have many corrupt packed objects.
-clone_swh https://github.com/microsoft/MS-DOS 661305ed4e91e8ab578dcb96ac4816b0f32ece32 ms-dos-1
-clone_swh https://github.com/microsoft/MS-DOS 656c98b804c7845b1352a84f08177401caaea866 ms-dos-2
-
-clone_submodule https://github.com/microsoft/MS-DOS ms-dos-3
-
-cd ms-dos-3
-
-# 1. Remove translated READMEs. With the addition of MS-DOS v4.0, they became
-#    out of date and a5eb02a (Moving localized READMEs, 2024-04-25) moved them
-#    to .readmes/, essentially deprecating them. Since the purpose here is to
-#    make a linear development history, these feel out of place.
-# 2. Pick "src" as the directory name.
-# 3. Move icons to docs/
-git filter-repo --quiet \
-  --invert-paths \
-  --path-regex 'README[.-].+\.md' \
-  --path-regex .readmes/thanks.md \
-  --invert-paths \
-  \
-  --path-rename v1.25/source/:v1.25/src/ \
-  --path-rename v2.0/source/:v2.0/src/ \
-  \
-  --path-rename msdos-logo.png:docs/msdos-logo.png \
-  --path-rename msdos-logo_250x250.png:docs/msdos-logo_250x250.png \
-  --path-rename .readmes/:docs/
