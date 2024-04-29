@@ -32,16 +32,23 @@ add_zip() {
       rm "$f"
     done
     # Fix 3-letter extensions that had the third letter overwritten with _ when
-    # compressing. This does not cover all of them.
+    # compressing. This does not cover ZEUS.EL_.
     rename -e 's/\.BA$/.BAT/' \
-           -e 's/\.BN$/.BNN/' \
+           -e 's/\.BN$/.BND/' \
+           -e 's/\.CF$/.CFG/' \
            -e 's/\.CP$/.CPP/' \
+           -e 's/\.DA$/.DAT/' \
            -e 's/\.EX$/.EXE/' \
            -e 's/\.HL$/.HLP/' \
            -e 's/\.ID$/.IDE/' \
            -e 's/\.IN$/.INI/' \
+           -e 's/\.KE$/.KEY/' \
            -e 's/\.MA$/.MAK/' \
-           -e 's/\.TX$/.TXT/' ./*
+           -e 's/\.PI$/.PIF/' \
+           -e 's/\.PR$/.PRF/' \
+           -e 's/\.TX$/.TXT/' \
+           -e 's/\.WR$/.WRI/' \
+           -e 's/\.ZI$/.ZIX/' ./*
   fi
 
   git add -Af
@@ -53,7 +60,7 @@ commit_as() {
   local message="$3"
   GIT_AUTHOR_NAME="$name" GIT_AUTHOR_EMAIL="$email" \
   GIT_COMMITTER_NAME="$name" GIT_COMMITTER_EMAIL="$email" \
-  tcommit -q -m "$message"
+  TZ=UTC tcommit -q -m "$message"
 }
 
 commit_as_jussi() {
