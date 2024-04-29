@@ -85,6 +85,9 @@
 [submodule "git/github.com/Smithers888/BlueSpace"]
 	path = git/github.com/Smithers888/BlueSpace
 	url = https://github.com/Smithers888/BlueSpace
+[submodule "git/github.com/aros-development-team/contrib"]
+	path = git/github.com/aros-development-team/contrib
+	url = https://github.com/aros-development-team/contrib
 [submodule "git/github.com/dpohanlon/wsInt"]
 	path = git/github.com/dpohanlon/wsInt
 	url = https://github.com/dpohanlon/wsInt

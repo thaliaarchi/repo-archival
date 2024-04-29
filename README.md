@@ -31,6 +31,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## From archives
 
+- decus-grep [[sh](scripts/regexp/decus-grep.sh)] - WIP
 - [minecraft-papercraft-pig](https://github.com/thaliaarchi/minecraft-papercraft-pig) [[sh](scripts/minecraft/papercraft-pig.sh)]
 - ms-dos [[sh](scripts/ms-dos.sh)] - WIP
 - nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
