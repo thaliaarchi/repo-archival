@@ -67,6 +67,9 @@ commit_pairs=(
   '4cf3bd08251fe6c2b7952d2691adfe58b0cc7979,df3323ea460879b92b59fd8d6b71de9753206db9' # 2023-11-01 05:41:42 +0900 / 2023-11-01 05:23:44 +0900
   'a760af845a332b96282302c8f437c0e3508154e1,2e2103eb44e67023b51fde35d3e2ebe68b24047e' # 2023-11-01 05:48:11 +0900 / 2023-11-01 05:27:11 +0900
   'b7e24f2e6be5e8090a3990f0c1f6beb5e8778540,26066d1ede0b91720baceecbd99dbdf7e4d3240b' # 2023-11-01 06:00:49 +0900 / 2023-11-01 05:39:34 +0900
+  '708c3129caa779f7a61402e93a45de951e428eb4,3ca0776f455748be1dff0439d65fc55d0cb0a37b' # 2024-04-26 06:19:03 +0900 / 2024-04-27 06:03:17 +0900
+  '04edc82a865c59cae390aaaf6e980d46bb93f9da,20d7f437c053b8e0b301ba996d124a4b812e3571' # 2024-04-26 06:25:15 +0900 / 2024-04-27 06:05:46 +0900
+  'a04f6ef7505bd3fb8a4034c6230e994f19cdca5d,f367bbdb5fb0f468f63b2ee9cd29b2d0471dca8b' # 2024-04-27 15:34:32 +0900 / 2024-04-27 15:20:55 +0900
 )
 
 # Fetch all orphaned spoiler commits
@@ -101,7 +104,16 @@ for pair in "${commit_pairs[@]}"; do
     commit -m 'Merge spoiler'
 
   cd spoiler
-  sha1sum --quiet -c ../SHA1SUMS
+  if [[ -f ../SHA1SUMS ]]; then
+    sha1sum --quiet -c ../SHA1SUMS
+  elif [[ -f ../SHA256SUMS ]]; then
+    # Switched to SHA-256 in 20d7f43 (Use sha256sum instead of sha1sum,
+    # 2024-04-27).
+    sha256sum --quiet -c ../SHA256SUMS
+  else
+    echo 'No SHA1SUMS or SHA256SUMS file' >&2
+    exit 1
+  fi
   cd ..
 done
 
