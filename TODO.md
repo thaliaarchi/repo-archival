@@ -12,6 +12,7 @@
       (2003-02-21)
     - [http://swtch.com/plan9port/](https://web.archive.org/web/20040411104231/http://swtch.com/plan9port/)
       (2004-08-08)
+- [Unix](https://www.tuhs.org/Archive/Distributions/Research/)
 - Pre-Git Linux kernel
   - [Initial Git commit](https://github.com/torvalds/linux/commit/1da177e4c3f41524e886b7f1b8a0c1fc7321cac2):
     Linux 2.6.12-rc2.
@@ -40,3 +41,4 @@
   - [Rhino](https://web.mit.edu/javascript/doc/rhino/index.html) is an
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
+- Apache HTTP Server: incorporate archive releases and graft onto NCSA HTTPd
