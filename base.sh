@@ -199,6 +199,10 @@ get_cached() {
   local url_out="${url##*/}"
   local url_out="${url_out%%\?*}"
   local out="${2-"$url_out"}"
+  if [[ -e "$out" ]]; then
+    echo "$out already exists" >&2
+    exit 1
+  fi
   mkdir -p "$(dirname "$out")"
   cp -p "$(get_cached_path "$url")" "$out"
 }
@@ -210,8 +214,9 @@ fix_perms() {
 }
 
 7z() {
-  # Suppress logging, unless it fails.
-  chronic 7z "$@"
+  # 7z extracts in the local timezone; use UTC. Suppress logging, unless it
+  # fails.
+  TZ="${TZ-UTC}" chronic 7z "$@"
 }
 
 list_swh_branches() {
