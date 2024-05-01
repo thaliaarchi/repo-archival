@@ -19,6 +19,8 @@ git filter-repo --force --quiet \
     if not b"\nSigned-off-by: " in commit.message:
       commit.message += b"\n"
     commit.message += b"\nSource: https://github.com/aros-development-team/contrib/commit/" + commit.original_id + b"\n"
+    commit.author_email = commit.author_email.removesuffix(b"@fb15a70f-31f2-0310-bbcc-cdcc74a49acc")
+    commit.committer_email = commit.committer_email.removesuffix(b"@fb15a70f-31f2-0310-bbcc-cdcc74a49acc")
   '
 # Linearize merge and drop duplicate commit.
 git rebase --root
