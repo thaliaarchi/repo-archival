@@ -10,14 +10,19 @@ cd regexp/decus-grep
 # to be to the current GitHub repo.
 # TODO: Are there other greps/regexp engines in here?
 clone_submodule https://github.com/aros-development-team/contrib aros-contrib
-git -C aros-contrib filter-repo --force --quiet \
+cd aros-contrib
+git filter-repo --force --quiet \
   --path fish/grep/grep.c --path-rename fish/grep/: \
   --commit-callback '
     commit.message = re.sub(
       br"\n+git-svn-id: https://svn\.aros\.org/svn/aros/trunk@\d+ fb15a70f-31f2-0310-bbcc-cdcc74a49acc\n$|\n*$", b"", commit.message)
-    if not re.match(b"\n(?:\n[a-zA-Z0-9_-]+: .+)+$", commit.message):
+    if not b"\nSigned-off-by: " in commit.message:
       commit.message += b"\n"
-    commit.message += b"\nSource: https://github.com/aros-development-team/contrib/commit/" + commit.original_id + b"\n"'
+    commit.message += b"\nSource: https://github.com/aros-development-team/contrib/commit/" + commit.original_id + b"\n"
+  '
+# Linearize merge and drop duplicate commit.
+git rebase --root
+cd ..
 
 clone_submodule https://github.com/thaliaarchi/zeus-editor-archive zeus
 # Extract only GREP.C from V2.15. Since it is the same in both Zeus for Windows
