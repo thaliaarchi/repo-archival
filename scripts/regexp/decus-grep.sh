@@ -6,6 +6,19 @@ set -eEuo pipefail
 mkdir -p regexp/decus-grep
 cd regexp/decus-grep
 
+git init -q
+
+get_cached https://web.archive.org/web/19980418215251/http://snippets.org/GREP.C
+git add GREP.C
+# The date is when it was last modified, as written in the file. It has no HTTP
+# Last-Modified header. The SNIPPETS collection was first released in 1992 or
+# earlier (see https://web.archive.org/web/19980418181553/http://snippets.org/SNIPPETS.TXT).
+GIT_AUTHOR_EMAIL='Bob Stout' GIT_AUTHOR_EMAIL='rbs@snippets.org' GIT_AUTHOR_DATE='1997-07-05 00:00:00 +0000' \
+GIT_COMMITTER_EMAIL='Bob Stout' GIT_COMMITTER_EMAIL='rbs@snippets.org' GIT_COMMITTER_DATE='1997-07-05 00:00:00 +0000' \
+git commit -q -m '"Real" grep - free with some strings
+
+Source: https://web.archive.org/web/19980418215251/http://snippets.org/GREP.C'
+
 # Extract fish/grep/grep.c. Rewrite git-svn trailers for the decommissioned SVN
 # to be to the current GitHub repo.
 # TODO: Are there other greps/regexp engines in here?
