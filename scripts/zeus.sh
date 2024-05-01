@@ -5,13 +5,27 @@ set -eEuo pipefail
 
 # Zeus Programmers Editor, now Zeus IDE
 
-# TODO:
-# - Properly extract the archives using EXPAND.EXE on Windows or DOS.
-# - Check docs for each version for how Zeus referred to itself and the
-#   developer's contact info.
+# Versions 1.05 and 2.15 have source code, but are compressed with DOS tools. I
+# think SETUP.EXE automatically decompresses everything, because SETUP.INF lists
+# each file with whether it's compressed. Files ending with *_ are "MS Compress
+# archive data, SZDD variant", according to `file`; they can be compressed with
+# 7z.
+#
+# VENDINFO.DIZ indicates it has the format "VENDINFO standard v1.04, produced by
+# VendEdit v1.30, 7-May-1996". I was able to read the PKZIP index–looking
+# compressed section at the end of VENDINFO.DIZ with VENDINFO Toolkit v1.00 from
+# https://archive.org/details/VNDNFO10_ZIP. It carries metadata about the
+# packaging and payment.
+#
+# The dates and CRC32 checksums match between `7z l` and VENDINFO.DIZ for
+# ZEUSV215.ZIP and ZE32V215.ZIP (the only versions to use VENDINFO.DIZ). The ZIP
+# dates have seconds, but VENDINFO.DIZ only has minutes.
+
+# TODO: Boot up Windows 95 and run SETUP.EXE to see if it decompresses better
+# than I have managed.
 
 extract() {
-  chronic 7z x "$@"
+  TZ=UTC chronic 7z x "$@"
 }
 
 add_zip() {
@@ -19,13 +33,6 @@ add_zip() {
   git rm -q --ignore-unmatch '*'
   extract "$(get_cached_path "$path")"
 
-  # Versions 1.05 and 2.15 have source code, but it is compressed with DOS
-  # tools. VENDINFO.DIZ has a PKZIP-looking directory index at the end, but it
-  # doesn't decompress; it indicates it has the format "VENDINFO standard v1.04,
-  # produced by VendEdit v1.30, 7-May-1996", so may be decompressible with that.
-  # Files ending with *_ are "MS Compress archive data, SZDD variant", according
-  # to `file`; they can be compressed with 7z. Since we're using 7z for that, we
-  # may as well use it above for the zips.
   if [[ -f EXPAND.EXE ]]; then
     for f in *_; do
       extract "$f"
@@ -43,6 +50,7 @@ add_zip() {
            -e 's/\.ID$/.IDE/' \
            -e 's/\.IN$/.INI/' \
            -e 's/\.KE$/.KEY/' \
+           -e 's/^TEST\.MA$/TEST.MAC/' \
            -e 's/\.MA$/.MAK/' \
            -e 's/\.PI$/.PIF/' \
            -e 's/\.PR$/.PRF/' \
@@ -51,23 +59,29 @@ add_zip() {
            -e 's/\.ZI$/.ZIX/' ./*
   fi
 
-  git add -Af
+  git add -f ./*
 }
 
 commit_as() {
   local name="$1"
   local email="$2"
-  local message="$3"
-  GIT_AUTHOR_NAME="$name" GIT_AUTHOR_EMAIL="$email" \
-  GIT_COMMITTER_NAME="$name" GIT_COMMITTER_EMAIL="$email" \
-  TZ=UTC tcommit -q -m "$message"
+  local date="$3"
+  local message="$4"
+  local item="$5"
+  local zip="$6"
+  add_zip "https://archive.org/download/$item/$zip"
+  GIT_AUTHOR_NAME="$name" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
+  GIT_COMMITTER_NAME="$name" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$date"}" \
+  TZ=UTC git commit -q -m "$message
+
+Source: https://archive.org/details/$item"
 }
 
 commit_as_jussi() {
-  commit_as 'Jussi Jumppanen' 'jussi@sydney.dialix.oz.au' "$1"
+  commit_as 'Jussi Jumppanen' 'jussi@sydney.dialix.oz.au' "$@"
 }
 commit_as_zeus() {
-  commit_as 'Jussi Jumppanen' 'info@zeusedit.com' "$1"
+  commit_as 'Jussi Jumppanen' 'info@zeusedit.com' "$@"
 }
 
 mkdir zeus
@@ -85,24 +99,18 @@ git init -q
 git config core.autocrlf false
 git checkout -qb zeus-2
 
-# These versions have source.
-add_zip https://archive.org/download/ZEUSV105_ZIP/ZEUSV105.ZIP
-commit_as_jussi 'Zeus for Windows 1.05 source'
-add_zip https://archive.org/download/ZEUSV215_ZIP/ZEUSV215.ZIP
-commit_as_jussi 'Zeus for Windows 2.15 source'
-add_zip https://archive.org/download/ZE32V215_ZIP/ZE32V215.ZIP
-commit_as_jussi 'Zeus for WIN32 2.15 source'
+# These versions have some source code.
+commit_as_jussi '1995-07-30 22:08:10' 'Zeus for Windows Programmers Editor V1.05' ZEUSV105_ZIP ZEUSV105.ZIP
+commit_as_jussi '1996-05-07 10:11:18' 'Zeus Programmers Editor for Windows V2.15' ZEUSV215_ZIP ZEUSV215.ZIP
+GIT_COMMITTER_DATE='1996-05-07 10:11:18' \
+commit_as_jussi '1996-05-07 10:07:42' 'Zeus Programmers Editor for WIN32 V2.15' ZE32V215_ZIP ZE32V215.ZIP
 
 # These versions have only EXEs, so include them on a separate non-default
 # branch.
 git checkout -qb zeus-3
-add_zip https://archive.org/download/ze32v300_zip/ze32v300.zip
-commit_as_zeus 'Zeus 3.00 setup'
-add_zip https://archive.org/download/ze32v320_zip/ze32v320.zip
-commit_as_zeus 'Zeus 3.20 setup'
-add_zip https://archive.org/download/ze32v330_zip/ze32v330.zip
-commit_as_zeus 'Zeus 3.30 setup'
-add_zip https://archive.org/download/ze32v340_zip/ze32v340.zip
-commit_as_zeus 'Zeus 3.40 setup'
+commit_as_zeus '1999-08-31 22:26:20' 'Zeus Programmers Editor V3.00' ze32v300_zip ze32v300.zip
+commit_as_zeus '2000-01-22 15:09:36' 'Zeus Programmers Editor V3.20' ze32v320_zip ze32v320.zip
+commit_as_zeus '2000-03-30 21:18:22' 'Zeus Programmers Editor V3.30' ze32v330_zip ze32v330.zip
+commit_as_zeus '2000-09-25 19:05:10' 'Zeus Programmers Editor V3.40' ze32v340_zip ze32v340.zip
 
 git checkout -q zeus-2
