@@ -37,6 +37,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
 - ncsa-httpd [[sh](scripts/ncsa-httpd.sh)]
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
+- snippets - [WIP](scripts/snippets/notes.md)
 - software-foundations [[sh](scripts/software-foundations/get_versions.sh)] - WIP
 - [wspace/burghard-wsa](https://github.com/wspace/burghard-wsa) [[sh](scripts/wspace/burghard.sh)]
 - [wspace/burghard-wsintercpp](https://github.com/wspace/burghard-wsintercpp) [[sh](scripts/wspace/burghard.sh)]
