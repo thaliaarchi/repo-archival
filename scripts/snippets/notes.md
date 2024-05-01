@@ -5,22 +5,54 @@ was a collection of free C programs created by Bob Stout from the late 1980s
 to 2007. After his death in 2011, various people [discussed](https://stackoverflow.com/questions/8246557/where-did-the-c-and-c-snippets-library-go)
 its archival.
 
-Known releases:
-- Later
-- [x] 1997-07-05 (9707) [^SNIPPETS.TXT]
-- [ ] 1996-11 (9611) [^WHATS.NEW]
-- [x] 1995-10 (9510) [^SNIPPETS.RAT] [^strangecreations] [^doc.ic.ac.uk]
-- [ ] 1995-03 (9503) [^SNIPPETS.TXT] [^doc.ic.ac.uk]
-- [x] 1994-04 (9404) [^SNIPPETS.TXT]
-- [x] 1993-04 (0493) [^SNIPPETS.TXT]
-- [ ] 1992-12 (1292) [^SNIPPETS.TXT]
+## Known releases
 
-with filenames of the pattern SNIPdddd.xxx and SNPDdddd.xxx, where dddd is the
-date and .xxx is .ZIP, .LZ, .TAZ, or .RAR [^SNIPPETS.TXT]. SNPD files were diffs
-generated with the [TLIB](https://www.burtonsys.com/) version control system
-[[Reference Manual](https://www.burtonsys.com/tlib_doc.pdf), [parsing](https://code.activestate.com/recipes/576729-simple-version-control/)].
+- 2003
+  - [x] snip-c.zip
+    - [http://c.snippets.org/code/temp/snip-c.zip](https://web.archive.org/web/20050301124506/http://c.snippets.org/code/temp/snip-c.zip)
+      (modified: 2003-09-16 02:14:58 +0000, archived: 2005-03-01 to 2007-02-03)
+    - [archive.org Snippets.org-Snipc-08-17-2003](https://archive.org/download/Snippets.org-Snipc-08-17-2003/snip-c.zip)
+      (modified: 2021-08-25 23:33:21)
+- 1997-07-05 (9707) [^SNIPPETS.TXT]
+  - [x] snip9707.zip
+    - [http://www.brokersys.com/snippets/snip9707.zip](https://web.archive.org/web/20120130182709/http://www.brokersys.com/snippets/snip9707.zip)
+      (modified: 2011-10-19 14:44:35 +0000, archived: 2012-01-30 to 2012-02-07)
+    - [~~http://www.funet.fi/pub/msdos/Simtel/c/snip9707.zip~~](https://web.archive.org/web/20050323172504/http://www.funet.fi/pub/msdos/Simtel/c/)
+  - [ ] snpd9707.zip
+    - [~~http://www.funet.fi/pub/msdos/Simtel/c/snpd9707.zip~~](https://web.archive.org/web/20050323172504/http://www.funet.fi/pub/msdos/Simtel/c/)
+- 1996-11 (9611) [^WHATS.NEW]
+- 1995-10 (9510) [^SNIPPETS.RAT] [^strangecreations] [^doc.ic.ac.uk]
+  - [x] SNIP9510.ZIP
+    - [Sezamfile97_1.iso:MSDOS/C/SNIP9510.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP)
+      (modified: 1997-07-11 00:50:10, archived: 2017-06-13 18:07:59)
+    - [~~http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/snip9510.zip~~](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
+      (modified: 1995-11-02 18:36, size: 730k)
+- 1995-03 (9503) [^SNIPPETS.TXT] [^doc.ic.ac.uk]
+  - [ ] snpd9503.zip
+    - [~~http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/snpd9503.zip~~](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
+      (modified: 1995-11-02 18:36, size: 730k)
+- 1994-04 (9404) [^SNIPPETS.TXT]
+  - [x] SNIP9404.ZIP
+    - [Sezamfile97_1.iso:MSDOS/C/SNIP9404.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9404.ZIP)
+      (modified: 1997-07-11 00:50:14, archived: 2017-06-13 18:07:59)
+- 1993-04 (0493) [^SNIPPETS.TXT]
+  - [x] SNIP0493.ARJ
+    - [Sezamfile97_1.iso:MSDOS/C/SNIP0493.ARJ](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.ARJ)
+      (modified: 1997-06-15 05:41:44, archived: 2017-06-13 18:07:59)
+  - [x] SNIP0493.A01
+    - [Sezamfile97_1.iso:MSDOS/C/SNIP0493.A01](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01)
+      (modified: 1997-07-11 01:13:16, archived: 2017-06-13 18:07:59)
+- 1992-12 (1292) [^SNIPPETS.TXT]
 
-Mirrors:
+Releases have filenames of the pattern SNIPdddd.xxx and SNPDdddd.xxx, where dddd
+is the date and .xxx is .ZIP, .LZ, .TAZ, or .RAR [^SNIPPETS.TXT]. SNPD files
+were diffs generated with the [TLIB](https://www.burtonsys.com/) version control
+system [[Reference Manual](https://www.burtonsys.com/tlib_doc.pdf), [parsing](https://code.activestate.com/recipes/576729-simple-version-control/)].
+
+## Sources
+
+### Mirrors
+
 - http://snippets.org/
   - [http://snippets.org/](https://web.archive.org/web/19971221055229/http://snippets.org/)
     (1997–2011)
@@ -66,6 +98,8 @@ Mirrors:
   - -> [http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
     - snip9510.zip (not archived)
     - snpd9503.zip (not archived)
+- ftp://oak.oakland.edu/pub/msdos/c/
+  - snip9404.zip (not archived)
 - juge.com/file/c/ (not archived) [^SNIPPETS.TXT]
 - connectn.acs.niu.edu ~/C/ (not archived) [^SNIPPETS.TXT]
 - ftp://ftp.microdot.com.au/pub/snippets/ (not archived) [^SNIPPETS.TXT]
@@ -73,9 +107,10 @@ Mirrors:
   - pdncee/ (not archived) [^so]
   - pdn/pdncee/snip9707.zip (not archived) [^so]
 - [http://mirror.rmg.io/](https://web.archive.org/web/20111125145058/http://mirror.rmg.io:80/)
-  - snippets.org/ [^so]
+  - snippets.org/ (not archived) [^so]
 
-Shareware:
+### Shareware
+
 - [Sezamfile Summer 97 (1997)](https://archive.org/details/Sezamfile_97)
   - Sezamfile97_1.iso:MSDOS/C/
     - [SNIP0493.A01](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01)
@@ -94,13 +129,15 @@ Shareware:
     …
     ```
     Translated: collection of miscellaneous C function
-- [(Czech) PC World 2000-02 CD-ROM](https://archive.org/details/czpcw200002cd)
+- TODO: [(Czech) PC World 2000-02 CD-ROM](https://archive.org/details/czpcw200002cd)
   ```
   Snippets        Obsáhlá kolekce programových rutin v jazyce C/C++
   ```
   Translated: Comprehensive collection of program routines in C/C++
+- TODO: [GitHub](https://github.com/search?q=snip9707+OR+snip9611+OR+snip9510+OR+snip9503+OR+snip9404+OR+snip0493+OR+snip1292+OR+snpd9707+OR+snpd9611+OR+snpd9510+OR+snpd9503+OR+snpd9404+OR+snpd0493+OR+snpd1292&type=code)
 
-Archives:
+### Archives
+
 - [https://github.com/vonj/snippets](https://github.com/vonj/snippets) [^so]
 - [Snippets.org - SNIPPETS 08-17-2003](https://archive.org/details/Snippets.org-Snipc-08-17-2003)
 

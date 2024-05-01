@@ -13,7 +13,7 @@ get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC
 get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP SNIP9510.ZIP
 
 # TODO: Other versions
-get_cached http://web.archive.org/web/20070203023500/http://c.snippets.org/code/temp/snip-c.zip
+get_cached https://web.archive.org/web/20050301124506/http://c.snippets.org/code/temp/snip-c.zip
 cmp snip-c.zip "$(get_cached_path https://archive.org/download/Snippets.org-Snipc-08-17-2003/snip-c.zip)"
 
 # TODO: https://archive.org/details/czpcw200002cd
