@@ -1,8 +1,8 @@
 # The SNIPPETS collection
 
 [The SNIPPETS collection](https://web.archive.org/web/19971221055229/http://snippets.org/)
-was a collection of free C programs created by Bob Stout from 1992 to 1997.
-After his death in 2011, various people [discussed](https://stackoverflow.com/questions/8246557/where-did-the-c-and-c-snippets-library-go)
+was a collection of free C programs created by Bob Stout from the late 1980s to
+2007. After his death in 2011, various people [discussed](https://stackoverflow.com/questions/8246557/where-did-the-c-and-c-snippets-library-go)
 its archival.
 
 Known releases:
@@ -15,35 +15,43 @@ Known releases:
 - 1992-12 (1292) [^SNIPPETS.TXT]
 
 with filenames of the pattern SNIPdddd.xxx and SNPDdddd.xxx, where dddd is the
-date and .xxx is .ZIP, .LZ, .TAZ, or .RAR [^SNIPPETS.TXT].
+date and .xxx is .ZIP, .LZ, .TAZ, or .RAR [^SNIPPETS.TXT]. SNPD files were diffs
+generated with the [TLIB](https://www.burtonsys.com/) version control system
+[[Reference Manual](https://www.burtonsys.com/tlib_doc.pdf), [parsing](https://code.activestate.com/recipes/576729-simple-version-control/)].
 
 Mirrors:
-- [http://snippets.org/](https://web.archive.org/web/19971221055229/http://snippets.org/)
+- http://snippets.org/
+  - [http://snippets.org/](https://web.archive.org/web/19971221055229/http://snippets.org/)
+    (1997–2011)
+    - `*.C`
+    - `*.H`
+  - [http://c.snippets.org/](http://web.archive.org/web/20110113202354/http://c.snippets.org/)
+    (2003–2011)
+    - [code/temp/snip-c.zip](http://web.archive.org/web/20070203023500/http://c.snippets.org/code/temp/snip-c.zip)
+  - [http://snippets.snippets.org/](http://web.archive.org/web/20110123133907/http://snippets.snippets.org:80/index.php)
+    (2003–2011)
   - pub/snippets/ (not archived) [^SNIPPETS.TXT]
-  - `*.C` (archived)
-  - `*.H` (archived)
 - brokersys.com (Jon Guthrie is affiliated [^index])
   - [**http://www.brokersys.com/snippets/**](https://web.archive.org/web/19971012033727/http://www.brokersys.com/snippets/)
-    (archived) [^strangecreations]
+    [^strangecreations]
     - [**snip9707.zip**](https://web.archive.org/web/20120130182709/http://www.brokersys.com/snippets/snip9707.zip)
-      (archived)
     - snip9707.tar.gz (not archived)
     - snpd9707.zip (not archived)
     - snip9510.zip (not archived) [^strangecreations]
     - snip9510.taz (not archived) [^strangecreations]
-    - `*.C` (archived)
+    - `*.C`
       - [GREP.C](https://web.archive.org/web/19980424214002/http://www.brokersys.com/snippets/GREP.C)
-    - `*.H` (archived)
+    - `*.H`
   - ftp://ftp.brokersys.com/pub/snippets/ (not archived)
     - snip9707.zip (not archived) [^index] [^brokersys]
     - snip9707.tar.gz (not archived) [^index] [^brokersys]
     - snpd9707.zip (not archived) [^index] [^brokersys]
-- **http://www.strangecreations.com/strange/library/snippets/** (archived)
+- **http://www.strangecreations.com/strange/library/snippets/**
   - [snippets.htm](https://web.archive.org/web/19970216105045/http://www.strangecreations.com:80/strange/library/snippets/snippets.htm)
     [^SNIPPETS.TXT]
-  - `*.C` (archived)
+  - `*.C`
     - [GREP.C](https://web.archive.org/web/19970216134644/http://www.strangecreations.com:80/strange/library/snippets/GREP.C)
-  - `*.H` (archived)
+  - `*.H`
 - funet.fi/pub/msdos/Simtel/c/ [^SNIPPETS.TXT]
   - [http://www.funet.fi/pub/msdos/Simtel/c/](https://web.archive.org/web/20050323172504/http://www.funet.fi/pub/msdos/Simtel/c/)
     - snip9707.zip (not archived)
@@ -60,6 +68,14 @@ Mirrors:
 - juge.com/file/c/ (not archived) [^SNIPPETS.TXT]
 - connectn.acs.niu.edu ~/C/ (not archived) [^SNIPPETS.TXT]
 - ftp://ftp.microdot.com.au/pub/snippets/ (not archived) [^SNIPPETS.TXT]
+- http://www.filegate.net/
+  - pdncee/ (not archived) [^so]
+  - pdn/pdncee/snip9707.zip (not archived) [^so]
+- [http://mirror.rmg.io/](https://web.archive.org/web/20111125145058/http://mirror.rmg.io:80/)
+  - snippets.org/ [^so]
+
+Archives:
+- [https://github.com/vonj/snippets](https://github.com/vonj/snippets) [^so]
 
 [^index]: https://web.archive.org/web/19971221055229/http://snippets.org/
 [^SNIPPETS.TXT]: https://web.archive.org/web/19980418181553/http://snippets.org/SNIPPETS.TXT
@@ -68,3 +84,4 @@ Mirrors:
 [^brokersys]: https://web.archive.org/web/19971012033727/http://www.brokersys.com/snippets/
 [^strangecreations]: https://web.archive.org/web/19970216105045/http://www.strangecreations.com:80/strange/library/snippets/snippets.htm
 [^doc.ic.ac.uk]: https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/
+[^so]: https://stackoverflow.com/questions/8246557/where-did-the-c-and-c-snippets-library-go
