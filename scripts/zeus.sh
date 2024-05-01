@@ -24,18 +24,14 @@ set -eEuo pipefail
 # TODO: Boot up Windows 95 and run SETUP.EXE to see if it decompresses better
 # than I have managed.
 
-extract() {
-  TZ=UTC chronic 7z x "$@"
-}
-
 add_zip() {
   local path="$1"
   git rm -q --ignore-unmatch '*'
-  extract "$(get_cached_path "$path")"
+  7z x "$(get_cached_path "$path")"
 
   if [[ -f EXPAND.EXE ]]; then
     for f in *_; do
-      extract "$f"
+      7z x "$f"
       rm "$f"
     done
     # Fix 3-letter extensions that had the third letter overwritten with _ when
@@ -90,8 +86,8 @@ cd zeus
 # These ZIPs have bit-identical contents, but are not bit-identical themselves.
 # Verify that.
 mkdir ZE32V215 ZE32V215_alt
-extract -oZE32V215 "$(get_cached_path https://archive.org/download/ZE32V215_ZIP/ZE32V215.ZIP)"
-extract -oZE32V215_alt "$(get_cached_path https://archive.org/download/ZE32V215.ZIP/ZE32V215.ZIP)"
+7z x -oZE32V215 "$(get_cached_path https://archive.org/download/ZE32V215_ZIP/ZE32V215.ZIP)"
+7z x -oZE32V215_alt "$(get_cached_path https://archive.org/download/ZE32V215.ZIP/ZE32V215.ZIP)"
 diff ZE32V215 ZE32V215_alt
 rm -r ZE32V215 ZE32V215_alt
 
