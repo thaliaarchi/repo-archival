@@ -1,18 +1,19 @@
 # The SNIPPETS collection
 
 [The SNIPPETS collection](https://web.archive.org/web/19971221055229/http://snippets.org/)
-was a collection of free C programs created by Bob Stout from the late 1980s to
-2007. After his death in 2011, various people [discussed](https://stackoverflow.com/questions/8246557/where-did-the-c-and-c-snippets-library-go)
+was a collection of free C programs created by Bob Stout from the late 1980s
+to 2007. After his death in 2011, various people [discussed](https://stackoverflow.com/questions/8246557/where-did-the-c-and-c-snippets-library-go)
 its archival.
 
 Known releases:
-- 1997-07-05 (9707) [^SNIPPETS.TXT]
-- 1996-11 (9611) [^WHATS.NEW]
-- 1995-10 (9510) [^SNIPPETS.RAT] [^strangecreations] [^doc.ic.ac.uk]
-- 1995-03 (9503) [^SNIPPETS.TXT] [^doc.ic.ac.uk]
-- 1994-04 (9404) [^SNIPPETS.TXT]
-- 1993-04 (0493) [^SNIPPETS.TXT]
-- 1992-12 (1292) [^SNIPPETS.TXT]
+- Later
+- [x] 1997-07-05 (9707) [^SNIPPETS.TXT]
+- [ ] 1996-11 (9611) [^WHATS.NEW]
+- [x] 1995-10 (9510) [^SNIPPETS.RAT] [^strangecreations] [^doc.ic.ac.uk]
+- [ ] 1995-03 (9503) [^SNIPPETS.TXT] [^doc.ic.ac.uk]
+- [x] 1994-04 (9404) [^SNIPPETS.TXT]
+- [x] 1993-04 (0493) [^SNIPPETS.TXT]
+- [ ] 1992-12 (1292) [^SNIPPETS.TXT]
 
 with filenames of the pattern SNIPdddd.xxx and SNPDdddd.xxx, where dddd is the
 date and .xxx is .ZIP, .LZ, .TAZ, or .RAR [^SNIPPETS.TXT]. SNPD files were diffs
@@ -74,8 +75,34 @@ Mirrors:
 - [http://mirror.rmg.io/](https://web.archive.org/web/20111125145058/http://mirror.rmg.io:80/)
   - snippets.org/ [^so]
 
+Shareware:
+- [Sezamfile Summer 97 (1997)](https://archive.org/details/Sezamfile_97)
+  - Sezamfile97_1.iso:MSDOS/C/
+    - [SNIP0493.A01](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01)
+    - [SNIP0493.ARJ](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.ARJ)
+    - [SNIP9404.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9404.ZIP)
+    - [SNIP9510.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP)
+  - [ALLFILES.TXT](https://ia800602.us.archive.org/9/items/Sezamfile_97/ALLFILES.TXT)
+    ```
+    …
+    \MSDOS\C
+    …
+    C-snippets 04/93, zbirka raznih C funkcija (source)  #2 [snip0493.a01]
+    C-snippets 04/93, zbirka raznih C funkcija (source)  #1 [snip0493.arj]
+    C-snippets 04/94: zbirka raznih C funkcija (source) [snip9404.zip]
+    C-snippets 10/95: zbirka raznih C funkcija (source) [snip9510.zip]
+    …
+    ```
+    Translated: collection of miscellaneous C function
+- [(Czech) PC World 2000-02 CD-ROM](https://archive.org/details/czpcw200002cd)
+  ```
+  Snippets        Obsáhlá kolekce programových rutin v jazyce C/C++
+  ```
+  Translated: Comprehensive collection of program routines in C/C++
+
 Archives:
 - [https://github.com/vonj/snippets](https://github.com/vonj/snippets) [^so]
+- [Snippets.org - SNIPPETS 08-17-2003](https://archive.org/details/Snippets.org-Snipc-08-17-2003)
 
 [^index]: https://web.archive.org/web/19971221055229/http://snippets.org/
 [^SNIPPETS.TXT]: https://web.archive.org/web/19980418181553/http://snippets.org/SNIPPETS.TXT
