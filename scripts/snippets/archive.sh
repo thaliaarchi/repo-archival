@@ -22,14 +22,21 @@ strip_simtel() {
 mkdir snippets
 cd snippets
 
-# SNIP0493.ZIP (and SNIP0493.ARJ+SNIP0493.A01)
-get_cached http://cd.textfiles.com/simtel/simtel20/MSDOS/C/SNIP0493.ZIP
-mkdir SNIP0493_ZIP SNIP0493_ARJ
+# SNIP9_91.ZIP
+get_cached http://cd.textfiles.com/simtel0692/MSDOS/C/SNIP9_91.ZIP
+
+# SNIP0493.ZIP via Simtel and SNIP0493.ZIP via Coast to Coast Simtel
+# (and SNIP0493.ARJ+SNIP0493.A01)
+get_cached http://cd.textfiles.com/simtel20/MSDOS/C/SNIP0493.ZIP
+get_cached 'http://cd.textfiles.com/simtelctc/disk2/C/SNIP0493.ZIP;1' SNIP0493-ctc.ZIP
+mkdir SNIP0493_ZIP SNIP0493_ZIP-ctc SNIP0493_ARJ
 7z x -oSNIP0493_ZIP SNIP0493.ZIP
+7z x -oSNIP0493_ZIP-ctc SNIP0493-ctc.ZIP
 7z x -oSNIP0493_ARJ "$(get_cached_path https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.ARJ)"
 7z x -oSNIP0493_ARJ "$(get_cached_path https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01)"
+diff SNIP0493_ZIP SNIP0493_ZIP-ctc
 diff SNIP0493_ZIP SNIP0493_ARJ
-rm -r SNIP0493_ZIP SNIP0493_ARJ
+rm -r SNIP0493_ZIP SNIP0493_ZIP-ctc SNIP0493_ARJ
 
 # SNIP9404.ZIP
 get_cached http://cd.textfiles.com/simtel/simtel/DISK1/DISC2/C/SNIP9404.ZIP
@@ -39,10 +46,12 @@ cmp SNIP9404.ZIP "$(get_cached_path https://archive.org/download/Sezamfile_97/Se
 get_cached http://cd.textfiles.com/simtel/simtel/DISK1/DISC2/C/SNPD9404.ZIP
 
 # SNPD9503.ZIP
-get_cached http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNPD9503.ZIP
+get_cached http://cd.textfiles.com/simtel9703/disk2/DISC2/C/SNPD9503.ZIP
+cmp SNPD9503.ZIP "$(get_cached_path http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNPD9503.ZIP)"
 
 # SNIP9510.ZIP via Simtel and SNIP9510.ZIP via Sezamfile (and snip9510.lzh)
-get_cached http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNIP9510.ZIP SNIP9510-simtel.ZIP
+get_cached http://cd.textfiles.com/simtel9703/disk2/DISC2/C/SNIP9510.ZIP SNIP9510-simtel.ZIP
+cmp SNIP9510-simtel.ZIP "$(get_cached_path http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)"
 strip_simtel SNIP9510-simtel.ZIP
 get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP SNIP9510.ZIP
 mkdir SNIP9510_ZIP snip9510_lzh
@@ -51,17 +60,19 @@ mkdir SNIP9510_ZIP snip9510_lzh
 diff SNIP9510_ZIP snip9510_lzh
 rm -r SNIP9510_ZIP snip9510_lzh
 
-# snip9707.zip (and SNIP9707.zip/snip9707.zip via Simtel)
-get_cached https://web.archive.org/web/20120130182709/http://www.brokersys.com/snippets/snip9707.zip
+# SNIP9707.ZIP (and SNIP9707.zip/snip9707.zip via Simtel)
+get_cached https://web.archive.org/web/20120130182709/http://www.brokersys.com/snippets/snip9707.zip SNIP9707.zip
 get_cached http://cd.textfiles.com/simtel/stmsdos9709/disk2/DISC2/C/SNIP9707.ZIP SNIP9707-simtel.zip
+cmp SNIP9707-simtel.zip "$(get_cached_path http://cd.textfiles.com/simtel0101/simtel/c/snip9707.zip)"
 cmp SNIP9707-simtel.zip "$(get_cached_path http://cd.textfiles.com/simtel/simtel0101/simtel/c/snip9707.zip)"
 cmp SNIP9707-simtel.zip "$(get_cached_path https://web.archive.org/web/20071027175145/http://www.dcee.net/Files/Programm/C/snip9707.zip)"
 strip_simtel SNIP9707-simtel.zip
-cmp snip9707.zip SNIP9707-simtel.zip
+cmp SNIP9707.zip SNIP9707-simtel.zip
 rm SNIP9707-simtel.zip
 
 # SNPD9707.zip via Simtel
 get_cached http://cd.textfiles.com/simtel/stmsdos9709/disk2/DISC2/C/SNPD9707.ZIP
+cmp SNPD9707.ZIP "$(get_cached_path http://cd.textfiles.com/simtel0101/simtel/c/snpd9707.zip)"
 cmp SNPD9707.ZIP "$(get_cached_path http://cd.textfiles.com/simtel/simtel0101/simtel/c/snpd9707.zip)"
 strip_simtel SNPD9707.zip
 
