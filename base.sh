@@ -184,10 +184,17 @@ get_cached_path() {
   url="$(ia_raw_url "$url")"
   cached="$(cache_path "$url")"
   if [ ! -f "$cached" ]; then
-    if wget -q "$url" -O "$cached"; then :
+    local cmd=(wget -q "$url" -O "$cached")
+    if [[ $url = http://annex.retroarchive.org/* ]]; then
+      # Override user agent.
+      # They 301 redirect wget and curl to http://www.google.com/.
+      cmd=(wget --user-agent '' -q "$url" -O "$cached")
+    fi
+    if "${cmd[@]}"; then :
     else
       local status=$?
       rm "$cached"
+      echo "Failed to get $url" >&2
       return $status
     fi
   fi
@@ -199,12 +206,14 @@ get_cached() {
   local url_out="${url##*/}"
   local url_out="${url_out%%\?*}"
   local out="${2-"$url_out"}"
+  local cached_path
   if [[ -e "$out" ]]; then
     echo "$out already exists" >&2
     exit 1
   fi
   mkdir -p "$(dirname "$out")"
-  cp -p "$(get_cached_path "$url")" "$out"
+  cached_path="$(get_cached_path "$url")"
+  cp -p "$cached_path" "$out"
 }
 
 fix_perms() {
