@@ -29,6 +29,9 @@ its archival.
       (modified: 2001-01-25 05:06:44 +0000, archived: 2007-10-27, live)
     - [~~http://www.funet.fi/pub/msdos/Simtel/c/snip9707.zip~~](https://web.archive.org/web/20050323172504/http://www.funet.fi/pub/msdos/Simtel/c/)
   - [x] SNPD9707.ZIP, applies to SNIP9611.ZIP
+    - [Cream of The Crop 26 - 1997](http://annex.retroarchive.org/cdrom/cotc-26/PROGRAM/SNPD9707.ZIP)
+      (listed date: 1997-07-05)
+  - [x] SNPD9707.ZIP, applies to SNIP9611.ZIP (with Simtel watermark)
     - [Simtel MSDOS Archive 1997-09](http://cd.textfiles.com/simtel/stmsdos9709/disk1/00GLOBAL.TXT)
       [C/SNPD9707.ZIP](http://cd.textfiles.com/simtel/stmsdos9709/disk2/DISC2/C/SNPD9707.ZIP)
       (listed date: 1997-07-09)
@@ -41,19 +44,24 @@ its archival.
   - [ ] SNIP9611.ZIP (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
   - [ ] SNIP9611.LZH (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
 - 1995-10 (9510) [^SNIPPETS.RAT] [^strangecreations] [^doc.ic.ac.uk]
-  - [x] SNIP9510.ZIP
+  - [x] SNIP9510.ZIP (with Simtel watermark)
     - [Simtel MSDOS Archive 1997-03](http://cd.textfiles.com/simtel9703/disk1/00GLOBAL.TXT)
       [C/SNIP9510.ZIP](http://cd.textfiles.com/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)
       [[dupe](http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)]
       (listed date: 1996-07-02)
-    - Sezamfile97_1.iso [MSDOS/C/SNIP9510.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP)
-      (modified: 1997-07-11 00:50:10, archived: 2017-06-13 18:07:59)
     - [~~http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/snip9510.zip~~](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
       (modified: 1995-11-02 18:36, size: 730k)
+  - [x] SNIP9510.ZIP (with different ZIP packing)
+    - Sezamfile97_1.iso [MSDOS/C/SNIP9510.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP)
+      (modified: 1997-07-11 00:50:10, archived: 2017-06-13 18:07:59)
   - [x] SNIP9510.LZH
     - [http://www.dcee.net/Files/Programm/C/snip9510.lzh](https://web.archive.org/web/20071027093526/http://www.dcee.net/Files/Programm/C/snip9510.lzh)
       (modified: 2001-01-25 05:06:44 +0000, archived: 2007-10-27, live)
 - 1995-03 (9503) [^SNIPPETS.TXT] [^doc.ic.ac.uk]
+  - [x] SNIP9503.ZIP (with Cream of the Crop watermark)
+    - [Cream of the Crop 8 - 1995](http://annex.retroarchive.org/cdrom/cotc-8/C_LANG/SNIP9503.ZIP)
+      (listed date: 1995-03-17)
+      > C_echo Snippets Courtesy of Bob Stout.
   - [ ] SNIP9503.ZIP
     - [Simtel MSDOS Archive 1995-05](http://cd.textfiles.com/simtel0595/00GLOBAL.TXT)
       [~~C/SNIP9503.ZIP~~](http://cd.textfiles.com/simtel0595/DISC2/C/)
@@ -71,6 +79,11 @@ its archival.
       (listed date: 1995-03-14)
     - [~~http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/snpd9503.zip~~](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
       (modified: 1995-11-02 18:36, size: 730k)
+  - [x] SNPD9503.ZIP, applies to SNIP9404.ZIP (with Cream of the Crop watermark
+    and different ZIP packing)
+    - [Cream of the Crop 8 - 1995](http://annex.retroarchive.org/cdrom/cotc-8/PROGRAM/SNPD9503.ZIP)
+      (listed date: 1995-03-14)
+      > Pdncee Snippets Diff File to Create Snip9503 Archive.
 - 1994-04 (9404) [^SNIPPETS.TXT]
   - [x] SNIP9404.ZIP
     - [Simtel MSDOS Archive 1994-09](http://cd.textfiles.com/simtel/simtel/DISK1/00_INDEX.TXT)
@@ -78,17 +91,28 @@ its archival.
       (listed date: 1994-04-03)
     - Sezamfile97_1.iso [MSDOS/C/SNIP9404.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9404.ZIP)
       (modified: 1997-07-11 00:50:14, archived: 2017-06-13 18:07:59)
+  - [x] SNIP9404.ZIP (with Cream of the Crop watermark)
+    - [Cream of the Crop 4 - 1994](http://annex.retroarchive.org/cdrom/cotc-4/C_LANG/SNIP9404.ZIP)
+      (listed date: 1994-04-03)
+      > 4/94 C_echo Snippets Courtesy of Bob Stout.
   - [ ] SNIP9404.LZH (referenced by SNPD9404.ZIP:SNIPDIFF.TXT and SNPD9503.ZIP:SNIPDIFF.TXT)
   - [x] SNPD9404.ZIP, applies to snip0493.zip
     - [Simtel MSDOS Archive 1994-09](http://cd.textfiles.com/simtel/simtel/DISK1/00_INDEX.TXT)
       [C/SNPD9404.ZIP](http://cd.textfiles.com/simtel/simtel/DISK1/DISC2/C/SNPD9404.ZIP)
       (listed date: 1994-04-03)
 - 1993-04 (0493) [^SNIPPETS.TXT]
-  - [x] SNIP0493.ZIP
+  - [x] SNIP0493.ZIP (with Simtel watermark)
     - [Simtel MSDOS Archive 1993-10](http://cd.textfiles.com/simtel20/00_INDEX.TXT)
       [MSDOS/C/SNIP0493.ZIP](http://cd.textfiles.com/simtel20/MSDOS/C/SNIP0493.ZIP)
       [[dupe](http://cd.textfiles.com/simtel/simtel20/MSDOS/C/SNIP0493.ZIP)]
       (listed date: 1993-05-31)
+  - [x] SNIP0493.ZIP (with Cream of the Crop watermark)
+    - [Cream of the Crop 2 - 1993](http://annex.retroarchive.org/cdrom/cotc-ii/C_LANG/SNIP0493.ZIP)
+      (listed date: 1993-04-04)
+      > C_echo Snippets Courtesy of Bob Stout. a Must for Serious C Program
+      > Developers, This Contains Invaluable Tips, Hints, and Misc. C Functions to
+      > be Added to Your Bag of Tricks April, '93 Edition.
+  - [x] SNIP0493.ZIP (with watermark and different ZIP packing)
     - [Coast to Coast Simtel Simtel MSDOS Archive 1994-03](http://cd.textfiles.com/simtelctc/disk1/AAREADME.TXT;1)
       [C/SNIP0493.ZIP;1](http://cd.textfiles.com/simtelctc/disk2/C/SNIP0493.ZIP;1)
       (listed date: 1993-05-31)
@@ -103,9 +127,28 @@ its archival.
     - Simtel MSDOS Archive 1995-05 MSDOS/C/SNIP1292.ZIP
       - TODO: [SIMTEL_0593.ISO](https://archive.org/download/simtel-0593)
       - TODO: [Simtel-MSDOS-May1995-CD1.iso and Simtel-MSDOS-May1995-CD2.iso](https://archive.org/details/Simtel_MSDOS_1995-05)
-  - [ ] SNIP1292.ZIP
+  - [x] SNIP1292.ARJ (with Cream of the Crop watermark)
+    - [Cream of the Crop 1 - 1993](http://annex.retroarchive.org/cdrom/cotc-1/PROGRAM/SNIP1292.ARJ)
+      (listed date: 12/26/1992)
+      > 12/92 C_echo Snippets Courtesy Of Bob Stout
+  - [x] SNPD1292.ZIP
+    - [NightOwl 008 - 1993](http://annex.retroarchive.org/cdrom/nightowl-008/017A/SNPD1292.ZIP)
+      (listed date: 1992-12-26)
+- 1992-07 (0792)
+  - [x] SNIP0792.ZIP
+    - [NightOwl 008 - 1993](http://annex.retroarchive.org/cdrom/nightowl-008/017A/SNIP0792.ZIP)
+      (listed date: 1992-07-04)
+- 1992-04 (0492)
+  - [x] SNIP0492.ARJ (with Cream of the Crop watermark)
+    - [Cream of the Crop 1 - 1993](http://annex.retroarchive.org/cdrom/cotc-1/PROGRAM/SNIP0492.ARJ)
+      (listed date: 1992-04-13)
+      > Lots Of Public Domain C Functions
 - 1991-09 (9_91)
-  - [x] SNIP9_91.ZIP
+  - [x] SNIP9_91.ARJ (with Cream of the Crop watermark)
+    - [Cream of the Crop 1 - 1993](http://annex.retroarchive.org/cdrom/cotc-1/PROGRAM/SNIP9_91.ARJ)
+      (listed date: 1991-09-13)
+      > Collection Of C-snippets
+  - [x] SNIP9_91.ZIP (with The Tool Shop watermark)
     - [SIMTEL20 MSDOS Archive 1992-06](http://cd.textfiles.com/simtel0692/INDEX.TXT)
       [MSDOS/C/SNIP9_91.ZIP](http://cd.textfiles.com/simtel0692/MSDOS/C/SNIP9_91.ZIP)
       (listed date: 1991-12-12)
@@ -228,6 +271,13 @@ TODO:
   ```
   Translated: Comprehensive collection of program routines in C/C++
 - TODO: [GitHub](https://github.com/search?q=snip9707+OR+snip9611+OR+snip9510+OR+snip9503+OR+snip9404+OR+snip0493+OR+snip1292+OR+snpd9707+OR+snpd9611+OR+snpd9510+OR+snpd9503+OR+snpd9404+OR+snpd0493+OR+snpd1292&type=code)
+
+#### CDs without SNIPPETS
+
+- [Cream of the Crop 3 - 1994](http://annex.retroarchive.org/cdrom/cotc-3/index.html)
+- [Cream of the Crop 5 - 1994](http://annex.retroarchive.org/cdrom/cotc-5/index.html)
+  - http://annex.retroarchive.org/cdrom/cotc-5/C_LANG/UNZIP512.ZIP
+- [Cream of The Crop 6 - 1995](http://annex.retroarchive.org/cdrom/cotc-6/index.html)
 
 ### Archives
 
