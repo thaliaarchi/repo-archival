@@ -27,7 +27,6 @@ its archival.
       (listed date: 1997-07-09)
     - [http://www.dcee.net/Files/Programm/C/snip9707.zip](https://web.archive.org/web/20071027175145/http://www.dcee.net/Files/Programm/C/snip9707.zip)
       (modified: 2001-01-25 05:06:44 +0000, archived: 2007-10-27, live)
-    - [~~http://www.funet.fi/pub/msdos/Simtel/c/snip9707.zip~~](https://web.archive.org/web/20050323172504/http://www.funet.fi/pub/msdos/Simtel/c/)
   - [x] SNPD9707.ZIP, applies to SNIP9611.ZIP
     - [Cream of The Crop 26 - 1997](http://annex.retroarchive.org/cdrom/cotc-26/PROGRAM/SNPD9707.ZIP)
       (listed date: 1997-07-05)
@@ -39,7 +38,6 @@ its archival.
       [simtel/c/snip9503.zip](http://cd.textfiles.com/simtel0101/simtel/c/snip9707.zip)
       [[dupe](http://cd.textfiles.com/simtel/simtel0101/simtel/c/snpd9707.zip)]
       (listed date: 1997-07-09)
-    - [~~http://www.funet.fi/pub/msdos/Simtel/c/snpd9707.zip~~](https://web.archive.org/web/20050323172504/http://www.funet.fi/pub/msdos/Simtel/c/)
 - 1996-11 (9611) [^WHATS.NEW]
   - [ ] SNIP9611.ZIP (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
   - [ ] SNIP9611.LZH (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
@@ -49,8 +47,6 @@ its archival.
       [C/SNIP9510.ZIP](http://cd.textfiles.com/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)
       [[dupe](http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)]
       (listed date: 1996-07-02)
-    - [~~http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/snip9510.zip~~](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
-      (modified: 1995-11-02 18:36, size: 730k)
   - [x] SNIP9510.ZIP (with different ZIP packing)
     - Sezamfile97_1.iso [MSDOS/C/SNIP9510.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP)
       (modified: 1997-07-11 00:50:10, archived: 2017-06-13 18:07:59)
@@ -77,8 +73,6 @@ its archival.
       [~~C/SNPD9503.ZIP~~](http://cd.textfiles.com/simtel0595/DISC2/C/)
       [[dupe](http://cd.textfiles.com/simtel/simtel0595/DISC2/C/)]
       (listed date: 1995-03-14)
-    - [~~http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/snpd9503.zip~~](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
-      (modified: 1995-11-02 18:36, size: 730k)
   - [x] SNPD9503.ZIP, applies to SNIP9404.ZIP (with Cream of the Crop watermark
     and different ZIP packing)
     - [Cream of the Crop 8 - 1995](http://annex.retroarchive.org/cdrom/cotc-8/PROGRAM/SNPD9503.ZIP)
@@ -121,7 +115,6 @@ its archival.
       (modified: 1997-06-15 05:41:44, archived: 2017-06-13 18:07:59)
       and [MSDOS/C/SNIP0493.A01](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01)
       (modified: 1997-07-11 01:13:16, archived: 2017-06-13 18:07:59)
-  - [ ] SNIP0493.ZIP
 - 1992-12 (1292) [^SNIPPETS.TXT]
   - [ ] SNIP1292.ZIP
     - Simtel MSDOS Archive 1995-05 MSDOS/C/SNIP1292.ZIP
@@ -207,8 +200,8 @@ system [[Reference Manual](https://www.burtonsys.com/tlib_doc.pdf), [parsing](ht
   - ftp://ftp.simtel.net/pub/simtelnet/msdos/c/ (not archived)
 - http://src.doc.ic.ac.uk/packages/simtel-msdos/c/ [^SNIPPETS.TXT]
   - -> [http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/](https://web.archive.org/web/19981205062831/http://sunsite.doc.ic.ac.uk/packages/simtel-msdos/c/)
-    - snip9510.zip (not archived)
-    - snpd9503.zip (not archived)
+    - snip9510.zip (modified: 1995-11-02 18:36, size: 730k, not archived)
+    - snpd9503.zip (modified: 1995-11-02 18:36, size: 730k, not archived)
 - ftp://oak.oakland.edu/pub/msdos/c/
   - snip9404.zip (not archived)
 - juge.com/file/c/ (not archived) [^SNIPPETS.TXT]
@@ -241,10 +234,6 @@ TODO:
   - https://www.mmnt.net/db/0/10/ftp.bu.edu/pub/mirrors/simtelnet/msdos/c/
   - http://www.lanet.lv/simtel.net/msdos/c.html
 
-##### Should be live
-
-- [~~Simtel 1992-06~~](http://cd.textfiles.com/simtel/simtel0692)
-
 ### Shareware
 
 - [Sezamfile Summer 97 (1997)](https://archive.org/details/Sezamfile_97)
@@ -271,6 +260,10 @@ TODO:
   ```
   Translated: Comprehensive collection of program routines in C/C++
 - TODO: [GitHub](https://github.com/search?q=snip9707+OR+snip9611+OR+snip9510+OR+snip9503+OR+snip9404+OR+snip0493+OR+snip1292+OR+snpd9707+OR+snpd9611+OR+snpd9510+OR+snpd9503+OR+snpd9404+OR+snpd0493+OR+snpd1292&type=code)
+
+#### Should be live
+
+- [~~Simtel 1992-06~~](http://cd.textfiles.com/simtel/simtel0692)
 
 #### CDs without SNIPPETS
 
