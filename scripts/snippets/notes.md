@@ -239,7 +239,13 @@ system [[Reference Manual](https://www.burtonsys.com/tlib_doc.pdf), [parsing](ht
 
 - http://www.dcee.net/Files/Programm/C/
   - [snip9510.lzh](http://www.dcee.net/Files/Programm/C/snip9510.lzh)
+    (last modified: 2001-01-25 05:06:42 +0000,
+    [archived](https://web.archive.org/web/20071027093526/http://www.dcee.net/Files/Programm/C/snip9510.lzh)
+    last modified: 2001-01-25 05:06:44 +0000)
   - [snip9707.zip](http://www.dcee.net/Files/Programm/C/snip9707.zip)
+    (last modified: 2001-01-25 05:06:45 +0000,
+    [archived](https://web.archive.org/web/20071027175145/http://www.dcee.net/Files/Programm/C/snip9707.zip)
+    last modified: 2001-01-25 05:06:44 +0000)
 
 TODO:
 
@@ -299,6 +305,9 @@ TODO:
 - [Cream of the Crop 23 - 1997](http://annex.retroarchive.org/cdrom/cotc-23/index.html)
 - [Cream of the Crop 24 - 1997](http://annex.retroarchive.org/cdrom/cotc-24/index.html)
 - [Cream of the Crop 25 - 1997](http://annex.retroarchive.org/cdrom/cotc-25/index.html)
+- [NightOwl 001 - 1990](http://annex.retroarchive.org/cdrom/nightowl-001/index.html)
+- [NightOwl 004 - 1991](http://annex.retroarchive.org/cdrom/nightowl-004/index.html)
+- [NightOwl 005 - 1990/91](http://www.retroarchive.org/cdrom/nightowl-005/index.html)
 
 ### Archives
 
