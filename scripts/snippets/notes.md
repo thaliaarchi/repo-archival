@@ -30,6 +30,10 @@ its archival.
   - [x] SNPD9707.ZIP, applies to SNIP9611.ZIP
     - [Cream of The Crop 26 - 1997](http://annex.retroarchive.org/cdrom/cotc-26/PROGRAM/SNPD9707.ZIP)
       (listed date: 1997-07-05)
+      > Pdncee the Snippets Collection is an Archive of Over 700 Separate Files,
+      > Over 94,000 Lines of Mostly C/C++ Source Code - all Public Domain and
+      > Freeware - Which Contains the Best C/C++ Answers to "How Do I..?"
+      > Programmi
   - [x] SNPD9707.ZIP, applies to SNIP9611.ZIP (with Simtel watermark)
     - [Simtel MSDOS Archive 1997-09](http://cd.textfiles.com/simtel/stmsdos9709/disk1/00GLOBAL.TXT)
       [C/SNPD9707.ZIP](http://cd.textfiles.com/simtel/stmsdos9709/disk2/DISC2/C/SNPD9707.ZIP)
@@ -39,14 +43,31 @@ its archival.
       [[dupe](http://cd.textfiles.com/simtel/simtel0101/simtel/c/snpd9707.zip)]
       (listed date: 1997-07-09)
 - 1996-11 (9611) [^WHATS.NEW]
-  - [ ] SNIP9611.ZIP (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
-  - [ ] SNIP9611.LZH (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
+  - [x] SNIP9611.ZIP (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
+    - [Cream of the Crop 22 - 1996](http://annex.retroarchive.org/cdrom/cotc-22/PROGRAM/SNIP9611.ZIP)
+      (listed date: 1996-11-24)
+      > Pdncee the Snippets Collection is an Archive of Over 675 Separate Files,
+      > Over 90,000 Lines of Mostly C/C++ Source Code - all Public Domain and
+      > Freeware - Which Contains the Best C/C++ Answers to "How Do I..?"
+  - [x] SNIP9611.LZH (referenced by SNPD9707.ZIP:SNIPDIFF.TXT)
+    - [Cream of the Crop 22 - 1996](http://annex.retroarchive.org/cdrom/cotc-22/PROGRAM/SNPD9611.ZIP)
+      (listed date: 1996-11-24)
+      > Pdncee Snipgen Creates Snip9611.* From Snip9510.Lzh, ZIP or Arj Archives
+  - [x] SNIPVIEW.ZIP
+    - [Cream of the Crop 22 - 1996](http://annex.retroarchive.org/cdrom/cotc-22/PROGRAM/SNIPVIEW.ZIP)
+      (listed date: 1996-11-24)
+      > Pdncee Snipview Snippets.Ndx-compatible Browser by Tom Torfs. Public
+      > Domain
 - 1995-10 (9510) [^SNIPPETS.RAT] [^strangecreations] [^doc.ic.ac.uk]
   - [x] SNIP9510.ZIP (with Simtel watermark)
     - [Simtel MSDOS Archive 1997-03](http://cd.textfiles.com/simtel9703/disk1/00GLOBAL.TXT)
       [C/SNIP9510.ZIP](http://cd.textfiles.com/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)
       [[dupe](http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)]
       (listed date: 1996-07-02)
+  - [x] SNIP9510.ZIP (with Cream of the Crop watermark and different packing)
+    - [Cream of the Crop 10, Part I - 1995](http://annex.retroarchive.org/cdrom/cotc-10-1/PROGRAM/SNIP9510.ZIP)
+      (listed date: 1995-11-02)
+      > Pdncee 10/95 C Echo Snippets Courtesty of Bob Stout
   - [x] SNIP9510.ZIP (with different ZIP packing)
     - Sezamfile97_1.iso [MSDOS/C/SNIP9510.ZIP](https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP)
       (modified: 1997-07-11 00:50:10, archived: 2017-06-13 18:07:59)
@@ -104,8 +125,8 @@ its archival.
     - [Cream of the Crop 2 - 1993](http://annex.retroarchive.org/cdrom/cotc-ii/C_LANG/SNIP0493.ZIP)
       (listed date: 1993-04-04)
       > C_echo Snippets Courtesy of Bob Stout. a Must for Serious C Program
-      > Developers, This Contains Invaluable Tips, Hints, and Misc. C Functions to
-      > be Added to Your Bag of Tricks April, '93 Edition.
+      > Developers, This Contains Invaluable Tips, Hints, and Misc. C Functions
+      > to be Added to Your Bag of Tricks April, '93 Edition.
   - [x] SNIP0493.ZIP (with watermark and different ZIP packing)
     - [Coast to Coast Simtel Simtel MSDOS Archive 1994-03](http://cd.textfiles.com/simtelctc/disk1/AAREADME.TXT;1)
       [C/SNIP0493.ZIP;1](http://cd.textfiles.com/simtelctc/disk2/C/SNIP0493.ZIP;1)
@@ -223,7 +244,6 @@ system [[Reference Manual](https://www.burtonsys.com/tlib_doc.pdf), [parsing](ht
 TODO:
 
 - snip9707
-  - http://annex.retroarchive.org/cdrom/cotc-26/PROGRAM/index.html
   - https://github.com/harbour/the-oasis/blob/main/docs/snip9707.htm
   - https://github.com/harbour/the-oasis/blob/main/docs/snip9707.htm
   - https://harbour.github.io/the-oasis/docs/ftp_c.htm
@@ -271,6 +291,14 @@ TODO:
 - [Cream of the Crop 5 - 1994](http://annex.retroarchive.org/cdrom/cotc-5/index.html)
   - http://annex.retroarchive.org/cdrom/cotc-5/C_LANG/UNZIP512.ZIP
 - [Cream of The Crop 6 - 1995](http://annex.retroarchive.org/cdrom/cotc-6/index.html)
+- [Cream of the Crop 9 - 1995](http://annex.retroarchive.org/cdrom/cotc-9/index.html)
+- [Cream of the Crop 11, Part I - 1996](http://annex.retroarchive.org/cdrom/cotc-11-1/index.html)
+- [Cream of the Crop 11, Part II - 1996](http://annex.retroarchive.org/cdrom/cotc-11-2/index.html)
+- [Cream of the Crop 20 - 1996](http://annex.retroarchive.org/cdrom/cotc-20/index.html)
+- [Cream of the Crop 21 - 1996](http://annex.retroarchive.org/cdrom/cotc-21/index.html)
+- [Cream of the Crop 23 - 1997](http://annex.retroarchive.org/cdrom/cotc-23/index.html)
+- [Cream of the Crop 24 - 1997](http://annex.retroarchive.org/cdrom/cotc-24/index.html)
+- [Cream of the Crop 25 - 1997](http://annex.retroarchive.org/cdrom/cotc-25/index.html)
 
 ### Archives
 
