@@ -72,8 +72,10 @@ mkdir SNIP0493_ZIP SNIP0493_ZIP-ctc SNIP0493_ARJ
 7z x -oSNIP0493_ZIP SNIP0493.ZIP
 7z x -oSNIP0493_ZIP-ctc SNIP0493-ctc.ZIP
 # SNIP0493.ARJ and SNIP0493.A01
-7z x -oSNIP0493_ARJ "$(get_cached_path https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.ARJ)"
-7z x -oSNIP0493_ARJ "$(get_cached_path https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01)"
+get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.ARJ SNIP0493.ARJ
+get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP0493.A01 SNIP0493.A01
+7z x -oSNIP0493_ARJ SNIP0493.ARJ
+7z x -oSNIP0493_ARJ SNIP0493.A01
 diff SNIP0493_ZIP SNIP0493_ZIP-ctc
 diff SNIP0493_ZIP SNIP0493_ARJ
 rm -r SNIP0493_ZIP SNIP0493_ZIP-ctc SNIP0493_ARJ
@@ -103,16 +105,27 @@ strip_watermark SNPD9503-cotc.ZIP ' From  Cream of the Crop cdrom  334-824-2552 
 get_cached http://cd.textfiles.com/simtel9703/disk2/DISC2/C/SNIP9510.ZIP SNIP9510-simtel.ZIP
 cmp SNIP9510-simtel.ZIP "$(get_cached_path http://cd.textfiles.com/simtel/simtel9703/disk2/DISC2/C/SNIP9510.ZIP)"
 strip_simtel SNIP9510-simtel.ZIP
+# SNIP9510.ZIP (with Cream of the Crop watermark)
+get_cached http://annex.retroarchive.org/cdrom/cotc-10-1/PROGRAM/SNIP9510.ZIP SNIP9510-cotc.ZIP
+strip_watermark SNIP9510-cotc.ZIP ' From  Cream of the Crop cdrom  334-824-2552      Description: Pdncee 10/95 C Echo Snippets Courtesty of Bob Stout'
 # SNIP9510.ZIP via Sezamfile
-get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP SNIP9510.ZIP
+get_cached https://archive.org/download/Sezamfile_97/Sezamfile97_1.iso/MSDOS%2FC%2FSNIP9510.ZIP SNIP9510-sezamfile.ZIP
 # snip9510.lzh
-mkdir SNIP9510_ZIP snip9510_lzh
-7z x -oSNIP9510_ZIP SNIP9510.ZIP
+mkdir SNIP9510-simtel_ZIP snip9510_lzh
+7z x -oSNIP9510-simtel_ZIP SNIP9510-simtel.ZIP
 7z x -osnip9510_lzh "$(get_cached_path https://web.archive.org/web/20071027093526/http://www.dcee.net/Files/Programm/C/snip9510.lzh)"
-diff SNIP9510_ZIP snip9510_lzh
-rm -r SNIP9510_ZIP snip9510_lzh
+diff SNIP9510-simtel_ZIP snip9510_lzh
+rm -r SNIP9510-simtel_ZIP snip9510_lzh
 
-# SNIP9611
+# SNIP9611.ZIP (with Cream of the Crop watermark)
+get_cached http://annex.retroarchive.org/cdrom/cotc-22/PROGRAM/SNIP9611.ZIP
+strip_watermark SNIP9611.ZIP ' From  Cream of the Crop cdrom  334-824-2552      Description: Pdncee the Snippets Collection is an Archive of Over 675 Separate Files, Over 90,000 Lines of Mostly C/C++ Source Code - all Public Domain and Freeware - Which Contains the Best C/C++ Answers '
+# SNPD9611.ZIP (with Cream of the Crop watermark)
+get_cached http://annex.retroarchive.org/cdrom/cotc-22/PROGRAM/SNPD9611.ZIP
+strip_watermark SNPD9611.ZIP ' From  Cream of the Crop cdrom  334-824-2552      Description: Pdncee Snipgen Creates Snip9611.* From Snip9510.Lzh, ZIP or Arj Archives'
+# SNIPVIEW.ZIP (with Cream of the Crop watermark)
+get_cached http://annex.retroarchive.org/cdrom/cotc-22/PROGRAM/SNIPVIEW.ZIP
+strip_watermark SNIPVIEW.ZIP ' From  Cream of the Crop cdrom  334-824-2552      Description: Pdncee Snipview Snippets.Ndx-compatible Browser by Tom Torfs. Public Domain'
 
 # SNIP9707.ZIP
 get_cached https://web.archive.org/web/20120130182709/http://www.brokersys.com/snippets/snip9707.zip SNIP9707.ZIP
