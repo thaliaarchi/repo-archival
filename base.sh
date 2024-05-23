@@ -23,7 +23,9 @@ submodule_path() {
 clone_submodule() {
   local url="${1#https://}"
   url="${url#http://}"
-  local dest="${2-"${url##*/}"}"
+  local dest="${url##*/}"
+  dest="${dest%.git}"
+  dest="${2-"$dest"}"
   git clone -q "$TOPLEVEL/git/$url/.git" "$dest" "${@:3}"
 }
 

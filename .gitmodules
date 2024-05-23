@@ -189,3 +189,9 @@
 [submodule "git/gitlab.com/zrneely/whitespace.git"]
 	path = git/gitlab.com/zrneely/whitespace.git
 	url = https://gitlab.com/zrneely/whitespace.git
+[submodule "git/gitlab.com/zsaleeba/picoc.git"]
+	path = git/gitlab.com/zsaleeba/picoc.git
+	url = https://gitlab.com/zsaleeba/picoc.git
+[submodule "git/repo.or.cz/tinycc.git"]
+	path = git/repo.or.cz/tinycc.git
+	url = https://repo.or.cz/tinycc.git
