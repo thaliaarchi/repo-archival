@@ -8,16 +8,7 @@ cd regexp/decus-grep
 
 git init -q
 
-get_cached https://web.archive.org/web/19980418215251/http://snippets.org/GREP.C
-git add GREP.C
-# The date is when it was last modified, as written in the file. It has no HTTP
-# Last-Modified header. The SNIPPETS collection was first released in 1992 or
-# earlier (see https://web.archive.org/web/19980418181553/http://snippets.org/SNIPPETS.TXT).
-GIT_AUTHOR_EMAIL='Bob Stout' GIT_AUTHOR_EMAIL='rbs@snippets.org' GIT_AUTHOR_DATE='1997-07-05 00:00:00 +0000' \
-GIT_COMMITTER_EMAIL='Bob Stout' GIT_COMMITTER_EMAIL='rbs@snippets.org' GIT_COMMITTER_DATE='1997-07-05 00:00:00 +0000' \
-git commit -q -m '"Real" grep - free with some strings
-
-Source: https://web.archive.org/web/19980418215251/http://snippets.org/GREP.C'
+# TODO: SNIPPETS
 
 # Extract fish/grep/grep.c. Rewrite git-svn trailers for the decommissioned SVN
 # to be to the current GitHub repo.
@@ -52,3 +43,37 @@ git -C zeus filter-repo --quiet \
       commit.author_date = commit.committer_date = b"829131866 +0000" # 1996-04-10 10:24:26
     commit.message += b"\nSource: https://github.com/thaliaarchi/zeus-editor-archive/commit/" + commit.original_id + b"\n"
   '
+
+clone_submodule https://gitlab.com/zsaleeba/picoc.git
+git -C picoc filter-repo --quiet \
+  --path tests/46_grep.c --path-rename tests/: \
+  --prune-empty always \
+  --commit-callback '
+    commit.message = re.sub(
+      br"\n+git-svn-id: http://picoc.googlecode.com/svn/trunk@\d+ 21eae674-98b7-11dd-bd71-f92a316d2d60\n$|\n*$", b"", commit.message)
+    commit.message += b"\n\nSource: https://gitlab.com/zsaleeba/picoc/-/commit/" + commit.original_id + b"\n"
+    commit.author_email = commit.author_email.removesuffix(b"@21eae674-98b7-11dd-bd71-f92a316d2d60")
+    commit.committer_email = commit.committer_email.removesuffix(b"@21eae674-98b7-11dd-bd71-f92a316d2d60")
+  '
+
+clone_submodule https://repo.or.cz/tinycc.git
+cd tinycc
+git filter-repo --quiet \
+  --path tests2/46_grep.c --path-rename tests2/: \
+  --path tests/tests2/46_grep.c --path-rename tests/tests2/: \
+  --preserve-commit-encoding \
+  --commit-callback '
+    commit.message = re.sub(br"\n+$", b"", commit.message)
+    commit.message += b"\n\nSource: https://repo.or.cz/tinycc.git/commit/" + commit.original_id + b"\n"
+  '
+git tag | chronic xargs git tag -d
+git branch -m tinycc
+
+git remote add picoc ../picoc
+git fetch -q picoc
+git branch -q picoc picoc/master
+git remote remove picoc
+git replace --graft "$(git rev-list --max-parents=0 HEAD)" picoc
+git filter-repo --force --quiet
+cd ..
+rm -rf picoc

@@ -113,7 +113,7 @@ EOF
 
 # Delete all tags, since denoting dated releases is less useful in a subset
 # history.
-git tag | xargs git tag -d > /dev/null
+git tag | chronic xargs git tag -d
 
 patch -s -p1 < "$(get_cached_path http://9legacy.org/9legacy/patch/libregexp-fixes.diff)"
 git add -A
