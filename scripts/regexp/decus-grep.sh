@@ -17,6 +17,7 @@ clone_submodule https://github.com/aros-development-team/contrib aros-contrib
 cd aros-contrib
 git filter-repo --force --quiet \
   --path fish/grep/grep.c --path-rename fish/grep/: \
+  --path README --path README.md \
   --commit-callback '
     commit.message = re.sub(
       br"\n+git-svn-id: https://svn\.aros\.org/svn/aros/trunk@\d+ fb15a70f-31f2-0310-bbcc-cdcc74a49acc\n$|\n*$", b"", commit.message)
@@ -47,6 +48,7 @@ git -C zeus filter-repo --quiet \
 clone_submodule https://gitlab.com/zsaleeba/picoc.git
 git -C picoc filter-repo --quiet \
   --path tests/46_grep.c --path-rename tests/: \
+  --path README \
   --prune-empty always \
   --commit-callback '
     commit.message = re.sub(
@@ -59,21 +61,33 @@ git -C picoc filter-repo --quiet \
 clone_submodule https://repo.or.cz/tinycc.git
 cd tinycc
 git filter-repo --quiet \
-  --path tests2/46_grep.c --path-rename tests2/: \
-  --path tests/tests2/46_grep.c --path-rename tests/tests2/: \
+  --path tests2/46_grep.c --path tests2/LICENSE \
+  --path tests/tests2/46_grep.c --path tests/tests2/LICENSE \
+  --path COPYING --path RELICENSING \
+  --path-rename tests2/: --path-rename tests/tests2/: \
   --preserve-commit-encoding \
   --commit-callback '
     commit.message = re.sub(br"\n+$", b"", commit.message)
     commit.message += b"\n\nSource: https://repo.or.cz/tinycc.git/commit/" + commit.original_id + b"\n"
   '
-git tag | chronic xargs git tag -d
-git branch -m tinycc
+# git tag | chronic xargs git tag -d
+# git branch -m tinycc
 
-git remote add picoc ../picoc
-git fetch -q picoc
-git branch -q picoc picoc/master
-git remote remove picoc
-git replace --graft "$(git rev-list --max-parents=0 HEAD)" picoc
-git filter-repo --force --quiet
+# git remote add picoc ../picoc
+# git fetch -q picoc
+# git branch -q picoc picoc/master
+# git remote remove picoc
+# git replace --graft "$(git rev-list --max-parents=0 HEAD)" picoc
+# git filter-repo --force --quiet
 cd ..
-rm -rf picoc
+
+clone_submodule https://github.com/alexfru/SmallerC
+git -C SmallerC filter-repo \
+  --path v0100/tests/picoc/46_grep.c --path v0100/tests/picoc/46.c \
+  --path v0100/tests/picoc/COPYING --path v0100/tests/picoc/LICENSE \
+  --path v0100/tests/picoc/readme.txt \
+  --path-rename v0100/tests/picoc/: \
+  --commit-callback '
+    commit.message = re.sub(br"\n+$", b"", commit.message)
+    commit.message += b"\n\nSource: https://github.com/alexfru/SmallerC/commit/" + commit.original_id + b"\n"
+  '
