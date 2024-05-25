@@ -82,9 +82,15 @@
 [submodule "git/github.com/MarkTraceur/redlandside"]
 	path = git/github.com/MarkTraceur/redlandside
 	url = https://github.com/MarkTraceur/redlandside
+[submodule "git/github.com/PCRE2Project/pcre2"]
+	path = git/github.com/PCRE2Project/pcre2
+	url = https://github.com/PCRE2Project/pcre2
 [submodule "git/github.com/Smithers888/BlueSpace"]
 	path = git/github.com/Smithers888/BlueSpace
 	url = https://github.com/Smithers888/BlueSpace
+[submodule "git/github.com/adobe/avmplus"]
+	path = git/github.com/adobe/avmplus
+	url = https://github.com/adobe/avmplus
 [submodule "git/github.com/alexfru/SmallerC"]
 	path = git/github.com/alexfru/SmallerC
 	url = https://github.com/alexfru/SmallerC
