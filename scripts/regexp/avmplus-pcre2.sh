@@ -10,7 +10,7 @@ clone_submodule https://github.com/PCRE2Project/pcre2 avmplus-pcre2
 cd avmplus-pcre2
 git remote remove origin
 git reset -q --hard pcre2-10.20~
-git rm -q '*'
+git rm -qrf .
 
 # Last-Modified              URL
 # 2015-07-02 12:17:00 +0000  https://web.archive.org/web/20170826025657/https://ftp.pcre.org/pub/pcre/pcre2-10.20.tar.bz2

@@ -70,6 +70,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## Merged git histories
 
 - [Andreal2000/WhitespaceEvaluator](https://github.com/Andreal2000/WhitespaceEvaluator) [[sh](scripts/wspace/andreal2000-scala.sh)]
+- avmplus-pcre [[sh](scripts/regexp/avmplus-pcre.sh)]
 - avmplus-pcre2 [[sh](scripts/regexp/avmplus-pcre2.sh)]
 - [hostilefork/rebol-whitespacers](https://github.com/hostilefork/rebol-whitespacers) [[post](scripts/wspace/rebol-whitespacers/post.md)] - with manual rebasing
 - inferno [[sh](scripts/inferno/archive.sh)]
