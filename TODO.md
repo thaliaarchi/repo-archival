@@ -30,6 +30,12 @@
     Commits authored by linus1 \<torvalds@linuxfoundation.org> from 1991-09-17 to 2000-12-31
     and committed by Linus Torvalds \<torvalds@linuxfoundation.org> on 2007-11-23,
     with a strange commit by pad \<yoann.padioleau@facebook.com> in 2010.
+- Free software archives
+  - DECUS Software Library
+  - Fred Fish's Amiga Software Library
+  - [Simtel](https://en.wikipedia.org/wiki/Simtel)
+  - [Aminet](https://en.wikipedia.org/wiki/Aminet)
+  - [CBT TAPE](https://www.cbttape.org/)
 - JavaScript 1.0
   - [doodlewind/mocha1995](https://github.com/doodlewind/mocha1995) extracts
     Mocha from the same archive as I am doing. It is done by the Chinese
