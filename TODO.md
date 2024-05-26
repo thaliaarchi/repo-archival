@@ -48,4 +48,6 @@
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
 - PCRE release archives
+- [The Esoteric File Archive](https://esolangs.org/wiki/The_Esoteric_File_Archive):
+  Construct revision history for each implementation from archives
 - Apache HTTP Server: incorporate archive releases and graft onto NCSA HTTPd
