@@ -113,10 +113,10 @@ set_idents() {
   local committer_ident="${BASH_REMATCH[4]:-$author_ident}"
   # Prepend $AUTHOR or $COMMITTER when the author/email is not present
   if [[ -z ${BASH_REMATCH[2]} ]]; then
-    author_ident="$AUTHOR $author_ident"
+    author_ident="${AUTHOR:-} $author_ident"
   fi
   if [[ -z ${BASH_REMATCH[5]} ]]; then
-    committer_ident="${COMMITTER:-$AUTHOR} $committer_ident"
+    committer_ident="${COMMITTER:-${AUTHOR:-}} $committer_ident"
   fi
 
   # Split the author fields
