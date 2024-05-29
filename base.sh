@@ -180,6 +180,13 @@ tag() {
   unset GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
 }
 
+amend_no_edit() {
+  GIT_COMMITTER_NAME="$(git show -s --format=%cn)" \
+  GIT_COMMITTER_EMAIL="$(git show -s --format=%ce)" \
+  GIT_COMMITTER_DATE="$(git show -s --format=%ci)" \
+  git commit -q --amend --no-edit
+}
+
 merge_repo() {
   local repo="$1"
   git remote add "$repo" "../$repo"
