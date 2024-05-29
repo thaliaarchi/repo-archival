@@ -34,9 +34,7 @@ commit_archive() {
   git add -Af
   # The name of the team and its email evolve throughout the versions. I use the
   # most consistent attribution.
-  GIT_AUTHOR_NAME='The NCSA HTTPd Development Team' GIT_AUTHOR_EMAIL='httpd@ncsa.uiuc.edu' \
-  GIT_COMMITTER_NAME='The NCSA HTTPd Development Team' GIT_COMMITTER_EMAIL='httpd@ncsa.uiuc.edu' \
-  TZ=UTC tcommit -q -m "$message
+  commit 'The NCSA HTTPd Development Team <httpd@ncsa.uiuc.edu> latest' "$message
 
 Source: $url"
 }

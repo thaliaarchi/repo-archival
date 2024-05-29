@@ -23,18 +23,7 @@ set -eEuo pipefail
 # https://news.ycombinator.com/item?id=40163405
 # https://www.os2museum.com/wp/how-not-to-release-historic-source-code/
 
-export GIT_AUTHOR_NAME='Microsoft Open Source'
-export GIT_AUTHOR_EMAIL='microsoftopensource@users.noreply.github.com'
-export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-
-commit() {
-  local date="$1"
-  local message="$2"
-  GIT_AUTHOR_DATE="${GIT_AUTHOR_DATE-"$date"}" \
-  GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$date"}" \
-  git commit -q -m "$message"
-}
+export AUTHOR='Microsoft Open Source <microsoftopensource@users.noreply.github.com>'
 
 reset_repo() {
   git rm -rq '*'
@@ -134,8 +123,7 @@ commit '1983-05-18 01:20:16 +0000' '1983-05-18: MS-DOS 1.25'
 # Date:     2013-12-16 10:34:17 -0800
 # Modified: 2013-12-19 23:15:52 +0000
 git add Tim_Paterson_16Dec2013_email.txt
-GIT_COMMITTER_DATE='2013-12-19 23:15:52 +0000' \
-commit '2013-12-16 10:34:17 -0800' '2013-12-16: MS-DOS 1.25'
+commit '2013-12-16 10:34:17 -0800, 2013-12-19 23:15:52 +0000' '2013-12-16: MS-DOS 1.25'
 
 # The microsoft/MS-DOS commits 1.25 in fce0f75 (MS-DOS v1.25 Release)
 # Author:    1982-03-03 16:51:26 -0800  Rich Turner <richturn@microsoft.com>

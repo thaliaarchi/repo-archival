@@ -2,8 +2,11 @@
 
 . base.sh
 
-NAME='Cybis'
-EMAIL='cybis-fdp@hotmail.com'
+CYBIS_NAME='Cybis'
+CYBIS_EMAIL='cybis-fdp@hotmail.com'
+CYBIS="$CYBIS_NAME <$CYBIS_EMAIL>"
+MARINUS='Marinus Oosters <marinuso@gmail.com>'
+export AUTHOR="$CYBIS"
 
 mkdir -p cybis
 cd cybis
@@ -22,7 +25,7 @@ svn relocate "file://$(pwd)/hapyli-svn/Trunk" hapyli-svn-checkout
 # git conversion
 git svn clone "file://$(pwd)/hapyli-svn" hapyli \
   --trunk=Trunk --branches=Branches \
-  --authors-file=<(echo "Kevin1 = $NAME <$EMAIL>")
+  --authors-file=<(echo "Kevin1 = $CYBIS")
 cd hapyli
 
 # Convert svn:ignore to .gitignore
@@ -33,7 +36,7 @@ git add '*.gitignore'
 GIT_COMMITTER_NAME="$(git show -s --format=%an)" \
 GIT_COMMITTER_EMAIL="$(git show -s --format=%ae)" \
 GIT_COMMITTER_DATE="$(git show -s --format=%ai)" \
-git commit --amend --no-edit
+git commit -q --amend --no-edit
 
 # Reformat git-svn metadata
 git filter-repo -f --quiet \
@@ -48,8 +51,9 @@ git filter-repo -f --quiet \
 # v1.0 subsumes and changes nothing from v1.0@27
 git branch -q -D trunk V2 v1.0@27
 
-git config user.name "$NAME"
-git config user.email "$EMAIL"
+# For rebase
+git config user.name "$CYBIS_NAME"
+git config user.email "$CYBIS_EMAIL"
 
 # sudoku.ws
 # 2009-05-19 23:53:16.030 +0000 Huf_Lungdung                                      https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace
@@ -58,8 +62,7 @@ git config user.email "$EMAIL"
 rebase_break_before_date '2009-05-19 23:53:16 +0000'
 get_cached https://pastebin.com/raw/f761fc4b5 sudoku.ws
 git add sudoku.ws
-GIT_AUTHOR_DATE='2009-05-19 23:53:16 +0000' GIT_COMMITTER_DATE='2009-05-19 23:53:16 +0000' \
-git -c user.name="$NAME" -c user.email="$EMAIL" commit -q -m 'Compile sudoku solver
+commit '2009-05-19 23:53:16 +0000' 'Compile sudoku solver
 
 https://what.thedailywtf.com/topic/5980/stupid-coding-tricks-sudoku-solver-in-whitespace'
 git rebase --continue
@@ -94,8 +97,7 @@ git config --unset user.email
 # 2012-07-12 02:48:54 +0000  https://web.archive.org/web/20120712024855/http://hapyli.webs.com:80/apps/forums/
 cp -Rp ../../../files/cybis/hapyli/2010-05-23/ .
 git add -A
-GIT_AUTHOR_DATE='2010-05-23 02:20:21 +0000' GIT_COMMITTER_DATE='2010-05-23 02:20:21 +0000' \
-git -c user.name="$NAME" -c user.email="$EMAIL" commit -q -m 'Publish tutorial
+commit '2010-05-23 02:20:21 +0000' 'Publish tutorial
 
 https://web.archive.org/web/20110212015726/http://hapyli.webs.com:80/
 https://web.archive.org/web/20130926170259/http://compsoc.dur.ac.uk:80/archives/whitespace/2010-May/000075.html'
@@ -105,8 +107,7 @@ https://web.archive.org/web/20130926170259/http://compsoc.dur.ac.uk:80/archives/
 cp -p ../hapyli-svn-checkout/99bottles.hpl .
 diff 99bottles.hpl "$(get_cached_path https://www.99-bottles-of-beer.net/download/2556)"
 git add 99bottles.hpl
-GIT_AUTHOR_DATE='2010-11-27 00:00:00 +0000' GIT_COMMITTER_DATE='2010-11-27 00:00:00 +0000' \
-git -c user.name='Marinus Oosters' -c user.email='marinuso@gmail.com' commit -q -m 'Create 99 bottles of beer in HaPyLi
+commit "$MARINUS 2010-11-27 00:00:00 +0000" 'Create 99 bottles of beer in HaPyLi
 
 https://www.99-bottles-of-beer.net/language-hapyli-2556.html'
 
@@ -114,8 +115,7 @@ https://www.99-bottles-of-beer.net/language-hapyli-2556.html'
 # 2010-12-01 07:54  Marinus  https://esolangs.org/w/index.php?title=User:Marinus/Brainfuck_interpreters&diff=20310&oldid=18866
 cp -Rp ../../../files/cybis/hapyli/2010-12-01/ .
 git add -A
-GIT_AUTHOR_DATE='2010-12-01 08:54:00 +0100' GIT_COMMITTER_DATE='2010-12-01 08:54:00 +0100' \
-git -c user.name='Marinus Oosters' -c user.email='marinuso@gmail.com' commit -q -m 'Create Brainfuck interpreter in HaPyLi
+commit "$MARINUS 2010-12-01 08:54:00 +0100" 'Create Brainfuck interpreter in HaPyLi
 
 https://esolangs.org/wiki/User:Marinus/Brainfuck_interpreters#HaPyLi'
 
@@ -124,8 +124,7 @@ cp -p ../hapyli-svn-checkout/99bottles.ws .
 # 99bottles.ws was generated as LF, but would have been committed as CRLF.
 unix2dos -q 99bottles.ws
 git add -A
-GIT_AUTHOR_DATE='2010-12-18 22:27:46 +0000' GIT_COMMITTER_DATE='2010-12-18 22:27:46 +0000' \
-git -c user.name="$NAME" -c user.email="$EMAIL" commit -q -m 'List 99 bottles in contributions
+commit '2010-12-18 22:27:46 +0000' 'List 99 bottles in contributions
 
 https://web.archive.org/web/20110217145734/http://hapyli.webs.com:80/examples.htm'
 

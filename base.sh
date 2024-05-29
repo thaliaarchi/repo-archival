@@ -146,17 +146,6 @@ set_idents() {
   export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
 }
 
-# `git commit`, using the latest file modification time as the commit and author
-# dates, when GIT_AUTHOR_DATE or GIT_COMMITTER_DATE, respectively, is not set.
-# TODO: remove
-tcommit() {
-  local latest_modified
-  latest_modified="$(git_latest_modified)"
-  GIT_AUTHOR_DATE="${GIT_AUTHOR_DATE-"$latest_modified"}" \
-  GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$latest_modified"}" \
-  git commit "$@"
-}
-
 commit() {
   local idents="$1"
   local message="$2"

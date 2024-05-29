@@ -31,16 +31,12 @@
 # X-Archive-Orig-Last-Modified 2008-10-29 07:56:50 +0000
 # “All programs are released under the GPL” https://web.archive.org/web/20090123074209/http://burghard.info:80/Code/index.html
 
-commit() {
-  GIT_AUTHOR_NAME='Oliver Burghard' GIT_AUTHOR_EMAIL='oliver@burghard.info' GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_NAME='Oliver Burghard' GIT_COMMITTER_EMAIL='oliver@burghard.info' GIT_COMMITTER_DATE="$1" \
-  git commit -q -m "$2"
-}
+export AUTHOR='Oliver Burghard <oliver@burghard.info>'
 
 commit_license() {
   cp ../../../files/wspace/burghard/LICENSE .
   git add LICENSE
-  commit "2008-10-29 07:56:50 +0000" "Release under the GPL
+  commit '2008-10-29 07:56:50 +0000' "Release under the GPL
 
 https://web.archive.org/web/20090123074209/http://burghard.info:80/Code/index.html"
 }
