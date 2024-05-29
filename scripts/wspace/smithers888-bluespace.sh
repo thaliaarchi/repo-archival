@@ -29,8 +29,7 @@ cd ..
 
 git add programs
 
-GIT_AUTHOR_NAME='Chris Smith' GIT_AUTHOR_EMAIL='chrissmithers888@gmail.com' GIT_AUTHOR_DATE='2015-06-28 13:35:26 +0100' \
-git commit -q -m 'Add programs from website'
+commit 'Chris Smith <chrissmithers888@gmail.com> 2015-06-28 13:35:26 +0100' 'Add programs from website'
 
 git branch -m master main
 git remote set-url origin https://github.com/wspace/smithers888-bluespace

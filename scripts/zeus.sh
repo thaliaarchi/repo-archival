@@ -3,6 +3,9 @@ set -eEuo pipefail
 
 . base.sh
 
+JUSSI='Jussi Jumppanen <jussi@sydney.dialix.oz.au>'
+ZEUS='Jussi Jumppanen <info@zeusedit.com>'
+
 # Zeus Programmers Editor, now Zeus IDE
 
 # Versions 1.05 and 2.15 have source code, but are compressed with DOS tools. I
@@ -58,27 +61,12 @@ add_zip() {
   git add -f ./*
 }
 
-commit_as() {
-  local name="$1"
-  local email="$2"
-  local date="$3"
-  local message="$4"
-  local item="$5"
-  local zip="$6"
+commit_zip() {
+  local ident="$1" message="$2" item="$3" zip="$4"
   add_zip "https://archive.org/download/$item/$zip"
-  GIT_AUTHOR_NAME="$name" GIT_AUTHOR_EMAIL="$email" GIT_AUTHOR_DATE="$date" \
-  GIT_COMMITTER_NAME="$name" GIT_COMMITTER_EMAIL="$email" GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$date"}" \
-  TZ=UTC git commit -q -m "$message
-
-Source: https://archive.org/details/$item"
+  commit "$ident" "$message" --trailer=Source:"https://archive.org/details/$item"
 }
 
-commit_as_jussi() {
-  commit_as 'Jussi Jumppanen' 'jussi@sydney.dialix.oz.au' "$@"
-}
-commit_as_zeus() {
-  commit_as 'Jussi Jumppanen' 'info@zeusedit.com' "$@"
-}
 
 mkdir zeus
 cd zeus
@@ -96,17 +84,16 @@ git config core.autocrlf false
 git checkout -qb zeus-2
 
 # These versions have some source code.
-commit_as_jussi '1995-07-30 22:08:10' 'Zeus for Windows Programmers Editor V1.05' ZEUSV105_ZIP ZEUSV105.ZIP
-commit_as_jussi '1996-05-07 10:11:18' 'Zeus Programmers Editor for Windows V2.15' ZEUSV215_ZIP ZEUSV215.ZIP
-GIT_COMMITTER_DATE='1996-05-07 10:11:18' \
-commit_as_jussi '1996-05-07 10:07:42' 'Zeus Programmers Editor for WIN32 V2.15' ZE32V215_ZIP ZE32V215.ZIP
+commit_zip "$JUSSI 1995-07-30 22:08:10" 'Zeus for Windows Programmers Editor V1.05' ZEUSV105_ZIP ZEUSV105.ZIP
+commit_zip "$JUSSI 1996-05-07 10:11:18" 'Zeus Programmers Editor for Windows V2.15' ZEUSV215_ZIP ZEUSV215.ZIP
+commit_zip "$JUSSI 1996-05-07 10:07:42, 1996-05-07 10:11:18" 'Zeus Programmers Editor for WIN32 V2.15' ZE32V215_ZIP ZE32V215.ZIP
 
 # These versions have only EXEs, so include them on a separate non-default
 # branch.
 git checkout -qb zeus-3
-commit_as_zeus '1999-08-31 22:26:20' 'Zeus Programmers Editor V3.00' ze32v300_zip ze32v300.zip
-commit_as_zeus '2000-01-22 15:09:36' 'Zeus Programmers Editor V3.20' ze32v320_zip ze32v320.zip
-commit_as_zeus '2000-03-30 21:18:22' 'Zeus Programmers Editor V3.30' ze32v330_zip ze32v330.zip
-commit_as_zeus '2000-09-25 19:05:10' 'Zeus Programmers Editor V3.40' ze32v340_zip ze32v340.zip
+commit_zip "$ZEUS 1999-08-31 22:26:20" 'Zeus Programmers Editor V3.00' ze32v300_zip ze32v300.zip
+commit_zip "$ZEUS 2000-01-22 15:09:36" 'Zeus Programmers Editor V3.20' ze32v320_zip ze32v320.zip
+commit_zip "$ZEUS 2000-03-30 21:18:22" 'Zeus Programmers Editor V3.30' ze32v330_zip ze32v330.zip
+commit_zip "$ZEUS 2000-09-25 19:05:10" 'Zeus Programmers Editor V3.40' ze32v340_zip ze32v340.zip
 
 git checkout -q zeus-2

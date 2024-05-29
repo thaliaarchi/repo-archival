@@ -18,9 +18,7 @@ git init -q
 unzip -q "$(get_cached_path 'https://web.archive.org/web/20141011193203/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20070224/2792d9db/markov.zip')"
 
 git add markov.ws markov.wsa input.mkv
-GIT_AUTHOR_NAME='Leonardo Mesquita' GIT_AUTHOR_EMAIL='mrbolha@gmail.com' GIT_AUTHOR_DATE='2007-02-24 21:58:06 +0000' \
-GIT_COMMITTER_NAME='Leonardo Mesquita' GIT_COMMITTER_EMAIL='mrbolha@gmail.com' GIT_COMMITTER_DATE='2007-02-24 21:58:06 +0000' \
-git commit -q -m 'Create Markov Algorithm simulator
+commit 'Leonardo Mesquita <mrbolha@gmail.com> 2007-02-24 21:58:06 +0000' 'Create Markov Algorithm simulator
 
 https://web.archive.org/web/20141011193203/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20070224/2792d9db/markov.zip'
 
@@ -47,9 +45,7 @@ Leonardo Mesquita
 EOF
 
 git add README
-GIT_AUTHOR_NAME='Leonardo Mesquita' GIT_AUTHOR_EMAIL='mrbolha@gmail.com' GIT_AUTHOR_DATE='2007-02-25 00:14:11 +0000' \
-GIT_COMMITTER_NAME='Leonardo Mesquita' GIT_COMMITTER_EMAIL='mrbolha@gmail.com' GIT_COMMITTER_DATE='2007-02-25 00:14:11 +0000' \
-git commit -q -m 'Send to Whitespace mailing list
+commit 'Leonardo Mesquita <mrbolha@gmail.com> 2007-02-25 00:14:11 +0000' 'Send to Whitespace mailing list
 
 https://web.archive.org/web/20070830102217/http://compsoc.dur.ac.uk:80/archives/whitespace/2007-February/000054.html
 https://web.archive.org/web/20070831081100/http://compsoc.dur.ac.uk:80/archives/whitespace/2007-February/000055.html'

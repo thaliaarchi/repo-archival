@@ -150,9 +150,7 @@ inferno-4e-20070510-unix() {
   git add -Af
   # HTTP Last-Modified: 2007-05-30 23:49:38 +0000
   # Latest modtime:     2007-05-30 23:47:35 +0000
-  GIT_AUTHOR_NAME='Charles.Forsyth' GIT_AUTHOR_EMAIL='devnull@localhost' GIT_AUTHOR_DATE='2007-05-30 23:47:35 +0000' \
-  GIT_COMMITTER_NAME='Charles.Forsyth' GIT_COMMITTER_EMAIL='devnull@localhost' GIT_COMMITTER_DATE='2007-05-30 23:47:35 +0000' \
-  git commit -q -m '20070510-2347 add fonts' --trailer Source:$source
+  commit 'Charles.Forsyth <devnull@localhost> 2007-05-30 23:47:35 +0000' -m '20070510-2347 add fonts' --trailer Source:$source
   cd ..
 }
 
@@ -172,9 +170,7 @@ inferno-4e-20091219-win() {
   # HTTP Last-Modified: 2009-12-19 16:12:54 +0000
   # Root dir modtime:   2009-12-19 15:41:26 +0000
   # Previous commit:    2009-12-19 14:29:25 +0000
-  GIT_AUTHOR_NAME='forsyth' GIT_AUTHOR_EMAIL='forsyth@vitanuova.com' GIT_AUTHOR_DATE='2009-12-19 15:41:26 +0000' \
-  GIT_COMMITTER_NAME='forsyth' GIT_COMMITTER_EMAIL='forsyth@vitanuova.com' GIT_COMMITTER_DATE='2009-12-19 15:41:26 +0000' \
-  git commit -q -m 'Compile Windows executables and add fonts' --trailer Source:$source
+  commit 'forsyth <forsyth@vitanuova.com> 2009-12-19 15:41:26 +0000' 'Compile Windows executables and add fonts' --trailer Source:$source
   cd ..
 }
 
@@ -189,9 +185,7 @@ inferno-4e-20100120-unix() {
   # HTTP Last-Modified: 2010-01-20 16:58:21 +0000
   # Latest modtime:     2010-01-20 16:48:30 +0000
   # Previous commit:    2010-01-20 16:10:53 +0000
-  GIT_AUTHOR_NAME='forsyth' GIT_AUTHOR_EMAIL='forsyth@vitanuova.com' GIT_AUTHOR_DATE='2010-01-20 16:48:30 +0000' \
-  GIT_COMMITTER_NAME='forsyth' GIT_COMMITTER_EMAIL='forsyth@vitanuova.com' GIT_COMMITTER_DATE='2010-01-20 16:48:30 +0000' \
-  git commit -q -m 'Add fonts' --trailer Source:$source
+  commit 'forsyth <forsyth@vitanuova.com> 2010-01-20 16:48:30 +0000' 'Add fonts' --trailer Source:$source
   cd ..
 }
 
@@ -208,9 +202,7 @@ inferno-4e-20150328-unix() {
   # HTTP Last-Modified: 2015-03-28 11:02:31 +0000
   # Latest modtime:     2015-03-28 10:58:34 +0000
   # Previous commit:    2015-03-28 10:58:16 +0000
-  GIT_AUTHOR_NAME='Charles Forsyth' GIT_AUTHOR_EMAIL='charles.forsyth@gmail.com' GIT_AUTHOR_DATE='2015-03-28 10:58:34 +0000' \
-  GIT_COMMITTER_NAME='Charles Forsyth' GIT_COMMITTER_EMAIL='charles.forsyth@gmail.com' GIT_COMMITTER_DATE='2015-03-28 10:58:34 +0000' \
-  git commit -q -m 'Compile Unix executables' --trailer Source:$source
+  commit 'Charles Forsyth <charles.forsyth@gmail.com> 2015-03-28 10:58:34 +0000' 'Compile Unix executables' --trailer Source:$source
   cd ..
 }
 

@@ -3,17 +3,9 @@ set -eEuo pipefail
 
 . base.sh
 
-commit_as() {
-  GIT_AUTHOR_NAME="$1" GIT_AUTHOR_EMAIL="$2" GIT_AUTHOR_DATE="$3" \
-  GIT_COMMITTER_NAME="$1" GIT_COMMITTER_EMAIL="$2" GIT_COMMITTER_DATE="$3" \
-  git commit -q --allow-empty -m "${@:4}"
-}
-commit_as_tepigmc() {
-  commit_as 'TepigMC' 'andrew@robarchibald.com' "$1" "${@:2}"
-}
-commit_as_ppa() {
-  commit_as 'PPA' 'pixelpapercraft@gmail.com' "$1" "${@:2}"
-}
+TEPIGMC='TepigMC <andrew@robarchibald.com>'
+PPA='PPA <pixelpapercraft@gmail.com>'
+THALIA='Thalia Archibald <thalia@archibald.dev>'
 
 mkdir -p minecraft
 cd minecraft
@@ -103,7 +95,7 @@ git init -q
 # 2014-12-30 09:23:22 (local)  pig-advanced/texture/vanilla/pig.png
 # 2014-12-30 09:23:46 (local)  pig-advanced/texture/vanilla/saddle.png
 git add texture/vanilla/{chainmail-armor.png,diamond-armor.png,gold-armor.png,iron-armor.png,pig.png,saddle.png}
-commit_as_tepigmc '2015-01-01 15:58 -0800' 'Papercraft generator for pigs
+commit "$TEPIGMC 2015-01-01 15:58 -0800" 'Papercraft generator for pigs
 
 It has options to enable helmets, boots, and saddles that can be
 attached to the pig or as seperate pieces. The head of the pig fits on
@@ -129,7 +121,7 @@ make it be flat instead.'
 # It's possible I made changes to it between the announcement and first sending
 # the code, and this is before the changelog was started, so I count this
 # email as a revision. The commit message is synthesized.
-commit_as_tepigmc '2015-01-06 10:18 -0800' 'Sent pig generator'
+commit "$TEPIGMC 2015-01-06 10:18 -0800" 'Sent pig generator' --allow-empty
 
 # Email #4 from Pixel Taj on 2015-01-07 05:37:40 +0000
 #
@@ -168,7 +160,7 @@ commit_as_tepigmc '2015-01-06 10:18 -0800' 'Sent pig generator'
 # 2015-01-14 16:13:06 (local)  pig-advanced/texture/faithful/saddle.png
 # 2015-01-14 16:13:40 (local)  pig-advanced/texture/faithful/diamond-armor.png
 git add texture/{faithful/{diamond-armor.png,pig.png,saddle.png},space-pig/pig.png}
-commit_as_tepigmc '2015-01-14 16:13:40 -0800' 'Added Faithful and Space Pig textures'
+commit "$TEPIGMC 2015-01-14 16:13:40 -0800" 'Added Faithful and Space Pig textures'
 
 # Photo "Overpowered Pig - From My Pig Generator" by TepigMC
 #
@@ -193,7 +185,8 @@ commit_as_tepigmc '2015-01-14 16:13:40 -0800' 'Added Faithful and Space Pig text
 # I use the upload date.
 get_cached https://web.archive.org/web/20240209135019/https://s3.amazonaws.com/pixelpapercraft/photo/1422029157948-800.jpg photo/overpowered-pig-from-my-pig-generator.jpg
 git add photo/overpowered-pig-from-my-pig-generator.jpg
-commit_as_tepigmc '2015-01-23 08:05:57 -0800' 'Uploaded photo "Overpowered Pig - From My Pig Generator"' --trailer=Source:https://www.pixelpapercraft.com/photo/54c2716775d8d3be59000060/overpowered-pig-from-my-pig-generator
+commit "$TEPIGMC 2015-01-23 08:05:57 -0800" 'Uploaded photo "Overpowered Pig - From My Pig Generator"' \
+  --trailer=Source:https://www.pixelpapercraft.com/photo/54c2716775d8d3be59000060/overpowered-pig-from-my-pig-generator
 
 # Email #6 from PPA on 2015-02-07 08:39 +1100
 #
@@ -223,7 +216,7 @@ mv Script.txt{,.bak}
 cp -p "$TOPLEVEL/files/minecraft/papercraft-pig/Script.txt" .
 git add Script.txt
 mv Script.txt{.bak,}
-commit_as_ppa '2015-02-07 08:39 +1100' 'Add user variables'
+commit "$PPA 2015-02-07 08:39 +1100" 'Add user variables'
 
 # Email #7 from PPA on 2015-02-07 08:43:53 +1100
 #
@@ -231,7 +224,7 @@ commit_as_ppa '2015-02-07 08:39 +1100' 'Add user variables'
 
 # No surviving email
 # Unknown time
-commit_as_ppa '2015-02-13 00:00:00 +1100' 'Update to use new version of generator'
+commit "$PPA 2015-02-13 00:00:00 +1100" 'Update to use new version of generator' --allow-empty
 
 # Email #8 from TepigMC on 2015-02-26 17:19 -0800
 #
@@ -249,7 +242,7 @@ commit_as_ppa '2015-02-13 00:00:00 +1100' 'Update to use new version of generato
 #
 # I assume this email accidentally sent the previous day's revision, which was
 # noted in the changelog. I use a synthetic time.
-commit_as_tepigmc '2015-02-25 00:00:00 -0800' 'Modified images; Fix drawing errors'
+commit "$TEPIGMC 2015-02-25 00:00:00 -0800" 'Modified images; Fix drawing errors' --allow-empty
 
 # Email #9 from TepigMC on 2015-02-26 17:20 -0800
 #
@@ -258,7 +251,7 @@ commit_as_tepigmc '2015-02-25 00:00:00 -0800' 'Modified images; Fix drawing erro
 #
 # I assume this email sent the 2015-02-26 revision noted in the changelog, so I
 # use the previous email's time.
-commit_as_tepigmc '2015-02-26 17:19 -0800' 'Removed missing texture checks; Rename files'
+commit "$TEPIGMC 2015-02-26 17:19 -0800" 'Removed missing texture checks; Rename files' --allow-empty
 
 # Email #10 from PPA on 2015-02-27 18:42:06 +1100
 #
@@ -275,7 +268,7 @@ commit_as_tepigmc '2015-02-26 17:19 -0800' 'Removed missing texture checks; Rena
 # > If you think it's OK then I'll officially announce it on the blog.
 # >
 # > http://pixelpapercraft.com/print/minecraft-pig-advanced
-commit_as_ppa '2015-02-27 18:42:06 +1100' 'Release generator to the site'
+commit "$PPA 2015-02-27 18:42:06 +1100" 'Release generator to the site' --allow-empty
 
 # Email #11 from TepigMC on 2015-02-27 20:21 -0800
 #
@@ -316,7 +309,7 @@ commit_as_ppa '2015-02-27 18:42:06 +1100' 'Release generator to the site'
 git add image/seperated/backgrounds/{body.png,boot.png,headAdvanced.png,headSimple.png,helmet.png,leg.png,nose3D.png,opaque.png,ultraMini.png} \
         image/seperated/folds/{body.png,boot.png,headAdvanced.png,headAdvancedCuts.png,headSimple.png,leg.png,nose3D.png,saddle.png} \
         image/seperated/titles/{leg.png,pixelPapercraft.png,tepigmc.png,ultraMini.png}
-commit_as_tepigmc '2015-02-27 21:01:14 -0800' 'Compacted backgrounds and folds into sprite files'
+commit "$TEPIGMC 2015-02-27 21:01:14 -0800" 'Compacted backgrounds and folds into sprite files'
 
 # Email #12 from TepigMC on 2015-02-28 12:21 -0800
 #
@@ -371,7 +364,7 @@ git add image/{background-sprites.png,label-sprites.png,Readme.md,title-sprites.
         image/seperated/folds/headStandardAdvanced.png \
         image/seperated/labels/{bodyHead.png,bodyLeg1.png,bodyLeg2.png,bodyLeg3.png,bodyLeg4.png,head.png,headNose3D.png,headStandardAdvanced.png,leg1.png,leg2.png,leg3.png,leg4.png,nose3D.png} \
         image/seperated/titles/{body.png,boot.png,head.png,helmet.png,nose3D.png,saddle.png}
-commit_as_tepigmc '2015-02-28 12:21 -0800' 'Compacted labels and titles into sprite files; Added "Advanced (Standard)" head'
+commit "$TEPIGMC 2015-02-28 12:21 -0800" 'Compacted labels and titles into sprite files; Added "Advanced (Standard)" head'
 
 # Photo "Advanced Pig Generator - With Customizable Options" by TepigMC
 #
@@ -396,7 +389,7 @@ commit_as_tepigmc '2015-02-28 12:21 -0800' 'Compacted labels and titles into spr
 # I use the upload date.
 get_cached http://web.archive.org/web/20240209014008/https://s3.amazonaws.com/pixelpapercraft/photo/1425155101003-800.jpg photo/advanced-pig-generator-with-customizable-options.jpg
 git add photo/advanced-pig-generator-with-customizable-options.jpg
-commit_as_tepigmc '2015-02-28 12:25:01 -0800' 'Uploaded photo "Advanced Pig Generator - With Customizable Options"' --trailer=Source:https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
+commit "$TEPIGMC 2015-02-28 12:25:01 -0800" 'Uploaded photo "Advanced Pig Generator - With Customizable Options"' --trailer=Source:https://www.pixelpapercraft.com/photo/54f2241d16bab6c70a000001/advanced-pig-generator-with-customizable-options
 
 # Email #13 from TepigMC on 2015-02-28 13:08 -0800
 #
@@ -437,7 +430,7 @@ git add Readme.md image/fold-sprites.png image/seperated/folds/helmet.png \
         texture/faithful/{chainmail-armor.png,gold-armor.png,iron-armor.png} \
         texture/space-pig/{armor.png,saddle.png} \
         texture/tepig/{audra.png,elpis.png}
-commit_as_tepigmc '2015-02-28 16:59 -0800' 'Added "Show Helmet Overlay" option; Added texture options'
+commit "$TEPIGMC 2015-02-28 16:59 -0800" 'Added "Show Helmet Overlay" option; Added texture options'
 
 # Email #16 from PPA on 2015-03-01 17:04:09 +1100
 #
@@ -507,7 +500,7 @@ git rm -q photo/overpowered-pig-from-my-pig-generator.jpg photo/advanced-pig-gen
 get_cached https://web.archive.org/web/20150315115218/http://pixelpapercraft.com/img/print/home/minecraft-pig-advanced.jpg photo/minecraft-pig-advanced.jpg
 get_cached https://web.archive.org/web/20150316143546/http://pixelpapercraft.com/img/print/home/minecraft-pig-advanced-2.jpg photo/minecraft-pig-advanced-2.jpg
 git add photo/{minecraft-pig-advanced.jpg,minecraft-pig-advanced-2.jpg}
-commit_as_ppa '2015-03-01 17:04:09 +1100' 'Release the new version to the site
+commit "$PPA 2015-03-01 17:04:09 +1100" 'Release the new version to the site
 
 https://web.archive.org/web/20150302194936/http://pixelpapercraft.com/print/minecraft-pig-advanced'
 
@@ -542,7 +535,7 @@ https://web.archive.org/web/20150302194936/http://pixelpapercraft.com/print/mine
 # 2015-03-09 19:38:26 (local)  pig-advanced/Script.js
 # 2015-03-09 19:38:30 (local)  pig-advanced/Script.txt
 git add Script.js Script.txt
-commit_as_tepigmc '2015-03-09 19:45:11 -0800' 'Fixed small bug with ultra mini pig' \
+commit "$TEPIGMC 2015-03-09 19:45:11 -0800" 'Fixed small bug with ultra mini pig' \
   --trailer=Source:https://web.archive.org/web/20150326203916/http://pixelpapercraft.com/app/generators/minecraft/pig-advanced.zip
 
 # The live version as of 2020-03-24 00:54:05 +0000 is identical to
@@ -598,7 +591,7 @@ get_cached http://web.archive.org/web/20240209014008/https://s3.amazonaws.com/pi
 git add README.md thumbnail/{thumbnail1-500.jpeg,thumbnail2-500.jpeg}
 git mv thumbnail/thumbnail1.jpeg thumbnail/thumbnail1-300.jpeg
 git mv thumbnail/thumbnail2.jpeg thumbnail/thumbnail2-300.jpeg
-commit_as 'Thalia Archibald' 'thalia@archibald.dev' '2024-02-09 06:43:53 -0800' 'Restore and update README and original thumbnails'
+commit "$THALIA 2024-02-09 06:43:53 -0800" 'Restore and update README and original thumbnails'
 
 git remote add origin https://github.com/thaliaarchi/minecraft-papercraft-pig
 

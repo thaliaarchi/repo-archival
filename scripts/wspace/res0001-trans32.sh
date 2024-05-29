@@ -15,7 +15,6 @@ cd res0001-trans32
 git init -q
 cp -p ../../../files/wspace/res0001-trans32/trans32.py .
 git add trans32.py
-GIT_AUTHOR_DATE='2012-05-30 15:12 +0000' GIT_COMMITTER_DATE='2012-05-30 15:12 +0000' \
-git -c user.name='r.e.s.' -c user.email='r.e.s.0001@gmail.com' commit -q -m 'Upload trans32.py'
+commit 'r.e.s. <r.e.s.0001@gmail.com> 2012-05-30 15:12 +0000' 'Upload trans32.py'
 
 git remote add origin https://github.com/wspace/res0001-trans32

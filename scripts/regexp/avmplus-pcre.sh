@@ -41,9 +41,7 @@ git checkout -q --orphan pcre-7.3
 git rm -qrf .
 tar xf "$(get_cached_path https://sourceforge.net/projects/pcre/files/pcre/7.3/pcre-7.3.tar.bz2/download)" --strip-components=1
 git add -Af .
-GIT_AUTHOR_NAME='Philip.Hazel' GIT_AUTHOR_EMAIL='Philip.Hazel@gmail.com' GIT_AUTHOR_DATE='2007-08-28 19:36:27 +0000' \
-GIT_COMMITTER_NAME='Philip.Hazel' GIT_COMMITTER_EMAIL='Philip.Hazel@gmail.com' GIT_COMMITTER_DATE='2007-08-28 19:36:27 +0000' \
-git commit -q -m 'Release PCRE 7.3
+commit 'Philip.Hazel <Philip.Hazel@gmail.com> 2007-08-28 19:36:27 +0000' 'Release PCRE 7.3
 
 Source: https://sourceforge.net/projects/pcre/files/pcre/7.3/pcre-7.3.tar.bz2/download'
 

@@ -34,9 +34,7 @@ git add -Af
 # Since the archives were created before the final commit and tag, match the tag
 # time. Match the two final LFs (which I presume come from git-svn with the
 # git-svm-id lines stripped).
-GIT_AUTHOR_NAME='Philip.Hazel' GIT_AUTHOR_EMAIL='Philip.Hazel@gmail.com' GIT_AUTHOR_DATE='2015-07-02 13:18:57 +0000' \
-GIT_COMMITTER_NAME='Philip.Hazel' GIT_COMMITTER_EMAIL='Philip.Hazel@gmail.com' GIT_COMMITTER_DATE='2015-07-02 13:18:57 +0000' \
-git commit -q -m 'Distribute release 10.20
+commit 'Philip.Hazel <Philip.Hazel@gmail.com> 2015-07-02 13:18:57 +0000' 'Distribute release 10.20
 
 Source: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.20/pcre2-10.20.tar.bz2'
 cd ..
