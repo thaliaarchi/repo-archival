@@ -33,9 +33,7 @@ Keys:
 EOF
 
 git add tetris.ws README
-GIT_AUTHOR_NAME='Peter De Wachter' GIT_AUTHOR_EMAIL='pdewacht@gmail.com' GIT_AUTHOR_DATE='2008-01-02 22:59:54 +0000' \
-GIT_COMMITTER_NAME='Peter De Wachter' GIT_COMMITTER_EMAIL='pdewacht@gmail.com' GIT_COMMITTER_DATE='2008-01-02 22:59:54 +0000' \
-git commit -q -m 'Implement Tetris in Whitespace
+commit 'Peter De Wachter <pdewacht@gmail.com> 2008-01-02 22:59:54 +0000' 'Implement Tetris in Whitespace
 
 https://web.archive.org/web/20141011193149/http://compsoc.dur.ac.uk/archives/whitespace/2008-January/000067.html
 https://web.archive.org/web/20150817151110/http://compsoc.dur.ac.uk/archives/whitespace/attachments/20080103/20651c47/attachment.zip'

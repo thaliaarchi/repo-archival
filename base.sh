@@ -150,7 +150,7 @@ commit() {
   local idents="$1"
   local message="$2"
   set_idents "$idents"
-  git commit -q -m "$message"
+  git commit -q -m "$message" "${@:3}"
 }
 
 merge_repo() {
@@ -245,7 +245,7 @@ get_cached_path() {
     else
       local status=$?
       rm "$cached"
-      echo "Failed to get $url" >&2
+      echo "get_cached_path: Failed to get $url" >&2
       return $status
     fi
   fi
@@ -259,7 +259,7 @@ get_cached() {
   local out="${2-"$url_out"}"
   local cached_path
   if [[ -e "$out" ]]; then
-    echo "$out already exists" >&2
+    echo "get_cached $url: $out already exists" >&2
     exit 1
   fi
   mkdir -p "$(dirname "$out")"

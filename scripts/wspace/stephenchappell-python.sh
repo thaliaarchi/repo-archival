@@ -2,6 +2,8 @@
 
 . base.sh
 
+export AUTHOR='Stephen "Zero" Chappell <Noctis.Skytower@gmail.com>'
+
 mkdir -p wspace
 cd wspace
 
@@ -119,9 +121,7 @@ get_revisions() {
     rm LICENSE.md.bak # For compatibility between GNU and BSD sed
     git add LICENSE.md
 
-    GIT_AUTHOR_NAME='Stephen "Zero" Chappell' GIT_AUTHOR_EMAIL='Noctis.Skytower@gmail.com' GIT_AUTHOR_DATE="$date +0000" \
-    GIT_COMMITTER_NAME='Stephen "Zero" Chappell' GIT_COMMITTER_EMAIL='Noctis.Skytower@gmail.com' GIT_COMMITTER_DATE="$date +0000" \
-    git commit -q -m "Recipe $id: $title, revision $revision
+    commit "$date +0000" "Recipe $id: $title, revision $revision
 
 ${revision_url}"
 

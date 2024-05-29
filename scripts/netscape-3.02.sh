@@ -29,14 +29,12 @@ git init -q
 git add -Af
 
 # Uses the date of the last modified file in the archive.
-GIT_AUTHOR_NAME='Jamie Zawinski' GIT_AUTHOR_EMAIL='jwz@netscape.com' GIT_AUTHOR_DATE='2004-11-02 23:45:24 +0000' \
-GIT_COMMITTER_NAME='Jason Scott' GIT_COMMITTER_EMAIL='jason@textfiles.com' GIT_COMMITTER_DATE='2011-10-28 22:20:21 +0000' \
-git commit -q -m 'Netscape 3.02 with changes' --trailer Source:https://archive.org/details/netscape-communicator-3-0-2-source
+commit 'Jamie Zawinski <jwz@netscape.com> 2004-11-02 23:45:24 +0000,
+        Jason Scott <jason@textfiles.com> 2011-10-28 22:20:21 +0000' \
+  'Netscape 3.02 with changes' --trailer Source:https://archive.org/details/netscape-communicator-3-0-2-source
 
 git rm -qr CVS dist
 find . -name .cvsignore -execdir git mv .cvsignore .gitignore \;
-GIT_AUTHOR_NAME='Thalia Archibald' GIT_AUTHOR_EMAIL='thalia@archibald.dev' GIT_AUTHOR_DATE='2023-11-15 17:55:33 -0800' \
-GIT_COMMITTER_NAME='Thalia Archibald' GIT_COMMITTER_EMAIL='thalia@archibald.dev' GIT_COMMITTER_DATE='2023-11-15 17:55:33 -0800' \
-git commit -q -m 'Convert to git'
+commit 'Thalia Archibald <thalia@archibald.dev> 2023-11-15 17:55:33 -0800' 'Convert to git'
 
 git remote add origin https://github.com/thaliaarchi/netscape-3.02

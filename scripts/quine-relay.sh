@@ -99,9 +99,7 @@ for pair in "${commit_pairs[@]}"; do
   # Select the later date
   date="$( (git show -s --format=%cd --date=raw "$master" &&
             git show -s --format=%cd --date=raw "$spoiler" | sed s/+0000/+0900/) | sort -r | head -n1)"
-  GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" \
-  git -c user.name='Yusuke Endoh' -c user.email='mame@ruby-lang.org' \
-    commit -m 'Merge spoiler'
+  commit "Yusuke Endoh <mame@ruby-lang.org> $date" 'Merge spoiler'
 
   cd spoiler
   if [[ -f ../SHA1SUMS ]]; then

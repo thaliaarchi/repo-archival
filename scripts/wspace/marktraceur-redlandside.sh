@@ -2,16 +2,18 @@
 
 . base.sh
 
+export AUTHOR='Mark Holmquist <marktraceur@gmail.com>'
+
 mkdir -p wspace
 cd wspace
 
 # Convert SVN repo
 git svn clone svn://svn.code.sf.net/p/redlandside/code/ marktraceur-redlandside \
   --no-metadata \
-  --authors-file=<(echo '
-marktraceur = Mark Holmquist <marktraceur@gmail.com>
+  --authors-file=<(echo "
+marktraceur = $AUTHOR
 lostinaudio89 = Logan May <lostinaudio89@users.sourceforge.net>
-')
+")
 cd marktraceur-redlandside
 git branch svn
 git filter-repo -f --quiet \
@@ -26,9 +28,7 @@ commit_build() {
   tar xf "$(get_cached_path "https://master.dl.sourceforge.net/project/redlandside/Sources/build_$build.tar.gz?viasf=1")" --strip-components=1
   rm -f -- test.py *.pyc 'icons/Redlands logo style 1 RGBb.jpg'
   git add -A
-  GIT_AUTHOR_NAME='Mark Holmquist' GIT_AUTHOR_EMAIL='marktraceur@gmail.com' GIT_AUTHOR_DATE="$date" \
-  GIT_COMMITTER_NAME='Mark Holmquist' GIT_COMMITTER_EMAIL='marktraceur@gmail.com' GIT_COMMITTER_DATE="$date" \
-  git commit -q -m "$message"
+  commit "$date" "$message"
   git clean -xqf
 }
 
