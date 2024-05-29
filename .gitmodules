@@ -112,6 +112,9 @@
 [submodule "git/github.com/graue/esofiles"]
 	path = git/github.com/graue/esofiles
 	url = https://github.com/graue/esofiles
+[submodule "git/github.com/graue/sortle"]
+	path = git/github.com/graue/sortle
+	url = https://github.com/graue/sortle
 [submodule "git/github.com/hogelog/hogel.org-old"]
 	path = git/github.com/hogelog/hogel.org-old
 	url = https://github.com/hogelog/hogel.org-old
