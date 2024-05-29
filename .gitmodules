@@ -109,6 +109,9 @@
 [submodule "git/github.com/google-code-export/grass-mud-horse"]
 	path = git/github.com/google-code-export/grass-mud-horse
 	url = https://github.com/google-code-export/grass-mud-horse
+[submodule "git/github.com/graue/esofiles"]
+	path = git/github.com/graue/esofiles
+	url = https://github.com/graue/esofiles
 [submodule "git/github.com/hogelog/hogel.org-old"]
 	path = git/github.com/hogelog/hogel.org-old
 	url = https://github.com/hogelog/hogel.org-old
