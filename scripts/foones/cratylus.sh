@@ -21,8 +21,7 @@ rm -rf ../cratylus-base
 
 # Restore the deleted .gitignore
 git checkout HEAD~ -- .gitignore
-GIT_COMMITTER_NAME="$(git show -s --format=%cn)" GIT_COMMITTER_EMAIL="$(git show -s --format=%ce)" GIT_COMMITTER_DATE="$(git show -s --format=%ci)" \
-git commit -q --amend --no-edit
+amend_no_edit
 
 git branch -m master main
 git remote add origin https://github.com/thaliaarchi/foones-cratylus
