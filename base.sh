@@ -142,15 +142,42 @@ set_idents() {
     fi
   fi
 
-  export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE
+  export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE \
+         GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
+}
+
+set_tag_ident() {
+  local ident="$1"
+  if [[ ! $ident =~ '<' ]]; then
+    ident="${COMMITTER:-${AUTHOR:-}} $ident"
+  fi
+  local pattern='^ *([^<>]*) *<([^<>]*)> *([^<>]*) *$'
+  if [[ ! $ident =~ $pattern ]]; then
+    echo "Invalid tagger ident: '$ident'" >&2
+    return 1
+  fi
+  GIT_COMMITTER_NAME="${BASH_REMATCH[1]}"
+  GIT_COMMITTER_EMAIL="${BASH_REMATCH[2]}"
+  GIT_COMMITTER_DATE="${BASH_REMATCH[3]}"
+  if [[ $GIT_COMMITTER_DATE = latest ]]; then
+    GIT_COMMITTER_DATE="$(git_latest_modified)"
+  fi
   export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
 }
 
 commit() {
-  local idents="$1"
-  local message="$2"
+  local idents="$1" message="$2"
   set_idents "$idents"
   git commit -q -m "$message" "${@:3}"
+  unset GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE \
+        GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
+}
+
+tag() {
+  local ident="$1" tag="$2" message="$3"
+  set_tag_ident "$ident"
+  git tag "$tag" -a -m "$message" "${@:4}"
+  unset GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
 }
 
 merge_repo() {
