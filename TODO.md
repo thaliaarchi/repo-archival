@@ -47,6 +47,7 @@
   - [Rhino](https://web.mit.edu/javascript/doc/rhino/index.html) is an
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
+- 1998-1999 Netscape and Mozilla sources: https://ftp.mozilla.org/pub/mozilla/source/
 - PCRE release archives
 - [The Esoteric File Archive](https://esolangs.org/wiki/The_Esoteric_File_Archive):
   Construct revision history for each implementation from archives
