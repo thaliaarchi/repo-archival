@@ -84,9 +84,8 @@ clone_swh_bare() {
   mv "swh:1:rev:$revision.git" "$dest"
 }
 
-# `git commit`, using the latest file modification time as the commit and author
-# dates, when GIT_AUTHOR_DATE or GIT_COMMITTER_DATE, respectively, is not set.
-tcommit() {
+# Get the latest modified date of all staged Git files, excluding deletions.
+git_latest_modified() {
   if [[ -z ${tcommit_stat:-} ]]; then
     if stat --version 2> /dev/null | grep -q 'GNU coreutils'; then
       tcommit_stat=(stat --format=%Y) # Detected GNU coreutils
@@ -95,16 +94,10 @@ tcommit() {
     fi
   fi
 
-  # Select the latest modified time of all staged files, excluding deletions.
-  local latest_modified
-  latest_modified="$(git diff --staged --diff-filter=d --name-only -z |
+  git diff --staged --diff-filter=d --name-only -z |
     xargs -0 "${tcommit_stat[@]}" |
     sort -rn |
-    head -1)"
-
-  GIT_AUTHOR_DATE="${GIT_AUTHOR_DATE-"$latest_modified"}" \
-  GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$latest_modified"}" \
-  git commit "$@"
+    head -1
 }
 
 set_idents() {
@@ -113,25 +106,44 @@ set_idents() {
     idents="$AUTHOR $idents"
   fi
   local pattern="^([^<>]*) ?\<([^<>]*)\> ?([^<>|]*)( ?\| ?([^<>]*) ?\<([^<>]*)\> ?([^<>]*))?$"
-  if [[ $idents =~ $pattern ]]; then
-    GIT_AUTHOR_NAME="${BASH_REMATCH[1]}"
-    GIT_AUTHOR_EMAIL="${BASH_REMATCH[2]}"
-    GIT_AUTHOR_DATE="${BASH_REMATCH[3]}"
-    if [[ -n ${BASH_REMATCH[5]} ]]; then
-      GIT_COMMITTER_NAME="${BASH_REMATCH[5]}"
-      GIT_COMMITTER_EMAIL="${BASH_REMATCH[6]}"
-      GIT_COMMITTER_DATE="${BASH_REMATCH[7]}"
-    else
-      GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-      GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-      GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
-    fi
-    export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE
-    export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
-  else
+  if [[ ! $idents =~ $pattern ]]; then
     echo "Invalid author/committer idents: '$idents'" >&2
     return 1
   fi
+  GIT_AUTHOR_NAME="${BASH_REMATCH[1]}"
+  GIT_AUTHOR_EMAIL="${BASH_REMATCH[2]}"
+  GIT_AUTHOR_DATE="${BASH_REMATCH[3]}"
+  if [[ -n ${BASH_REMATCH[5]} ]]; then
+    GIT_COMMITTER_NAME="${BASH_REMATCH[5]}"
+    GIT_COMMITTER_EMAIL="${BASH_REMATCH[6]}"
+    GIT_COMMITTER_DATE="${BASH_REMATCH[7]}"
+  else
+    GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+    GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+    GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
+  fi
+  if [[ $GIT_AUTHOR_DATE = latest || $GIT_COMMITTER_DATE = latest ]]; then
+    local latest_modified
+    latest_modified="$(git_latest_modified)"
+    if [[ $GIT_AUTHOR_DATE = latest ]]; then
+      GIT_AUTHOR_DATE="$latest_modified"
+    fi
+    if [[ $GIT_COMMITTER_DATE = latest ]]; then
+      GIT_COMMITTER_DATE="$latest_modified"
+    fi
+  fi
+  export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE
+  export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
+}
+
+# `git commit`, using the latest file modification time as the commit and author
+# dates, when GIT_AUTHOR_DATE or GIT_COMMITTER_DATE, respectively, is not set.
+tcommit() {
+  local latest_modified
+  latest_modified="$(git_latest_modified)"
+  GIT_AUTHOR_DATE="${GIT_AUTHOR_DATE-"$latest_modified"}" \
+  GIT_COMMITTER_DATE="${GIT_COMMITTER_DATE-"$latest_modified"}" \
+  git commit "$@"
 }
 
 commit() {
