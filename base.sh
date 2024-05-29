@@ -104,30 +104,24 @@ set_idents() {
   local idents="$1"
 
   # Split author and committer idents
-  local pattern='^(([^<>]*<[^<>]*>)?[^<>,]*)( *, *(([^<>]*<[^<>]*>)?[^<>]*))?$'
+  local pattern='^ *([^<>,]*<[^<>]*>)? *([^<>,]*)( *, *(([^<>,]*<[^<>]*>)? *([^<>,]*)))? *$'
   if [[ ! $idents =~ $pattern ]]; then
     echo "Invalid author/committer idents: '$idents'" >&2
     return 1
   fi
-  local author_ident="${BASH_REMATCH[1]}"
-  local committer_ident="${BASH_REMATCH[4]:-$author_ident}"
-  # Prepend $AUTHOR or $COMMITTER when the author/email is not present
-  if [[ -z ${BASH_REMATCH[2]} ]]; then
-    author_ident="${AUTHOR:-} $author_ident"
-  fi
-  if [[ -z ${BASH_REMATCH[5]} ]]; then
-    committer_ident="${COMMITTER:-${AUTHOR:-}} $committer_ident"
-  fi
+  local author_ident="${BASH_REMATCH[1]:-${AUTHOR:-}}"
+  GIT_AUTHOR_DATE="${BASH_REMATCH[2]}"
+  local committer_ident="${BASH_REMATCH[5]:-${BASH_REMATCH[1]:-${COMMITTER:-${AUTHOR:-}}}}"
+  GIT_COMMITTER_DATE="${BASH_REMATCH[6]:-${BASH_REMATCH[2]}}"
 
   # Split the author fields
-  local pattern='^ *([^<>]*) *<([^<>]*)> *([^<>/]*) *$'
+  local pattern='^ *([^<>]*) *<([^<>]*)> *$'
   if [[ ! $author_ident =~ $pattern ]]; then
     echo "Invalid author ident: '$author_ident'" >&2
     return 1
   fi
   GIT_AUTHOR_NAME="${BASH_REMATCH[1]}"
   GIT_AUTHOR_EMAIL="${BASH_REMATCH[2]}"
-  GIT_AUTHOR_DATE="${BASH_REMATCH[3]}"
   # Split the committer fields
   if [[ ! $committer_ident =~ $pattern ]]; then
     echo "Invalid committer ident: '$committer_ident'" >&2
@@ -135,9 +129,8 @@ set_idents() {
   fi
   GIT_COMMITTER_NAME="${BASH_REMATCH[1]}"
   GIT_COMMITTER_EMAIL="${BASH_REMATCH[2]}"
-  GIT_COMMITTER_DATE="${BASH_REMATCH[3]}"
 
-  # Use the latest modified date for 'latest'
+  # Use the latest file modification time for 'latest'
   if [[ $GIT_AUTHOR_DATE = latest || $GIT_COMMITTER_DATE = latest ]]; then
     local latest_modified
     latest_modified="$(git_latest_modified)"
@@ -155,6 +148,7 @@ set_idents() {
 
 # `git commit`, using the latest file modification time as the commit and author
 # dates, when GIT_AUTHOR_DATE or GIT_COMMITTER_DATE, respectively, is not set.
+# TODO: remove
 tcommit() {
   local latest_modified
   latest_modified="$(git_latest_modified)"
