@@ -8,16 +8,17 @@
 export AUTHOR='Mariia Mykhailova <michaylova@gmail.com>'
 
 get_article() {
-  local url="$1" filename="$2"
-  curl --no-progress-meter "$url" |
-    htmlq '#content > *' \
-      -r '#editmenu, #comments, meta, br[style="clear: both;"]' \
-      -o "$filename"
+  local url="$1" out_path="$2" path
+  path="$(get_cached_path "$url")"
+  htmlq '#content > *' \
+    -r '#editmenu, #comments, meta, br[style="clear: both;"]' \
+    -o "$out_path" -f "$path"
 }
 
 get_revisions() {
-  local url="$1history/"
-  curl --no-progress-meter "$url" | htmlq '#maintext > table' | html2md
+  local url="$1history/" path
+  path="$(get_cached_path "$url")"
+  htmlq '#maintext > table' -f "$path" | html2md
 }
 
 mkdir -p wspace

@@ -65,6 +65,11 @@ git -C activestate filter-repo --quiet \
 # - Revision diffs have revision dates with second precision
 # - The revision history list has revision dates with minute precision
 
+# Sometime between 2023-07-09 and 2024-05-28, the pages for revisions earlier
+# than the latest went offline and now report "The specified key does not
+# exist.".
+# TODO: Contact ActiveState or use archived versions.
+
 cd stephenchappell-python
 git init -q
 
@@ -98,11 +103,11 @@ get_revisions() {
   local date
   local revision=1
   for date in "${revision_dates[@]}"; do
-    local revision_url="${url}history/$revision/"
     echo "Downloading $filename revision $revision ($date)"
+    local revision_url="${url}history/$revision/" revision_path
+    revision_path="$(get_cached_path "$revision_url")"
     # Extract code block from page
-    curl --no-progress-meter "$revision_url" |
-      htmlq --text '#content pre.prettyprint:first-child' -o "$filename"
+    htmlq --text '#content pre.prettyprint:first-child' -o "$filename" -f "$revision_path"
     # Remove superfluous LF at the end of the file from htmlq serialization
     truncate -s-1 "$filename"
     if [[ $filename = *.py ]]; then
@@ -129,8 +134,9 @@ ${revision_url}"
   done
 
   echo "Downloading $filename latest"
-  curl --no-progress-meter -o "$filename.raw" "${url}download/1/"
-  if ! cmp "$filename" "$filename.raw"; then
+  local latest_path
+  latest_path="$(get_cached_path "${url}download/1/")"
+  if ! cmp "$filename" "$latest_path"; then
     echo "$filename: Extracted HTML code block does not match raw file" >&2
     exit 1
   fi
