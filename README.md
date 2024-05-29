@@ -36,6 +36,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - ms-dos [[sh](scripts/ms-dos.sh)] - WIP
 - nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
 - ncsa-httpd [[sh](scripts/ncsa-httpd.sh)]
+- ncsa-mosaic [[sh](scripts/ncsa-mosaic.sh)]
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
 - snippets [[sh](scripts/snippets/archive.sh)] - [WIP](scripts/snippets/notes.md)
 - software-foundations [[sh](scripts/software-foundations/get_versions.sh)] - WIP
