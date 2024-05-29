@@ -2,11 +2,7 @@
 
 . base.sh
 
-as_martin() {
-  GIT_AUTHOR_NAME='MArtin SHerratt' GIT_AUTHOR_EMAIL='martinandhels@yahoo.co.uk' GIT_AUTHOR_DATE="$1" \
-  GIT_COMMITTER_NAME='MArtin SHerratt' GIT_COMMITTER_EMAIL='martinandhels@yahoo.co.uk' GIT_COMMITTER_DATE="$1" \
-  "${@:2}"
-}
+export AUTHOR='MArtin SHerratt <martinandhels@yahoo.co.uk>'
 
 mkdir -p wspace
 cd wspace
@@ -42,14 +38,14 @@ git filter-repo -f \
 # https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/whitespacesdk/whitespace_snapshot_0.1.zip
 # https://storage.googleapis.com/google-code-archive/v2/code.google.com/whitespacesdk/downloads-page-1.json
 rebase_break_before_date '2010-04-28 06:55:47 +0100'
-as_martin '2010-04-28 06:55:47 +0100' git tag -a v0.1 -m 'Snapshot v0.1'
+tag '2010-04-28 06:55:47 +0100' v0.1 'Snapshot v0.1'
 
 # Commit the repository Markdown summary. Google Code no longer exposes the list
 # of updates and it was not archived, so I have no dates for changes to the
 # repository and use the upload date of snapshot v0.1 as a proxy for that.
 jq -r '"# \(.name)\n\n\(.summary)\n\n\(.description)"' "$(get_cached_path https://storage.googleapis.com/google-code-archive/v2/code.google.com/whitespacesdk/project.json)" > README.md
 git add README.md
-as_martin '2010-04-28 06:55:47 +0100' git commit -q -m 'Uploaded snapshot v0.1'
+commit '2010-04-28 06:55:47 +0100' 'Uploaded snapshot v0.1'
 git rebase --continue
 
 git remote add origin https://github.com/wspace/mash-whitespacesdk

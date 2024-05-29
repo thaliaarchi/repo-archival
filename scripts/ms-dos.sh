@@ -131,8 +131,7 @@ commit '2013-12-16 10:34:17 -0800, 2013-12-19 23:15:52 +0000' '2013-12-16: MS-DO
 #
 # The author date is obviously fabricated and is inaccurate, because all files
 # are modified after it.
-GIT_COMMITTER_DATE='2013-12-19 23:15:52 +0000' \
-git tag ms-dos-v1.25 -a -m 'MS-DOS 1.25'
+tag '2013-12-19 23:15:52 +0000' ms-dos-v1.25 'MS-DOS 1.25'
 
 reset_repo
 
@@ -402,8 +401,7 @@ commit '2013-02-23 16:45:36 +0000' '2013-02-23: MS-DOS 2.0'
 #
 # The author date is obviously fabricated and is inaccurate, because most files
 # are modified after it.
-GIT_COMMITTER_DATE='2013-02-23 16:45:36 +0000' \
-git tag ms-dos-v2.0 -a -m 'MS-DOS 2.0'
+tag '2013-02-23 16:45:36 +0000' ms-dos-v2.0 'MS-DOS 2.0'
 
 reset_repo
 
@@ -422,8 +420,7 @@ commit '1987-07-24 05:00:02 +0000' '1987-07-24: MS-DOS 3.30'
 git add -f src/UPDSRC
 commit '1988-02-02 06:00:02 +0000' '1988-02-02: MS-DOS 3.30'
 
-GIT_COMMITTER_DATE='1988-02-02 06:00:02 +0000' \
-git tag ms-dos-v3.30 -a -m 'MS-DOS 3.30'
+tag '1988-02-02 06:00:02 +0000' ms-dos-v3.30 'MS-DOS 3.30'
 
 reset_repo
 
@@ -438,5 +435,4 @@ mv dos-6.0 src
 git add -f src
 commit '1999-10-31 19:01:40 +0000' '1999-10-31: MS-DOS 6.0'
 
-GIT_COMMITTER_DATE='1999-10-31 19:01:40 +0000' \
-git tag ms-dos-v6.0 -a -m 'MS-DOS 6.0'
+tag '1999-10-31 19:01:40 +0000' ms-dos-v6.0 'MS-DOS 6.0'
