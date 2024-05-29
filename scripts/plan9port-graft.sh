@@ -192,7 +192,7 @@ mkdir -p sys/src/libc/port
 git checkout 3e12c5d1bb89fc02707907988834ef147769ddaf -- sys/src/libc/port/charstod.c
 git rm src/libfmt/charstod.c
 git mv sys/src/libc/port/charstod.c src/libfmt/charstod.c
-git tcommit -m 'libfmt: Revert Third Edition 2000-10-14 changes to charstod.c
+git commit -m 'libfmt: Revert Third Edition 2000-10-14 changes to charstod.c
 
 This partially reverts https://github.com/plan9foundation/plan9/commit/59cc4ca53493a3c6d2349fe2b7f7c40f7dce7294'
 
