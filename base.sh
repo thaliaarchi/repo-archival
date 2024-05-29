@@ -107,6 +107,40 @@ tcommit() {
   git commit "$@"
 }
 
+set_idents() {
+  local idents="$1"
+  if [[ -n $AUTHOR && ! $idents =~ '<' ]]; then
+    idents="$AUTHOR $idents"
+  fi
+  local pattern="^([^<>]*) ?\<([^<>]*)\> ?([^<>|]*)( ?\| ?([^<>]*) ?\<([^<>]*)\> ?([^<>]*))?$"
+  if [[ $idents =~ $pattern ]]; then
+    GIT_AUTHOR_NAME="${BASH_REMATCH[1]}"
+    GIT_AUTHOR_EMAIL="${BASH_REMATCH[2]}"
+    GIT_AUTHOR_DATE="${BASH_REMATCH[3]}"
+    if [[ -n ${BASH_REMATCH[5]} ]]; then
+      GIT_COMMITTER_NAME="${BASH_REMATCH[5]}"
+      GIT_COMMITTER_EMAIL="${BASH_REMATCH[6]}"
+      GIT_COMMITTER_DATE="${BASH_REMATCH[7]}"
+    else
+      GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+      GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+      GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
+    fi
+    export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE
+    export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
+  else
+    echo "Invalid author/committer idents: '$idents'" >&2
+    return 1
+  fi
+}
+
+commit() {
+  local idents="$1"
+  local message="$2"
+  set_idents "$idents"
+  git commit -q -m "$message"
+}
+
 merge_repo() {
   local repo="$1"
   git remote add "$repo" "../$repo"
