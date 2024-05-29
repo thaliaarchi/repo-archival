@@ -12,7 +12,7 @@ set -eEuo pipefail
 # TODO
 # - Parse FTP directory listings to automate traversal of tree (see any
 #   directory in the time map).
-# - Clean up CVS metadata.
+# - Parse CVS metadata.
 # - Check the other seemingly-redundant files in the FTP tree.
 # - Include docs from separate archives.
 
@@ -54,6 +54,8 @@ amend_no_edit
 commit_archive 'NCSA HTTPd 1.2'           strip   https://web.archive.org/web/20160611172547/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.2/httpd_source.tar.Z
 commit_archive 'NCSA HTTPd 1.3'           strip   https://web.archive.org/web/20160611172550/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.3/httpd_source.tar.Z
 commit_archive 'NCSA HTTPd 1.3R'          strip   https://web.archive.org/web/20160611172552/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.3R/httpd_source.tar.Z
+find . -name CVS -exec git rm -rq {} +
+amend_no_edit
 commit_archive 'NCSA HTTPd 1.3R+'         strip   https://web.archive.org/web/20160611172554/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.3R+/httpd_1.3R+_source.tar.Z
 delete_backup cgi-src/imagemap.c '~'
 amend_no_edit
