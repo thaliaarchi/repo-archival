@@ -102,26 +102,42 @@ git_latest_modified() {
 
 set_idents() {
   local idents="$1"
-  if [[ -n $AUTHOR && ! $idents =~ '<' ]]; then
-    idents="$AUTHOR $idents"
-  fi
-  local pattern="^([^<>]*) ?\<([^<>]*)\> ?([^<>|]*)( ?\| ?([^<>]*) ?\<([^<>]*)\> ?([^<>]*))?$"
+
+  # Split author and committer idents
+  local pattern='^(([^<>]*<[^<>]*>)?[^<>,]*)( *, *(([^<>]*<[^<>]*>)?[^<>]*))?$'
   if [[ ! $idents =~ $pattern ]]; then
     echo "Invalid author/committer idents: '$idents'" >&2
+    return 1
+  fi
+  local author_ident="${BASH_REMATCH[1]}"
+  local committer_ident="${BASH_REMATCH[4]:-$author_ident}"
+  # Prepend $AUTHOR or $COMMITTER when the author/email is not present
+  if [[ -z ${BASH_REMATCH[2]} ]]; then
+    author_ident="$AUTHOR $author_ident"
+  fi
+  if [[ -z ${BASH_REMATCH[5]} ]]; then
+    committer_ident="${COMMITTER:-$AUTHOR} $committer_ident"
+  fi
+
+  # Split the author fields
+  local pattern='^ *([^<>]*) *<([^<>]*)> *([^<>/]*) *$'
+  if [[ ! $author_ident =~ $pattern ]]; then
+    echo "Invalid author ident: '$author_ident'" >&2
     return 1
   fi
   GIT_AUTHOR_NAME="${BASH_REMATCH[1]}"
   GIT_AUTHOR_EMAIL="${BASH_REMATCH[2]}"
   GIT_AUTHOR_DATE="${BASH_REMATCH[3]}"
-  if [[ -n ${BASH_REMATCH[5]} ]]; then
-    GIT_COMMITTER_NAME="${BASH_REMATCH[5]}"
-    GIT_COMMITTER_EMAIL="${BASH_REMATCH[6]}"
-    GIT_COMMITTER_DATE="${BASH_REMATCH[7]}"
-  else
-    GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-    GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-    GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
+  # Split the committer fields
+  if [[ ! $committer_ident =~ $pattern ]]; then
+    echo "Invalid committer ident: '$committer_ident'" >&2
+    return 1
   fi
+  GIT_COMMITTER_NAME="${BASH_REMATCH[1]}"
+  GIT_COMMITTER_EMAIL="${BASH_REMATCH[2]}"
+  GIT_COMMITTER_DATE="${BASH_REMATCH[3]}"
+
+  # Use the latest modified date for 'latest'
   if [[ $GIT_AUTHOR_DATE = latest || $GIT_COMMITTER_DATE = latest ]]; then
     local latest_modified
     latest_modified="$(git_latest_modified)"
@@ -132,6 +148,7 @@ set_idents() {
       GIT_COMMITTER_DATE="$latest_modified"
     fi
   fi
+
   export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE
   export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE
 }

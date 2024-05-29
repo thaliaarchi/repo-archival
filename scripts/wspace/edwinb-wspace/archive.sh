@@ -2,15 +2,7 @@
 
 . base.sh
 
-commit() {
-  local date="$1"
-  local message="$2"
-  local author_date="${date% / *}"
-  local committer_date="${date#* / }"
-  GIT_AUTHOR_NAME='Edwin Brady' GIT_AUTHOR_EMAIL='e.c.brady@durham.ac.uk' GIT_AUTHOR_DATE="$author_date" \
-  GIT_COMMITTER_NAME='Edwin Brady' GIT_COMMITTER_EMAIL='e.c.brady@durham.ac.uk' GIT_COMMITTER_DATE="$committer_date" \
-  git commit -q -m "$message"
-}
+export AUTHOR='Edwin Brady <e.c.brady@durham.ac.uk>'
 
 add_file() {
   local file="$1"
@@ -188,7 +180,7 @@ add_file    examples/fibonacci.ws                                               
 commit '2003-03-31 17:30:52 +0100' 'Add Fibonacci program'
 
 # Remove Whitespace 0.1 binaries
-git rm -- *.hi *.o wspace
+git rm -q -- *.hi *.o wspace
 
 # Don't include packages
 # add_file  whitespace_0.2-1.dsc                                                            r1 '2003-03-31 17:36:05 +0100' https://web.archive.org/web/20040120123855/http://compsoc.dur.ac.uk:80/whitespace/whitespace_0.2-1.dsc
@@ -221,7 +213,7 @@ commit '2003-04-02 10:23:53 +0100' 'Add site HTML'
 add_file    docs/tutorial.html                                                              r1 '2003-04-03 00:03:10 +0100' https://web.archive.org/web/20030405142201/http://compsoc.dur.ac.uk:80/whitespace/tutorial.html
 commit '2003-04-03 00:03:10 +0100' 'Embed fact.ws in tutorial.html'
 
-git rm docs/{examples,explanation,feedback}.html
+git rm -q docs/{examples,explanation,feedback}.html
 add_file    docs/examples.php                                                              ~r1 '2003-04-05 10:16:24 +0100' https://web.archive.org/web/20030405091634/http://compsoc.dur.ac.uk:80/whitespace/examples.php
 add_file    docs/explanation.php                                                           ~r1 '2003-04-05 15:08:45 +0100' https://web.archive.org/web/20030405140846/http://compsoc.dur.ac.uk:80/whitespace/explanation.php
 add_file    docs/feedback.php                                                              ~r1 '2003-04-05 15:20:10 +0100' https://web.archive.org/web/20030405142010/http://compsoc.dur.ac.uk:80/whitespace/feedback.php
@@ -239,12 +231,12 @@ commit '2003-04-08 11:41:56 +0100' 'Add a tool to embed a Whitespace program in 
 
 commit_file contrib/quine-copy.ws                                                           r1 '2003-04-08 12:19:26 +0100' https://web.archive.org/web/20030430003318/http://compsoc.dur.ac.uk:80/whitespace/quine-copy.ws
 
-git rm docs/index.html
+git rm -q docs/index.html
 commit_file docs/index.php                                                                 ~r1 '2003-04-12 21:19:16 +0100' https://web.archive.org/web/20030412201917/http://compsoc.dur.ac.uk:80/whitespace/
 commit_file docs/tutorial.php                                                              ~r1 '2003-04-14 01:17:23 +0100' https://web.archive.org/web/20030414001723/http://compsoc.dur.ac.uk:80/whitespace/tutorial.php
 commit_file docs/mailinglist.php                                                           ~r1 '2003-04-22 10:19:08 +0100' https://web.archive.org/web/20030422091910/http://compsoc.dur.ac.uk:80/whitespace/mailinglist.php
 commit_file docs/tools.php                                                                 ~r1 '2003-04-22 10:21:06 +0100' https://web.archive.org/web/20030422092107/http://compsoc.dur.ac.uk:80/whitespace/tools.php
-git rm docs/download.html
+git rm -q docs/download.html
 commit_file docs/download.php                                                              ~r1 '2003-06-04 13:33:03 +0100' https://web.archive.org/web/20030604123308/http://compsoc.dur.ac.uk:80/whitespace/download.php
 commit_file docs/explanation.php                                                           ~r2 '2003-06-21 19:12:12 +0100' https://web.archive.org/web/20030621181212/http://compsoc.dur.ac.uk:80/whitespace/explanation.php
 commit_file docs/contrib.php                                                               ~r1 '2003-06-21 22:48:00 +0100' https://web.archive.org/web/20030621214800/http://compsoc.dur.ac.uk:80/whitespace/contrib.php
@@ -291,7 +283,7 @@ add_file    docs/feedback.php                                                   
 add_file    docs/mailinglist.php                                                           ~r2 '2004-06-06 14:27:22 +0100' https://web.archive.org/web/20040606132722/http://compsoc.dur.ac.uk:80/whitespace/mailinglist.php
 add_file    docs/tutorial.php                                                              ~r2 '2004-06-06 14:57:41 +0100' https://web.archive.org/web/20040606135741/http://compsoc.dur.ac.uk:80/whitespace/tutorial.php
 # Unknown time
-commit '2004-05-04 00:00 +0000 / 2004-06-02 21:13:01 +0100' 'Update site for Whitespace 0.3'
+commit '2004-05-04 00:00 +0000, 2004-06-02 21:13:01 +0100' 'Update site for Whitespace 0.3'
 
 # Modified between 2004-08-03 23:55:10 +0100 and 2004-10-13 00:17:54 +0100.
 add_file    docs/explanation.php                                                           ~r4 '2004-10-13 00:17:54 +0100' https://web.archive.org/web/20041012231756/http://compsoc.dur.ac.uk:80/whitespace/explanation.php
