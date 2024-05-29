@@ -21,9 +21,7 @@ cd ncsa-httpd
 git init -q
 
 commit_archive() {
-  local message="$1"
-  local strip="$2"
-  local url="$3"
+  local message="$1" strip="$2" url="$3"
   if [[ $strip = strip ]]; then
     strip=--strip-components=1
   else
@@ -34,19 +32,31 @@ commit_archive() {
   git add -Af
   # The name of the team and its email evolve throughout the versions. I use the
   # most consistent attribution.
-  commit 'The NCSA HTTPd Development Team <httpd@ncsa.uiuc.edu> latest' "$message
+  commit 'The NCSA HTTPd Development Team <httpd@ncsa.uiuc.edu> latest' "$message" --trailer=Source:"$url"
+}
 
-Source: $url"
+# Remove backup versions of files that are identical to the previous revision.
+delete_backup() {
+  local filename="$1" backup_suffix="$2"
+  diff <(git show HEAD~:"$filename") "$filename$backup_suffix"
+  git rm -q "$filename$backup_suffix"
 }
 
 commit_archive 'NCSA HTTPd beta 0.5'      nostrip https://web.archive.org/web/20160611172535/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd-0.5/httpd0.5-src.tar.Z
+# httpd_1.1-nopatch/src/Makefile~ is not in the previous version, so cannot be
+# deleted, unless the history is made more granular.
 commit_archive 'NCSA HTTPd 1.1'           strip   https://web.archive.org/web/20160611172542/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.1-nopatch/httpd_source.tar.Z
-# TODO: Remove *.old and *~ files
 commit_archive 'NCSA HTTPd 1.1 (patched)' strip   https://web.archive.org/web/20160611172539/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.1/httpd_source.tar.Z
+delete_backup src/http_alias.c .old
+delete_backup src/httpd.h .old
+delete_backup src/util.c .old
+amend_no_edit
 commit_archive 'NCSA HTTPd 1.2'           strip   https://web.archive.org/web/20160611172547/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.2/httpd_source.tar.Z
 commit_archive 'NCSA HTTPd 1.3'           strip   https://web.archive.org/web/20160611172550/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.3/httpd_source.tar.Z
 commit_archive 'NCSA HTTPd 1.3R'          strip   https://web.archive.org/web/20160611172552/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.3R/httpd_source.tar.Z
 commit_archive 'NCSA HTTPd 1.3R+'         strip   https://web.archive.org/web/20160611172554/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/old/httpd_1.3R+/httpd_1.3R+_source.tar.Z
+delete_backup cgi-src/imagemap.c '~'
+amend_no_edit
 commit_archive 'NCSA HTTPd 1.4.2'         strip   https://web.archive.org/web/20160619204306/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/httpd_1.4.2/httpd_1.4.2_source.tar.Z
 commit_archive 'NCSA HTTPd 1.5.1'         strip   https://web.archive.org/web/20160619204337/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/httpd_1.5.1/httpd_1.5.1-export_source.tar.Z
 commit_archive 'NCSA HTTPd 1.5.2a'        strip   https://web.archive.org/web/20160619204223/ftp://ftp.ncsa.uiuc.edu/Web/httpd/Unix/ncsa_httpd/current/httpd_1.5.2a-export_source.tar.Z
