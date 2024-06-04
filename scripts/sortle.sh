@@ -50,18 +50,14 @@ esofiles="$(submodule_path https://github.com/graue/esofiles)"
 
 add_file() {
   local url="$1"
-  local path="${url#*/files/sortle/}"
-  local basename="${path##*/}"
-  mkdir -p "$(dirname "$path")"
-  get_cached "$url" "$path"
-  # Verify that the FTP versions are the same.
-  diff "$esofiles/sortle/$path" "$path"
-  # Verify that the sortle.c versions are the same.
-  if [[ -f $basename ]]; then
-    diff "$basename" "$path"
-    git rm -q "$basename"
-  fi
-  git add "$path"
+  local esofiles_path="${url#*/files/sortle/}"
+  local filename="${esofiles_path##*/}"
+  # Replace the .tar.gz version, if it exists.
+  git rm -q --ignore-unmatch "$filename"
+  get_cached "$url" "$filename"
+  # Verify that the Git and FTP Esofiles versions are the same.
+  diff "$esofiles/sortle/$esofiles_path" "$filename"
+  git add "$filename"
 }
 
 export AUTHOR='Graue <graue@oceanbase.org>'
@@ -74,7 +70,7 @@ add_file 'https://web.archive.org/web/20160414105457/http://esoteric.voxelperfec
 commit '2005-07-21 01:26:05 +0000' 'Add spec'
 
 git rm -qr .
-git checkout HEAD -- doc/sortle.pdf
+git checkout HEAD -- sortle.pdf
 tar xf "$esofiles/sortle/impl/sortle-1.0.tar.gz" --strip-components=1
 git add .
 commit latest 'Sortle 1.0' --trailer=Source:https://github.com/graue/esofiles/blob/master/sortle/impl/sortle-1.0.tar.gz
@@ -92,6 +88,8 @@ commit '2012-02-28 09:26:13 +0000' 'Add bct.sort'
 
 add_file 'https://web.archive.org/web/20161206014818/http://esoteric.voxelperfect.net/files/sortle/src/digroot.sort'
 add_file 'https://web.archive.org/web/20160414105507/http://esoteric.voxelperfect.net/files/sortle/src/quine.sort'
+cp "$esofiles/sortle/_readme.txt" .
+git add _readme.txt
 commit '2012-03-11 11:48:05 +0000' 'Add digroot.sort and quine.sort'
 
 add_file 'https://web.archive.org/web/20160414105510/http://esoteric.voxelperfect.net/files/sortle/impl/sortle.pl'
