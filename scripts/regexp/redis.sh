@@ -5,17 +5,26 @@ set -eEuo pipefail
 
 mkdir -p regexp
 cd regexp
-
-clone_submodule https://github.com/redis/redis
+mkdir redis
 cd redis
-# Extract the files containing stringmatch
-git filter-repo --quiet \
-  --path src/util.c --path src/util.h \
-  --path redis.c --path src/redis.h \
-  --path LICENSE.txt --path REDISCONTRIBUTIONS.txt --path COPYING \
-  --commit-callback '
-    commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: https://github.com/redis/redis/commit/" + commit.original_id + b"\n"
-  '
+
+# Filter the files relevant to stringmatch.
+filter() {
+  local dir="$1"
+  local url="$2"
+  clone_submodule "$url" "$dir"
+  git -C "$dir" filter-repo --quiet \
+    --path src/util.c --path src/util.h \
+    --path redis.c --path src/redis.h \
+    --path COPYING --path LICENSE.txt --path REDISCONTRIBUTIONS.txt \
+    --path src/.clang-format \
+    --commit-callback '
+      commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: '"$url"'/commit/" + commit.original_id + b"\n"
+    '
+}
+
+filter redis https://github.com/redis/redis
+filter valkey https://github.com/valkey-io/valkey
 
 # Relevant commits:
 

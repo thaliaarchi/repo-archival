@@ -204,6 +204,9 @@
 [submodule "git/github.com/timvandermeij/whitespace-interpreter"]
 	path = git/github.com/timvandermeij/whitespace-interpreter
 	url = https://github.com/timvandermeij/whitespace-interpreter
+[submodule "git/github.com/valkey-io/valkey"]
+	path = git/github.com/valkey-io/valkey
+	url = https://github.com/valkey-io/valkey
 [submodule "git/github.com/wspace/kspalaiologos-codegolf"]
 	path = git/github.com/wspace/kspalaiologos-codegolf
 	url = https://github.com/wspace/kspalaiologos-codegolf
