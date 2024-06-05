@@ -56,6 +56,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - regexp/plan9 [[sh](scripts/regexp/plan9.sh)]
 - regexp/plan9port [[sh](scripts/regexp/plan9port.sh)]
 - regexp/python [[sh](scripts/regexp/python-re.sh)]
+- regexp/redis [[sh](scripts/regexp/redis.sh)]
 - regexp/serenityos [[sh](scripts/regexp/serenityos.sh)]
 - [wspace/0x0dea-lolcode](https://github.com/wspace/0x0dea-lolcode) [[sh](scripts/wspace/0x0dea-lolcode.sh)]
 - [wspace/aniket965-hacktoberfest](https://github.com/wspace/aniket965-hacktoberfest) [[sh](scripts/wspace/aniket965-hacktoberfest.sh)]
