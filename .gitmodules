@@ -189,6 +189,9 @@
 [submodule "git/github.com/rdebath/whitespace"]
 	path = git/github.com/rdebath/whitespace
 	url = https://github.com/rdebath/whitespace
+[submodule "git/github.com/redis/redis"]
+	path = git/github.com/redis/redis
+	url = https://github.com/redis/redis
 [submodule "git/github.com/shi-mo/yukicoder"]
 	path = git/github.com/shi-mo/yukicoder
 	url = https://github.com/shi-mo/yukicoder
