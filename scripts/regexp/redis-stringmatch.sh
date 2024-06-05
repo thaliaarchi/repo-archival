@@ -5,8 +5,8 @@ set -eEuo pipefail
 
 mkdir -p regexp
 cd regexp
-mkdir redis
-cd redis
+mkdir redis-stringmatch
+cd redis-stringmatch
 
 # Filter the files relevant to stringmatch.
 filter() {
