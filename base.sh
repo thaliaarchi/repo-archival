@@ -301,6 +301,19 @@ get_cached() {
   cp -p "$cached_path" "$out"
 }
 
+commit_archive() {
+  local message="$1" url="$2"
+  local strip='--strip-components=1'
+  if [[ $2 = --nostrip ]]; then
+    strip=
+    url="$3"
+  fi
+  git rm -rq --ignore-unmatch '*'
+  tar xf "$(get_cached_path "$url")" $strip
+  git add -Af
+  commit latest "$message" --trailer=Source:"$url"
+}
+
 fix_perms() {
   # Allow the user to read and write and group/other to only read. Keep
   # executable bit as-is.
