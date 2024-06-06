@@ -91,6 +91,9 @@
 [submodule "git/github.com/Smithers888/BlueSpace"]
 	path = git/github.com/Smithers888/BlueSpace
 	url = https://github.com/Smithers888/BlueSpace
+[submodule "git/github.com/Snapchat/KeyDB"]
+	path = git/github.com/Snapchat/KeyDB
+	url = https://github.com/Snapchat/KeyDB
 [submodule "git/github.com/adobe/avmplus"]
 	path = git/github.com/adobe/avmplus
 	url = https://github.com/adobe/avmplus
