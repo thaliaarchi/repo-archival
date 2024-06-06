@@ -103,6 +103,15 @@
 [submodule "git/github.com/alexfru/SmallerC"]
 	path = git/github.com/alexfru/SmallerC
 	url = https://github.com/alexfru/SmallerC
+[submodule "git/github.com/antirez/Jim"]
+	path = git/github.com/antirez/Jim
+	url = https://github.com/antirez/Jim
+[submodule "git/github.com/antirez/disque"]
+	path = git/github.com/antirez/disque
+	url = https://github.com/antirez/disque
+[submodule "git/github.com/antirez/strabo"]
+	path = git/github.com/antirez/strabo
+	url = https://github.com/antirez/strabo
 [submodule "git/github.com/aros-development-team/contrib"]
 	path = git/github.com/aros-development-team/contrib
 	url = https://github.com/aros-development-team/contrib

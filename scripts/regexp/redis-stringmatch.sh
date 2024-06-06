@@ -8,16 +8,26 @@ cd regexp
 mkdir redis-stringmatch
 cd redis-stringmatch
 
-# Filter the files relevant to stringmatch.
 filter() {
   local dir="$1"
   local url="$2"
   clone_submodule "$url" "$dir"
+
+  # Filter the files relevant to stringmatch.
+  # - src/util.c and src/util.h are the current location of stringmatch.
+  # - redis.c was the original location of stringmatch (2009-2010).
+  # - src/redis.h was briefly the header including stringmatch (2010).
+  # - COPYING is the BSD-3-Clause license.
+  # - LICENSE.txt and REDISCONTRIBUTIONS.txt are the 2023 Redis license.
+  # - src/.clang-format is added in Valkey.
+  # - jim.c and LICENSE are only in Jim.
+  # - strabo.c is only in Strabo.
   git -C "$dir" filter-repo --quiet \
     --path src/util.c --path src/util.h \
     --path redis.c --path src/redis.h \
     --path COPYING --path LICENSE.txt --path REDISCONTRIBUTIONS.txt \
     --path src/.clang-format \
+    --path jim.c --path strabo.c --path LICENSE \
     --preserve-commit-hashes \
     --commit-callback '
       commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: '"$url"'/commit/" + commit.original_id + b"\n"
@@ -27,6 +37,14 @@ filter() {
 filter redis https://github.com/redis/redis
 filter valkey https://github.com/valkey-io/valkey
 filter keydb https://github.com/Snapchat/KeyDB
+
+# Disque started as a hard fork of Redis. Its history is clear.
+filter disque https://github.com/antirez/disque # Relevant: src/util.c, COPYING
+# Jim and Strabo have history earlier than in Git and stringmatch may be derived
+# from one of them.
+filter jim https://github.com/antirez/Jim # Relevant: jim.c, COPYING, LICENSE
+# Strabo's COPYING writes “Disque”.
+filter strabo https://github.com/antirez/strabo # Relevant: strabo.c, COPYING
 
 # Relevant commits:
 # 2009-03-22 10:30:00 +0100 redis:ed9b544e1 first commit
