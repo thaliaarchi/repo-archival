@@ -29,7 +29,7 @@ clone_submodule() {
   local dest="${url##*/}"
   dest="${dest%.git}"
   dest="${2-"$dest"}"
-  git clone -q "$TOPLEVEL/git/$url/.git" "$dest" "${@:3}"
+  git clone -q --no-local "$TOPLEVEL/git/$url/.git" "$dest" "${@:3}"
 }
 
 request_swh() {
