@@ -42,6 +42,7 @@ filter keydb https://github.com/Snapchat/KeyDB
 filter disque https://github.com/antirez/disque # Relevant: src/util.c, COPYING
 # Jim and Strabo have history earlier than in Git and stringmatch may be derived
 # from one of them.
+# TODO: test.tcl and ChangeLog and more history, including Tcl regexp engine.
 filter jim https://github.com/antirez/Jim # Relevant: jim.c, COPYING, LICENSE
 # Strabo's COPYING writes “Disque”.
 filter strabo https://github.com/antirez/strabo # Relevant: strabo.c, COPYING
