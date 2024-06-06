@@ -25,6 +25,7 @@ filter() {
 
 filter redis https://github.com/redis/redis
 filter valkey https://github.com/valkey-io/valkey
+filter keydb https://github.com/Snapchat/KeyDB
 
 # Relevant commits:
 
