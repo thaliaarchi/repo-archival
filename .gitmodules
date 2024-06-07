@@ -112,6 +112,9 @@
 [submodule "git/github.com/antirez/strabo"]
 	path = git/github.com/antirez/strabo
 	url = https://github.com/antirez/strabo
+[submodule "git/github.com/antirez/visitors"]
+	path = git/github.com/antirez/visitors
+	url = https://github.com/antirez/visitors
 [submodule "git/github.com/aros-development-team/contrib"]
 	path = git/github.com/aros-development-team/contrib
 	url = https://github.com/aros-development-team/contrib

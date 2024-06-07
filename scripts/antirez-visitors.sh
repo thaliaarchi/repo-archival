@@ -23,8 +23,14 @@ cd antirez-visitors
 
 git init -q
 
-# Project site:
-# http://web.archive.org/web/20221105021137/http://www.hping.org/visitors/
+# Project site: http://web.archive.org/web/20221105021137/http://www.hping.org/visitors/
+# Current repo: https://github.com/antirez/visitors
+#
+# There are numerous forks of antirez/visitors on GitHub. In addition,
+# https://github.com/moritz/visitors and https://github.com/xupefei/visitors
+# start from Visitors 0.7, but do not share Git history.
+# https://github.com/camilohe/visited is a project that uses Visitors as a base.
+# No forks that I have checked have changed vi_match_len.
 
 export AUTHOR='Salvatore Sanfilippo <antirez@invece.org>'
 
@@ -43,23 +49,23 @@ expect_file                              https://web.archive.org/web/20060101234
 commit_archive 'Visitors 0.7'            https://web.archive.org/web/20060614200041/http://www.hping.org:80/visitors/visitors-0.7.tar.gz
 expect_file                              https://web.archive.org/web/20060423131644/http://www.hping.org:80/visitors/visitors_0.7/Changelog
 
-# Found with https://github.com/search?q=vi_match_len&type=code
+# Graft the newer changes from GitHub.
+clone_submodule https://github.com/antirez/visitors github
+cd github
+git filter-repo --quiet \
+  --commit-callback '
+    commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: https://github.com/antirez/visitors/commit/" + commit.original_id + b"\n"
+  '
+git remote add visitors ..
+git fetch -q visitors
+# The initial commit is slightly modified from version 0.7, so graft instead of
+# replace.
+git replace --graft "$(git rev-list --max-parents=0 HEAD)" visitors/main
+git filter-repo --quiet --force
+cd ..
 
-# First commit: 2009-12-01, probably 0.7
-# Seems to be slightly ahead the version 0.7 in moritz and xupefei
-git clone https://github.com/antirez/visitors antirez-visitors
-# Continues Git history
-git clone https://github.com/xlab/visitors xlab-visitors
-# Identical history
-git clone https://github.com/schollz/visitors schollz-visitors
-# Identical history
-git clone https://github.com/Cloudxtreme/visitors cloudxtreme-visitors
-
-# Identical first commit contents
-# First commit: 2010-05-13, version 0.7 (with two junk files)
-git clone https://github.com/moritz/visitors moritz-visitors
-# First commit: 2014-07-07, version 0.7
-git clone https://github.com/xupefei/visitors xupefei-visitors
-
-# A fork of visitors by Camilo E. Hidalgo Estevez
-git clone https://github.com/camilohe/visited camilohe-visited
+git remote add github ./github
+git fetch -q github
+git reset -q --hard github/master
+git remote remove github
+rm -rf github
