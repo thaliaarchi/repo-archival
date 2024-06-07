@@ -237,3 +237,6 @@
 [submodule "git/repo.or.cz/tinycc.git"]
 	path = git/repo.or.cz/tinycc.git
 	url = https://repo.or.cz/tinycc.git
+[submodule "git/github.com/msteveb/jimtcl"]
+	path = git/github.com/msteveb/jimtcl
+	url = https://github.com/msteveb/jimtcl
