@@ -3,14 +3,18 @@ set -eEuo pipefail
 
 . base.sh
 
+if [[ ! -d antirez-visitors ]]; then
+  echo 'scripts/antirez-visitors.sh must be run first' >&2
+  exit 1
+fi
+
 mkdir -p regexp
 cd regexp
-mkdir redis-stringmatch
-cd redis-stringmatch
+mkdir antirez-stringmatch
+cd antirez-stringmatch
 
 filter() {
-  local dir="$1"
-  local url="$2"
+  local dir="$1" url="$2"
   clone_submodule "$url" "$dir"
 
   # Filter the files relevant to stringmatch.
@@ -34,18 +38,31 @@ filter() {
     '
 }
 
+# The repos need to be manually rebased afterward to keep only the relevant
+# parts of files and clean the commit topology.
+
+# Redis and forks:
 filter redis https://github.com/redis/redis
 filter valkey https://github.com/valkey-io/valkey
 filter keydb https://github.com/Snapchat/KeyDB
 
+# Other projects by antirez:
+
+# TODO: Jim is likely the original source of stringmatch and later versions also
+# have a Tcl-style regexp engine.
+# TODO: test.tcl and ChangeLog.
+filter jim https://github.com/antirez/Jim # Relevant: jim.c, COPYING, LICENSE
 # Disque started as a hard fork of Redis. Its history is clear.
 filter disque https://github.com/antirez/disque # Relevant: src/util.c, COPYING
-# Jim and Strabo have history earlier than in Git and stringmatch may be derived
-# from one of them.
-# TODO: test.tcl and ChangeLog and more history, including Tcl regexp engine.
-filter jim https://github.com/antirez/Jim # Relevant: jim.c, COPYING, LICENSE
 # Strabo's COPYING writes “Disque”.
+# TODO: Strabo has history earlier than in Git.
 filter strabo https://github.com/antirez/strabo # Relevant: strabo.c, COPYING
+
+# vi_match_len and vi_match were added in Visitors 0.7.
+git clone -q ../../antirez-visitors visitors
+git -C visitors filter-repo --quiet \
+  --path visitors.c \
+  --path COPYING --path AUTHORS --path Changelog --path TODO
 
 # Relevant commits:
 # 2009-03-22 10:30:00 +0100 redis:ed9b544e1 first commit
