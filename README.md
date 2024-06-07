@@ -32,13 +32,13 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## From archives
 
 - antirez-visitors [[sh](scripts/antirez-visitors.sh)]
-- decus-grep [[sh](scripts/regexp/decus-grep.sh)] - WIP
 - [minecraft-papercraft-pig](https://github.com/thaliaarchi/minecraft-papercraft-pig) [[sh](scripts/minecraft/papercraft-pig.sh)]
 - ms-dos [[sh](scripts/ms-dos.sh)] - WIP
 - nand2tetris [[sh](scripts/nand2tetris.sh)] - WIP
 - ncsa-httpd [[sh](scripts/ncsa-httpd.sh)]
 - ncsa-mosaic [[sh](scripts/ncsa-mosaic.sh)]
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
+- regexp/decus-grep [[sh](scripts/regexp/decus-grep.sh)] - WIP
 - snippets [[sh](scripts/snippets/archive.sh)] - [WIP](scripts/snippets/notes.md)
 - software-foundations [[sh](scripts/software-foundations/get_versions.sh)] - WIP
 - sortle [[sh](scripts/sortle.sh)]
@@ -75,12 +75,12 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## Merged git histories
 
 - [Andreal2000/WhitespaceEvaluator](https://github.com/Andreal2000/WhitespaceEvaluator) [[sh](scripts/wspace/andreal2000-scala.sh)]
-- avmplus-pcre [[sh](scripts/regexp/avmplus-pcre.sh)]
-- avmplus-pcre2 [[sh](scripts/regexp/avmplus-pcre2.sh)]
 - [hostilefork/rebol-whitespacers](https://github.com/hostilefork/rebol-whitespacers) [[post](scripts/wspace/rebol-whitespacers/post.md)] - with manual rebasing
 - inferno [[sh](scripts/inferno/archive.sh)]
 - plan9port-graft [[sh](scripts/plan9port-graft.sh)] - manual
 - [quine-relay-spoiler](https://github.com/thaliaarchi/quine-relay-spoiler) [[sh](scripts/quine-relay.sh)]
+- regexp/avmplus-pcre [[sh](scripts/regexp/avmplus-pcre.sh)]
+- regexp/avmplus-pcre2 [[sh](scripts/regexp/avmplus-pcre2.sh)]
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) [[sh](scripts/wspace/0qol-prime.sh)] - with manual rewording
 - [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) [[sh](scripts/wspace/ilikepython256-whitespace-unc.sh)] - with manual rebasing
 - [wspace/keens-whitelie](https://github.com/wspace/keens-whitelie) [[sh](scripts/wspace/keens-whitelie.sh)] - with manual rebasing
