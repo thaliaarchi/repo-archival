@@ -16,6 +16,7 @@ commit_urls=''
 # - Not everything for the C project is archived. Go through the timemap to try
 #   and get everything. I haven't touched 64-bit yet. I am not doing
 #   implementations in other languages by other authors.
+# - Use `Co-authored-by:` trailer.
 
 push_commit_url() {
   commit_urls="$commit_urls
