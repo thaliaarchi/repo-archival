@@ -32,15 +32,12 @@ git filter-repo --quiet \
 
 git checkout -q --orphan pcre-7.3
 git rm -qrf .
-tar xf "$(get_cached_path https://sourceforge.net/projects/pcre/files/pcre/7.3/pcre-7.3.tar.bz2/download)" --strip-components=1
-git add -Af .
-commit 'Philip.Hazel <Philip.Hazel@gmail.com> 2007-08-28 19:36:27 +0000' 'Release PCRE 7.3
-
-Source: https://sourceforge.net/projects/pcre/files/pcre/7.3/pcre-7.3.tar.bz2/download'
+commit_archive 'Philip.Hazel <Philip.Hazel@gmail.com> 2007-08-28 19:36:27 +0000' 'Release PCRE 7.3' \
+  https://sourceforge.net/projects/pcre/files/pcre/7.3/pcre-7.3.tar.bz2/download
 
 git checkout -q master
 # Replace the README- and LICENSE-only initial commit and keep the first commit
 # with source, 65a0592 (Initial source code drop, 2013-12-02).
 git replace "$(git rev-list --max-parents=0 HEAD)" pcre-7.3
-git filter-repo --force
-git branch -d pcre-7.3
+git filter-repo --quiet --force
+git branch -qd pcre-7.3

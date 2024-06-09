@@ -10,7 +10,6 @@ clone_submodule https://github.com/PCRE2Project/pcre2 avmplus-pcre2
 cd avmplus-pcre2
 git remote remove origin
 git reset -q --hard pcre2-10.20~
-git rm -qrf .
 
 # Last-Modified              URL
 # 2015-07-02 12:17:00 +0000  https://web.archive.org/web/20170826025657/https://ftp.pcre.org/pub/pcre/pcre2-10.20.tar.bz2
@@ -29,14 +28,11 @@ git rm -qrf .
 # the commits use the timezone of the server, which seems to have been +0100.
 # This matches later commits by Philip in +0100.
 
-tar xf "$(get_cached_path https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.20/pcre2-10.20.tar.bz2)" --strip-components=1
-git add -Af
 # Since the archives were created before the final commit and tag, match the tag
 # time. Match the two final LFs (which I presume come from git-svn with the
 # git-svm-id lines stripped).
-commit 'Philip.Hazel <Philip.Hazel@gmail.com> 2015-07-02 13:18:57 +0000' 'Distribute release 10.20
-
-Source: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.20/pcre2-10.20.tar.bz2'
+commit_archive 'Philip.Hazel <Philip.Hazel@gmail.com> 2015-07-02 13:18:57 +0000' 'Distribute release 10.20' \
+  https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.20/pcre2-10.20.tar.bz2
 cd ..
 
 clone_submodule https://github.com/adobe/avmplus

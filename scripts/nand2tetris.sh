@@ -3,13 +3,11 @@
 . base.sh
 
 commit_archive() {
-  local date="$1"
-  local message="$2"
-  local url="$3"
+  local date="$1" message="$2" url="$3"
   cd ..
   rm -rf nand2tetris
   unzip -q "$(get_cached_path "$url")"
-  rm -rf __MACOSX
+  rm -rf __MACOSX # For https://web.archive.org/web/20160204005352/http://www.nand2tetris.org/software/nand2tetris.zip
   cd suite
   git --work-tree ../nand2tetris add -Af
   GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" \

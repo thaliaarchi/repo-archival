@@ -5,6 +5,10 @@
 mkdir -p wspace
 cd wspace
 
+mkdir stellwag-wspacegen
+cd stellwag-wspacegen
+git init -q
+
 # Philippe is likely in Germany, but I don't know whether the archive
 # times are local or UTC, so I won't set the location.
 
@@ -26,15 +30,8 @@ cd wspace
 # 2004-09-09 12:59:05 +0000  wspacegen/GNUmakefile
 # 2004-09-09 12:59:08 +0000  wspacegen/Makefile
 # 2004-09-09 12:59:19 +0000  wspacegen/
-tar xf "$(get_cached_path 'https://master.dl.sourceforge.net/project/wspacegen/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz?viasf=1')"
-mv wspacegen stellwag-wspacegen
-cd stellwag-wspacegen
 
-git init -q
-git add -Af
-
-commit 'Philippe Stellwag <linux@mp3s.name> 2004-09-09 12:59:19 +0000' 'Release wspacegen pre-alpha 0.1
-
-https://sourceforge.net/projects/wspacegen/files/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz/download'
+commit_archive 'Philippe Stellwag <linux@mp3s.name> 2004-09-09 12:59:19 +0000' 'Release wspacegen pre-alpha 0.1' \
+  https://sourceforge.net/projects/wspacegen/files/Pre-Alpha/v0.1/wspacegen-0.1-src.tar.gz/download
 
 git remote add origin https://github.com/wspace/stellwag-wspacegen
