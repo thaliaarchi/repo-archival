@@ -54,6 +54,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Extracted from git subtree
 
+- regexp/autohotkey-pcre [[sh](scripts/regexp/autohotkey-pcre.sh)]
 - regexp/plan9 [[sh](scripts/regexp/plan9.sh)]
 - regexp/plan9port [[sh](scripts/regexp/plan9port.sh)]
 - regexp/python [[sh](scripts/regexp/python-re.sh)]
