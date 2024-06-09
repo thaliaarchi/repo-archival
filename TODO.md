@@ -48,7 +48,11 @@
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
 - 1998-1999 Netscape and Mozilla sources: https://ftp.mozilla.org/pub/mozilla/source/
-- PCRE release archives
+- PCRE release archives:
+  PCRE was previously released to [ftp.csx.cam.ac.uk](https://web.archive.org/web/20150515020758/http://ftp.csx.cam.ac.uk:80/pub/software/programming/pcre)
+  and [ftp.pcre.org](http://web.archive.org/web/20210724130104/http://ftp.pcre.org/pub/pcre/),
+  but few versions were archived. Versions back to 3.3 are [mirrored](https://sourceforge.net/projects/pcre/files/pcre/)
+  on SourceForge, but I do not know the primary source.
 - [The Esoteric File Archive](https://esolangs.org/wiki/The_Esoteric_File_Archive):
   Construct revision history for each implementation from archives
 - Apache HTTP Server: incorporate archive releases and graft onto NCSA HTTPd

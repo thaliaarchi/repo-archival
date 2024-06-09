@@ -10,12 +10,6 @@ cd regexp
 # - Assemble history with earlier PCRE versions.
 # - Check if any changes were cherry-picked from later PCRE releases.
 
-# PCRE was previously released to https://web.archive.org/web/20150515020758/http://ftp.csx.cam.ac.uk:80/pub/software/programming/pcre
-# and http://web.archive.org/web/20210724130104/http://ftp.pcre.org/pub/pcre/,
-# but few versions were archived. Versions back to 3.3 are mirrored on
-# SourceForge at https://sourceforge.net/projects/pcre/files/pcre/, but I do not
-# know the primary source.
-
 clone_submodule https://github.com/adobe/avmplus avmplus-pcre
 cd avmplus-pcre
 git filter-repo --quiet \
@@ -24,8 +18,7 @@ git filter-repo --quiet \
   --path pcre --path-rename pcre/: \
   --mailmap <(echo 'Dave McAllister <dmcallis@adobe.com> dmcallis <dmcallis@adobe.com>') \
   --commit-callback '
-    commit.message = re.sub(br"\n+$", b"", commit.message)
-    commit.message += b"\n\nSource: https://github.com/adobe/avmplus/commit/" + commit.original_id + b"\n"
+    commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: https://github.com/adobe/avmplus/commit/" + commit.original_id + b"\n"
   '
 
 # Last-Modified              URL

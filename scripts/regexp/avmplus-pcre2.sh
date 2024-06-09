@@ -50,8 +50,7 @@ git filter-repo --quiet \
   --path LICENSE --path-rename LICENSE:LICENSE.avmplus \
   --path pcre2 --path-rename pcre2/: \
   --commit-callback '
-    commit.message = re.sub(br"\n+$", b"", commit.message)
-    commit.message += b"\n\nSource: https://github.com/adobe/avmplus/commit/" + commit.original_id + b"\n"
+    commit.message = re.sub(br"(?:\r?\n)+$", b"", commit.message) + b"\n\nSource: https://github.com/adobe/avmplus/commit/" + commit.original_id + b"\n"
   '
 
 git remote add pcre2 ../avmplus-pcre2

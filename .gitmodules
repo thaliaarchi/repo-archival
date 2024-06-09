@@ -53,6 +53,9 @@
 	path = git/github.com/Aniket965/Hello-world
 	url = https://github.com/Aniket965/Hello-world
 	ignore = dirty
+[submodule "git/github.com/AutoHotkey/AutoHotkey"]
+	path = git/github.com/AutoHotkey/AutoHotkey
+	url = https://github.com/AutoHotkey/AutoHotkey
 [submodule "git/github.com/BackupTheBerlios/wsdebug"]
 	path = git/github.com/BackupTheBerlios/wsdebug
 	url = https://github.com/BackupTheBerlios/wsdebug
