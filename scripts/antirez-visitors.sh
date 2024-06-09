@@ -4,12 +4,12 @@ set -eEuo pipefail
 . base.sh
 
 commit_file() {
-  local message="$1" url="$2"
+  local ident="$1" message="$2" url="$3"
   local filename="${url##*/}"
   git rm -q --ignore-unmatch "$filename"
   get_cached "$url"
   git add "$filename"
-  commit latest "$message" --trailer=Source:"$url"
+  commit "$ident" "$message" --trailer=Source:"$url"
 }
 
 expect_file() {
@@ -35,19 +35,19 @@ git init -q
 export AUTHOR='Salvatore Sanfilippo <antirez@invece.org>'
 
 # Not all releases were archived. Fill in some gaps with changelogs.
-commit_archive 'Visitors 0.2'            https://web.archive.org/web/20070318223258/http://www.hping.org:80/visitors/visitors-0.2.tar.gz
-commit_file    'Visitors 0.2a changelog' https://web.archive.org/web/20040529013204/http://www.hping.org:80/visitors/visitors_0.2a/Changelog
-commit_file    'Visitors 0.3a changelog' https://web.archive.org/web/20040605145301/http://www.hping.org:80/visitors/visitors_0.3a/Changelog
-commit_file    'Visitors 0.4 changelog'  https://web.archive.org/web/20041019060040/http://www.hping.org:80/visitors/visitors_0.4/Changelog
-commit_file    'Visitors 0.4a changelog' https://web.archive.org/web/20040925090153/http://www.hping.org:80/visitors/visitors_0.4a/Changelog
-commit_archive 'Visitors 0.5'            https://web.archive.org/web/20051210050149/http://www.hping.org:80/visitors/visitors-0.5.tar.gz
-commit_file    'Visitors 0.5 changelog'  https://web.archive.org/web/20050507141459/http://www.hping.org:80/visitors/visitors_0.5/Changelog
-commit_archive 'Visitors 0.6'            https://web.archive.org/web/20051221054302/http://www.hping.org:80/visitors/visitors-0.6.tar.gz
-expect_file                              https://web.archive.org/web/20051221060335/http://www.hping.org:80/visitors/visitors_0.6/Changelog
-commit_archive 'Visitors 0.61'           https://web.archive.org/web/20060207122132/http://www.hping.org:80/visitors/visitors-0.61.tar.gz
-expect_file                              https://web.archive.org/web/20060101234727/http://www.hping.org:80/visitors/visitors_0.61/Changelog
-commit_archive 'Visitors 0.7'            https://web.archive.org/web/20060614200041/http://www.hping.org:80/visitors/visitors-0.7.tar.gz
-expect_file                              https://web.archive.org/web/20060423131644/http://www.hping.org:80/visitors/visitors_0.7/Changelog
+commit_archive latest 'Visitors 0.2'            https://web.archive.org/web/20070318223258/http://www.hping.org:80/visitors/visitors-0.2.tar.gz
+commit_file    latest 'Visitors 0.2a changelog' https://web.archive.org/web/20040529013204/http://www.hping.org:80/visitors/visitors_0.2a/Changelog
+commit_file    latest 'Visitors 0.3a changelog' https://web.archive.org/web/20040605145301/http://www.hping.org:80/visitors/visitors_0.3a/Changelog
+commit_file    latest 'Visitors 0.4 changelog'  https://web.archive.org/web/20041019060040/http://www.hping.org:80/visitors/visitors_0.4/Changelog
+commit_file    latest 'Visitors 0.4a changelog' https://web.archive.org/web/20040925090153/http://www.hping.org:80/visitors/visitors_0.4a/Changelog
+commit_archive latest 'Visitors 0.5'            https://web.archive.org/web/20051210050149/http://www.hping.org:80/visitors/visitors-0.5.tar.gz
+commit_file    latest 'Visitors 0.5 changelog'  https://web.archive.org/web/20050507141459/http://www.hping.org:80/visitors/visitors_0.5/Changelog
+commit_archive latest 'Visitors 0.6'            https://web.archive.org/web/20051221054302/http://www.hping.org:80/visitors/visitors-0.6.tar.gz
+expect_file                                     https://web.archive.org/web/20051221060335/http://www.hping.org:80/visitors/visitors_0.6/Changelog
+commit_archive latest 'Visitors 0.61'           https://web.archive.org/web/20060207122132/http://www.hping.org:80/visitors/visitors-0.61.tar.gz
+expect_file                                     https://web.archive.org/web/20060101234727/http://www.hping.org:80/visitors/visitors_0.61/Changelog
+commit_archive latest 'Visitors 0.7'            https://web.archive.org/web/20060614200041/http://www.hping.org:80/visitors/visitors-0.7.tar.gz
+expect_file                                     https://web.archive.org/web/20060423131644/http://www.hping.org:80/visitors/visitors_0.7/Changelog
 
 # Graft the newer changes from GitHub.
 clone_submodule https://github.com/antirez/visitors github

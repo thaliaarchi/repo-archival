@@ -296,22 +296,23 @@ get_cached() {
     echo "get_cached $url: $out already exists" >&2
     exit 1
   fi
-  mkdir -p "$(dirname "$out")"
   cached_path="$(get_cached_path "$url")"
+  mkdir -p "$(dirname "$out")"
   cp -p "$cached_path" "$out"
 }
 
 commit_archive() {
-  local message="$1" url="$2"
-  local strip='--strip-components=1'
-  if [[ $2 = --nostrip ]]; then
+  local ident="$1" message="$2" url="$3"
+  local strip='--strip-components=1' cached_path
+  if [[ $3 = --nostrip ]]; then
     strip=
-    url="$3"
+    url="$4"
   fi
-  git rm -rq --ignore-unmatch '*'
-  tar xf "$(get_cached_path "$url")" $strip
+  cached_path="$(get_cached_path "$url")"
+  git rm -qr --ignore-unmatch .
+  tar xf "$cached_path" $strip
   git add -Af
-  commit latest "$message" --trailer=Source:"$url"
+  commit "$ident" "$message" --trailer=Source:"$url"
 }
 
 fix_perms() {
