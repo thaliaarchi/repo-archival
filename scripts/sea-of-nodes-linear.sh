@@ -11,6 +11,8 @@ git init -q
 
 repo="$(submodule_path https://github.com/SeaOfNodes/Simple)"
 
+last_committer_date='0 +0000'
+
 git -C "$repo" ls-tree HEAD --name-only | grep '^chapter' |
 while read -r chapter; do
   echo "Processing $chapter"
@@ -48,6 +50,9 @@ EOF
   fi
   author_date="$(git -C "$repo" log --format=%ad --date=raw "$chapter" "${author_root_files[@]}" | tail -n1)"
   committer_date="$(git -C "$repo" log --format=%ad --date=raw -1 "$chapter" "${root_files[@]}")"
+  if [[ $committer_date < $last_committer_date ]]; then
+    committer_date="$last_committer_date"
+  fi
 
   # Add the files for the chapter.
   git rm -qr --ignore-unmatch .
