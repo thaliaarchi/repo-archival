@@ -5,8 +5,8 @@ set -eEuo pipefail
 
 IFS=$'\n'
 
-mkdir sea-of-nodes
-cd sea-of-nodes
+mkdir sea-of-nodes-linear
+cd sea-of-nodes-linear
 git init -q
 
 repo="$(submodule_path https://github.com/SeaOfNodes/Simple)"
@@ -77,8 +77,9 @@ EOF
     mkdir docs
     # Remove links to chapters.
     gsed -Ei 's,\[Chapter ([0-9]+)\]\(chapter0?\1/README\.md\),Chapter \1,' README.md
-    # Remove the <modules> section from pom.xml for a single-project structure.
-    gsed -i '/<modules>/,/^$/d' pom.xml
+    # Change to a JAR and delete the modules, for a single-project structure.
+    gsed -i -e 's,<packaging>pom</packaging>,<packaging>jar</packaging>,' \
+            -e '/<modules>/,/^$/d' pom.xml
   fi
   git mv chapter_docs "docs/$chapter"
   # Restore the link to this chapter.

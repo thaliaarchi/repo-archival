@@ -61,7 +61,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - regexp/antirez-jim [[sh](scripts/regexp/antirez-jim.sh)]
 - [regexp/antirez-stringmatch](https://github.com/thaliaarchi/antirez-stringmatch) [[sh](scripts/regexp/antirez-stringmatch.sh)]
 - regexp/serenityos [[sh](scripts/regexp/serenityos.sh)]
-- sea-of-nodes-linear [[sh](scripts/sea-of-nodes-linear.sh)]
+- [sea-of-nodes-linear](https://github.com/thaliaarchi/sea-of-nodes-linear) [[sh](scripts/sea-of-nodes-linear.sh)]
 - [wspace/0x0dea-lolcode](https://github.com/wspace/0x0dea-lolcode) [[sh](scripts/wspace/0x0dea-lolcode.sh)]
 - [wspace/aniket965-hacktoberfest](https://github.com/wspace/aniket965-hacktoberfest) [[sh](scripts/wspace/aniket965-hacktoberfest.sh)]
 - [wspace/emilbahnsen-assembler](https://github.com/wspace/emilbahnsen-assembler) [[sh](scripts/wspace/emilbahnsen-assembler.sh)]
