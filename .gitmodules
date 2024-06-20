@@ -88,6 +88,9 @@
 [submodule "git/github.com/PCRE2Project/pcre2"]
 	path = git/github.com/PCRE2Project/pcre2
 	url = https://github.com/PCRE2Project/pcre2
+[submodule "git/github.com/SeaOfNodes/Simple"]
+	path = git/github.com/SeaOfNodes/Simple
+	url = https://github.com/SeaOfNodes/Simple
 [submodule "git/github.com/SerenityOS/serenity"]
 	path = git/github.com/SerenityOS/serenity
 	url = https://github.com/SerenityOS/serenity
