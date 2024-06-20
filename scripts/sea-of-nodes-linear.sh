@@ -46,7 +46,7 @@ EOF
     # Only include the commit date of the root files for chapter01.
     author_root_files+=("${root_files[@]}")
   fi
-  author_date="$(git -C "$repo" log --format=%ad --date=raw --reverse "$chapter" "${author_root_files[@]}" | head -n1)"
+  author_date="$(git -C "$repo" log --format=%ad --date=raw "$chapter" "${author_root_files[@]}" | tail -n1)"
   committer_date="$(git -C "$repo" log --format=%ad --date=raw -1 "$chapter" "${root_files[@]}")"
 
   # Add the files for the chapter.
