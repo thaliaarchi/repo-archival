@@ -53,32 +53,34 @@ EOF
   git rm -qr --ignore-unmatch .
   cp -r "$repo/$chapter/" .
   mv README.md docs/
-  mv pom.xml "$chapter.pom.xml"
   mv docs chapter_docs
+  rm pom.xml
   git add .
 
-  # Add the shared files in the root, except for README.md.
-  root_files=(LICENSE pom.xml .gitignore .dir-locals.el)
+  # Add the shared files in the root, except for README.md and pom.xml.
+  root_files=(LICENSE .gitignore .dir-locals.el)
   cp "${root_files[@]/#/"$repo/"}" .
   git add "${root_files[@]}"
 
-  # Merge this chapter's documentation with the previous.
+  # Fix README.md, docs/chapter??/README.md, and pom.xml.
   if git rev-parse HEAD >/dev/null 2>/dev/null; then
-    # Restore the documentation from the previous chapter.
-    git diff --staged --diff-filter=D --name-only -- docs README.md | xargs git checkout -q HEAD
+    # Restore the documentation and pom.xml from the previous chapter.
+    git diff --staged --diff-filter=D --name-only -- docs README.md pom.xml | xargs git checkout -q HEAD
   else
+    # This is the first commit; setup shared files.
+    cp "$repo"/{README.md,pom.xml} .
     mkdir docs
-    # Add README.md, but remove links to chapters.
-    cp "$repo/README.md" .
+    # Remove links to chapters.
     gsed -Ei 's,\[Chapter ([0-9]+)\]\(chapter0?\1/README\.md\),Chapter \1,' README.md
-    git add README.md
+    # Remove the <modules> section from pom.xml for a single-project structure.
+    gsed -i '/<modules>/,/^$/d' pom.xml
   fi
   git mv chapter_docs "docs/$chapter"
   # Restore the link to this chapter.
   gsed -Ei "s,^\* Chapter $chapter_number: ,* [Chapter $chapter_number](docs/$chapter/README.md): ," README.md
   # Repair links for this chapter.
   gsed -Ei 's,\bdocs/,,' "docs/$chapter/README.md"
-  git add README.md "docs/$chapter/README.md"
+  git add README.md "docs/$chapter/README.md" pom.xml
 
   commit "$first_author $author_date, $committer_date" "$message"
 done
