@@ -166,9 +166,6 @@
 [submodule "git/github.com/jmesyou/erasure"]
 	path = git/github.com/jmesyou/erasure
 	url = https://github.com/jmesyou/erasure
-[submodule "git/github.com/joaquin-rossi/esoteric"]
-	path = git/github.com/joaquin-rossi/esoteric
-	url = https://github.com/joaquin-rossi/esoteric
 [submodule "git/github.com/koturn/Whitespace"]
 	path = git/github.com/koturn/Whitespace
 	url = https://github.com/koturn/Whitespace
