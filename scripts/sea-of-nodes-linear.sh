@@ -3,6 +3,14 @@ set -eEuo pipefail
 
 . base.sh
 
+sort_authors() {
+  # Unify author aliases.
+  sed -e 's/^dibyendumajumdar <mobile@majumdar\.org\.uk>$/Dibyendu Majumdar <mobile@majumdar.org.uk>/g' \
+      -e 's/^Dibyendu Majumdar <dibyendumajumdar@users\.noreply\.github\.com>$/Dibyendu Majumdar <mobile@majumdar.org.uk>/g' |
+  # Rank by number of commits.
+  sort | uniq -c | sort -nr | gsed -E 's/^ *[0-9]+ //'
+}
+
 IFS=$'\n'
 
 mkdir sea-of-nodes-linear
@@ -17,29 +25,22 @@ git -C "$repo" ls-tree HEAD --name-only | grep '^chapter' |
 while read -r chapter; do
   echo "Processing $chapter"
 
-  # Unify author aliases for proper sort order.
-  cat <<EOF >.mailmap
-Dibyendu Majumdar <mobile@majumdar.org.uk> dibyendumajumdar <mobile@majumdar.org.uk>
-Dibyendu Majumdar <mobile@majumdar.org.uk> Dibyendu Majumdar <dibyendumajumdar@users.noreply.github.com>
-EOF
-
   chapter_number="$(gsed 's/^chapter0*//' <<< "$chapter")"
   message="Chapter $chapter_number"$'\n\n'
-  first_author=
 
-  # Extract chapter authors and rank by number of commits.
-  authors="$(
-    git -C "$repo" -c mailmap.file="$PWD/.mailmap" log \
-      --format='%aN <%aE>' --use-mailmap --no-merges "$chapter" |
-    sort | uniq -c | sort -nr | gsed -E 's/^ *[0-9]+ //')"
+  # Extract the authors for this chapter from commit authors and the
+  # Co-authored-by trailer.
+  authors="$(git -C "$repo" log --format='%an <%ae>' --no-merges "$chapter")"
+  co_authors="$(git -C "$repo" log --format=%B --no-merges "$chapter" |
+    dos2unix | grep '^ *Co-authored-by: ' | cut -d' ' -f2-)"
+  first_author="$(sort_authors <<< "$authors" | head -n1)"
+  all_authors="$(sort_authors <<< "$authors"$'\n'"$co_authors")"
+
   while read -r author; do
-    if [[ -z $first_author ]]; then
-      first_author="$author"
-    else
+    if [[ "$author" != "$first_author" ]]; then
       message+="Co-authored-by: $author"$'\n'
     fi
-  done <<< "$authors"
-  rm .mailmap
+  done <<< "$all_authors"
 
   # Get the first and last dates this chapter was modified.
   root_files=(README.md LICENSE pom.xml .gitignore .dir-locals.el)
