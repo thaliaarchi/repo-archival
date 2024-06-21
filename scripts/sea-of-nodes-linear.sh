@@ -5,8 +5,8 @@ set -eEuo pipefail
 
 sort_authors() {
   # Unify author aliases.
-  sed -e 's/^dibyendumajumdar <mobile@majumdar\.org\.uk>$/Dibyendu Majumdar <mobile@majumdar.org.uk>/g' \
-      -e 's/^Dibyendu Majumdar <dibyendumajumdar@users\.noreply\.github\.com>$/Dibyendu Majumdar <mobile@majumdar.org.uk>/g' |
+  gsed -e 's/^dibyendumajumdar <mobile@majumdar\.org\.uk>$/Dibyendu Majumdar <mobile@majumdar.org.uk>/g' \
+       -e 's/^Dibyendu Majumdar <dibyendumajumdar@users\.noreply\.github\.com>$/Dibyendu Majumdar <mobile@majumdar.org.uk>/g' |
   # Rank by number of commits.
   sort | uniq -c | sort -nr | gsed -E 's/^ *[0-9]+ //'
 }
@@ -26,7 +26,7 @@ while read -r chapter; do
   echo "Processing $chapter"
 
   chapter_number="$(gsed 's/^chapter0*//' <<< "$chapter")"
-  message="Chapter $chapter_number"$'\n\n'
+  chapter_title="$(head -n1 "$repo/$chapter/README.md" | gsed 's/^# //')"
 
   # Extract the authors for this chapter from commit authors and the
   # Co-authored-by trailer.
@@ -36,6 +36,7 @@ while read -r chapter; do
   first_author="$(sort_authors <<< "$authors" | head -n1)"
   all_authors="$(sort_authors <<< "$authors"$'\n'"$co_authors")"
 
+  message="$chapter_title"$'\n\n'
   while read -r author; do
     if [[ "$author" != "$first_author" ]]; then
       message+="Co-authored-by: $author"$'\n'
