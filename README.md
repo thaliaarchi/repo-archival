@@ -117,6 +117,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 - minecraft/cuchaz-mappings [[sh](scripts/minecraft/cuchaz-mappings.sh)]
 - [regexp/re1](https://github.com/thaliaarchi/re1-archive) [[sh](scripts/regexp/re1.sh)]
+- tamarin-redux [[sh](scripts/tamarin-redux.sh)]
 
 ## Converted from SVN
 
