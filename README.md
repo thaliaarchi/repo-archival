@@ -84,6 +84,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - [quine-relay-spoiler](https://github.com/thaliaarchi/quine-relay-spoiler) [[sh](scripts/quine-relay.sh)]
 - regexp/avmplus-pcre [[sh](scripts/regexp/avmplus-pcre.sh)]
 - regexp/avmplus-pcre2 [[sh](scripts/regexp/avmplus-pcre2.sh)]
+- regexp/tamarin-pcre [[sh](scripts/regexp/tamarin-pcre.sh)]
 - [wspace/0qol-prime](https://github.com/wspace/0qol-prime) [[sh](scripts/wspace/0qol-prime.sh)] - with manual rewording
 - [wspace/ilikepython256-whitespace-unc](https://github.com/wspace/ilikepython256-whitespace-unc) [[sh](scripts/wspace/ilikepython256-whitespace-unc.sh)] - with manual rebasing
 - [wspace/keens-whitelie](https://github.com/wspace/keens-whitelie) [[sh](scripts/wspace/keens-whitelie.sh)] - with manual rebasing
