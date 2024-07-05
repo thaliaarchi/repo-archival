@@ -211,40 +211,47 @@ rebase_break_before_date() {
   rebase_with_metadata -i -q --committer-date-is-author-date "$commit_before"
 }
 
-# Convert a Mercurial repo in-place to git using hg-fast-export. It must be on
-# exactly commit 723d8032ba69594f86e282cc3b0f31cbe19f19f8, because the next
-# commit, 4c10270302979f76d3bf143a2c3b3374c1b36e2c breaks compatibility for at
-# least Inferno conversions. Create an alias for hg-fast-export.sh as
-# hg-fast-export.
-# https://github.com/frej/fast-export
+# Convert a Mercurial repo to Git using hg-fast-export
+# (https://github.com/frej/fast-export). When the second parameter, the
+# destination Git repo, is not supplied, it converts the repo in place.
+#
+# hg-fast-export must have commit 4c10270 (Fix data handling, 2023-03-02)
+# reverted, because it does not add LF for commit messages and breaks
+# compatibility for at least Inferno conversions. Create an alias for
+# hg-fast-export.sh as hg-fast-export.
 hg_to_git() {
-  local repo="$1"
-  repo="$(realpath "$repo")"
-  local git_tmp="${repo}_git"
-  local working_tree_count
-  working_tree_count="$(\ls -f "$repo" | wc -l)"
+  local hg_repo="$1" git_repo="${2:-}"
+  hg_repo="$(realpath "$hg_repo")"
+  if [[ -z "$git_repo" ]]; then
+    git_repo="${hg_repo}_git"
+  fi
 
-  git init -q "$git_tmp"
-  cd "$git_tmp"
+  mkdir "$git_repo"
+  cd "$git_repo"
+  git init -q
   git config core.ignoreCase false
   # hg-fast-export logs every revision; suppress stdout with chronic from
   # moreutils, unless it fails.
-  chronic hg-fast-export -r "$repo" -M main
+  chronic hg-fast-export -r "$hg_repo" -M main
   cd - > /dev/null
 
-  mv "$git_tmp/.git" "$repo/"
-  rmdir "$git_tmp"
-  rm -r "$repo/.hg"
+  # Operate in place
+  if [[ -z ${2:-} ]]; then
+    mv "$git_repo/.git" "$hg_repo/"
+    rmdir "$git_repo"
+    rm -r "$hg_repo/.hg"
+    git_repo="$hg_repo"
+  fi
+
   # If the original working tree was empty (only . .. and .hg), checkout a fresh
-  # tree; otherwise, use the existing one. Uses [ unquoted, to strip the spaces
-  # from wc.
-  if [ $working_tree_count = 3 ]; then
-    git -C "$repo" checkout -q HEAD
+  # tree; otherwise, use the existing one.
+  if (( $(\ls -f "$git_repo" | wc -l) == 3 )); then
+    git -C "$git_repo" checkout -q HEAD
   else
-    git -C "$repo" reset -q --mixed HEAD
+    git -C "$git_repo" reset -q --mixed HEAD
     # Mercurial tags are tracked in .hgtags, but hg-fast-export converts them to
     # git tags.
-    rm -f "$repo/.hgtags"
+    rm -f "$git_repo/.hgtags"
   fi
 }
 
