@@ -7,6 +7,12 @@ trap 'trap - SIGTERM && kill -- -$$' SIGINT SIGTERM EXIT
 
 # See note in base.sh for pinned version of hg-fast-export.
 
+# Mark the addition of binaries and fonts with me as the committer, since they
+# were deliberately omitted from the source distributions for license issues and
+# only distributed with the releases. I think they are historically valuable and
+# have reintegrated them.
+THALIA='Thalia Archibald <thalia@archibald.dev>'
+
 repos=()
 
 section() {
@@ -46,8 +52,8 @@ git_verify_is_ancestor() {
   git remote add inferno-os "$(submodule_path https://github.com/inferno-os/inferno-os)"
   git fetch -q inferno-os
   if git merge-base --is-ancestor HEAD inferno-os/master; then
-    echo "inferno-os continues from $repo at commit"
-    git log -1 --format='%H %ai %s'
+    echo -n "inferno-os continues from $repo at commit "
+    git show -s --format=reference HEAD
   else
     echo "inferno-os does not contain the history of $repo" >&2
     exit 1
@@ -151,7 +157,11 @@ inferno-4e-20070510-unix() {
   git add -Af
   # HTTP Last-Modified: 2007-05-30 23:49:38 +0000
   # Latest modtime:     2007-05-30 23:47:35 +0000
-  commit 'Charles.Forsyth <devnull@localhost> 2007-05-30 23:47:35 +0000' '20070530-2347 add fonts' --trailer Source:$source
+  # TODO: I add one to the hour in the commit message, to match the convention
+  # of nearby commits. The Last-Modified time is UTC. I don't know if the other
+  # commits are really local-written-as-UTC.
+  commit "Charles.Forsyth <devnull@localhost> 2007-05-30 23:47:35 +0000, $THALIA 2024-01-18 16:18:59 -0800" \
+    '20070531-0047 add fonts' --trailer Source:$source
   cd ..
 }
 
@@ -171,7 +181,8 @@ inferno-4e-20091219-win() {
   # HTTP Last-Modified: 2009-12-19 16:12:54 +0000
   # Root dir modtime:   2009-12-19 15:41:26 +0000
   # Previous commit:    2009-12-19 14:29:25 +0000
-  commit 'forsyth <forsyth@vitanuova.com> 2009-12-19 15:41:26 +0000' 'Compile Windows executables and add fonts' --trailer Source:$source
+  commit "forsyth <forsyth@vitanuova.com> 2009-12-19 15:41:26 +0000, $THALIA 2024-01-18 10:34:40 -0800" \
+    'Compile Windows executables and add fonts' --trailer Source:$source
   cd ..
 }
 
@@ -186,7 +197,8 @@ inferno-4e-20100120-unix() {
   # HTTP Last-Modified: 2010-01-20 16:58:21 +0000
   # Latest modtime:     2010-01-20 16:48:30 +0000
   # Previous commit:    2010-01-20 16:10:53 +0000
-  commit 'forsyth <forsyth@vitanuova.com> 2010-01-20 16:48:30 +0000' 'Add fonts' --trailer Source:$source
+  commit "forsyth <forsyth@vitanuova.com> 2010-01-20 16:48:30 +0000, $THALIA 2024-01-18 16:18:59 -0800" \
+    'Add fonts' --trailer Source:$source
   cd ..
 }
 
@@ -203,7 +215,8 @@ inferno-4e-20150328-unix() {
   # HTTP Last-Modified: 2015-03-28 11:02:31 +0000
   # Latest modtime:     2015-03-28 10:58:34 +0000
   # Previous commit:    2015-03-28 10:58:16 +0000
-  commit 'Charles Forsyth <charles.forsyth@gmail.com> 2015-03-28 10:58:34 +0000' 'Compile Unix executables' --trailer Source:$source
+  commit "Charles Forsyth <charles.forsyth@gmail.com> 2015-03-28 10:58:34 +0000, $THALIA 2024-01-18 10:34:40 -0800" \
+    'Compile Unix executables' --trailer Source:$source
   cd ..
 }
 
