@@ -49,7 +49,13 @@
   - [Rhino](https://web.mit.edu/javascript/doc/rhino/index.html) is an
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
-- 1998-1999 Netscape and Mozilla sources: https://ftp.mozilla.org/pub/mozilla/source/
+- Netscape and Firefox
+  - 1998-1999 Netscape and Mozilla sources: https://ftp.mozilla.org/pub/mozilla/source/
+  - Netscape 3.02 has regular expression engines in lib/xp/xp_reg.c,
+    include/xp_reg.h, and security/cmd/rdist/src/regex.c.
+  - gecko-dev history only goes back to 2016. Where is the older history?
+  - A regexp engine from either the firefox-3.5 branch or the tamarin-redux
+    branch is in [jsregex.cpp](https://github.com/sandys/tracemonkey-64bit/blob/master/jsregexp.cpp).
 - PCRE release archives:
   PCRE was previously released to [ftp.csx.cam.ac.uk](https://web.archive.org/web/20150515020758/http://ftp.csx.cam.ac.uk:80/pub/software/programming/pcre)
   and [ftp.pcre.org](http://web.archive.org/web/20210724130104/http://ftp.pcre.org/pub/pcre/),
