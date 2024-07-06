@@ -3,12 +3,12 @@ set -eEuo pipefail
 
 . base.sh
 
+# TODO: Parse the BibTeX in Preface.html.
+
 get_release() {
-  local title="$1"
-  local slug="$2"
-  local version="$3"
-  local path
+  local title="$1" slug="$2" version="$3"
   local url=https://softwarefoundations.cis.upenn.edu/$slug-$version/index.html
+  local path
   path="$(get_cached_path "$url")"
   echo "Get info $slug-$version" >&2
   pup 'title, #button_block > .button > a, #index_content > p json{}' < "$path" |
@@ -20,9 +20,7 @@ get_release() {
 }
 
 get_releases() {
-  local volume="$1"
-  local title="$2"
-  local slug="$3"
+  local volume="$1" title="$2" slug="$3"
   for version in "${@:4}"; do
     get_release "$title" "$slug" "$version"
   done |
@@ -63,4 +61,4 @@ get_releases() {
     1.0 1.2 1.3 1.4 1.5 1.6 \
     2.0 2.1
 ) |
-jq -s .
+jq -s . > "$TOPLEVEL/scripts/software-foundations/versions.json"
