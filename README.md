@@ -39,6 +39,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - ncsa-mosaic [[sh](scripts/ncsa-mosaic.sh)]
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
 - regexp/decus-grep [[sh](scripts/regexp/decus-grep.sh)] - WIP
+- rn [[sh](scripts/rn.sh)]
 - snippets [[sh](scripts/snippets/archive.sh)] - [WIP](scripts/snippets/notes.md)
 - software-foundations [[sh](scripts/software-foundations/get_versions.sh)] - WIP
 - sortle [[sh](scripts/sortle.sh)]

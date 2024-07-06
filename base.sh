@@ -308,6 +308,19 @@ get_cached() {
   cp -p "$cached_path" "$out"
 }
 
+get_usenet_post() {
+  local post_id="$1"
+  local file="$TOPLEVEL/cache/usenetarchives/$post_id.json"
+  if [[ ! -f $file ]]; then
+    echo "Getting post $post_id"
+    mkdir -p "$TOPLEVEL/cache/usenetarchives"
+    # API called from https://usenetarchives.com/view.php?id=net.sources&mid=$post_id
+    curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$file" \
+      --data-raw "search_type=get_posts&search_term=$post_id&search_group=net.sources"
+  fi
+  echo "$file"
+}
+
 commit_archive() {
   local ident="$1" message="$2" url="$3"
   local strip='--strip-components=1' cached_path
