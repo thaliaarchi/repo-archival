@@ -308,17 +308,37 @@ get_cached() {
   cp -p "$cached_path" "$out"
 }
 
+usenet_post_path() {
+  local post_id="$1"
+  echo "$TOPLEVEL/cache/usenetarchives/$post_id.json"
+}
+
 get_usenet_post() {
   local post_id="$1"
-  local file="$TOPLEVEL/cache/usenetarchives/$post_id.json"
-  if [[ ! -f $file ]]; then
+  local path
+  path="$(usenet_post_path "$post_id")"
+  if [[ ! -f $path ]]; then
     echo "Getting post $post_id"
     mkdir -p "$TOPLEVEL/cache/usenetarchives"
     # API called from https://usenetarchives.com/view.php?id=net.sources&mid=$post_id
-    curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$file" \
+    curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$path" \
       --data-raw "search_type=get_posts&search_term=$post_id&search_group=net.sources"
   fi
-  echo "$file"
+}
+
+extract_usenet_post() {
+  local post_id="$1"
+  get_usenet_post "$post_id"
+  chronic sh <(jq -r '
+    def assert(pred; message): if pred | not then error(message) end;
+    assert(length == 1; "expected 1 post") | .[0].body |
+    assert(length == 1; "expected 1 body") | .[0].content
+  ' "$(usenet_post_path "$post_id")")
+}
+
+get_usenet_post_date() {
+  local post_id="$1"
+  jq -r '.[0].header.date' "$(usenet_post_path "$post_id")"
 }
 
 commit_archive() {

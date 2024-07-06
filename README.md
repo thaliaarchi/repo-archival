@@ -38,6 +38,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 - ncsa-httpd [[sh](scripts/ncsa-httpd.sh)]
 - ncsa-mosaic [[sh](scripts/ncsa-mosaic.sh)]
 - netscape-3.02 [[sh](scripts/netscape-3.02.sh)]
+- patch [[sh](scripts/patch.sh)]
 - regexp/decus-grep [[sh](scripts/regexp/decus-grep.sh)] - WIP
 - rn [[sh](scripts/rn.sh)]
 - snippets [[sh](scripts/snippets/archive.sh)] - [WIP](scripts/snippets/notes.md)
