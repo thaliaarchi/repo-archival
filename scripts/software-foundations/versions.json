@@ -281,7 +281,7 @@
   },
   {
     "volume": "4",
-    "title": "QuickCheck: Property-Based Testing in Coq",
+    "title": "QuickChick: Property-Based Testing in Coq",
     "slug": "qc",
     "versions": [
       {
