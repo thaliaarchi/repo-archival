@@ -56,3 +56,6 @@ unshar_usenet_post PDEzODNAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 6 of 8 (rep
 rm kit{1,2,3,4,5,6,7,8}isdone
 git add -A
 git diff --quiet --cached || echo 'Repost is not identical'
+
+# "rn - part 1 of 8 (reposting)" is a garbled shar a month later by Adrian Pell
+# https://usenetarchives.com/view.php?id=net.sources&mid=PDc4NUBydS1jczQ0LlVVQ1A%2B

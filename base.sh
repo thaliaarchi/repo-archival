@@ -331,7 +331,7 @@ get_usenet_post() {
     mkdir -p "$TOPLEVEL/cache/usenetarchives"
     # API called from https://usenetarchives.com/view.php?id=net.sources&mid=$post_id
     curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$path" \
-      --data-raw "search_type=get_posts&search_term=$post_id&search_group=net.sources"
+      --data-raw "search_type=get_posts&search_term=${post_id//%/%25}&search_group=net.sources"
   fi
 }
 
