@@ -313,6 +313,15 @@ usenet_post_path() {
   echo "$TOPLEVEL/cache/usenetarchives/$post_id.json"
 }
 
+usenet_post_contents() {
+  local post_id="$1"
+  jq -r '
+    def assert(pred; message): if pred | not then error(message) end;
+    .[0].body |
+    assert(length == 1; "expected 1 body") | .[0].content
+  ' "$(usenet_post_path "$post_id")"
+}
+
 get_usenet_post() {
   local post_id="$1"
   local path
@@ -326,14 +335,15 @@ get_usenet_post() {
   fi
 }
 
-extract_usenet_post() {
+unshar_usenet_post_file() {
+  local post_id="$1"
+  chronic sh <(usenet_post_contents "$post_id")
+}
+
+unshar_usenet_post() {
   local post_id="$1"
   get_usenet_post "$post_id"
-  chronic sh <(jq -r '
-    def assert(pred; message): if pred | not then error(message) end;
-    assert(length == 1; "expected 1 post") | .[0].body |
-    assert(length == 1; "expected 1 body") | .[0].content
-  ' "$(usenet_post_path "$post_id")")
+  unshar_usenet_post_file "$post_id"
 }
 
 get_usenet_post_date() {
