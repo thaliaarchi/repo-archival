@@ -13,11 +13,13 @@ mkdir patch
 cd patch
 git init -q
 
+## 1.2
+
 unshar_usenet_post PDE1MDhAc2RjcmRjZi5VVUNQPg
 git add -A
 
 commit "$(get_usenet_post_date PDE1MDhAc2RjcmRjZi5VVUNQPg)" \
-"patch version 1.2--YOU WANT THIS
+"patch version 1.2
 
 [Laziness is the father of invention]
 
@@ -36,10 +38,23 @@ Happy patching!
 Larry Wall
 {allegra,burdvax,cbosgd,hplabs,ihnp4,sdcsvax}!sdcrdcf!lwall
 
-Source: https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg"
+Source: net.sources https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg"
+
+## 1.3
 
 git rm -qr .
+get_usenet_post PDgxM0BnZW5yYWQuVVVDUD4
+chronic sh <(usenet_post_contents PDgxM0BnZW5yYWQuVVVDUD4 | tail -n+4)
+git add -A
 
+commit "$(get_usenet_post_date PDgxM0BnZW5yYWQuVVVDUD4)" \
+'patch version 1.3
+
+Source: mod.sources https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4'
+
+## 1.5
+
+git rm -qr .
 get_usenet_post    PDI5MjJAc2RjcmRjZi5VVUNQPg # patch version 1.5, kit 1 of 2
 unshar_usenet_post PDI5MjNAc2RjcmRjZi5VVUNQPg # patch version 1.5, part 2 of 2
 get_usenet_post    PDI5MzBAc2RjcmRjZi5VVUNQPg # tail of patch 1.5, kit 1 of 2
@@ -61,3 +76,29 @@ Source: net.sources
 - "patch version 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg
 - "patch version 1.5, part 2 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg
 - "tail of patch 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MzBAc2RjcmRjZi5VVUNQPg'
+
+## 2.0
+
+git rm -qr .
+get_usenet_post PDUxM0BtaXJyb3IuVVVDUD4
+get_usenet_post PDUxNEBtaXJyb3IuVVVDUD4
+get_usenet_post PDUxNUBtaXJyb3IuVVVDUD4
+chronic sh <(usenet_post_contents PDUxM0BtaXJyb3IuVVVDUD4 | tail -n+12)
+chronic sh <(usenet_post_contents PDUxNEBtaXJyb3IuVVVDUD4 | tail -n+12)
+chronic sh <(usenet_post_contents PDUxNUBtaXJyb3IuVVVDUD4 | tail -n+12)
+
+git add -A
+
+commit "$(get_usenet_post_date PDUxM0BtaXJyb3IuVVVDUD4)" \
+'patch version 2.0
+
+Here is the official 2.0 release of patch.  It supersedes the 1.5 beta
+version posted to net.sources, and the version that comes with 4.3bsd.
+
+Larry Wall
+sdcrdcf!lwall
+
+Source: net.sources
+- "v07i038: Release 2.0 of patch, Part01/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxM0BtaXJyb3IuVVVDUD4
+- "v07i039: Release 2.0 of patch, Part02/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4
+- "v07i040: Release 2.0 of patch, Part03/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'
