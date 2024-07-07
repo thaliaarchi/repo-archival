@@ -13,13 +13,24 @@ mkdir patch
 cd patch
 git init -q
 
+## 1.1
+
+unshar_usenet_post PDE0NTdAc2RjcmRjZi5VVUNQPg
+git add -A
+
+commit "$(get_usenet_post_date PDE1MDhAc2RjcmRjZi5VVUNQPg)" \
+'A patch applier--YOU WANT THIS!!!
+
+Source: net.sources "A patch applier--YOU WANT THIS!!!" https://usenetarchives.com/view.php?id=net.sources&mid=PDE0NTdAc2RjcmRjZi5VVUNQPg'
+
 ## 1.2
 
+git rm -qr .
 unshar_usenet_post PDE1MDhAc2RjcmRjZi5VVUNQPg
 git add -A
 
 commit "$(get_usenet_post_date PDE1MDhAc2RjcmRjZi5VVUNQPg)" \
-'patch version 1.2
+'patch version 1.2--YOU WANT THIS
 
 [Laziness is the father of invention]
 
@@ -62,6 +73,7 @@ get_usenet_post    PDI5MzBAc2RjcmRjZi5VVUNQPg # tail of patch 1.5, kit 1 of 2
 chronic sh <(
   usenet_post_contents PDI5MjJAc2RjcmRjZi5VVUNQPg | head -n1567 &&
   usenet_post_contents PDI5MzBAc2RjcmRjZi5VVUNQPg | tail -n+19)
+rm kit{1,2}isdone
 git add -A
 
 commit "$(get_usenet_post_date PDI5MjJAc2RjcmRjZi5VVUNQPg)" \
@@ -73,9 +85,9 @@ test it, and then I'\''ll submit it to mod.sources, probably as version 2.0.
 Larry
 
 Source: net.sources
-- "patch version 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg
-- "patch version 1.5, part 2 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg
-- "tail of patch 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MzBAc2RjcmRjZi5VVUNQPg'
+* "patch version 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg
+* "patch version 1.5, part 2 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg
+* "tail of patch 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MzBAc2RjcmRjZi5VVUNQPg'
 
 ## 2.0
 
@@ -86,11 +98,11 @@ get_usenet_post PDUxNUBtaXJyb3IuVVVDUD4
 chronic sh <(usenet_post_contents PDUxM0BtaXJyb3IuVVVDUD4 | tail -n+12)
 chronic sh <(usenet_post_contents PDUxNEBtaXJyb3IuVVVDUD4 | tail -n+12)
 chronic sh <(usenet_post_contents PDUxNUBtaXJyb3IuVVVDUD4 | tail -n+12)
-
+rm kit{1,2,3}isdone
 git add -A
 
 commit "$(get_usenet_post_date PDUxM0BtaXJyb3IuVVVDUD4)" \
-'patch version 2.0
+'Release 2.0 of patch
 
 Here is the official 2.0 release of patch.  It supersedes the 1.5 beta
 version posted to net.sources, and the version that comes with 4.3bsd.
@@ -99,6 +111,6 @@ Larry Wall
 sdcrdcf!lwall
 
 Source: net.sources
-- "v07i038: Release 2.0 of patch, Part01/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxM0BtaXJyb3IuVVVDUD4
-- "v07i039: Release 2.0 of patch, Part02/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4
-- "v07i040: Release 2.0 of patch, Part03/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'
+* "v07i038: Release 2.0 of patch, Part01/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxM0BtaXJyb3IuVVVDUD4
+* "v07i039: Release 2.0 of patch, Part02/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4
+* "v07i040: Release 2.0 of patch, Part03/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'

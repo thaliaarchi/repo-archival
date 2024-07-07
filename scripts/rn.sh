@@ -29,14 +29,14 @@ commit "$(get_usenet_post_date PDEzMzJAc2RjcmRjZi5VVUNQPg)" \
 'rn version 4.1
 
 Source: net.sources
-- "rn version 4.1 distribution kit (part 1 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzJAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 2 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzNAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 3 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzRAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 4 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzVAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 5 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzZAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 6 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzdAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 7 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzhAc2RjcmRjZi5VVUNQPg
-- "rn version 4.1 distribution kit (part 8 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzlAc2RjcmRjZi5VVUNQPg'
+* "rn version 4.1 distribution kit (part 1 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzJAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 2 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzNAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 3 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzRAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 4 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzVAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 5 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzZAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 6 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzdAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 7 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzhAc2RjcmRjZi5VVUNQPg
+* "rn version 4.1 distribution kit (part 8 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzlAc2RjcmRjZi5VVUNQPg'
 
 git rm -qr .
 unshar_usenet_post PDEzNThAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 1 of 8 (reposting 1,2,3 & 7)
@@ -110,13 +110,13 @@ Larry Wall
 ]
 
 Source: mod.sources
-- "The REAL rn (rn 4.3 - part 0 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxOUBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 1 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMUBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 2 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMkBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 3 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyM0BnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 4 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNUBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 5 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNkBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 6 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyN0BnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 7 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOEBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 8 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4
-- "rn version 4.3 (kit 9 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4'
+* "The REAL rn (rn 4.3 - part 0 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxOUBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 1 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMUBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 2 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMkBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 3 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyM0BnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 4 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNUBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 5 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNkBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 6 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyN0BnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 7 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOEBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 8 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4
+* "rn version 4.3 (kit 9 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4'

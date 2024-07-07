@@ -21,6 +21,7 @@
   - 1987-01-26 mod.sources [v08INF1: Mod.Sources Index and Archives](https://usenetarchives.com/view.php?id=mod.sources&mid=PDE0MDdAbWlycm9yLlRNQy5DT00%2B)
   - 1987-01-26 mod.sources [v08INF2: Archive access and listing](https://usenetarchives.com/view.php?id=mod.sources&mid=PDE0MDhAbWlycm9yLlRNQy5DT00%2B)
   - 1987-03-18 mod.sources [v09INF3: Change in archive sites, recent errors](https://usenetarchives.com/view.php?id=mod.sources&mid=PDIzODZAbWlycm9yLlRNQy5DT00%2B)
+- 1984-11-08 net.sources [Announcing net.wanted.sources!](https://usenetarchives.com/view.php?id=net.sources&mid=PDQxNzBAZGVjd3JsLlVVQ1A%2B)
 - 1985-01-09 net.sources [archive of net.sources](https://usenetarchives.com/view.php?id=net.sources&mid=PDI3MUBoYXJ2YXJkLkFSUEE%2B)
 - 1986-06-06 mod.sources [v06i001: Introduction to mod.sources (intro)](https://usenetarchives.com/view.php?id=mod.sources&mid=PDYxQG1pcnJvci5taXJyb3IuVVVDUD4)
 
@@ -65,6 +66,7 @@
 
 ## Shell archive (shar)
 
+- `makekit` in rn
 - 1982-10-24 net.sources [Another Shell Archiver](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)
 - 1982-10-25 net.sources [Another Shell Archiver](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLmxsMS4xMjY%2B)
 - 1984-02-29 net.sources [shell archiver wanted - (nf)](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)
@@ -147,8 +149,12 @@ Commentary:
 
 ## patch
 
+- 1984-11-09 net.sources [A patch applier--YOU WANT THIS!!!](https://usenetarchives.com/view.php?id=net.sources&mid=PDE0NTdAc2RjcmRjZi5VVUNQPg)
+  [[Google Groups](https://groups.google.com/g/net.sources/c/XjZSNCpCuDU)]
 - 1984-11-29 net.sources [patch version 1.2--YOU WANT THIS](https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg)
+  [[Google Groups](https://groups.google.com/g/net.sources/c/uWFr9NOp_fw)]
 - 1985-05-08 mod.sources [patch version 1.3](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4)
+  [[Google Groups](https://groups.google.com/g/mod.sources/c/xSQM63e39YY)]
 - 1986-08-02 net.sources [patch version 1.5, kit 1 of 2](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg)
   - 1986-08-02 net.sources [patch version 1.5, part 2 of 2](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg)
   - 1986-08-05 net.sources [tail of patch 1.5, kit 1 of 2](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MzBAc2RjcmRjZi5VVUNQPg)
