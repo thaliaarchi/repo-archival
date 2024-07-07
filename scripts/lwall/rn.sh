@@ -5,7 +5,6 @@ set -eEuo pipefail
 
 # TODO:
 # - "code for rn speedup by buffering" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNUBsc3VjLlVVQ1A%2B
-# - "Rn 4.3 patches 1-10" https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg
 
 # Email from README, rn.c, rn.man, and Configure.
 export AUTHOR='Larry Wall <lwall@sdcrdcf.UUCP>'
@@ -140,3 +139,82 @@ Synthesized-from: mod.sources
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4
   * "rn version 4.3 (kit 9 of 9)" https://groups.google.com/g/mod.sources/c/0xMLaQS6V5s
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4'
+
+get_usenet_post net.sources PDExNzhAcHVjYy1qPg
+# This post seems to have been interpreted as Shift JIS, as `\` from the
+# original file has been encoded as UTF-8 `¥`.
+chronic sh <(usenet_post_contents net.sources PDExNzhAcHVjYy1qPg | tail -n+13 | iconv -f UTF-8 -t SHIFT-JIS)
+
+# Metadata from the patches
+# File           Old                  New
+#
+## patch.1
+# art.c          1985-05-10 13:52:54  1985-05-10 13:52:59
+# head.c         1985-05-10 13:52:36  1985-05-10 13:52:39
+#
+## patch.2
+# kfile.c        1985-05-10 14:22:47  1985-05-10 14:22:49
+#
+## patch.3
+# ngstuff.c      1985-05-10 14:32:57  1985-05-10 14:32:59
+#
+## patch.4
+# art.c          1985-05-13 09:32:42  1985-05-13 09:32:48
+# artstate.h     1985-05-13 09:31:51  1985-05-13 09:31:52
+# common.h       1985-05-13 09:31:29  1985-05-13 09:31:33
+# ng.c           1985-05-13 09:32:07  1985-05-13 09:32:13
+# rn.1           1985-05-13 09:33:24  1985-05-13 09:33:34
+#
+## patch.5
+# rn.c           1985-05-13 09:36:19  1985-05-13 09:36:25
+#
+## patch.6
+# term.h         1985-05-13 15:53:05  1985-05-13 15:53:09
+#
+## patch.7
+# Makefile.SH    1985-05-13 17:22:15  1985-05-13 17:22:17
+# Configure      1985-05-13 15:59:49  1985-05-13 16:00:35
+# makedepend.SH  1985-05-13 15:59:22  1985-05-13 15:59:24
+# config.sh      1985-04-01 16:18:20  1985-05-13 16:26:07
+#
+## patch.8
+# respond.c      1985-05-14 08:57:20  1985-05-14 08:57:24
+#
+## patch.9
+# intrp.c        1985-05-15 14:47:52  1985-05-15 14:48:07
+# ndir.c         1985-05-15 14:50:24  1985-05-15 14:50:26
+# respond.c      1985-05-15 14:49:17  1985-05-15 14:49:31
+# util.c         1985-05-15 14:49:49  1985-05-15 14:49:53
+
+commit_patch() {
+  local patch="$1" date="$2"
+  if [[ $patch = 7 ]]; then
+    # Skip the patch to config.sh:
+    # > NOTE: if patch says "File to patch:", it just means you haven't run
+    # > Configure yet, and don't need the following patch.  Just type interrupt and
+    # > you're done.
+    sed '/Index: config\.sh/,$d' patch.7 | patch -s
+  else
+    patch -s < "patch.$patch"
+  fi
+  rm "patch.$patch"
+  git add -u
+  # The date is (probably) local. Since his timezone is unknown, use UTC.
+  commit "$date +0000" 'rn 4.3 patch '"$patch"'
+
+Synthesized-from: net.sources
+  * "Rn 4.3 patches 1-10" https://groups.google.com/g/net.sources/c/ELYIv7jkrZs
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg'
+}
+
+echo 'Patch #: 0' > patchlevel
+commit_patch 1 '1985-05-10 13:52:59'
+commit_patch 2 '1985-05-10 14:22:49'
+commit_patch 3 '1985-05-10 14:32:59'
+commit_patch 4 '1985-05-13 09:33:34'
+commit_patch 5 '1985-05-13 09:36:25'
+commit_patch 6 '1985-05-13 15:53:09'
+commit_patch 7 '1985-05-13 17:22:17'
+commit_patch 8 '1985-05-14 08:57:24'
+commit_patch 9 '1985-05-15 14:50:26'
+rm patchlevel

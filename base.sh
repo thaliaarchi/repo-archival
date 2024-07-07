@@ -360,7 +360,18 @@ get_usenet_post_date() {
     echo "Post $group $post_id is not downloaded" >&2
     exit 1
   fi
-  jq -r '.[0].header.date' "$path"
+
+  # Dates from the usenetarchives.com API have the timezone -0400 and -0500,
+  # which seems to be an artifact of the conversion process. For example, post
+  # "Rn 4.3 patches 1-10"[0] has the date 1986-05-09 18:40:59 -0400 in the API
+  # and 1986-05-09 18:40:59 +0000 in the UI. On Google Groups, that same post[1]
+  # displays the date 1986-05-09 15:40:59. Evidently, this is mangled through
+  # 18+4-7 = 15 (I am in -0700), thus the dates are actually in UTC and the
+  # false offset should be stripped.
+  # [0]: https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg
+  # [1]: https://groups.google.com/g/net.sources/c/ELYIv7jkrZs
+
+  jq -r '.[0].header.date | sub("-0[45]:00$"; "Z")' "$path"
 }
 
 commit_archive() {

@@ -7,8 +7,14 @@
   - [comp.sources.unix](https://usenetarchives.com/threads.php?id=comp.sources.unix)
   - [news.software.readers](https://usenetarchives.com/threads.php?id=news.software.readers)
 
-Beware with usenetarchives.com that the list on threads.php has the dates as one
-day in the future and capitalizes the first letter of the subjects.
+usenetarchives.com has some issues:
+- The list on threads.php has the dates as one day in the future and capitalizes
+  the first letter of the subjects.
+- Some messages are encoded incorrectly. For example ["Rn 4.3 patches 1-10"](https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg)
+  seems to have been interpreted as Shift JIS, as `\` from the original file has
+  been encoded as UTF-8 `¥`.
+- Dates incorrectly report a timezone offset of -0400/-0500 instead of UTC (see
+  `base.sh:get_usenet_post_date`).
 
 ## mod.sources and net.sources meta
 
@@ -160,6 +166,7 @@ TODO: Search "Larry Wall" in net.sources.
   - 1985-05-12 mod.sources: "rn version 4.3 (kit 7 of 9)" [[gg](https://groups.google.com/g/mod.sources/c/WAihOBJZf7A)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOEBnZW5yYWQuVVVDUD4)]
   - 1985-05-12 mod.sources: "rn version 4.3 (kit 8 of 9)" [[gg](https://groups.google.com/g/mod.sources/c/jLfBDURu-_8)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4)]
   - 1985-05-12 mod.sources: "rn version 4.3 (kit 9 of 9)" [[gg](https://groups.google.com/g/mod.sources/c/0xMLaQS6V5s)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4)]
+- 1986-05-09 net.sources: "Rn 4.3 patches 1-10" [[gg](https://groups.google.com/g/net.sources/c/ELYIv7jkrZs)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg)]
 - 1991-06-24 news.software.readers: "where can I find source for xrn ?" [[ua](https://usenetarchives.com/view.php?id=news.software.readers&mid=PDE5OTFKdW4yNC4xODAyMTMuMjIyNzFAYnJvbnplLnVjcy5pbmRpYW5hLmVkdT4)]
 
 Unrelated:
