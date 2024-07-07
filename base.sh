@@ -308,19 +308,23 @@ get_cached() {
   cp -p "$cached_path" "$out"
 }
 
-usenet_post_path() {
+get_usenet_post() {
   local group="$1" post_id="$2"
-  echo "$TOPLEVEL/cache/usenetarchives/$group/$post_id.json"
+  local path="$TOPLEVEL/cache/usenetarchives/$group/$post_id.json"
+  if [[ ! -f $path ]]; then
+    echo "Getting $group post $post_id" >&2
+    mkdir -p "$TOPLEVEL/cache/usenetarchives/$group"
+    # API called from https://usenetarchives.com/view.php?id=$group&mid=$post_id
+    curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$path" \
+      --data-raw "search_type=get_posts&search_term=${post_id//%/%25}&search_group=$group"
+  fi
+  echo "$path"
 }
 
 usenet_post_contents() {
   local group="$1" post_id="$2"
   local path
-  path="$(usenet_post_path "$group" "$post_id")"
-  if [[ ! -f $path ]]; then
-    echo "Post $group $post_id is not downloaded" >&2
-    exit 1
-  fi
+  path="$(get_usenet_post "$group" "$post_id")"
   jq -r '
     def assert(pred; message): if pred | not then error(message) end;
     .[0].body |
@@ -328,38 +332,17 @@ usenet_post_contents() {
   ' "$path"
 }
 
-get_usenet_post() {
-  local group="$1" post_id="$2"
-  local path
-  path="$(usenet_post_path "$group" "$post_id")"
-  if [[ ! -f $path ]]; then
-    echo "Getting $group post $post_id"
-    mkdir -p "$TOPLEVEL/cache/usenetarchives/$group"
-    # API called from https://usenetarchives.com/view.php?id=$group&mid=$post_id
-    curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$path" \
-      --data-raw "search_type=get_posts&search_term=${post_id//%/%25}&search_group=$group"
-  fi
-}
-
-unshar_usenet_post_file() {
-  local group="$1" post_id="$2"
-  chronic sh <(usenet_post_contents "$group" "$post_id")
-}
-
 unshar_usenet_post() {
   local group="$1" post_id="$2"
-  get_usenet_post "$group" "$post_id"
-  unshar_usenet_post_file "$group" "$post_id"
+  local path
+  path="$(get_usenet_post "$group" "$post_id")"
+  chronic sh <(usenet_post_contents "$group" "$post_id")
 }
 
 get_usenet_post_date() {
   local group="$1" post_id="$2"
   local path
-  path="$(usenet_post_path "$group" "$post_id")"
-  if [[ ! -f $path ]]; then
-    echo "Post $group $post_id is not downloaded" >&2
-    exit 1
-  fi
+  path="$(get_usenet_post "$group" "$post_id")"
 
   # Dates from the usenetarchives.com API have the timezone -0400 and -0500,
   # which seems to be an artifact of the conversion process. For example, post

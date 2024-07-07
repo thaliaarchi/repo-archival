@@ -64,16 +64,6 @@ git diff --quiet --cached || echo 'Repost is not identical'
 # https://usenetarchives.com/view.php?id=net.sources&mid=PDc4NUBydS1jczQ0LlVVQ1A%2B
 
 git rm -qr .
-get_usenet_post mod.sources PDgxOUBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyMUBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyMkBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyM0BnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyNUBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyNkBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyN0BnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyOEBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgyOUBnZW5yYWQuVVVDUD4
-get_usenet_post mod.sources PDgzMEBnZW5yYWQuVVVDUD4
 chronic sh <(usenet_post_contents mod.sources PDgyMUBnZW5yYWQuVVVDUD4 | tail -n+4)
 chronic sh <(usenet_post_contents mod.sources PDgyMkBnZW5yYWQuVVVDUD4 | tail -n+4)
 chronic sh <(usenet_post_contents mod.sources PDgyM0BnZW5yYWQuVVVDUD4 | tail -n+4)
@@ -140,7 +130,6 @@ Synthesized-from: mod.sources
   * "rn version 4.3 (kit 9 of 9)" https://groups.google.com/g/mod.sources/c/0xMLaQS6V5s
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4'
 
-get_usenet_post net.sources PDExNzhAcHVjYy1qPg
 # This post seems to have been interpreted as Shift JIS, as `\` from the
 # original file has been encoded as UTF-8 `¥`.
 chronic sh <(usenet_post_contents net.sources PDExNzhAcHVjYy1qPg | tail -n+13 | iconv -f UTF-8 -t SHIFT-JIS)

@@ -57,7 +57,6 @@ Synthesized-from: net.sources
 ## 1.3
 
 git rm -qr .
-get_usenet_post net.sources PDgxM0BnZW5yYWQuVVVDUD4
 chronic sh <(usenet_post_contents net.sources PDgxM0BnZW5yYWQuVVVDUD4 | tail -n+4)
 git add -A
 
@@ -76,13 +75,11 @@ git diff --quiet --cached || echo 'Repost is not identical'
 ## 1.5
 
 git rm -qr .
-get_usenet_post    net.sources PDI5MjJAc2RjcmRjZi5VVUNQPg # patch version 1.5, kit 1 of 2
 unshar_usenet_post net.sources PDI5MjNAc2RjcmRjZi5VVUNQPg # patch version 1.5, part 2 of 2
-get_usenet_post    net.sources PDI5MzBAc2RjcmRjZi5VVUNQPg # tail of patch 1.5, kit 1 of 2
 # Combine truncated kit
 chronic sh <(
-  usenet_post_contents net.sources PDI5MjJAc2RjcmRjZi5VVUNQPg | head -n1567 &&
-  usenet_post_contents net.sources PDI5MzBAc2RjcmRjZi5VVUNQPg | tail -n+19)
+  usenet_post_contents net.sources PDI5MjJAc2RjcmRjZi5VVUNQPg | head -n1567 && # patch version 1.5, kit 1 of 2
+  usenet_post_contents net.sources PDI5MzBAc2RjcmRjZi5VVUNQPg | tail -n+19) # tail of patch 1.5, kit 1 of 2
 rm kit{1,2}isdone
 git add -A
 
@@ -105,9 +102,6 @@ Synthesized-from: net.sources
 ## 2.0
 
 git rm -qr .
-get_usenet_post mod.sources PDUxM0BtaXJyb3IuVVVDUD4
-get_usenet_post mod.sources PDUxNEBtaXJyb3IuVVVDUD4
-get_usenet_post mod.sources PDUxNUBtaXJyb3IuVVVDUD4
 chronic sh <(usenet_post_contents mod.sources PDUxM0BtaXJyb3IuVVVDUD4 | tail -n+12)
 chronic sh <(usenet_post_contents mod.sources PDUxNEBtaXJyb3IuVVVDUD4 | tail -n+12)
 chronic sh <(usenet_post_contents mod.sources PDUxNUBtaXJyb3IuVVVDUD4 | tail -n+12)
@@ -132,7 +126,6 @@ Synthesized-from: mod.sources
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'
 
 # I don't have patches 1-4, so cannot apply 5.
-get_usenet_post net.sources PDExOUBlbXMuVVVDUD4
 usenet_post_contents net.sources PDExOUBlbXMuVVVDUD4 | tail -n+13 > patch2.0.5.patch
 # "Patch patch #5" https://groups.google.com/g/net.sources/c/wEMtxZUaFhc
 # https://usenetarchives.com/view.php?id=net.sources&mid=PDExOUBlbXMuVVVDUD4
