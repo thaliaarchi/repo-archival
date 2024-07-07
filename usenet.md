@@ -90,6 +90,7 @@ day in the future and capitalizes the first letter of the subjects.
 - 1985-02-09 net.sources: "unshar" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI1NEB0dXJpbmcuVVVDUD4)]
 - 1985-06-04 mod.sources: "improved version of shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDg3NUBnZW5yYWQuVVVDUD4)]
 - 1985-07-15 mod.sources: "Update to C shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDk0NEBnZW5yYWQuVVVDUD4)]
+- 1985-07-22 mod.sources: "software "kit" generation script" [[gg](https://groups.google.com/g/mod.sources/c/ZdB1hyf3zyg)]
 - 1986-03-06 net.sources: "shar request" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MDBAYnJsLXNtb2tlLkFSUEE%2B)]
 - 1986-03-11 net.sources: "New Version of Shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE3MjlAd2FuZ2luc3QuVVVDUD4)]
 - 1986-03-13 net.sources: "shell archiver written in c" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDgwMkBkaWNvbWUuVVVDUD4)]
@@ -123,7 +124,14 @@ Commentary:
   - 1987-01-14 net.sources: "MSDOS less source 2 of 3" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2OEBrb2Rhay5VVUNQPg)]
   - 1987-01-14 net.sources: "MSDOS less source 3 of 3" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2OUBrb2Rhay5VVUNQPg)]
 
-## rn
+## Larry Wall
+
+Searched "Larry Wall" in mod.sources. Many posts use patch and several use
+Configure or makekit.
+
+TODO: Search "Larry Wall" in net.sources.
+
+### rn
 
 - 1984-09-24 net.sources: "rn version 4.1 distribution kit (part 1 of 8)" [[gg](https://groups.google.com/g/net.sources/c/xUGB_4Meno8)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzJAc2RjcmRjZi5VVUNQPg)]
   - 1984-09-24 net.sources: "rn version 4.1 distribution kit (part 2 of 8)" [[gg](https://groups.google.com/g/net.sources/c/XUBHx73xK7s)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzNAc2RjcmRjZi5VVUNQPg)]
@@ -157,7 +165,7 @@ Commentary:
 Unrelated:
 - 1985-05-03 net.sources: "rn - A new and improved newsreader with an old name." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5OUB1Y3NiY3NsLlVVQ1A%2B)]
 
-## patch
+### patch
 
 - 1984-11-09 net.sources: "A patch applier--YOU WANT THIS!!!" [[gg](https://groups.google.com/g/net.sources/c/XjZSNCpCuDU)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE0NTdAc2RjcmRjZi5VVUNQPg)]
 - 1984-11-29 net.sources: "patch version 1.2--YOU WANT THIS" [[gg](https://groups.google.com/g/net.sources/c/uWFr9NOp_fw)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg)]
@@ -170,6 +178,10 @@ Unrelated:
   - 1986-10-27 mod.sources: "v07i039: Release 2.0 of patch, Part02/03" [[gg](https://groups.google.com/g/mod.sources/c/byPb-78moQM)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4)]
   - 1986-10-27 mod.sources: "v07i040: Release 2.0 of patch, Part03/03" [[gg](https://groups.google.com/g/mod.sources/c/xfI2kfZXNN8)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4)]
   - 1987-01-18 net.sources: "Patch patch #5" [[gg](https://groups.google.com/g/net.sources/c/wEMtxZUaFhc)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExOUBlbXMuVVVDUD4)]
+
+### Misc
+
+- 1987-03-11 mod.sources: "v09i020: Previous "obfuscated C" winners" [[gg](https://groups.google.com/g/mod.sources/c/fd8bRu9GT4I)]
 
 ## tar
 

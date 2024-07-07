@@ -3,9 +3,6 @@ set -eEuo pipefail
 
 . base.sh
 
-# TODO:
-# - "Patch patch #5" (patch 2.0 patch #5) https://usenetarchives.com/view.php?id=net.sources&mid=PDExOUBlbXMuVVVDUD4
-
 # Email from rn sources
 export AUTHOR='Larry Wall <lwall@sdcrdcf.UUCP>'
 
@@ -69,6 +66,11 @@ Synthesized-from: mod.sources
   * "patch version 1.3" https://groups.google.com/g/mod.sources/c/xSQM63e39YY
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4'
 
+git rm -qr .
+unshar_usenet_post net.sources PDIwMjFAc2RjcmRjZi5VVUNQPg # "I'm PATCH 1.3, save me, save me!"
+git add -A
+git diff --quiet --cached || echo 'Repost is not identical'
+
 ## 1.5
 
 git rm -qr .
@@ -126,3 +128,9 @@ Synthesized-from: mod.sources
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4
   * "v07i040: Release 2.0 of patch, Part03/03" https://groups.google.com/g/mod.sources/c/xfI2kfZXNN8
     https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'
+
+# I don't have patches 1-4, so cannot apply 5.
+get_usenet_post net.sources PDExOUBlbXMuVVVDUD4
+usenet_post_contents net.sources PDExOUBlbXMuVVVDUD4 | tail -n+13 > patch2.0.5.patch
+# "Patch patch #5" https://groups.google.com/g/net.sources/c/wEMtxZUaFhc
+# https://usenetarchives.com/view.php?id=net.sources&mid=PDExOUBlbXMuVVVDUD4
