@@ -14,18 +14,18 @@ mkdir rn
 cd rn
 git init -q
 
-unshar_usenet_post PDEzMzJAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzNAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzRAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzVAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzZAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzdAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzhAc2RjcmRjZi5VVUNQPg
-unshar_usenet_post PDEzMzlAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzJAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzNAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzRAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzVAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzZAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzdAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzhAc2RjcmRjZi5VVUNQPg
+unshar_usenet_post net.sources PDEzMzlAc2RjcmRjZi5VVUNQPg
 rm kit{1,2,3,4,5,6,7,8}isdone
 git add -A
 
-commit "$(get_usenet_post_date PDEzMzJAc2RjcmRjZi5VVUNQPg)" \
+commit "$(get_usenet_post_date net.sources PDEzMzJAc2RjcmRjZi5VVUNQPg)" \
 'rn version 4.1
 
 Synthesized-from: net.sources
@@ -47,14 +47,14 @@ Synthesized-from: net.sources
     https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzlAc2RjcmRjZi5VVUNQPg'
 
 git rm -qr .
-unshar_usenet_post PDEzNThAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 1 of 8 (reposting 1,2,3 & 7)
-unshar_usenet_post PDEzNTlAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 2 of 8 (reposting 1,2,3 & 7)
-unshar_usenet_post PDEzNjBAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 3 of 8 (reposting 1,2,3 & 7)
-unshar_usenet_post PDEzNjFAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 7 of 8 (reposting 1,2,3 & 7)
-unshar_usenet_post PDEzODBAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 4 of 8 (reposting 4,5,6 & 8)
-unshar_usenet_post PDEzODFAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 5 of 8 (reposting 4,5,6 & 8)
-unshar_usenet_post PDEzODJAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 8 of 8 (reposting 4,5,6 & 8)
-unshar_usenet_post PDEzODNAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 6 of 8 (reposting 4,5,6 & 8)
+unshar_usenet_post net.sources PDEzNThAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 1 of 8 (reposting 1,2,3 & 7)
+unshar_usenet_post net.sources PDEzNTlAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 2 of 8 (reposting 1,2,3 & 7)
+unshar_usenet_post net.sources PDEzNjBAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 3 of 8 (reposting 1,2,3 & 7)
+unshar_usenet_post net.sources PDEzNjFAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 7 of 8 (reposting 1,2,3 & 7)
+unshar_usenet_post net.sources PDEzODBAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 4 of 8 (reposting 4,5,6 & 8)
+unshar_usenet_post net.sources PDEzODFAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 5 of 8 (reposting 4,5,6 & 8)
+unshar_usenet_post net.sources PDEzODJAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 8 of 8 (reposting 4,5,6 & 8)
+unshar_usenet_post net.sources PDEzODNAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 6 of 8 (reposting 4,5,6 & 8)
 rm kit{1,2,3,4,5,6,7,8}isdone
 git add -A
 git diff --quiet --cached || echo 'Repost is not identical'
@@ -63,29 +63,29 @@ git diff --quiet --cached || echo 'Repost is not identical'
 # https://usenetarchives.com/view.php?id=net.sources&mid=PDc4NUBydS1jczQ0LlVVQ1A%2B
 
 git rm -qr .
-get_usenet_post PDgxOUBnZW5yYWQuVVVDUD4
-get_usenet_post PDgyMUBnZW5yYWQuVVVDUD4
-get_usenet_post PDgyMkBnZW5yYWQuVVVDUD4
-get_usenet_post PDgyM0BnZW5yYWQuVVVDUD4
-get_usenet_post PDgyNUBnZW5yYWQuVVVDUD4
-get_usenet_post PDgyNkBnZW5yYWQuVVVDUD4
-get_usenet_post PDgyN0BnZW5yYWQuVVVDUD4
-get_usenet_post PDgyOEBnZW5yYWQuVVVDUD4
-get_usenet_post PDgyOUBnZW5yYWQuVVVDUD4
-get_usenet_post PDgzMEBnZW5yYWQuVVVDUD4
-chronic sh <(usenet_post_contents PDgyMUBnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyMkBnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyM0BnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyNUBnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyNkBnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyN0BnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyOEBnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgyOUBnZW5yYWQuVVVDUD4 | tail -n+4)
-chronic sh <(usenet_post_contents PDgzMEBnZW5yYWQuVVVDUD4 | tail -n+4)
+get_usenet_post mod.sources PDgxOUBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyMUBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyMkBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyM0BnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyNUBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyNkBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyN0BnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyOEBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgyOUBnZW5yYWQuVVVDUD4
+get_usenet_post mod.sources PDgzMEBnZW5yYWQuVVVDUD4
+chronic sh <(usenet_post_contents mod.sources PDgyMUBnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyMkBnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyM0BnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyNUBnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyNkBnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyN0BnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyOEBnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgyOUBnZW5yYWQuVVVDUD4 | tail -n+4)
+chronic sh <(usenet_post_contents mod.sources PDgzMEBnZW5yYWQuVVVDUD4 | tail -n+4)
 rm kit{1,2,3,4,5,6,7,8,9}isdone
 git add -A
 
-commit "$(get_usenet_post_date PDgxOUBnZW5yYWQuVVVDUD4)" \
+commit "$(get_usenet_post_date mod.sources PDgxOUBnZW5yYWQuVVVDUD4)" \
 'rn version 4.3
 
 I'\''ve just posted the new release of rn (version 4.3) to mod.sources.

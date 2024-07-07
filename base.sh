@@ -309,46 +309,58 @@ get_cached() {
 }
 
 usenet_post_path() {
-  local post_id="$1"
-  echo "$TOPLEVEL/cache/usenetarchives/$post_id.json"
+  local group="$1" post_id="$2"
+  echo "$TOPLEVEL/cache/usenetarchives/$group/$post_id.json"
 }
 
 usenet_post_contents() {
-  local post_id="$1"
+  local group="$1" post_id="$2"
+  local path
+  path="$(usenet_post_path "$group" "$post_id")"
+  if [[ ! -f $path ]]; then
+    echo "Post $group $post_id is not downloaded" >&2
+    exit 1
+  fi
   jq -r '
     def assert(pred; message): if pred | not then error(message) end;
     .[0].body |
     assert(length == 1; "expected 1 body") | .[0].content
-  ' "$(usenet_post_path "$post_id")"
+  ' "$path"
 }
 
 get_usenet_post() {
-  local post_id="$1"
+  local group="$1" post_id="$2"
   local path
-  path="$(usenet_post_path "$post_id")"
+  path="$(usenet_post_path "$group" "$post_id")"
   if [[ ! -f $path ]]; then
-    echo "Getting post $post_id"
-    mkdir -p "$TOPLEVEL/cache/usenetarchives"
-    # API called from https://usenetarchives.com/view.php?id=net.sources&mid=$post_id
+    echo "Getting $group post $post_id"
+    mkdir -p "$TOPLEVEL/cache/usenetarchives/$group"
+    # API called from https://usenetarchives.com/view.php?id=$group&mid=$post_id
     curl --no-progress-meter 'https://usenetarchives.com/api/search.php' -o "$path" \
-      --data-raw "search_type=get_posts&search_term=${post_id//%/%25}&search_group=net.sources"
+      --data-raw "search_type=get_posts&search_term=${post_id//%/%25}&search_group=$group"
   fi
 }
 
 unshar_usenet_post_file() {
-  local post_id="$1"
-  chronic sh <(usenet_post_contents "$post_id")
+  local group="$1" post_id="$2"
+  chronic sh <(usenet_post_contents "$group" "$post_id")
 }
 
 unshar_usenet_post() {
-  local post_id="$1"
-  get_usenet_post "$post_id"
-  unshar_usenet_post_file "$post_id"
+  local group="$1" post_id="$2"
+  get_usenet_post "$group" "$post_id"
+  unshar_usenet_post_file "$group" "$post_id"
 }
 
 get_usenet_post_date() {
-  local post_id="$1"
-  jq -r '.[0].header.date' "$(usenet_post_path "$post_id")"
+  local group="$1" post_id="$2"
+  local path
+  path="$(usenet_post_path "$group" "$post_id")"
+  if [[ ! -f $path ]]; then
+    echo "Post $group $post_id is not downloaded" >&2
+    exit 1
+  fi
+  jq -r '.[0].header.date' "$path"
 }
 
 commit_archive() {
