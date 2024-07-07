@@ -1,10 +1,11 @@
 # Usenet posts
 
 - Exhaustively searched:
-  - [mod.sources](https://usenetarchives.com/threads.php?id=mod.sources)
   - [net.sources](https://usenetarchives.com/threads.php?id=net.sources)
+  - [mod.sources](https://usenetarchives.com/threads.php?id=mod.sources)
 - TODO:
   - [comp.sources.unix](https://usenetarchives.com/threads.php?id=comp.sources.unix)
+    - [GNU AWK](https://usenetarchives.com/threads.php?id=comp.sources.unix&y=0&r=0&p=72)
   - [news.software.readers](https://usenetarchives.com/threads.php?id=news.software.readers)
 
 usenetarchives.com has some issues:
@@ -132,10 +133,8 @@ Commentary:
 
 ## Larry Wall
 
-Searched "Larry Wall" in mod.sources. Many posts use patch and several use
-Configure or makekit.
-
-TODO: Search "Larry Wall" in net.sources.
+Searched "Larry Wall" in net.sources and mod.sources. Many posts use patch and
+several use Configure or makekit.
 
 ### rn
 
@@ -167,6 +166,7 @@ TODO: Search "Larry Wall" in net.sources.
   - 1985-05-12 mod.sources: "rn version 4.3 (kit 8 of 9)" [[gg](https://groups.google.com/g/mod.sources/c/jLfBDURu-_8)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4)]
   - 1985-05-12 mod.sources: "rn version 4.3 (kit 9 of 9)" [[gg](https://groups.google.com/g/mod.sources/c/0xMLaQS6V5s)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4)]
 - 1986-05-09 net.sources: "Rn 4.3 patches 1-10" [[gg](https://groups.google.com/g/net.sources/c/ELYIv7jkrZs)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg)]
+- 1986-05-21 net.sources: "news 2.10.3, rn 4.3 available via ftp" [[gg](https://groups.google.com/g/net.sources/c/wde6DwHjCdQ)] [not in ua]
 - 1991-06-24 news.software.readers: "where can I find source for xrn ?" [[ua](https://usenetarchives.com/view.php?id=news.software.readers&mid=PDE5OTFKdW4yNC4xODAyMTMuMjIyNzFAYnJvbnplLnVjcy5pbmRpYW5hLmVkdT4)]
 
 Unrelated:
@@ -177,6 +177,7 @@ Unrelated:
 - 1984-11-09 net.sources: "A patch applier--YOU WANT THIS!!!" [[gg](https://groups.google.com/g/net.sources/c/XjZSNCpCuDU)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE0NTdAc2RjcmRjZi5VVUNQPg)]
 - 1984-11-29 net.sources: "patch version 1.2--YOU WANT THIS" [[gg](https://groups.google.com/g/net.sources/c/uWFr9NOp_fw)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg)]
 - 1985-05-08 mod.sources: "patch version 1.3" [[gg](https://groups.google.com/g/mod.sources/c/xSQM63e39YY)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4)]
+- 1985-05-20 net.sources: "Request for patch -- used by L. Wall to patch rn" [[gg](https://groups.google.com/g/net.sources/c/ABnfTszF-zQ)]
 - 1985-05-24 net.sources: "I'm PATCH 1.3, save me, save me!" [[gg](https://groups.google.com/g/net.sources/c/qtfVio1sSHs)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwMjFAc2RjcmRjZi5VVUNQPg)]
 - 1986-08-02 net.sources: "patch version 1.5, kit 1 of 2" [[gg](https://groups.google.com/g/net.sources/c/9nIzZAUp-J4)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg)]
   - 1986-08-02 net.sources: "patch version 1.5, part 2 of 2" [[gg](https://groups.google.com/g/net.sources/c/dxBWkSO1OgQ)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg)]
@@ -186,9 +187,41 @@ Unrelated:
   - 1986-10-27 mod.sources: "v07i040: Release 2.0 of patch, Part03/03" [[gg](https://groups.google.com/g/mod.sources/c/xfI2kfZXNN8)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4)]
   - 1987-01-18 net.sources: "Patch patch #5" [[gg](https://groups.google.com/g/net.sources/c/wEMtxZUaFhc)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExOUBlbXMuVVVDUD4)]
 
+Projects using patch:
+- 1985-09-07 net.sources: "Mods to 4.2 ps to show open files" [[gg](https://groups.google.com/g/net.sources/c/ZpdYsQOQ9fM)]
+- 1986-03-11 net.sources: "RFS: release #2, shar 1 of 7 (kernel-resident distributed file system)" [[gg](https://groups.google.com/g/net.sources/c/6ZD3uu8KBTI)]
+- 1986-09-14 net.sources: "Graphics for C-Prolog on the SUN" [[gg](https://groups.google.com/g/net.sources/c/VHtlR6_k7LM)]
+- 1987-01-30 net.sources: "sp - soundex-based spelling aid" [[gg](https://groups.google.com/g/net.sources/c/zJ5LFpkIsJI)]
+
+### warp
+
+Searched "warp" in net.sources.
+
+- 1983-05-06 net.sources: "warp distribution kit" [[gg](https://groups.google.com/g/net.sources/c/nZISHbQYQdE)]
+- 1984-05-13 net.sources: "\*\*\* NEW GAME \*\*\* - (nf)" [[gg](https://groups.google.com/g/net.sources/c/MzprpxZMQ6k)]
+- 1983-08-12 net.sources: "warp 6.0 distribution kit, finally" [[gg](https://groups.google.com/g/net.sources/c/Nyiyut1io5o)]
+- 1983-08-16 net.sources: "warp 6.0" [[gg](https://groups.google.com/g/net.sources/c/mbniIH0u1eo)]
+- 1983-08-17 net.sources: "Help on WARP make" [[gg](https://groups.google.com/g/net.sources/c/yfr2SidZcNM)]
+- 1983-08-23 net.sources: "Warp for folks w/o FIONREAD" [[gg](https://groups.google.com/g/net.sources/c/qJnktqO64Mc)]
+- 1983-08-23 net.sources: "Warp 6.0" [[gg](https://groups.google.com/g/net.sources/c/RrxeH5cDmvc)]
+- 1983-08-25 net.sources: "problems with new warp 6.0" [[gg](https://groups.google.com/g/net.sources/c/dpGwsRrGF5I)]
+- 1983-08-26 net.sources: "New warp fix" [[gg](https://groups.google.com/g/net.sources/c/k0P5iJ8Dtrk)]
+- 1983-08-26 net.sources: "missing parts of warp - (nf)" [[gg](https://groups.google.com/g/net.sources/c/jV8whC3e6dQ)]
+- 1983-08-29 net.sources: "Some gripes about WARP (Estes Version)" [[gg](https://groups.google.com/g/net.sources/c/eQsRurc7VWY)]
+- 1983-08-31 net.sources: "WARP fix that works !" [[gg](https://groups.google.com/g/net.sources/c/iYOhS9EH910)]
+- 1983-08-31 net.sources: "A warp fix fix (and an apology)" [[gg](https://groups.google.com/g/net.sources/c/Lw96IZhmZaw)]
+- 1084-07-22 net.sources: "Termcap fix for warp" [[gg](https://groups.google.com/g/net.sources/c/oNekht_wfvc)]
+- 1986-10-22 net.sources: "Beta testers wanted for warp 7.0" [[gg](https://groups.google.com/g/net.sources/c/LhResGK2RUw)]
+
+Mentions warp:
+- 1985-09-20 net.sources: "Trouble with visual strek" [[gg](https://groups.google.com/g/net.sources/c/13Jy4lK42TM)]
+
 ### Misc
 
+- 1984-10-03 net.sources: "Auto-configuring software -- potential problems" [[gg](https://groups.google.com/g/net.sources/c/kUBpHTTXa7Q)]
+- 1986-10-11 net.sources: "Next MEP shar" [[gg](https://groups.google.com/g/net.sources/c/wP5fFkeeRO4)]
 - 1987-03-11 mod.sources: "v09i020: Previous "obfuscated C" winners" [[gg](https://groups.google.com/g/mod.sources/c/fd8bRu9GT4I)]
+- 1987-04-15 net.sources: "A network library for non-guru's (REAL SOURCE!)" [[gg](https://groups.google.com/g/net.sources/c/KfpbjEW_Md0)]
 
 ## tar
 
@@ -302,6 +335,8 @@ Unrelated:
 
 ## NN
 
+Has a regular expression engine.
+
 - 1989-06-23 comp.sources.unix: "v19i062: NN, a Usenet news reader, Part01/15" [[gg](https://groups.google.com/g/comp.sources.unix/c/W0JQwwfvK50)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDE4MzZAcGFwYXlhLmJibi5jb20%2B)]
   - 1989-06-23 comp.sources.unix: "v19i063: NN, a Usenet news reader, Part02/15" [[gg](https://groups.google.com/g/comp.sources.unix/c/T3CuSdOWGwI)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDE4MzdAcGFwYXlhLmJibi5jb20%2B)]
   - 1989-06-23 comp.sources.unix: "v19i064: NN, a Usenet news reader, Part03/15" [[gg](https://groups.google.com/g/comp.sources.unix/c/_y3pV9oJT2Y)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDE4MzhAcGFwYXlhLmJibi5jb20%2B)]
@@ -347,6 +382,14 @@ Unrelated:
   - 1990-05-24 comp.sources.unix: "v22INF3: NN postings, mail problems" [[gg](https://groups.google.com/g/comp.sources.unix/c/p3sxRtAEDJg)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDI1NjdAcGFwYXlhLmJibi5jb20%2B)]
   - 1990-05-24 comp.sources.unix: "v22i059: NN Newsreader, release 6.4, Patch3" [[gg](https://groups.google.com/g/comp.sources.unix/c/SM52VnEtz8M)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDI1NjhAcGFwYXlhLmJibi5jb20%2B)]
   - 1990-06-08 comp.sources.unix: "v22i108: NN Newsreader, release 6.4, Patch4" [[gg](https://groups.google.com/g/comp.sources.unix/c/q-Qr8DMfNJU)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDI2NDhAbGl0Y2hpLmJibi5jb20%2B)]
+
+## vn
+
+Has a regular expression engine.
+
+- 1986-05-21 net.sources: "Yet Another Newsreader - vn (PART 1 of 3)" [[gg](https://groups.google.com/g/net.sources/c/O3j5qDoxNqk/m)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2N0BydGVjaC5VVUNQPg)]
+  - 1986-05-21 net.sources: "vn (Part 2 of 3)" [[gg](https://groups.google.com/g/net.sources/c/T0VSORHj_MI/m)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2OEBydGVjaC5VVUNQPg)]
+  - 1986-05-21 net.sources: "vn (Part 3 of 3)" [[gg](https://groups.google.com/g/net.sources/c/m54np191HxU/m)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2OUBydGVjaC5VVUNQPg)]
 
 ## Misc
 
