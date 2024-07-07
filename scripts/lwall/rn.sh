@@ -4,6 +4,8 @@ set -eEuo pipefail
 . base.sh
 
 # TODO:
+# - Apply *.pat patches that are distributed with 4.1 and 4.3
+# - Handle manifake and manimake
 # - "code for rn speedup by buffering" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNUBsc3VjLlVVQ1A%2B
 
 # Email from README, rn.c, rn.man, and Configure.

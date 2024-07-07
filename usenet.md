@@ -4,6 +4,7 @@
   - [net.sources](https://usenetarchives.com/threads.php?id=net.sources)
   - [mod.sources](https://usenetarchives.com/threads.php?id=mod.sources)
 - TODO:
+  - net.sources.bugs: rn patches were submitted here (according to rn README)
   - [comp.sources.unix](https://usenetarchives.com/threads.php?id=comp.sources.unix)
     - [GNU AWK](https://usenetarchives.com/threads.php?id=comp.sources.unix&y=0&r=0&p=72)
   - [news.software.readers](https://usenetarchives.com/threads.php?id=news.software.readers)
@@ -80,7 +81,7 @@ usenetarchives.com has some issues:
 
 ## Shell archive (shar)
 
-- `makekit` in rn
+- `makedist`, `makekit`, `kitlists.c`, `kitleader`, `kittrailer` in rn
 - 1982-10-24 net.sources: "Another Shell Archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)]
 - 1982-10-25 net.sources: "Another Shell Archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLmxsMS4xMjY%2B)]
 - 1984-02-29 net.sources: "shell archiver wanted - (nf)" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)]
