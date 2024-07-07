@@ -19,12 +19,12 @@ unshar_usenet_post PDE1MDhAc2RjcmRjZi5VVUNQPg
 git add -A
 
 commit "$(get_usenet_post_date PDE1MDhAc2RjcmRjZi5VVUNQPg)" \
-"patch version 1.2
+'patch version 1.2
 
 [Laziness is the father of invention]
 
 Sorry the initial version was so sloppy, but I was just going on vacation
-and couldn't bear not sending it out.
+and couldn'\''t bear not sending it out.
 
 Differences from version 1.1 to 1.2:
 	Linted.
@@ -38,7 +38,7 @@ Happy patching!
 Larry Wall
 {allegra,burdvax,cbosgd,hplabs,ihnp4,sdcsvax}!sdcrdcf!lwall
 
-Source: net.sources https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg"
+Source: net.sources "patch version 1.2--YOU WANT THIS" https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg'
 
 ## 1.3
 
@@ -50,7 +50,7 @@ git add -A
 commit "$(get_usenet_post_date PDgxM0BnZW5yYWQuVVVDUD4)" \
 'patch version 1.3
 
-Source: mod.sources https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4'
+Source: mod.sources "patch version 1.3" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4'
 
 ## 1.5
 
