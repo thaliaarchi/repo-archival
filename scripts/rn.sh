@@ -28,15 +28,23 @@ git add -A
 commit "$(get_usenet_post_date PDEzMzJAc2RjcmRjZi5VVUNQPg)" \
 'rn version 4.1
 
-Source: net.sources
-* "rn version 4.1 distribution kit (part 1 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzJAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 2 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzNAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 3 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzRAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 4 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzVAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 5 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzZAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 6 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzdAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 7 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzhAc2RjcmRjZi5VVUNQPg
-* "rn version 4.1 distribution kit (part 8 of 8)" https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzlAc2RjcmRjZi5VVUNQPg'
+Synthesized-from: net.sources
+  * "rn version 4.1 distribution kit (part 1 of 8)" https://groups.google.com/g/net.sources/c/xUGB_4Meno8
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzJAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 2 of 8)" https://groups.google.com/g/net.sources/c/XUBHx73xK7s
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzNAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 3 of 8)" https://groups.google.com/g/net.sources/c/X78CZnttHqg
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzRAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 4 of 8)" https://groups.google.com/g/net.sources/c/U8wjLYgZ9XQ
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzVAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 5 of 8)" https://groups.google.com/g/net.sources/c/9MA0hI3j4iI
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzZAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 6 of 8)" https://groups.google.com/g/net.sources/c/FFbGY5bbixE
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzdAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 7 of 8)" https://groups.google.com/g/net.sources/c/iLF8GYR36k8
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzhAc2RjcmRjZi5VVUNQPg
+  * "rn version 4.1 distribution kit (part 8 of 8)" https://groups.google.com/g/net.sources/c/g8oUj9EgApA
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDEzMzlAc2RjcmRjZi5VVUNQPg'
 
 git rm -qr .
 unshar_usenet_post PDEzNThAc2RjcmRjZi5VVUNQPg # Rn version 4.1, part 1 of 8 (reposting 1,2,3 & 7)
@@ -109,14 +117,24 @@ Larry Wall
         net.sources several days ago.  This is the REAL rn.
 ]
 
-Source: mod.sources
-* "The REAL rn (rn 4.3 - part 0 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxOUBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 1 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMUBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 2 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMkBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 3 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyM0BnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 4 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNUBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 5 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNkBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 6 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyN0BnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 7 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOEBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 8 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4
-* "rn version 4.3 (kit 9 of 9)" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4'
+Synthesized-from: mod.sources
+  * "The REAL rn (rn 4.3 - part 0 of 9)" https://groups.google.com/g/mod.sources/c/ZGohbRfEi2w
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxOUBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 1 of 9)" https://groups.google.com/g/mod.sources/c/hJok66uiWTU
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMUBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 2 of 9)" https://groups.google.com/g/mod.sources/c/H7mx3N-0jk4
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyMkBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 3 of 9)" https://groups.google.com/g/mod.sources/c/27eQUTed3J0
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyM0BnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 4 of 9)" https://groups.google.com/g/mod.sources/c/QzOejfSBrdQ
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNUBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 5 of 9)" https://groups.google.com/g/mod.sources/c/hvSc-jCBMmY
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyNkBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 6 of 9)" https://groups.google.com/g/mod.sources/c/RM9voSBl-98
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyN0BnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 7 of 9)" https://groups.google.com/g/mod.sources/c/WAihOBJZf7A
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOEBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 8 of 9)" https://groups.google.com/g/mod.sources/c/jLfBDURu-_8
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgyOUBnZW5yYWQuVVVDUD4
+  * "rn version 4.3 (kit 9 of 9)" https://groups.google.com/g/mod.sources/c/0xMLaQS6V5s
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4'

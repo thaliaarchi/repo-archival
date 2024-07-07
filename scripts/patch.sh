@@ -21,7 +21,9 @@ git add -A
 commit "$(get_usenet_post_date PDE1MDhAc2RjcmRjZi5VVUNQPg)" \
 'A patch applier--YOU WANT THIS!!!
 
-Source: net.sources "A patch applier--YOU WANT THIS!!!" https://usenetarchives.com/view.php?id=net.sources&mid=PDE0NTdAc2RjcmRjZi5VVUNQPg'
+Synthesized-from: net.sources
+  * "A patch applier--YOU WANT THIS!!!" https://groups.google.com/g/net.sources/c/XjZSNCpCuDU
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDE0NTdAc2RjcmRjZi5VVUNQPg'
 
 ## 1.2
 
@@ -49,7 +51,9 @@ Happy patching!
 Larry Wall
 {allegra,burdvax,cbosgd,hplabs,ihnp4,sdcsvax}!sdcrdcf!lwall
 
-Source: net.sources "patch version 1.2--YOU WANT THIS" https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg'
+Synthesized-from: net.sources
+  * "patch version 1.2--YOU WANT THIS" https://groups.google.com/g/net.sources/c/uWFr9NOp_fw
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDE1MDhAc2RjcmRjZi5VVUNQPg'
 
 ## 1.3
 
@@ -61,7 +65,9 @@ git add -A
 commit "$(get_usenet_post_date PDgxM0BnZW5yYWQuVVVDUD4)" \
 'patch version 1.3
 
-Source: mod.sources "patch version 1.3" https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4'
+Synthesized-from: mod.sources
+  * "patch version 1.3" https://groups.google.com/g/mod.sources/c/xSQM63e39YY
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDgxM0BnZW5yYWQuVVVDUD4'
 
 ## 1.5
 
@@ -84,10 +90,13 @@ test it, and then I'\''ll submit it to mod.sources, probably as version 2.0.
 
 Larry
 
-Source: net.sources
-* "patch version 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg
-* "patch version 1.5, part 2 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg
-* "tail of patch 1.5, kit 1 of 2" https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MzBAc2RjcmRjZi5VVUNQPg'
+Synthesized-from: net.sources
+  * "patch version 1.5, kit 1 of 2" https://groups.google.com/g/net.sources/c/9nIzZAUp-J4
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjJAc2RjcmRjZi5VVUNQPg
+  * "patch version 1.5, part 2 of 2" https://groups.google.com/g/net.sources/c/dxBWkSO1OgQ
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MjNAc2RjcmRjZi5VVUNQPg
+  * "tail of patch 1.5, kit 1 of 2" https://groups.google.com/g/net.sources/c/m-VhmtV6AWQ
+    https://usenetarchives.com/view.php?id=net.sources&mid=PDI5MzBAc2RjcmRjZi5VVUNQPg'
 
 ## 2.0
 
@@ -110,7 +119,10 @@ version posted to net.sources, and the version that comes with 4.3bsd.
 Larry Wall
 sdcrdcf!lwall
 
-Source: net.sources
-* "v07i038: Release 2.0 of patch, Part01/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxM0BtaXJyb3IuVVVDUD4
-* "v07i039: Release 2.0 of patch, Part02/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4
-* "v07i040: Release 2.0 of patch, Part03/03" https://usenetarchives.com/view.php?id=net.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'
+Synthesized-from: mod.sources
+  * "v07i038: Release 2.0 of patch, Part01/03" https://groups.google.com/g/mod.sources/c/ylwY2Ly5chY
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxM0BtaXJyb3IuVVVDUD4
+  * "v07i039: Release 2.0 of patch, Part02/03" https://groups.google.com/g/mod.sources/c/byPb-78moQM
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNEBtaXJyb3IuVVVDUD4
+  * "v07i040: Release 2.0 of patch, Part03/03" https://groups.google.com/g/mod.sources/c/xfI2kfZXNN8
+    https://usenetarchives.com/view.php?id=mod.sources&mid=PDUxNUBtaXJyb3IuVVVDUD4'
