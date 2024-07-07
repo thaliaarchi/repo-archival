@@ -6,6 +6,8 @@ set -eEuo pipefail
 # Email from rn sources
 export AUTHOR='Larry Wall <lwall@sdcrdcf.UUCP>'
 
+mkdir -p lwall
+cd lwall
 mkdir patch
 cd patch
 git init -q

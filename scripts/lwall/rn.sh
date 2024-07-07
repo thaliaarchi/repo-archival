@@ -10,6 +10,8 @@ set -eEuo pipefail
 # Email from README, rn.c, rn.man, and Configure.
 export AUTHOR='Larry Wall <lwall@sdcrdcf.UUCP>'
 
+mkdir -p lwall
+cd lwall
 mkdir rn
 cd rn
 git init -q
