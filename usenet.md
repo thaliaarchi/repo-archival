@@ -131,11 +131,19 @@ Commentary:
   - 1987-01-14 net.sources: "MSDOS less source 1 of 3" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2N0Brb2Rhay5VVUNQPg)]
   - 1987-01-14 net.sources: "MSDOS less source 2 of 3" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2OEBrb2Rhay5VVUNQPg)]
   - 1987-01-14 net.sources: "MSDOS less source 3 of 3" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2OUBrb2Rhay5VVUNQPg)]
+- 1988-09-16 comp.sources.unix: "v16i030: Less, a pager that's more than more, Part01/04" [[gg](https://groups.google.com/g/comp.sources.unix/c/hlaDjr_-Yd4)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDEwODdAZmlnLmJibi5jb20%2B)]
+  - 1988-09-16 comp.sources.unix: "v16i031: Less, a pager that's more than more, Part02/04" [[gg](https://groups.google.com/g/comp.sources.unix/c/ZoYoBcLzFOU)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDEwODhAZmlnLmJibi5jb20%2B)]
+  - 1988-09-16 comp.sources.unix: "v16i032: Less, a pager that's more than more, Part03/04" [[gg](https://groups.google.com/g/comp.sources.unix/c/RXkrIroGnjA)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDEwODlAZmlnLmJibi5jb20%2B)]
+  - 1988-09-16 comp.sources.unix: "v16i033: Less, a pager that's more than more, Part04/04" [[gg](https://groups.google.com/g/comp.sources.unix/c/BjrKAVIHPBk)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDEwOTBAZmlnLmJibi5jb20%2B)]
 
 ## Larry Wall
 
 Searched "Larry Wall" in net.sources and mod.sources. Many posts use patch and
 several use Configure or makekit.
+
+### Perl
+
+TODO: Search comp.sources.unix.
 
 ### rn
 
@@ -168,7 +176,6 @@ several use Configure or makekit.
   - 1985-05-12 mod.sources: "rn version 4.3 (kit 9 of 9)" [[gg](https://groups.google.com/g/mod.sources/c/0xMLaQS6V5s)] [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDgzMEBnZW5yYWQuVVVDUD4)]
 - 1986-05-09 net.sources: "Rn 4.3 patches 1-10" [[gg](https://groups.google.com/g/net.sources/c/ELYIv7jkrZs)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg)]
 - 1986-05-21 net.sources: "news 2.10.3, rn 4.3 available via ftp" [[gg](https://groups.google.com/g/net.sources/c/wde6DwHjCdQ)] [not in ua]
-- 1991-06-24 news.software.readers: "where can I find source for xrn ?" [[ua](https://usenetarchives.com/view.php?id=news.software.readers&mid=PDE5OTFKdW4yNC4xODAyMTMuMjIyNzFAYnJvbnplLnVjcy5pbmRpYW5hLmVkdT4)]
 
 Unrelated:
 - 1985-05-03 net.sources: "rn - A new and improved newsreader with an old name." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5OUB1Y3NiY3NsLlVVQ1A%2B)]
@@ -194,9 +201,23 @@ Projects using patch:
 - 1986-09-14 net.sources: "Graphics for C-Prolog on the SUN" [[gg](https://groups.google.com/g/net.sources/c/VHtlR6_k7LM)]
 - 1987-01-30 net.sources: "sp - soundex-based spelling aid" [[gg](https://groups.google.com/g/net.sources/c/zJ5LFpkIsJI)]
 
+### configure
+
+Searched "Larry Wall's Configure generator" in comp.sources.unix.
+
+- 1988-10-14 comp.sources.unix: "v16i034: Larry Wall's Configure generator, etc., Part01/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/Fl0Edw3aIH4)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMThAZmlnLmJibi5jb20%2B)]
+  - 1988-10-14 comp.sources.unix: "v16i035: Larry Wall's Configure generator, etc., Part02/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/kviF9IZIvco)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMTlAZmlnLmJibi5jb20%2B)]
+  - 1988-10-14 comp.sources.unix: "v16i036: Larry Wall's Configure generator, etc., Part03/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/AEsyBKPrmlg)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjBAZmlnLmJibi5jb20%2B)]
+  - 1988-10-14 comp.sources.unix: "v16i037: Larry Wall's Configure generator, etc., Part04/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/bBmMW0xqNvg)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjFAZmlnLmJibi5jb20%2B)]
+  - 1988-10-14 comp.sources.unix: "v16i038: Larry Wall's Configure generator, etc., Part05/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/rvG1B_zQRmE)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjJAZmlnLmJibi5jb20%2B)]
+  - 1988-10-17 comp.sources.unix: "v16i039: Larry Wall's Configure generator, etc., Part06/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/SkYK-egUrU8)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjRAZmlnLmJibi5jb20%2B)]
+  - 1988-10-17 comp.sources.unix: "v16i040: Larry Wall's Configure generator, etc., Part07/07" [[gg](https://groups.google.com/g/comp.sources.unix/c/FaphovE-t58)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjVAZmlnLmJibi5jb20%2B)]
+  - 1988-10-17 comp.sources.unix: "v16i041: Larry Wall's Configure generator, etc., Patch1" [[gg](https://groups.google.com/g/comp.sources.unix/c/JAfesm35zfg)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjZAZmlnLmJibi5jb20%2B)]
+  - 1988-10-17 comp.sources.unix: "v16i042: Larry Wall's Configure generator, etc., Patch2" [[gg](https://groups.google.com/g/comp.sources.unix/c/iXHOJhQuMD8)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDExMjdAZmlnLmJibi5jb20%2B)]
+
 ### warp
 
-Searched "warp" in net.sources.
+Searched "warp" in net.sources, mod.sources, and comp.sources.unix.
 
 - 1983-05-06 net.sources: "warp distribution kit" [[gg](https://groups.google.com/g/net.sources/c/nZISHbQYQdE)]
 - 1984-05-13 net.sources: "\*\*\* NEW GAME \*\*\* - (nf)" [[gg](https://groups.google.com/g/net.sources/c/MzprpxZMQ6k)]
@@ -395,3 +416,4 @@ Has a regular expression engine.
 ## Misc
 
 - 1984-09-26 net.sources: "perfect hash function finder" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQyMzRAc2Vpc21vLlVVQ1A%2B)]
+- 1991-06-24 news.software.readers: "where can I find source for xrn ?" [[gg](https://groups.google.com/g/news.software.readers/c/gV38od1Pkeg)] [[ua](https://usenetarchives.com/view.php?id=news.software.readers&mid=PDE5OTFKdW4yNC4xODAyMTMuMjIyNzFAYnJvbnplLnVjcy5pbmRpYW5hLmVkdT4)]
