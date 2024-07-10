@@ -18,7 +18,7 @@ usenetarchives.com has some issues:
 - Dates incorrectly report a timezone offset of -0400/-0500 instead of UTC (see
   `base.sh:get_usenet_post_date`).
 
-## mod.sources and net.sources meta
+## Meta
 
 - 1985-07-22 mod.sources: "mod.sources archive index" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDk1MUBnZW5yYWQuVVVDUD4)]
   - 1985-07-22 mod.sources: "mod.sources archive access" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDk1MkBnZW5yYWQuVVVDUD4)]
@@ -39,6 +39,9 @@ usenetarchives.com has some issues:
 - 1984-11-08 net.sources: "Announcing net.wanted.sources!" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQxNzBAZGVjd3JsLlVVQ1A%2B)]
 - 1985-01-09 net.sources: "archive of net.sources" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI3MUBoYXJ2YXJkLkFSUEE%2B)]
 - 1986-06-06 mod.sources: "v06i001: Introduction to mod.sources (intro)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDYxQG1pcnJvci5taXJyb3IuVVVDUD4)]
+- 1999-01-31 comp.sources.unix: "v13INF1: Introduction to comp.sources.unix" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0N0BmaWcuYmJuLmNvbT4)]
+  - 1999-01-31 comp.sources.unix: "v13INF2: List of sources in the archives" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0OEBmaWcuYmJuLmNvbT4)]
+  - 1988-01-31 comp.sources.unix: "v13INF3: Listing of upcoming sources" [[gg](https://groups.google.com/g/comp.sources.unix/c/hBSmGn-1GcY)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0OUBmaWcuYmJuLmNvbT4)]
 
 ## Regular expressions
 
@@ -81,17 +84,26 @@ usenetarchives.com has some issues:
 
 ## Shell archive (shar)
 
+TODO: Search "shell archiver".
+
+Some are by James Gosling. ["Wanted: A copy of"](https://groups.google.com/g/net.sources/c/-zzuImxOlec)
+discusses some of the history of shar.
+
 - `makedist`, `makekit`, `kitlists.c`, `kitleader`, `kittrailer` in rn
-- 1982-10-24 net.sources: "Another Shell Archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)]
+- 1982-10-24 net.sources: "Another Shell Archiver" [[gg](https://groups.google.com/g/net.sources/c/Tsk_5K33qwM]) [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)]
 - 1982-10-25 net.sources: "Another Shell Archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLmxsMS4xMjY%2B)]
 - 1984-02-29 net.sources: "shell archiver wanted - (nf)" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)]
+- 1984-06-15 net.sources: "Wanted: A copy of" [[gg](https://groups.google.com/g/net.sources/c/-zzuImxOlec)]
 - 1984-07-03 net.sources: "Slight revision to the shar routine" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI4MzhAZWNzdmF4LlVVQ1A%2B)]
 - 1984-10-28 net.sources: "Program to un-shar netmaps without using a shell.." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQ3M0B1bm12YXguVVVDUD4)]
 - 1984-11-04 net.sources: "makeshar - shell archive shell script" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExM0BjaXJjYWRpYS5VVUNQPg)]
-- 1984-12-05 net.sources: "shell archiver written in C" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwMzE1QHdpdmF4LlVVQ1A%2B)]
+- 1984-12-05 net.sources: "shell archiver written in C" [[gg](https://groups.google.com/g/net.sources/c/HElc1h9J9jc)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwMzE1QHdpdmF4LlVVQ1A%2B)]
 - 1984-12-08 net.sources: "shell script to generate shar files" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwNTAwMDA0QGhwY25vZS5VVUNQPg)]
+- 1984-12-11 net.sources: "yasa.c (Yet Another Shell Archiver)" [[gg](https://groups.google.com/g/net.sources/c/806UyKYWnRg)]
 - 1984-12-19 net.sources: "shar--yet another shell archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQwMkB0amFsay5VVUNQPg)]
 - 1984-12-20 mod.sources: "The Connoisseur's Shar, version 2" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDU0MUBnZW5yYWQuVVVDUD4)]
+- 1984-12-27 net.sources: "Improved Connoisseur's Shar" [[gg](https://groups.google.com/g/net.sources/c/MwCoy_jQbas)]
+- 1985-01-18 net.sources: "new C version of shar" [[gg](https://groups.google.com/g/net.sources/c/7ngIFztxXhU)]
 - 1985-01-18 net.sources: "new C version of shar" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDEyMEB3YW5naW5zdC5VVUNQPg)]
 - 1985-01-29 net.sources: "packmail and unshar: make and extract shar files" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI1OUBjbXUtY3MtY2FkLkFSUEE%2B)]
   - 1985-01-30 net.sources: "fix to unshar: "quit" function" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2MEBjbXUtY3MtY2FkLkFSUEE%2B)]
@@ -99,9 +111,10 @@ usenetarchives.com has some issues:
 - 1985-06-04 mod.sources: "improved version of shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDg3NUBnZW5yYWQuVVVDUD4)]
 - 1985-07-15 mod.sources: "Update to C shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDk0NEBnZW5yYWQuVVVDUD4)]
 - 1985-07-22 mod.sources: "software "kit" generation script" [[gg](https://groups.google.com/g/mod.sources/c/ZdB1hyf3zyg)]
-- 1986-03-06 net.sources: "shar request" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MDBAYnJsLXNtb2tlLkFSUEE%2B)]
-- 1986-03-11 net.sources: "New Version of Shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE3MjlAd2FuZ2luc3QuVVVDUD4)]
-- 1986-03-13 net.sources: "shell archiver written in c" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDgwMkBkaWNvbWUuVVVDUD4)]
+- 1986-03-06 net.sources: "shar request" [[gg](https://groups.google.com/g/net.sources/c/mGa0-EfAjKA)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MDBAYnJsLXNtb2tlLkFSUEE%2B)]
+- 1986-03-11 net.sources: "New Version of Shar (shell archiver)" [[gg](https://groups.google.com/g/net.sources/c/2eA2leWlEug)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE3MjlAd2FuZ2luc3QuVVVDUD4)]
+- 1986-03-13 net.sources: "shell archiver written in c" [[gg](https://groups.google.com/g/net.sources/c/WuGV3pXr5ts)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDgwMkBkaWNvbWUuVVVDUD4)]
+- 1986-06-30 net.sources: "Shar for iRMX86 systems" [[gg](https://groups.google.com/g/net.sources/c/hh4vHdCCZA8)]
 - 1987-02-24 net.sources: "One more SHAR program ..." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE4OEBvYml3YW4ubWlwcy5VVUNQPg)]
 - 1987-03-06 net.sources: "One more SHAR, one more time ..." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE5MUBvYml3YW4ubWlwcy5VVUNQPg)]
 - 1987-03-07 net.sources: "Improved shar.c for VAX/VMS to create archive files." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQ4MDJAYnJsLWFkbS5BUlBBPg)]
@@ -144,6 +157,22 @@ several use Configure or makekit.
 ### Perl
 
 TODO: Search comp.sources.unix.
+
+- 1988-01-31 comp.sources.unix: "v13INF3: Listing of upcoming sources" [[gg](https://groups.google.com/g/comp.sources.unix/c/hBSmGn-1GcY)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0OUBmaWcuYmJuLmNvbT4)]
+- 1988-02-01 comp.sources.unix: "v13i001: Perl, a "replacement" for awk and sed, Part01/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/Njx6b6TiZos)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1MEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-01 comp.sources.unix: "v13i002: Perl, a "replacement" for awk and sed, Part02/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/tcg-t9-DE9U)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1MUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-01 comp.sources.unix: "v13i003: Perl, a "replacement" for awk and sed, Part03/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/iol2j_zxstk)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1MkBmaWcuYmJuLmNvbT4)]
+  - 1988-02-01 comp.sources.unix: "v13i004: Perl, a "replacement" for awk and sed, Part04/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/ZLrkdzCXxbU)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1M0BmaWcuYmJuLmNvbT4)]
+  - 1988-02-01 comp.sources.unix: "v13i005: Perl, a "replacement" for awk and sed, Part05/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/pEymR1BK5W4)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1NEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-02 comp.sources.unix: "REPOST v13i006: Perl, a "replacement" for awk and sed, Part06/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/nXiU2B36bT0)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2MUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-02 comp.sources.unix: "v13i006: Perl, a "replacement" for awk and sed, Part06/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/RrOSDV8xPVI)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1NkBmaWcuYmJuLmNvbT4)]
+  - 1988-02-02 comp.sources.unix: "v13i007: Perl, a "replacement" for awk and sed, Part07/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/JnBT64wRuds)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1N0BmaWcuYmJuLmNvbT4)]
+  - 1988-02-02 comp.sources.unix: "v13i008: Perl, a "replacement" for awk and sed, Part08/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/8J4W62lJf0I)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1OEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-02 comp.sources.unix: "v13i009: Perl, a "replacement" for awk and sed, Part09/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/SPOfUSr-tlg)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM1OUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-02 comp.sources.unix: "v13i010: Perl, a "replacement" for awk and sed, Part10/10" [[gg](https://groups.google.com/g/comp.sources.unix/c/-_8EvvTePWg)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2MEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-03 comp.sources.unix: "v13i011: Perl patches 1 to 5, Patch1-Patch5" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2NEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-03 comp.sources.unix: "v13i012: Perl patches 6 to 10, Patch6-Patch10" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2NUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-03 comp.sources.unix: "v13i013: Forwarded posting of perl code" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2NkBmaWcuYmJuLmNvbT4)]
 
 ### rn
 
@@ -245,6 +274,85 @@ Mentions warp:
 - 1987-03-11 mod.sources: "v09i020: Previous "obfuscated C" winners" [[gg](https://groups.google.com/g/mod.sources/c/fd8bRu9GT4I)]
 - 1987-04-15 net.sources: "A network library for non-guru's (REAL SOURCE!)" [[gg](https://groups.google.com/g/net.sources/c/KfpbjEW_Md0)]
 
+## James Gosling
+
+Searched "James Gosling" in net.sources, mod.sources, and comp.sources.unix.
+
+TODO: Search "Gosling Emacs".
+
+### Emacs
+
+- 1983-08-22 net.sources: "Emacs upgrade part 2" [[gg](https://groups.google.com/g/net.sources/c/DoZqKpo6HLo)]
+- 1983-08-28 net.sources: "Emacs mods: #4" [[gg](https://groups.google.com/g/net.sources/c/-SarJyiSPC8)]
+- 1983-08-31 net.sources: "Emacs mods: #5" [[gg](https://groups.google.com/g/net.sources/c/PZX0xb-pOOo)]
+- 1984-02-13 net.sources: "Emacs/EDT hybrid" [[gg](https://groups.google.com/g/net.sources/c/8Au6-Zqjnac)]
+- 1987-01-27 mod.sources: "v08i008: A Micro-Emacs variant that resembles GNU Emacs" [[gg](https://groups.google.com/g/mod.sources/c/vAmnrWiN1_4)]
+
+### sc spreadsheet
+
+Searched "sc spreadsheet" and "sc spread sheet" in net.sources, mod.sources, and
+comp.sources.unix.
+
+TODO: Search in net.sources and mod.sources.
+
+- 1987-01-26 net.sources: "Sc 3.1 (1 of 2) spread sheet" [[gg](https://groups.google.com/g/net.sources/c/DYDQdT_QWRE)]
+- 1987-08-18 comp.sources.unix: "v11i017: Spread sheet program, sc 4.1, Part01/03" [[gg](https://groups.google.com/g/comp.sources.unix/c/eKQF8BNlIJY)]
+  - 1987-08-18 comp.sources.unix: "v11i018: Spread sheet program, sc 4.1, Part02/03" [[gg](https://groups.google.com/g/comp.sources.unix/c/547tGK5ozQw)]
+  - 1987-08-18 comp.sources.unix: "v11i019: Spread sheet program, sc 4.1, Part03/03" [[gg](https://groups.google.com/g/comp.sources.unix/c/8KgzqvIqthQ)]
+- 1988-01-31 comp.sources.unix: "v13INF3: Listing of upcoming sources" [[gg](https://groups.google.com/g/comp.sources.unix/c/hBSmGn-1GcY)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0OUBmaWcuYmJuLmNvbT4)]
+- 1988-02-04 comp.sources.unix: "v13i018: SC spreadsheet program, version 5.1, Part03/03" [[gg](https://groups.google.com/g/comp.sources.unix/c/Orc6yMVPgZA)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3MEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-04 comp.sources.unix: "v13i016: SC spreadsheet program, version 5.1, Part01/03" [[gg](https://groups.google.com/g/comp.sources.unix/c/1bkc690PMQU)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3MUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-04 comp.sources.unix: "v13i017: SC spreadsheet program, version 5.1, Part02/03" [[gg](https://groups.google.com/g/comp.sources.unix/c/82is1yQy640)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3MkBmaWcuYmJuLmNvbT4)]
+- 1989-03-21 comp.sources.unix: "v18i045: SC spreadsheet, version 6.1, Part01/04" [[ua](https://groups.google.com/g/comp.sources.unix/c/bttEoGdsEhU)]
+  - 1989-03-21 comp.sources.unix: "v18i046: SC spreadsheet, version 6.1, Part02/04" [[ua](https://groups.google.com/g/comp.sources.unix/c/u6y62Qxyuqo)]
+  - 1989-03-21 comp.sources.unix: "v18i047: SC spreadsheet, version 6.1, Part03/04" [[ua](https://groups.google.com/g/comp.sources.unix/c/wLij0Z1StOg)]
+  - 1989-03-21 comp.sources.unix: "v18i048: SC spreadsheet, version 6.1, Part04/04" [[ua](https://groups.google.com/g/comp.sources.unix/c/Xt4x4sdexbY)]
+- 1990-09-04 comp.sources.unix: "v23i021: The SC Spreadsheet, release 6.8, Part01/06" [[ua](https://groups.google.com/g/comp.sources.unix/c/4sJ8FTuhhJs)]
+  - 1990-09-04 comp.sources.unix: "v23i022: The SC Spreadsheet, release 6.8, Part02/06" [[ua](https://groups.google.com/g/comp.sources.unix/c/KDXClPpvl_E)]
+  - 1990-09-04 comp.sources.unix: "v23i023: The SC Spreadsheet, release 6.8, Part03/06" [[ua](https://groups.google.com/g/comp.sources.unix/c/HmTdWzxZJHs)]
+  - 1990-09-04 comp.sources.unix: "v23i024: The SC Spreadsheet, release 6.8, Part04/06" [[ua](https://groups.google.com/g/comp.sources.unix/c/ARh-93h7ZHI)]
+  - 1990-09-04 comp.sources.unix: "v23i025: The SC Spreadsheet, release 6.8, Part05/06" [[ua](https://groups.google.com/g/comp.sources.unix/c/J1jxehooPHk)]
+  - 1990-09-04 comp.sources.unix: "v23i026: The SC Spreadsheet, release 6.8, Part06/06" [[ua](https://groups.google.com/g/comp.sources.unix/c/WB_68qDDLzo)]
+
+#### vc spreadsheet
+
+- 1985-01-01 net.sources: "Unix `vc' spreadsheet." [[gg](https://groups.google.com/g/net.sources/c/yZE-hLkRyYk)]
+- 1985-01-18 net.sources: "vc documentation" [[gg](https://groups.google.com/g/net.sources/c/uusfgEJ9IgU)]
+- 1985-01-22 net.sources: "vc (registered trademark, SII)" [[gg](https://groups.google.com/g/net.sources/c/A0FuxWBWCZc)]
+  - 1985-01-23 net.sources: "vc (registered trademark, SII) or ATT System V???" [[gg](https://groups.google.com/g/net.sources/c/h79pKU4oksQ)]
+- 1985-05-08 net.sources: "vc hacks" [[gg](https://groups.google.com/g/net.sources/c/9ygkAkOMh_w)]
+- 1987-01-05 net.sources: "VC 2.1 - Part 1 of 2" [[gg](https://groups.google.com/g/net.sources/c/GyJb1ayDY1c)]
+  - 1987-01-05 net.sources: "VC Part 2 of 2" [[gg](https://groups.google.com/g/net.sources/c/dN2GONb2TDI)]
+- 1987-01-08 net.sources: "VC" [[gg](https://groups.google.com/g/net.sources/c/VnPibHgSuGY)]
+- 1987-01-17 net.sources: "Trimmed down spread sheet program for U**X/VMS/AMIGA, happy taxes!" [[gg](https://groups.google.com/g/net.sources/c/Qxi2mMlxSQM)]
+
+### Window
+
+- 1983-07-01 net.sources: "Window source #0 [of 7]: misc files, header files" [[gg](https://groups.google.com/g/net.sources/c/d5R4bveOheg)]
+  - 1983-07-01 net.sources: "Window sources #1 [of 0-7]: Terminal drivers (excl. TrmTERM)" [[gg](https://groups.google.com/g/net.sources/c/7TWQZ6CFWqI)]
+  - 1983-07-03 net.sources: "Window source #3 [of 0-7]: misc source" [[gg](https://groups.google.com/g/net.sources/c/zq-fW05S7uI)]
+  - 1983-07-03 net.sources: "Window source #4 [of 0-7]: display.c" [[gg](https://groups.google.com/g/net.sources/c/hqm-snR_KbU)]
+  - 1983-07-03 net.sources: "Window source #5 [of 0-7]: misc source" [[gg](https://groups.google.com/g/net.sources/c/XGWnaQcT9xA)]
+  - 1983-07-03 net.sources: "Window source #7 [of 0-7]: TrmTERM.c" [[gg](https://groups.google.com/g/net.sources/c/SiuNpgYwRxw)]
+  - 1983-07-06 net.sources: "Window doc #1 [of 0-2]" [[gg](https://groups.google.com/g/net.sources/c/4APmcU0E6qo)]
+- 1983-07-14 net.sources: "Windows bug fixes" [[gg](https://groups.google.com/g/net.sources/c/f0XJrZ7nRng)]
+- 1983-08-08 net.sources: "Window fixes for SIGTSTP problem" [[gg](https://groups.google.com/g/net.sources/c/GBiBtLGC3cs)]
+
+### shar
+
+See above (intermixed).
+
+### Misc
+
+Mentions:
+- 1982-08-20 net.sources: "new mx2.c" [[gg](https://groups.google.com/g/net.sources/c/xQLKxStNBeQ)]
+- 1982-09-12 net.sources: "New mx2.c from mit-vax!mp - (nf)" [[gg](https://groups.google.com/g/net.sources/c/kncI5ht-3_A)]
+- 1983-02-10 net.sources: "LIST-OF-LISTS" [[gg](https://groups.google.com/g/net.sources/c/14SnL_MM1Q8)]
+- 1983-04-12 net.sources: "New LIST-OF-LISTS" [[gg](https://groups.google.com/g/net.sources/c/XddU-f_UFDM)]
+- 1983-05-12 net.sources: "LIST-OF-LISTS" [[gg](https://groups.google.com/g/net.sources/c/VBC0xqdshMc)]
+- 1983-07-06 net.sources: "New LIST-OF-LISTS" [[gg](https://groups.google.com/g/net.sources/c/rU_YBp1_EAw)]
+- 1986-03-16 net.sources: "JARGON in ditroff format, 4 of 4" [[gg](https://groups.google.com/g/net.sources/c/TvLb-kFniz4)]
+
 ## tar
 
 - 1984-11-29 net.sources: "Improved ansitar -- ansi tape utility" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2OEBhbWQuVVVDUD4)]
@@ -307,6 +415,27 @@ Mentions warp:
   - 1987-02-04 mod.sources: "v08i030: The JOVE text editor, Part11/13" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDE1NjJAbWlycm9yLlRNQy5DT00%2B)]
   - 1987-02-04 mod.sources: "v08i031: The JOVE text editor, Part12/13" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDE1NjNAbWlycm9yLlRNQy5DT00%2B)]
   - 1987-02-04 mod.sources: "v08i032: The JOVE text editor, Part13/13" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDE1NjRAbWlycm9yLlRNQy5DT00%2B)]
+- 1988-04-25 comp.sources.unix: "v14i057: Jove, an emacs variant, version 4.9, Part01/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY1OUBmaWcuYmJuLmNvbT4)]
+  - 1988-04-25 comp.sources.unix: "v14i058: Jove, an emacs variant, version 4.9, Part02/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2MEBmaWcuYmJuLmNvbT4)]
+  - 1988-04-25 comp.sources.unix: "v14i059: Jove, an emacs variant, version 4.9, Part03/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2MUBmaWcuYmJuLmNvbT4)]
+  - 1988-04-25 comp.sources.unix: "v14i060: Jove, an emacs variant, version 4.9, Part04/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2MkBmaWcuYmJuLmNvbT4)]
+  - 1988-04-25 comp.sources.unix: "v14i061: Jove, an emacs variant, version 4.9, Part05/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2M0BmaWcuYmJuLmNvbT4)]
+  - 1988-04-26 comp.sources.unix: "v14i062: Jove, an emacs variant, version 4.9, Part06/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2NUBmaWcuYmJuLmNvbT4)]
+  - 1988-04-26 comp.sources.unix: "v14i063: Jove, an emacs variant, version 4.9, Part07/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2NkBmaWcuYmJuLmNvbT4)]
+  - 1988-04-26 comp.sources.unix: "v14i064: Jove, an emacs variant, version 4.9, Part08/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2N0BmaWcuYmJuLmNvbT4)]
+  - 1988-04-26 comp.sources.unix: "v14i065: Jove, an emacs variant, version 4.9, Part09/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2OEBmaWcuYmJuLmNvbT4)]
+  - 1988-04-26 comp.sources.unix: "v14i066: Jove, an emacs variant, version 4.9, Part10/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY2OUBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i067: Jove, an emacs variant, version 4.9, Part11/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY3NkBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i068: Jove, an emacs variant, version 4.9, Part12/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY3N0BmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i069: Jove, an emacs variant, version 4.9, Part13/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY3OEBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i070: Jove, an emacs variant, version 4.9, Part14/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY3OUBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i071: Jove, an emacs variant, version 4.9, Part15/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY4MEBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i072: Jove, an emacs variant, version 4.9, Part16/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY4NEBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i073: Jove, an emacs variant, version 4.9, Part17/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY4NUBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i074: Jove, an emacs variant, version 4.9, Part18/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY4NkBmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i075: Jove, an emacs variant, version 4.9, Part19/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY4N0BmaWcuYmJuLmNvbT4)]
+  - 1988-04-28 comp.sources.unix: "v14i076: Jove, an emacs variant, version 4.9, Part20/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY4OEBmaWcuYmJuLmNvbT4)]
+  - 1988-04-29 comp.sources.unix: "v14i078: Jove, an emacs variant, version 4.9, Part21/21" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDY5MUBmaWcuYmJuLmNvbT4)]
 
 ## QEDIT
 
@@ -354,6 +483,49 @@ Mentions warp:
 - 1986-11-04 net.sources: "UUENCODE C source, if you need UUENCODE - here it is!!!!" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI4MUBjYmxwZS5VVUNQPg)]
   - 1986-11-04 net.sources: "UUDECODE C source, if you need UUDECODE - here it is!!!!" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI4MkBjYmxwZS5VVUNQPg)]
 - 1987-01-13 net.sources: "uuen/decode with checksums." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDM5MTdAdXRjc3JpLlVVQ1A%2B)]
+
+## trn
+
+Searched "trn", "trn-3.3", and "trn-3.6" in comp.sources.unix.
+
+- 1990-11-30 comp.sources.unix: "v23i060: TRN, version of RN that follows conversation threads, Part01/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/3IXhMR-jilM)]
+  - 1990-11-30 comp.sources.unix: "v23i061: TRN, version of RN that follows conversation threads, Part02/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/htOYzwa-nL4)]
+  - 1990-11-30 comp.sources.unix: "v23i062: TRN, version of RN that follows conversation threads, Part03/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/qBsoBKvXlOo)]
+  - 1990-11-30 comp.sources.unix: "v23i063: TRN, version of RN that follows conversation threads, Part04/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/LoyLp59CwQo)]
+  - 1990-11-30 comp.sources.unix: "v23i064: TRN, version of RN that follows conversation threads, Part05/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/Xjz3yGRbT64)]
+  - 1990-11-30 comp.sources.unix: "v23i065: TRN, version of RN that follows conversation threads, Part06/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/k-ecaydISnU)]
+  - 1990-11-30 comp.sources.unix: "v23i066: TRN, version of RN that follows conversation threads, Part07/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/8moJbSgPwj8)]
+  - 1990-12-03 comp.sources.unix: "v23i067: TRN, version of RN that follows conversation threads, Part08/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/n4yQOpKOeSE)]
+  - 1990-12-03 comp.sources.unix: "v23i068: TRN, version of RN that follows conversation threads, Part09/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/KainKKUKjXI)]
+  - 1990-12-03 comp.sources.unix: "v23i069: TRN, version of RN that follows conversation threads, Part10/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/pQeX0pe0l2k)]
+  - 1990-12-03 comp.sources.unix: "v23i070: TRN, version of RN that follows conversation threads, Part11/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/9hXkf8BEiRs)]
+  - 1990-12-03 comp.sources.unix: "v23i071: TRN, version of RN that follows conversation threads, Part12/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/iyKaOffQkcE)]
+  - 1990-12-03 comp.sources.unix: "v23i072: TRN, version of RN that follows conversation threads, Part13/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/kEIqEnrkQyI)]
+  - 1990-12-03 comp.sources.unix: "v23i073: TRN, version of RN that follows conversation threads, Part14/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/ErGoTJXCugA)]
+  - 1990-12-03 comp.sources.unix: "v23i074: TRN, version of RN that follows conversation threads, Patch1" [[gg](https://groups.google.com/g/comp.sources.unix/c/TPGO_ZtotTE)]
+  - 1990-12-05 comp.sources.unix: "REPOST v23i068: TRN, version of RN that follows conversation threads, Part09/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/yHUNH-L8YWg)]
+  - 1990-12-06 comp.sources.unix: "REPOST v23i069: TRN, version of RN that follows conversation threads, Part10/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/gBF6gkBhYZE)]
+- 1991-01-03 comp.sources.unix: "v23i060: Complete reposting of TRN at patchlevel 1, Part01/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/BtRlQNBjDZ4)]
+  - 1991-01-04 comp.sources.unix: "v23i061: Complete reposting of TRN at patchlevel 1, Part02/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/loWO3EI85gA)]
+  - 1991-01-04 comp.sources.unix: "v23i062: Complete reposting of TRN at patchlevel 1, Part03/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/Uwx80of7W2g)]
+  - 1991-01-04 comp.sources.unix: "v23i063: Complete reposting of TRN at patchlevel 1, Part04/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/mnedNPJj63Y)]
+  - 1991-01-04 comp.sources.unix: "v23i064: Complete reposting of TRN at patchlevel 1, Part05/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/y1W9NSm_TJ0)]
+  - 1991-01-04 comp.sources.unix: "v23i065: Complete reposting of TRN at patchlevel 1, Part06/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/IKnTW6u2yWU)]
+  - 1991-01-04 comp.sources.unix: "v23i066: Complete reposting of TRN at patchlevel 1, Part07/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/Nzkpn_2dNgA)]
+  - 1991-01-04 comp.sources.unix: "v23i067: Complete reposting of TRN at patchlevel 1, Part08/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/kSJ0FQBJwDE)]
+  - 1991-01-04 comp.sources.unix: "v23i068: Complete reposting of TRN at patchlevel 1, Part09/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/T-BY5smwts4)]
+  - 1991-01-04 comp.sources.unix: "v23i069: Complete reposting of TRN at patchlevel 1, Part10/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/2urKF-XcES4)]
+  - 1991-01-04 comp.sources.unix: "v23i070: Complete reposting of TRN at patchlevel 1, Part11/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/uHcR-6TlXqk)]
+  - 1991-01-04 comp.sources.unix: "v23i071: Complete reposting of TRN at patchlevel 1, Part12/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/yWiDfzqzln0)]
+  - 1991-01-04 comp.sources.unix: "v23i072: Complete reposting of TRN at patchlevel 1, Part13/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/2hf3W6Aucrw)]
+  - 1991-01-04 comp.sources.unix: "v23i073: Complete reposting of TRN at patchlevel 1, Part14/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/EeTvnOiYQg4)]
+- 1993-11-27 comp.sources.unix: "v27i094: trn-3.3 - threaded newsreader based on RN, V3.3, Part01/12" [[gg](https://groups.google.com/g/comp.sources.unix/c/ovsf6yHM01Y)]
+- 1995-10-29 comp.sources.unix: "v29i046: trn-3.6 - threaded newsreader based on RN, V3.6, Part09/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/QbhWwy0KRYs)]
+  - 1995-10-29 comp.sources.unix: "v29i047: trn-3.6 - threaded newsreader based on RN, V3.6, Part10/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/TE61QxITkrQ)]
+  - 1995-10-29 comp.sources.unix: "v29i048: trn-3.6 - threaded newsreader based on RN, V3.6, Part11/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/by6qYdXJhh0)]
+  - 1995-10-29 comp.sources.unix: "v29i050: trn-3.6 - threaded newsreader based on RN, V3.6, Part13/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/Av1JhB-XZW4)]
+  - 1995-10-29 comp.sources.unix: "v29i049: trn-3.6 - threaded newsreader based on RN, V3.6, Part12/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/zaCH71W-Q3o)]
+  - 1995-10-29 comp.sources.unix: "v29i051: trn-3.6 - threaded newsreader based on RN, V3.6, Part14/14" [[gg](https://groups.google.com/g/comp.sources.unix/c/5ANT7yCY1LY)]
 
 ## NN
 
@@ -412,8 +584,18 @@ Has a regular expression engine.
 - 1986-05-21 net.sources: "Yet Another Newsreader - vn (PART 1 of 3)" [[gg](https://groups.google.com/g/net.sources/c/O3j5qDoxNqk/m)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2N0BydGVjaC5VVUNQPg)]
   - 1986-05-21 net.sources: "vn (Part 2 of 3)" [[gg](https://groups.google.com/g/net.sources/c/T0VSORHj_MI/m)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2OEBydGVjaC5VVUNQPg)]
   - 1986-05-21 net.sources: "vn (Part 3 of 3)" [[gg](https://groups.google.com/g/net.sources/c/m54np191HxU/m)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2OUBydGVjaC5VVUNQPg)]
+- 1988-02-05 comp.sources.unix: "v13i019: VN newsreader, 1/88 version, Part01/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3M0BmaWcuYmJuLmNvbT4)]
+  - 1988-02-05 comp.sources.unix: "v13i020: VN newsreader, 1/88 version, Part02/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3NEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-05 comp.sources.unix: "v13i021: VN newsreader, 1/88 version, Part03/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3NUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-05 comp.sources.unix: "v13i022: VN newsreader, 1/88 version, Part04/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3NkBmaWcuYmJuLmNvbT4)]
+  - 1988-02-05 comp.sources.unix: "v13i023: VN newsreader, 1/88 version, Part05/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3N0BmaWcuYmJuLmNvbT4)]
 
 ## Misc
 
 - 1984-09-26 net.sources: "perfect hash function finder" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQyMzRAc2Vpc21vLlVVQ1A%2B)]
+- 1988-02-19 comp.sources.unix: "v13i053: New release of little smalltalk, Part01/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQyNUBmaWcuYmJuLmNvbT4)]
+  - 1988-02-19 comp.sources.unix: "v13i054: New release of little smalltalk, Part02/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQyNkBmaWcuYmJuLmNvbT4)]
+  - 1988-02-23 comp.sources.unix: "v13i055: New release of little smalltalk, Part03/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQzM0BmaWcuYmJuLmNvbT4)]
+  - 1988-02-23 comp.sources.unix: "v13i056: New release of little smalltalk, Part04/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQzNEBmaWcuYmJuLmNvbT4)]
+  - 1988-02-23 comp.sources.unix: "v17i053: New release of little smalltalk, Part05/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQzNUBmaWcuYmJuLmNvbT4)]
 - 1991-06-24 news.software.readers: "where can I find source for xrn ?" [[gg](https://groups.google.com/g/news.software.readers/c/gV38od1Pkeg)] [[ua](https://usenetarchives.com/view.php?id=news.software.readers&mid=PDE5OTFKdW4yNC4xODAyMTMuMjIyNzFAYnJvbnplLnVjcy5pbmRpYW5hLmVkdT4)]
