@@ -289,10 +289,11 @@ Mentions warp:
 
 Searched "James Gosling" in net.sources, mod.sources, and comp.sources.unix.
 
+His address was `uw-beave!jim`.
+
 ### Gosling Emacs
 
 TODO: Search "Gosling Emacs".
-TODO: Figure out his UUCP address for searching.
 
 ["Emacs/EDT hybrid"](https://groups.google.com/g/net.sources/c/8Au6-Zqjnac)
 mentions "James Gosling's CMU Emacs". Perhaps that what it was initially called.
