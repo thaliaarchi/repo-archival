@@ -61,6 +61,8 @@
   and [ftp.pcre.org](http://web.archive.org/web/20210724130104/http://ftp.pcre.org/pub/pcre/),
   but few versions were archived. Versions back to 3.3 are [mirrored](https://sourceforge.net/projects/pcre/files/pcre/)
   on SourceForge, but I do not know the primary source.
+- Lars Brinkhoff's [emacs-history](https://github.com/larsbrinkhoff/emacs-history)
+  constructs a Git repo by applying archives and patches in sequence with sh.
 - [The Esoteric File Archive](https://esolangs.org/wiki/The_Esoteric_File_Archive):
   Construct revision history for each implementation from archives
 - Apache HTTP Server: incorporate archive releases and graft onto NCSA HTTPd
