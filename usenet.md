@@ -55,6 +55,14 @@ usenetarchives.com has some issues:
 - 1987-06-16 comp.sources.unix: "v09i061: Fastest grep around, Part01/02" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2NUB1dW5ldC5VVS5ORVQ%2B)]
   - 1987-06-16 comp.sources.unix: "v09i062: Fastest grep around, Part02/02" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM2NkB1dW5ldC5VVS5ORVQ%2B)]
 
+### GNU egrep
+
+- 1989-02-09 comp.sources.unix: "v17i098: Gnu E?GREP (it's fast), Part01/05" [[gg](https://groups.google.com/g/comp.sources.unix/c/4oVbWhUxaRg)]
+  - 1989-02-09 comp.sources.unix: "v17i099: Gnu E?GREP (it's fast), Part02/05" [[gg](https://groups.google.com/g/comp.sources.unix/c/dpRWSn5H46A)]
+  - 1989-02-09 comp.sources.unix: "v17i100: Gnu E?GREP (it's fast), Part03/05" [[gg](https://groups.google.com/g/comp.sources.unix/c/fJt0KphXDOs)]
+  - 1989-02-09 comp.sources.unix: "v17i101: Gnu E?GREP (it's fast), Part04/05" [[gg](https://groups.google.com/g/comp.sources.unix/c/I7OXvdZotuw)]
+  - 1989-02-09 comp.sources.unix: "v17i102: Gnu E?GREP (it's fast), Part05/05" [[gg](https://groups.google.com/g/comp.sources.unix/c/C6WB6daTI0g)]
+
 ## Version control
 
 - 1983-06-08 net.sources: "diff to ed script" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDM0NUBhbGJlcnRhLlVVQ1A%2B)]
@@ -89,7 +97,8 @@ TODO: Search "shell archiver".
 Some are by James Gosling. ["Wanted: A copy of"](https://groups.google.com/g/net.sources/c/-zzuImxOlec)
 discusses some of the history of shar.
 
-- `makedist`, `makekit`, `kitlists.c`, `kitleader`, `kittrailer` in rn
+- `makedist` in rn
+- 1982-10-19 net.sources: "Shell archiver" [[gg](https://groups.google.com/g/net.sources/c/fdv-S8YSCTU)]
 - 1982-10-24 net.sources: "Another Shell Archiver" [[gg](https://groups.google.com/g/net.sources/c/Tsk_5K33qwM]) [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)]
 - 1982-10-25 net.sources: "Another Shell Archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLmxsMS4xMjY%2B)]
 - 1984-02-29 net.sources: "shell archiver wanted - (nf)" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)]
@@ -107,7 +116,7 @@ discusses some of the history of shar.
 - 1985-01-18 net.sources: "new C version of shar" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDEyMEB3YW5naW5zdC5VVUNQPg)]
 - 1985-01-29 net.sources: "packmail and unshar: make and extract shar files" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI1OUBjbXUtY3MtY2FkLkFSUEE%2B)]
   - 1985-01-30 net.sources: "fix to unshar: "quit" function" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI2MEBjbXUtY3MtY2FkLkFSUEE%2B)]
-- 1985-02-09 net.sources: "unshar" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI1NEB0dXJpbmcuVVVDUD4)]
+- 1985-02-09 net.sources: "unshar" [[gg](https://groups.google.com/g/net.sources/c/VB7jQT1HdOQ)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI1NEB0dXJpbmcuVVVDUD4)]
 - 1985-06-04 mod.sources: "improved version of shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDg3NUBnZW5yYWQuVVVDUD4)]
 - 1985-07-15 mod.sources: "Update to C shar (shell archiver)" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDk0NEBnZW5yYWQuVVVDUD4)]
 - 1985-07-22 mod.sources: "software "kit" generation script" [[gg](https://groups.google.com/g/mod.sources/c/ZdB1hyf3zyg)]
@@ -153,6 +162,8 @@ Commentary:
 
 Searched "Larry Wall" in net.sources and mod.sources. Many posts use patch and
 several use Configure or makekit.
+
+TODO: Search "lwall".
 
 ### Perl
 
@@ -278,15 +289,24 @@ Mentions warp:
 
 Searched "James Gosling" in net.sources, mod.sources, and comp.sources.unix.
 
+### Gosling Emacs
+
 TODO: Search "Gosling Emacs".
+TODO: Figure out his UUCP address for searching.
 
-### Emacs
+["Emacs/EDT hybrid"](https://groups.google.com/g/net.sources/c/8Au6-Zqjnac)
+mentions "James Gosling's CMU Emacs". Perhaps that what it was initially called.
 
+Mentions Gosling:
 - 1983-08-22 net.sources: "Emacs upgrade part 2" [[gg](https://groups.google.com/g/net.sources/c/DoZqKpo6HLo)]
 - 1983-08-28 net.sources: "Emacs mods: #4" [[gg](https://groups.google.com/g/net.sources/c/-SarJyiSPC8)]
 - 1983-08-31 net.sources: "Emacs mods: #5" [[gg](https://groups.google.com/g/net.sources/c/PZX0xb-pOOo)]
 - 1984-02-13 net.sources: "Emacs/EDT hybrid" [[gg](https://groups.google.com/g/net.sources/c/8Au6-Zqjnac)]
 - 1987-01-27 mod.sources: "v08i008: A Micro-Emacs variant that resembles GNU Emacs" [[gg](https://groups.google.com/g/mod.sources/c/vAmnrWiN1_4)]
+
+Lisp code for Gosling Emacs:
+- 1982-10-25 net.sources: "Gosling Emacs incremental search package" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=dXRhaC1jcy4xMTQ3)]
+  - 1982-10-27 net.sources: "Gosling Emacs incremental search package" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLnV0YWgtY3MuMTE0Nz4)]
 
 ### sc spreadsheet
 
@@ -590,6 +610,10 @@ Has a regular expression engine.
   - 1988-02-05 comp.sources.unix: "v13i022: VN newsreader, 1/88 version, Part04/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3NkBmaWcuYmJuLmNvbT4)]
   - 1988-02-05 comp.sources.unix: "v13i023: VN newsreader, 1/88 version, Part05/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM3N0BmaWcuYmJuLmNvbT4)]
 
+## Emacs
+
+- 1987-03-17 mod.sources: "v09i040: MicroEMACS, version 3.8b, Part08/14" [[gg](https://groups.google.com/g/mod.sources/c/DFEsRhB4HmE)]
+
 ## Misc
 
 - 1984-09-26 net.sources: "perfect hash function finder" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQyMzRAc2Vpc21vLlVVQ1A%2B)]
@@ -599,3 +623,7 @@ Has a regular expression engine.
   - 1988-02-23 comp.sources.unix: "v13i056: New release of little smalltalk, Part04/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQzNEBmaWcuYmJuLmNvbT4)]
   - 1988-02-23 comp.sources.unix: "v17i053: New release of little smalltalk, Part05/05" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDQzNUBmaWcuYmJuLmNvbT4)]
 - 1991-06-24 news.software.readers: "where can I find source for xrn ?" [[gg](https://groups.google.com/g/news.software.readers/c/gV38od1Pkeg)] [[ua](https://usenetarchives.com/view.php?id=news.software.readers&mid=PDE5OTFKdW4yNC4xODAyMTMuMjIyNzFAYnJvbnplLnVjcy5pbmRpYW5hLmVkdT4)]
+
+## No results
+
+Searched "snippets" in net.sources, mod.sources, and comp.sources.unix.
