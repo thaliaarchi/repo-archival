@@ -322,27 +322,27 @@ get_usenet_post() {
 }
 
 usenet_post_contents() {
-  local group="$1" post_id="$2"
+  local group="$1" post_id="$2" thread_index="${3:-1}"
   local path
   path="$(get_usenet_post "$group" "$post_id")"
-  jq -r '
+  jq -r --argjson thread_index "$thread_index" '
     def assert(pred; message): if pred | not then error(message) end;
-    .[0].body |
+    .[$thread_index - 1].body |
     assert(length == 1; "expected 1 body") | .[0].content
   ' "$path"
 }
 
 unshar_usenet_post() {
-  local group="$1" post_id="$2"
+  local group="$1" post_id="$2" thread_index="$3"
   local path
   path="$(get_usenet_post "$group" "$post_id")"
-  chronic sh <(usenet_post_contents "$group" "$post_id")
+  chronic sh <(usenet_post_contents "$group" "$post_id" "$thread_index")
 }
 
 get_usenet_post_date() {
-  local group="$1" post_id="$2"
+  local group="$1" post_id="$2" thread_index="$3"
   local path
-  path="$(get_usenet_post "$group" "$post_id")"
+  path="$(get_usenet_post "$group" "$post_id" "$thread_index")"
 
   # Dates from the usenetarchives.com API have the timezone -0400 and -0500,
   # which seems to be an artifact of the conversion process. For example, post
@@ -354,7 +354,9 @@ get_usenet_post_date() {
   # [0]: https://usenetarchives.com/view.php?id=net.sources&mid=PDExNzhAcHVjYy1qPg
   # [1]: https://groups.google.com/g/net.sources/c/ELYIv7jkrZs
 
-  jq -r '.[0].header.date | sub("-0[45]:00$"; "Z")' "$path"
+  jq -r --argjson thread_index "$thread_index" '
+    .[$thread_index - 1].header.date | sub("-0[45]:00$"; "Z")
+  ' "$path"
 }
 
 commit_archive() {

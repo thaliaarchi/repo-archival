@@ -43,6 +43,11 @@ usenetarchives.com has some issues:
   - 1999-01-31 comp.sources.unix: "v13INF2: List of sources in the archives" [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0OEBmaWcuYmJuLmNvbT4)]
   - 1988-01-31 comp.sources.unix: "v13INF3: Listing of upcoming sources" [[gg](https://groups.google.com/g/comp.sources.unix/c/hBSmGn-1GcY)] [[ua](https://usenetarchives.com/view.php?id=comp.sources.unix&mid=PDM0OUBmaWcuYmJuLmNvbT4)]
 
+The Great Renaming:
+- 1986-10-14 net.sources: "Old to New group name convertor" [[gg](https://groups.google.com/g/net.sources/c/vBEGORH9ARg)]
+- 1986-10-27 net.sources: "Parallel Addition of the New Groups" [[gg](https://groups.google.com/g/net.sources/c/86iaE0hiEYU)]
+- 1986-10-27 net.sources: "Notes sequence file converter" [[gg](https://groups.google.com/g/net.sources/c/WKrhIQgDULA)]
+
 ## Regular expressions
 
 - 1984-08-08 net.sources: "fgrep.c - new version" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI5NkBlbGVjdmF4Lk9aPg)]
@@ -98,11 +103,13 @@ Some are by James Gosling. ["Wanted: A copy of"](https://groups.google.com/g/net
 discusses some of the history of shar.
 
 - `makedist` in rn
-- 1982-10-19 net.sources: "Shell archiver" [[gg](https://groups.google.com/g/net.sources/c/fdv-S8YSCTU)]
-- 1982-10-24 net.sources: "Another Shell Archiver" [[gg](https://groups.google.com/g/net.sources/c/Tsk_5K33qwM]) [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)]
-- 1982-10-25 net.sources: "Another Shell Archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLmxsMS4xMjY%2B)]
-- 1984-02-29 net.sources: "shell archiver wanted - (nf)" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)]
-- 1984-06-15 net.sources: "Wanted: A copy of" [[gg](https://groups.google.com/g/net.sources/c/-zzuImxOlec)]
+- 1982-10-19 net.sources: "Shell archiver" [[gg](https://groups.google.com/g/net.sources/c/fdv-S8YSCTU)] [not in ua]
+- 1982-10-24 net.sources: "Another Shell Archiver" [not in gg] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=bGwxLjEyNg)]
+- 1982-10-25 net.sources: "Another Shell Archiver" [[gg](https://groups.google.com/g/net.sources/c/Tsk_5K33qwM)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PGJuZXdzLmxsMS4xMjY%2B)]
+- 1984-02-25 net.sources: "shell archiver wanted - (nf)" [[gg](https://groups.google.com/g/net.sources/c/op569tp_e0U)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)]
+  - 1984-02-28 net.sources: "shell archiver wanted - (nf)" [[gg](https://groups.google.com/g/net.sources/c/KmmcP1bQAPE)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDE2MTlAcHVyLWVlLlVVQ1A%2B)]
+- 1984-06-15 net.sources: "Wanted: A copy of" [[gg](https://groups.google.com/g/net.sources/c/-zzuImxOlec)] [not in ua]
+- 1984-07-03 net.sources: "Wanted: "shar" archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI4MzNAZWNzdmF4LlVVQ1A%2B)]
 - 1984-07-03 net.sources: "Slight revision to the shar routine" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDI4MzhAZWNzdmF4LlVVQ1A%2B)]
 - 1984-10-28 net.sources: "Program to un-shar netmaps without using a shell.." [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQ3M0B1bm12YXguVVVDUD4)]
 - 1984-11-04 net.sources: "makeshar - shell archive shell script" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDExM0BjaXJjYWRpYS5VVUNQPg)]
@@ -110,7 +117,7 @@ discusses some of the history of shar.
 - 1984-12-08 net.sources: "shell script to generate shar files" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwNTAwMDA0QGhwY25vZS5VVUNQPg)]
 - 1984-12-11 net.sources: "yasa.c (Yet Another Shell Archiver)" [[gg](https://groups.google.com/g/net.sources/c/806UyKYWnRg)]
 - 1984-12-19 net.sources: "shar--yet another shell archiver" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDQwMkB0amFsay5VVUNQPg)]
-- 1984-12-20 mod.sources: "The Connoisseur's Shar, version 2" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDU0MUBnZW5yYWQuVVVDUD4)]
+- 1984-12-20 mod.sources: "The Connoisseur's Shar, version 2" [[ua](https://usenetarchives.com/view.php?id=mod.sources&mid=PDU0MUBnZW5yYWQuVVVDUD4)] [[bug-gnu-utils](https://lists.gnu.org/archive/html/bug-gnu-utils/2022-09/txtlmRiYRwtEp.txt)]
 - 1984-12-27 net.sources: "Improved Connoisseur's Shar" [[gg](https://groups.google.com/g/net.sources/c/MwCoy_jQbas)]
 - 1985-01-18 net.sources: "new C version of shar" [[gg](https://groups.google.com/g/net.sources/c/7ngIFztxXhU)]
 - 1985-01-18 net.sources: "new C version of shar" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDEyMEB3YW5naW5zdC5VVUNQPg)]
@@ -272,11 +279,21 @@ Searched "warp" in net.sources, mod.sources, and comp.sources.unix.
 - 1983-08-29 net.sources: "Some gripes about WARP (Estes Version)" [[gg](https://groups.google.com/g/net.sources/c/eQsRurc7VWY)]
 - 1983-08-31 net.sources: "WARP fix that works !" [[gg](https://groups.google.com/g/net.sources/c/iYOhS9EH910)]
 - 1983-08-31 net.sources: "A warp fix fix (and an apology)" [[gg](https://groups.google.com/g/net.sources/c/Lw96IZhmZaw)]
-- 1084-07-22 net.sources: "Termcap fix for warp" [[gg](https://groups.google.com/g/net.sources/c/oNekht_wfvc)]
+- 1984-07-22 net.sources: "Termcap fix for warp" [[gg](https://groups.google.com/g/net.sources/c/oNekht_wfvc)]
 - 1986-10-22 net.sources: "Beta testers wanted for warp 7.0" [[gg](https://groups.google.com/g/net.sources/c/LhResGK2RUw)]
 
 Mentions warp:
 - 1985-09-20 net.sources: "Trouble with visual strek" [[gg](https://groups.google.com/g/net.sources/c/13Jy4lK42TM)]
+
+### makedist
+
+Stan Barber used Larry's makedist and configure tools in uumail.
+
+- 1981-01-11 net.sources: "uumail part 4 of 4 (FINAL PART)" [[gg](https://groups.google.com/g/net.sources/c/upR1ZOo2gpM)]
+- 1987-02-05 mod.sources: "v08i033: Uumail release 4.2, Part01/04" [[gg](https://groups.google.com/g/mod.sources/c/Xac5jmbN-yE)]
+  - 1987-02-05 mod.sources: v08i034: Uumail release 4.2, Part02/04 [[gg](https://groups.google.com/g/mod.sources/c/5S4qpl0uhH8)]
+  - 1987-02-05 mod.sources: v08i035: Uumail release 4.2, Part03/04 [[gg](https://groups.google.com/g/mod.sources/c/Mryqn7D0GYU)]
+  - 1987-02-05 mod.sources: v08i036: Uumail release 4.2, Part04/04 [[gg](https://groups.google.com/g/mod.sources/c/lCijhrgMK58)]
 
 ### Misc
 
@@ -289,7 +306,10 @@ Mentions warp:
 
 Searched "James Gosling" in net.sources, mod.sources, and comp.sources.unix.
 
-His address was `uw-beave!jim`.
+His address appears to have been `uw-beave!jim`. However, a post from that
+address, 1983-02-17 "mailed date in network mail headers - (nf)" [[gg](https://groups.google.com/g/net.sources/c/PVLsRMxgyxk)],
+makes a change to Mail, signed in the code as Jim Rees, borrowing code from
+"Gosling's Emacs", making it less likely to be him.
 
 ### Gosling Emacs
 
@@ -373,6 +393,28 @@ Mentions:
 - 1983-05-12 net.sources: "LIST-OF-LISTS" [[gg](https://groups.google.com/g/net.sources/c/VBC0xqdshMc)]
 - 1983-07-06 net.sources: "New LIST-OF-LISTS" [[gg](https://groups.google.com/g/net.sources/c/rU_YBp1_EAw)]
 - 1986-03-16 net.sources: "JARGON in ditroff format, 4 of 4" [[gg](https://groups.google.com/g/net.sources/c/TvLb-kFniz4)]
+
+## Jim Rees
+
+Jim Rees used both the addresses uw-beave!jim and apollo!rees. He connected both
+uw-beaver and apollo to Usenet, and when he connected apollo, he posted
+apollo!rees as his contact and mentioned uw-beaver.
+
+James Gosling did not use the address uw-beave!jim. Although Gary Perlman cited
+`From: decvax!microsof!uw-beave!jim (James Gosling at CMU)` as the source of
+shar in 1984-10-05 "shell archiver written in C" [[gg](https://groups.google.com/g/net.sources/c/HElc1h9J9jc)],
+he was mistaken, as clarified by Jim Rees [to bug-gnu-utils](https://lists.gnu.org/archive/html/bug-gnu-utils/2022-09/msg00000.html).
+
+Searched "apollo!rees" in net.sources and "rees" in net.news.newsite.
+
+Posts by Jim Rees:
+- 1982.09.14 net.news.newsite: "New Usenet site "uw-beaver"" [[gg](https://groups.google.com/g/net.news.newsite/c/Vv2KrBDI0L0)] [[ua](https://usenetarchives.com/view.php?id=net.news.newsite&mid=PGJuZXdzLnV3LWJlYXZlLjEwNz4)] [[bug-gnu-utils](https://lists.gnu.org/archive/html/bug-gnu-utils/2022-09/txtS0kd86BwsW.txt)]
+- 1982-11-05 net.news.newsite: "uw-vlsi joins USENET" [[gg](https://groups.google.com/g/net.news.newsite/c/jU15pAOBsSo)]
+- 1983-09-27 net.news.newsite: "Apollo Computer" [[gg](https://groups.google.com/g/net.news.newsite/c/q-CqfV9hgZo)] [[ua](https://usenetarchives.com/view.php?id=net.news.newsite&mid=PDExM0BhcG9sbG8uVVVDUD4)]
+- 1984-02-20 net.sources: "dtree bugfix" [[gg](https://groups.google.com/g/net.sources/c/tX-hcrCyAso)]
+- 1984-07-06 net.sources: "Wanted: A copy of" [[gg](https://groups.google.com/g/net.sources/c/-zzuImxOlec)] [not in ua]
+- 1984-07-10 net.sources: "Z-80 disassembler" [[gg](https://groups.google.com/g/net.sources/c/xkxxOcyDWIA)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwNzgzMWExLjExNDdAYXBvbGxvLnV1Y3A%2B)]
+- 1984-08-21 net.sources: "Thompsons self reproducing program" [[gg](https://groups.google.com/g/net.sources/c/byWe46HnNgs)]
 
 ## tar
 
