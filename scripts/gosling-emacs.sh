@@ -36,3 +36,8 @@ if ! git merge-base --is-ancestor HEAD reid/main; then
 fi
 cd ..
 rm -rf reid-1999
+
+tar xf "$archive/der Mouse/gosling-emacs.tar"
+git clone -q --no-local gosling-emacs.git der-mouse
+git -C der-mouse remote remove origin
+rm -rf gosling-emacs.git
