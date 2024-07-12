@@ -172,6 +172,9 @@
 [submodule "git/github.com/kspalaiologos/recreational"]
 	path = git/github.com/kspalaiologos/recreational
 	url = https://github.com/kspalaiologos/recreational
+[submodule "git/github.com/larsbrinkhoff/emacs-history"]
+	path = git/github.com/larsbrinkhoff/emacs-history
+	url = https://github.com/larsbrinkhoff/emacs-history
 [submodule "git/github.com/mame/quine-relay@master"]
 	path = git/github.com/mame/quine-relay@master
 	url = https://github.com/mame/quine-relay
@@ -186,6 +189,9 @@
 [submodule "git/github.com/microsoft/MS-DOS"]
 	path = git/github.com/microsoft/MS-DOS
 	url = https://github.com/microsoft/MS-DOS
+[submodule "git/github.com/msteveb/jimtcl"]
+	path = git/github.com/msteveb/jimtcl
+	url = https://github.com/msteveb/jimtcl
 [submodule "git/github.com/omurakazuaki/WriteCodeEveryDay"]
 	path = git/github.com/omurakazuaki/WriteCodeEveryDay
 	url = https://github.com/omurakazuaki/WriteCodeEveryDay
@@ -240,6 +246,3 @@
 [submodule "git/repo.or.cz/tinycc.git"]
 	path = git/repo.or.cz/tinycc.git
 	url = https://repo.or.cz/tinycc.git
-[submodule "git/github.com/msteveb/jimtcl"]
-	path = git/github.com/msteveb/jimtcl
-	url = https://github.com/msteveb/jimtcl

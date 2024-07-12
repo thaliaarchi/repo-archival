@@ -134,6 +134,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 
 ## Converted from CVS
 
+- gosling-emacs [[sh](scripts/gosling-emacs.sh)]
 - phpicalendar [[sh](scripts/phpicalendar.sh)]
 - slrn [[sh](scripts/jedsoft/slrn.sh)] - WIP
 - sourcepuller [[sh](scripts/sourcepuller.sh)]
