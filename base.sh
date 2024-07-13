@@ -214,11 +214,6 @@ rebase_break_before_date() {
 # Convert a Mercurial repo to Git using hg-fast-export
 # (https://github.com/frej/fast-export). When the second parameter, the
 # destination Git repo, is not supplied, it converts the repo in place.
-#
-# hg-fast-export must have commit 4c10270 (Fix data handling, 2023-03-02)
-# reverted, because it does not add LF for commit messages and breaks
-# compatibility for at least Inferno conversions. Create an alias for
-# hg-fast-export.sh as hg-fast-export.
 hg_to_git() {
   local hg_repo="$1" git_repo="${2:-}"
   hg_repo="$(realpath "$hg_repo")"

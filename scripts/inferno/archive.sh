@@ -5,8 +5,6 @@
 # Kill sub-processes on exit
 trap 'trap - SIGTERM && kill -- -$$' SIGINT SIGTERM EXIT
 
-# See note in base.sh for pinned version of hg-fast-export.
-
 # Mark the addition of binaries and fonts with me as the committer, since they
 # were deliberately omitted from the source distributions for license issues and
 # only distributed with the releases. I think they are historically valuable and
