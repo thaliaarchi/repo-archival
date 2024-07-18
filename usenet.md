@@ -416,6 +416,15 @@ Posts by Jim Rees:
 - 1984-07-10 net.sources: "Z-80 disassembler" [[gg](https://groups.google.com/g/net.sources/c/xkxxOcyDWIA)] [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDIwNzgzMWExLjExNDdAYXBvbGxvLnV1Y3A%2B)]
 - 1984-08-21 net.sources: "Thompsons self reproducing program" [[gg](https://groups.google.com/g/net.sources/c/byWe46HnNgs)]
 
+## Unix
+
+Searched "pdp-7" and "pdp7" in net.unix-wizards.
+
+"dsw: pdp7 memorabilia" is identical to [dsw.s](https://github.com/DoctorWkt/pdp7-unix/blob/master/scans/dsw.s)
+in pdp7-unix, but with a small whitespace transcription error.
+
+- 1984-12-08 net.unix-wizards: "dsw: pdp7 memorabilia" [[gg](https://groups.google.com/g/net.unix-wizards/c/1vc2i3Uf7NY)] [[ua](https://usenetarchives.com/view.php?id=net.unix-wizards&mid=PDIwMDJAcmVzZWFyY2guVVVDUD4)]
+
 ## tar
 
 - 1984-11-29 net.sources: "Improved ansitar -- ansi tape utility" [[ua](https://usenetarchives.com/view.php?id=net.sources&mid=PDY2OEBhbWQuVVVDUD4)]
