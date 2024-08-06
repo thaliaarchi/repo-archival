@@ -32,7 +32,7 @@ while read -r chapter; do
   # Co-authored-by trailer.
   authors="$(git -C "$repo" log --format='%an <%ae>' --no-merges "$chapter")"
   co_authors="$(git -C "$repo" log --format=%B --no-merges "$chapter" |
-    dos2unix | grep '^ *Co-authored-by: ' | cut -d' ' -f2-)"
+    dos2unix | ( grep '^ *Co-authored-by: ' || : ) | cut -d' ' -f2-)"
   first_author="$(sort_authors <<< "$authors" | head -n1)"
   all_authors="$(sort_authors <<< "$authors"$'\n'"$co_authors")"
 
