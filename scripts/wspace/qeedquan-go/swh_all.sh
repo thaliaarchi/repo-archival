@@ -3,10 +3,10 @@ set -eEuo pipefail
 
 . base.sh
 
-mkdir -p wspace
-cd wspace
-mkdir qeedquan-go-swh
-cd qeedquan-go-swh
+mkdir -p wspace/qeedquan-go
+cd wspace/qeedquan-go
+mkdir swh-all
+cd swh-all
 
 origin_url=https://github.com/qeedquan/misc_utilities
 
