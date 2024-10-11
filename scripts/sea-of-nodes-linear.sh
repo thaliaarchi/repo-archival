@@ -44,7 +44,7 @@ while read -r chapter; do
   done <<< "$all_authors"
 
   # Get the first and last dates this chapter was modified.
-  root_files=(README.md LICENSE pom.xml .gitignore .dir-locals.el)
+  root_files=(README.md LICENSE pom.xml .gitignore .dir-locals.el transpile-tests)
   author_root_files=()
   if [[ $chapter = chapter01 ]]; then
     # Only include the commit date of the root files for chapter01.
@@ -58,15 +58,15 @@ while read -r chapter; do
 
   # Add the files for the chapter.
   git rm -qr --ignore-unmatch .
-  cp -r "$repo/$chapter/." .
+  cp -R "$repo/$chapter/." .
   mv README.md docs/
   mv docs chapter_docs
   rm pom.xml
   git add .
 
   # Add the shared files in the root, except for README.md and pom.xml.
-  root_files=(LICENSE .gitignore .dir-locals.el)
-  cp "${root_files[@]/#/"$repo/"}" .
+  root_files=(LICENSE .gitignore .dir-locals.el transpile-tests)
+  cp -R "${root_files[@]/#/"$repo/"}" .
   git add "${root_files[@]}"
 
   # Fix README.md, docs/chapter??/README.md, and pom.xml.
