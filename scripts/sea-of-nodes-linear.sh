@@ -54,6 +54,8 @@ while read -r chapter; do
   committer_date="$(git -C "$repo" log --format=%ad --date=raw -1 "$chapter" "${root_files[@]}")"
   if [[ $committer_date < $last_committer_date ]]; then
     committer_date="$last_committer_date"
+  else
+    last_committer_date="$committer_date"
   fi
 
   # Add the files for the chapter.
