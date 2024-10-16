@@ -32,6 +32,7 @@ and [CyBF](https://github.com/thaliaarchi/cybf-archive) compilers.
 ## From archives
 
 - antirez-visitors [[sh](scripts/antirez-visitors.sh)]
+- cs236-datalog [[sh](scripts/cs236-datalog.sh)]
 - lwall/patch [[sh](scripts/lwall/patch.sh)]
 - lwall/rn [[sh](scripts/lwall/rn.sh)]
 - [minecraft-papercraft-pig](https://github.com/thaliaarchi/minecraft-papercraft-pig) [[sh](scripts/minecraft/papercraft-pig.sh)]
