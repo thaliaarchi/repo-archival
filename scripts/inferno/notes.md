@@ -110,3 +110,14 @@ Miscellaneous repos, that are not on both forges:
 - https://github.com/inferno-os/ventivac: Venti components for Inferno (GSoC)
 - https://bitbucket.org/inferno-os/inferno64-os/: History is fully included in
   inferno-os/inferno-os, so it seems to serve no purpose
+
+## Inferno port to Raspberry Pi
+
+- Bitbucket:
+  - https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/infpi/inferno-rpi
+  - https://bitbucket-archive.softwareheritage.org/projects/in/infpi/inferno-rpi.html
+- Google Code:
+  - https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://inferno-rpi.googlecode.com/hg/
+- beta1:
+  - https://web.archive.org/web/20231001113905/http://lynxline.com/inferno-raspberry-pi-image-beta1/
+  - https://web.archive.org/web/20140514235709/http://tor.lynxline.com/inferno-raspberry-pi-beta1.img.zip

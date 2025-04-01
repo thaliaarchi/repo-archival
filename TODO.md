@@ -15,6 +15,8 @@
 - [Unix](https://www.tuhs.org/Archive/Distributions/Research/)
   - [unix-history-repo](https://github.com/dspinellis/unix-history-repo)
     by Diomidis Spinellis
+- Inferno
+  - [Inferno port for Raspberry Pi](scripts/inferno/notes.md#inferno-port-to-raspberry-pi)
 - Pre-Git Linux kernel
   - [Initial Git commit](https://github.com/torvalds/linux/commit/1da177e4c3f41524e886b7f1b8a0c1fc7321cac2):
     Linux 2.6.12-rc2.
