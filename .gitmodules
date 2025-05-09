@@ -40,6 +40,9 @@
 [submodule "git/gist.github.com/y-taka-23/7353612"]
 	path = git/gist.github.com/y-taka-23/7353612
 	url = https://gist.github.com/y-taka-23/7353612
+[submodule "git/git.suckless.org/st"]
+	path = git/git.suckless.org/st
+	url = git://git.suckless.org/st
 [submodule "git/github.com/9fans/plan9port"]
 	path = git/github.com/9fans/plan9port
 	url = https://github.com/9fans/plan9port
@@ -192,6 +195,9 @@
 [submodule "git/github.com/msteveb/jimtcl"]
 	path = git/github.com/msteveb/jimtcl
 	url = https://github.com/msteveb/jimtcl
+[submodule "git/github.com/obsolescence/pidp11"]
+	path = git/github.com/obsolescence/pidp11
+	url = https://github.com/obsolescence/pidp11
 [submodule "git/github.com/omurakazuaki/WriteCodeEveryDay"]
 	path = git/github.com/omurakazuaki/WriteCodeEveryDay
 	url = https://github.com/omurakazuaki/WriteCodeEveryDay

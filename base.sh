@@ -20,12 +20,14 @@ fi
 submodule_path() {
   local url="${1#https://}"
   url="${url#http://}"
+  url="${url#git://}"
   echo "$TOPLEVEL/git/$url"
 }
 
 clone_submodule() {
   local url="${1#https://}"
   url="${url#http://}"
+  url="${url#git://}"
   local dest="${url##*/}"
   dest="${dest%.git}"
   dest="${2-"$dest"}"
