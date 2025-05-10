@@ -6,8 +6,31 @@ set -eEuo pipefail
 mkdir -p obsolescence
 cd obsolescence
 
-clone_submodule https://github.com/obsolescence/pidp11 pidp11-sty
+clone_submodule https://github.com/obsolescence/pidp10 pidp10-st-0.9.2
+cd pidp10-st-0.9.2
 
+# Only two commits modify src/st-0.9.2. They are self-contained:
+
+# commit 74b481b61a6e45213a3b6856352160b8b3f71d4a
+# 2024-05-02 03:35:08 +0200  add st as telcon
+#
+# :000000 100... 0000000 ....... A	src/st-0.9.2/*
+
+# commit 662891c0cb389c951efbd50fd1d1135f591fd328
+# 2024-05-02 03:50:26 +0200  fix
+#
+# :100644 100644 8600ab6 f8e4462 M	src/st-0.9.2/config.h
+
+git filter-repo --quiet --subdirectory-filter src/st-0.9.2
+
+git remote add upstream "$(submodule_path git://git.suckless.org/st)"
+git fetch -q upstream
+# Graft 0.9.2 as the root commit.
+git replace --graft "$(git rev-list --max-parents=0 HEAD)" 0.9.2
+git filter-repo --quiet
+cd ..
+
+clone_submodule https://github.com/obsolescence/pidp11 pidp11-sty
 cd pidp11-sty
 
 # Only two commits modify sty. Their relevant files are:
@@ -39,11 +62,11 @@ cd pidp11-sty
 # :000000 100644 0000000 1a42a35 A	src/sty/x.c
 # :100644 000000 9eeeb51 0000000 D	src/sty33.zip
 
-# Keep only sty and sounds and a font for it. Merge the identical bin/sounds/
-# and src/sty/sounds/. Ignore src/sty33.zip, as it is an empty zip.
+# Keep only sty and sounds and a font for it. Ignore the redundant bin/sounds/
+# and the empty zip src/sty33.zip.
+git diff --no-index bin/sounds/ src/sty/sounds/
 git filter-repo --quiet \
-  --path src/sty/ --path-rename src/sty/: \
-  --path bin/sounds/ --path-rename bin/: \
+  --subdirectory-filter src/sty \
   --path install/TTY33MAlc-Book.ttf --path-rename install/:
 
 git remote add upstream "$(submodule_path git://git.suckless.org/st)"

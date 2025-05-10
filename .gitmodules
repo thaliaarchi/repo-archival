@@ -195,6 +195,9 @@
 [submodule "git/github.com/msteveb/jimtcl"]
 	path = git/github.com/msteveb/jimtcl
 	url = https://github.com/msteveb/jimtcl
+[submodule "git/github.com/obsolescence/pidp10"]
+	path = git/github.com/obsolescence/pidp10
+	url = https://github.com/obsolescence/pidp10
 [submodule "git/github.com/obsolescence/pidp11"]
 	path = git/github.com/obsolescence/pidp11
 	url = https://github.com/obsolescence/pidp11
