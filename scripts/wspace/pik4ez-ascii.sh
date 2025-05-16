@@ -9,8 +9,6 @@
 # https://gist.github.com/pik4ez/fb76073886531d9b888a5c86e870bccd shura-bura.ws
 # https://gist.github.com/pik4ez/e3d776091bae3a41e18ae1404bdccac1 lamarr.ws
 
-# TODO: Incorporate jonas.bf.
-
 # brooks contains the entirety of the other .ws repos at earlier dates, however
 # the history is messy. jonas is separate.
 
@@ -60,13 +58,18 @@
 clone_submodule https://gist.github.com/pik4ez/a2b0ece78c999e3b9ca54369ffd484f3 wspace/pik4ez-ascii
 cd wspace/pik4ez-ascii
 
+git remote add jonas "$(submodule_path https://gist.github.com/pik4ez/ff8419892f0a71383aee01588e06e104)"
+git fetch -q jonas
+git rebase -q jonas/master --committer-date-is-author-date
+git remote remove jonas
+
 # Fix the gistfile1.txt filename and drop file deletions.
 # Set the commit message to list the files added or modified (both are listed as
 # type M) and on successive occurrences of the same files changed, mark it with
 # "amend!".
 # Since filter-repo does not report renames, crudely check for the hedi_ascii.ws
 # -> lamarr.ws rename.
-git filter-repo --quiet \
+git filter-repo --quiet --force \
   --path-rename gistfile1.txt:hedi_ascii.ws \
   --commit-callback '
     filenames = set(c.filename for c in commit.file_changes)
@@ -90,7 +93,7 @@ git filter-repo --quiet \
 
 # Squash placeholder text fixup commits, making their author dates become the
 # committer dates of the base commits.
-GIT_EDITOR=: git rebase --root --autosquash --committer-date-is-author-date
+GIT_EDITOR=: git rebase -q --root --autosquash --committer-date-is-author-date
 
 # Fix committer.
 git filter-repo --quiet \
